@@ -1,0 +1,534 @@
+{
+  "total": {
+    "PASS": 76,
+    "PARTIAL": 0,
+    "FAIL": 0,
+    "TOTAL": 76
+  },
+  "by_category": {
+    "redaction": {
+      "PASS": 14,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 14
+    },
+    "hygiene": {
+      "PASS": 14,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 14
+    },
+    "integrity": {
+      "PASS": 14,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 14
+    },
+    "code": {
+      "PASS": 1,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 1
+    },
+    "localization": {
+      "PASS": 18,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 18
+    },
+    "logical": {
+      "PASS": 1,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 1
+    },
+    "oper": {
+      "PASS": 2,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 2
+    },
+    "security": {
+      "PASS": 1,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 1
+    },
+    "stress": {
+      "PASS": 3,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 3
+    },
+    "philosophical": {
+      "PASS": 2,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 2
+    },
+    "documentation": {
+      "PASS": 6,
+      "PARTIAL": 0,
+      "FAIL": 0,
+      "TOTAL": 6
+    }
+  },
+  "results": [
+    {
+      "category": "redaction",
+      "name": "master tree private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "master tree forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "master unzip",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "category": "redaction",
+      "name": "master zip private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "master zip forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "master internal checksums before report update",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "code",
+      "name": "source pytest",
+      "status": "PASS",
+      "detail": "........                                                                 [100%]\n8 passed in 0.65s\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs ar before command",
+      "status": "PASS",
+      "detail": "فهرس الوثائق الثابتة BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/ar/INDEX.md\n- docs/ar/README.md\n- docs/ar/INSTALL.md\n- docs/ar/QUICKSTART.md\n- docs/ar/USER_MANUAL_SHORT.md\n- docs/ar/USER_MANUAL_FULL.md\n- docs/ar/TECHNICAL_OVERVIEW.md\n- docs/ar/ARCHITECTURE.md\n- docs/ar/DATA_MODEL_AND_SCHEMAS.md\n- docs/ar/CLI_REFERENCE.md\n- docs/ar/SIMA_ANALYZER_GUIDE.md\n- docs/ar/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/ar/TESTING_AND_SELF_TESTING.md\n- docs/ar/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/ar/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/ar/SECURITY.md\n- docs/ar/RESPONSIBLE_USE.md\n- docs/ar/RELEASE_BOUNDARIES.md\n- docs/ar/PRIVACY_AND_ANONYMIZATION.md\n- docs/ar/MAINTENANCE_PAUSE_NOTICE.md\n- docs/ar/FINAL_RELEASE_READINESS.md\n- docs/ar/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs ar after command",
+      "status": "PASS",
+      "detail": "فهرس الوثائق الثابتة BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/ar/INDEX.md\n- docs/ar/README.md\n- docs/ar/INSTALL.md\n- docs/ar/QUICKSTART.md\n- docs/ar/USER_MANUAL_SHORT.md\n- docs/ar/USER_MANUAL_FULL.md\n- docs/ar/TECHNICAL_OVERVIEW.md\n- docs/ar/ARCHITECTURE.md\n- docs/ar/DATA_MODEL_AND_SCHEMAS.md\n- docs/ar/CLI_REFERENCE.md\n- docs/ar/SIMA_ANALYZER_GUIDE.md\n- docs/ar/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/ar/TESTING_AND_SELF_TESTING.md\n- docs/ar/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/ar/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/ar/SECURITY.md\n- docs/ar/RESPONSIBLE_USE.md\n- docs/ar/RELEASE_BOUNDARIES.md\n- docs/ar/PRIVACY_AND_ANONYMIZATION.md\n- docs/ar/MAINTENANCE_PAUSE_NOTICE.md\n- docs/ar/FINAL_RELEASE_READINESS.md\n- docs/ar/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs en before command",
+      "status": "PASS",
+      "detail": "BOIS:SIMA&BORIS static documentation index\n- docs/INDEX.md\n- docs/en/INDEX.md\n- docs/en/README.md\n- docs/en/INSTALL.md\n- docs/en/QUICKSTART.md\n- docs/en/USER_MANUAL_SHORT.md\n- docs/en/USER_MANUAL_FULL.md\n- docs/en/TECHNICAL_OVERVIEW.md\n- docs/en/ARCHITECTURE.md\n- docs/en/DATA_MODEL_AND_SCHEMAS.md\n- docs/en/CLI_REFERENCE.md\n- docs/en/SIMA_ANALYZER_GUIDE.md\n- docs/en/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/en/TESTING_AND_SELF_TESTING.md\n- docs/en/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/en/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/en/SECURITY.md\n- docs/en/RESPONSIBLE_USE.md\n- docs/en/RELEASE_BOUNDARIES.md\n- docs/en/PRIVACY_AND_ANONYMIZATION.md\n- docs/en/MAINTENANCE_PAUSE_NOTICE.md\n- docs/en/FINAL_RELEASE_READINESS.md\n- docs/en/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs en after command",
+      "status": "PASS",
+      "detail": "BOIS:SIMA&BORIS static documentation index\n- docs/INDEX.md\n- docs/en/INDEX.md\n- docs/en/README.md\n- docs/en/INSTALL.md\n- docs/en/QUICKSTART.md\n- docs/en/USER_MANUAL_SHORT.md\n- docs/en/USER_MANUAL_FULL.md\n- docs/en/TECHNICAL_OVERVIEW.md\n- docs/en/ARCHITECTURE.md\n- docs/en/DATA_MODEL_AND_SCHEMAS.md\n- docs/en/CLI_REFERENCE.md\n- docs/en/SIMA_ANALYZER_GUIDE.md\n- docs/en/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/en/TESTING_AND_SELF_TESTING.md\n- docs/en/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/en/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/en/SECURITY.md\n- docs/en/RESPONSIBLE_USE.md\n- docs/en/RELEASE_BOUNDARIES.md\n- docs/en/PRIVACY_AND_ANONYMIZATION.md\n- docs/en/MAINTENANCE_PAUSE_NOTICE.md\n- docs/en/FINAL_RELEASE_READINESS.md\n- docs/en/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs es before command",
+      "status": "PASS",
+      "detail": "Índice de documentación estática BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/es/INDEX.md\n- docs/es/README.md\n- docs/es/INSTALL.md\n- docs/es/QUICKSTART.md\n- docs/es/USER_MANUAL_SHORT.md\n- docs/es/USER_MANUAL_FULL.md\n- docs/es/TECHNICAL_OVERVIEW.md\n- docs/es/ARCHITECTURE.md\n- docs/es/DATA_MODEL_AND_SCHEMAS.md\n- docs/es/CLI_REFERENCE.md\n- docs/es/SIMA_ANALYZER_GUIDE.md\n- docs/es/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/es/TESTING_AND_SELF_TESTING.md\n- docs/es/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/es/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/es/SECURITY.md\n- docs/es/RESPONSIBLE_USE.md\n- docs/es/RELEASE_BOUNDARIES.md\n- docs/es/PRIVACY_AND_ANONYMIZATION.md\n- docs/es/MAINTENANCE_PAUSE_NOTICE.md\n- docs/es/FINAL_RELEASE_READINESS.md\n- docs/es/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs es after command",
+      "status": "PASS",
+      "detail": "Índice de documentación estática BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/es/INDEX.md\n- docs/es/README.md\n- docs/es/INSTALL.md\n- docs/es/QUICKSTART.md\n- docs/es/USER_MANUAL_SHORT.md\n- docs/es/USER_MANUAL_FULL.md\n- docs/es/TECHNICAL_OVERVIEW.md\n- docs/es/ARCHITECTURE.md\n- docs/es/DATA_MODEL_AND_SCHEMAS.md\n- docs/es/CLI_REFERENCE.md\n- docs/es/SIMA_ANALYZER_GUIDE.md\n- docs/es/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/es/TESTING_AND_SELF_TESTING.md\n- docs/es/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/es/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/es/SECURITY.md\n- docs/es/RESPONSIBLE_USE.md\n- docs/es/RELEASE_BOUNDARIES.md\n- docs/es/PRIVACY_AND_ANONYMIZATION.md\n- docs/es/MAINTENANCE_PAUSE_NOTICE.md\n- docs/es/FINAL_RELEASE_READINESS.md\n- docs/es/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs fr before command",
+      "status": "PASS",
+      "detail": "Index de documentation statique BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/fr/INDEX.md\n- docs/fr/README.md\n- docs/fr/INSTALL.md\n- docs/fr/QUICKSTART.md\n- docs/fr/USER_MANUAL_SHORT.md\n- docs/fr/USER_MANUAL_FULL.md\n- docs/fr/TECHNICAL_OVERVIEW.md\n- docs/fr/ARCHITECTURE.md\n- docs/fr/DATA_MODEL_AND_SCHEMAS.md\n- docs/fr/CLI_REFERENCE.md\n- docs/fr/SIMA_ANALYZER_GUIDE.md\n- docs/fr/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/fr/TESTING_AND_SELF_TESTING.md\n- docs/fr/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/fr/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/fr/SECURITY.md\n- docs/fr/RESPONSIBLE_USE.md\n- docs/fr/RELEASE_BOUNDARIES.md\n- docs/fr/PRIVACY_AND_ANONYMIZATION.md\n- docs/fr/MAINTENANCE_PAUSE_NOTICE.md\n- docs/fr/FINAL_RELEASE_READINESS.md\n- docs/fr/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs fr after command",
+      "status": "PASS",
+      "detail": "Index de documentation statique BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/fr/INDEX.md\n- docs/fr/README.md\n- docs/fr/INSTALL.md\n- docs/fr/QUICKSTART.md\n- docs/fr/USER_MANUAL_SHORT.md\n- docs/fr/USER_MANUAL_FULL.md\n- docs/fr/TECHNICAL_OVERVIEW.md\n- docs/fr/ARCHITECTURE.md\n- docs/fr/DATA_MODEL_AND_SCHEMAS.md\n- docs/fr/CLI_REFERENCE.md\n- docs/fr/SIMA_ANALYZER_GUIDE.md\n- docs/fr/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/fr/TESTING_AND_SELF_TESTING.md\n- docs/fr/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/fr/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/fr/SECURITY.md\n- docs/fr/RESPONSIBLE_USE.md\n- docs/fr/RELEASE_BOUNDARIES.md\n- docs/fr/PRIVACY_AND_ANONYMIZATION.md\n- docs/fr/MAINTENANCE_PAUSE_NOTICE.md\n- docs/fr/FINAL_RELEASE_READINESS.md\n- docs/fr/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs ru before command",
+      "status": "PASS",
+      "detail": "Индекс статической документации BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/ru/INDEX.md\n- docs/ru/README.md\n- docs/ru/INSTALL.md\n- docs/ru/QUICKSTART.md\n- docs/ru/USER_MANUAL_SHORT.md\n- docs/ru/USER_MANUAL_FULL.md\n- docs/ru/TECHNICAL_OVERVIEW.md\n- docs/ru/ARCHITECTURE.md\n- docs/ru/DATA_MODEL_AND_SCHEMAS.md\n- docs/ru/CLI_REFERENCE.md\n- docs/ru/SIMA_ANALYZER_GUIDE.md\n- docs/ru/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/ru/TESTING_AND_SELF_TESTING.md\n- docs/ru/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/ru/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/ru/SECURITY.md\n- docs/ru/RESPONSIBLE_USE.md\n- docs/ru/RELEASE_BOUNDARIES.md\n- docs/ru/PRIVACY_AND_ANONYMIZATION.md\n- docs/ru/MAINTENANCE_PAUSE_NOTICE.md\n- docs/ru/FINAL_RELEASE_READINESS.md\n- docs/ru/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs ru after command",
+      "status": "PASS",
+      "detail": "Индекс статической документации BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/ru/INDEX.md\n- docs/ru/README.md\n- docs/ru/INSTALL.md\n- docs/ru/QUICKSTART.md\n- docs/ru/USER_MANUAL_SHORT.md\n- docs/ru/USER_MANUAL_FULL.md\n- docs/ru/TECHNICAL_OVERVIEW.md\n- docs/ru/ARCHITECTURE.md\n- docs/ru/DATA_MODEL_AND_SCHEMAS.md\n- docs/ru/CLI_REFERENCE.md\n- docs/ru/SIMA_ANALYZER_GUIDE.md\n- docs/ru/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/ru/TESTING_AND_SELF_TESTING.md\n- docs/ru/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/ru/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/ru/SECURITY.md\n- docs/ru/RESPONSIBLE_USE.md\n- docs/ru/RELEASE_BOUNDARIES.md\n- docs/ru/PRIVACY_AND_ANONYMIZATION.md\n- docs/ru/MAINTENANCE_PAUSE_NOTICE.md\n- docs/ru/FINAL_RELEASE_READINESS.md\n- docs/ru/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs zh before command",
+      "status": "PASS",
+      "detail": "BOIS:SIMA&BORIS 静态文档索引\n- docs/INDEX.md\n- docs/zh/INDEX.md\n- docs/zh/README.md\n- docs/zh/INSTALL.md\n- docs/zh/QUICKSTART.md\n- docs/zh/USER_MANUAL_SHORT.md\n- docs/zh/USER_MANUAL_FULL.md\n- docs/zh/TECHNICAL_OVERVIEW.md\n- docs/zh/ARCHITECTURE.md\n- docs/zh/DATA_MODEL_AND_SCHEMAS.md\n- docs/zh/CLI_REFERENCE.md\n- docs/zh/SIMA_ANALYZER_GUIDE.md\n- docs/zh/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/zh/TESTING_AND_SELF_TESTING.md\n- docs/zh/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/zh/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/zh/SECURITY.md\n- docs/zh/RESPONSIBLE_USE.md\n- docs/zh/RELEASE_BOUNDARIES.md\n- docs/zh/PRIVACY_AND_ANONYMIZATION.md\n- docs/zh/MAINTENANCE_PAUSE_NOTICE.md\n- docs/zh/FINAL_RELEASE_READINESS.md\n- docs/zh/FAQ.md\n"
+    },
+    {
+      "category": "localization",
+      "name": "docs zh after command",
+      "status": "PASS",
+      "detail": "BOIS:SIMA&BORIS 静态文档索引\n- docs/INDEX.md\n- docs/zh/INDEX.md\n- docs/zh/README.md\n- docs/zh/INSTALL.md\n- docs/zh/QUICKSTART.md\n- docs/zh/USER_MANUAL_SHORT.md\n- docs/zh/USER_MANUAL_FULL.md\n- docs/zh/TECHNICAL_OVERVIEW.md\n- docs/zh/ARCHITECTURE.md\n- docs/zh/DATA_MODEL_AND_SCHEMAS.md\n- docs/zh/CLI_REFERENCE.md\n- docs/zh/SIMA_ANALYZER_GUIDE.md\n- docs/zh/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/zh/TESTING_AND_SELF_TESTING.md\n- docs/zh/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/zh/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/zh/SECURITY.md\n- docs/zh/RESPONSIBLE_USE.md\n- docs/zh/RELEASE_BOUNDARIES.md\n- docs/zh/PRIVACY_AND_ANONYMIZATION.md\n- docs/zh/MAINTENANCE_PAUSE_NOTICE.md\n- docs/zh/FINAL_RELEASE_READINESS.md\n- docs/zh/FAQ.md\n"
+    },
+    {
+      "category": "logical",
+      "name": "validate generic example",
+      "status": "PASS",
+      "detail": "{\n  \"ok\": true,\n  \"language\": \"en\",\n  \"findings\": []\n}\n"
+    },
+    {
+      "category": "oper",
+      "name": "analyze generic example",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "category": "security",
+      "name": "self-check",
+      "status": "PASS",
+      "detail": "{\n  \"ok\": true,\n  \"policy\": \"Public safe baseline: no network, no shell, no dynamic code execution, no autonomous action.\",\n  \"ignored_dirs\": [\n    \".eggs\",\n    \".env\",\n    \".git\",\n    \".github\",\n    \".mypy_cache\",\n    \".pytest_cache\",\n    \".ruff_cache\",\n    \".venv\",\n    \"__pycache__\",\n    \"build\",\n    \"dist\",\n    \"env\",\n    \"site-packages\",\n    \"venv\"\n  ],\n  \"findings\": [],\n  \"language\": \"en\"\n}\n"
+    },
+    {
+      "category": "stress",
+      "name": "malformed JSON clean exit",
+      "status": "PASS",
+      "detail": "{\"ok\": false, \"error\": \"invalid_json\", \"path\": \"/tmp/v13_w5_e11dp/bad.json\", \"line\": 1, \"column\": 2, \"message\": \"Expecting property name enclosed in double quotes\"}\n"
+    },
+    {
+      "category": "stress",
+      "name": "missing file clean exit",
+      "status": "PASS",
+      "detail": "{\"ok\": false, \"error\": \"file_not_found\", \"path\": \"missing-nope.json\"}\n"
+    },
+    {
+      "category": "stress",
+      "name": "500-oper analysis",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "category": "philosophical",
+      "name": "M has O/E/A/V/R/C/T components",
+      "status": "PASS",
+      "detail": "dict_keys(['O_ontology', 'E_epistemology', 'A_agency', 'V_value_interface', 'R_risk_model', 'C_closure_rule', 'T_transition_rule'])"
+    },
+    {
+      "category": "philosophical",
+      "name": "limits deny final truth/consciousness/legal authority",
+      "status": "PASS",
+      "detail": "this is a reconstruction, not a final truth. do not infer consciousness, legal authority, or human suitability from this output. do not use for autonomous coercive governance or decisions about rights, employment, benefits, law enforcement, or military targeting without independent lawful human process."
+    },
+    {
+      "category": "oper",
+      "name": "operome count matches example observations",
+      "status": "PASS",
+      "detail": "{'definition': 'Set of observed or candidate opers in the selected observation window.', 'object_id': 'demo-local-workflow', 'count': 3, 'confidence': 'medium', 'opers': [{'id': 'oper-001', 'trigger': 'user supplies local object description', 'distinction': 'declaration versus observation', 'evidence': 'JSON fields and observed episodes', 'carrier': 'local CLI and human reviewer', 'authority': 'human operator', 'value_risk_gate': 'no autonomous coercive governance', 'transformation': 'candidate opers are extracted', 'memory_write': 'analysis JSON and Markdown report', 'closure_signal': 'report generated with limits', 'transition_residue': 'next test recommendation', 'cost': 'attention and review time', 'confidence': 'medium'}, {'id': 'oper-002', 'trigger': 'missing or weak evidence is detected', 'distinction': 'verified result versus hypothesis', 'evidence': 'validation findings', 'carrier': 'SIMA validator', 'authority': 'human reviewer', 'value_risk_gate': 'avoid false certainty', 't"
+    },
+    {
+      "category": "integrity",
+      "name": "ar package unzip",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "category": "redaction",
+      "name": "ar zip private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "ar zip forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "ar package internal checksums",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "redaction",
+      "name": "ar tree private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "ar tree forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "documentation",
+      "name": "ar required docs coverage",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "localization",
+      "name": "ar package docs command",
+      "status": "PASS",
+      "detail": "فهرس الوثائق الثابتة BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/README.md\n- docs/INSTALL.md\n- docs/QUICKSTART.md\n- docs/USER_MANUAL_SHORT.md\n- docs/USER_MANUAL_FULL.md\n- docs/TECHNICAL_OVERVIEW.md\n- docs/ARCHITECTURE.md\n- docs/DATA_MODEL_AND_SCHEMAS.md\n- docs/CLI_REFERENCE.md\n- docs/SIMA_ANALYZER_GUIDE.md\n- docs/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/TESTING_AND_SELF_TESTING.md\n- docs/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/SECURITY.md\n- docs/RESPONSIBLE_USE.md\n- docs/RELEASE_BOUNDARIES.md\n- docs/PRIVACY_AND_ANONYMIZATION.md\n- docs/MAINTENANCE_PAUSE_NOTICE.md\n- docs/FINAL_RELEASE_READINESS.md\n- docs/FAQ.md\n"
+    },
+    {
+      "category": "integrity",
+      "name": "en package unzip",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "category": "redaction",
+      "name": "en zip private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "en zip forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "en package internal checksums",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "redaction",
+      "name": "en tree private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "en tree forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "documentation",
+      "name": "en required docs coverage",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "localization",
+      "name": "en package docs command",
+      "status": "PASS",
+      "detail": "BOIS:SIMA&BORIS static documentation index\n- docs/INDEX.md\n- docs/README.md\n- docs/INSTALL.md\n- docs/QUICKSTART.md\n- docs/USER_MANUAL_SHORT.md\n- docs/USER_MANUAL_FULL.md\n- docs/TECHNICAL_OVERVIEW.md\n- docs/ARCHITECTURE.md\n- docs/DATA_MODEL_AND_SCHEMAS.md\n- docs/CLI_REFERENCE.md\n- docs/SIMA_ANALYZER_GUIDE.md\n- docs/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/TESTING_AND_SELF_TESTING.md\n- docs/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/SECURITY.md\n- docs/RESPONSIBLE_USE.md\n- docs/RELEASE_BOUNDARIES.md\n- docs/PRIVACY_AND_ANONYMIZATION.md\n- docs/MAINTENANCE_PAUSE_NOTICE.md\n- docs/FINAL_RELEASE_READINESS.md\n- docs/FAQ.md\n"
+    },
+    {
+      "category": "integrity",
+      "name": "es package unzip",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "category": "redaction",
+      "name": "es zip private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "es zip forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "es package internal checksums",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "redaction",
+      "name": "es tree private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "es tree forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "documentation",
+      "name": "es required docs coverage",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "localization",
+      "name": "es package docs command",
+      "status": "PASS",
+      "detail": "Índice de documentación estática BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/README.md\n- docs/INSTALL.md\n- docs/QUICKSTART.md\n- docs/USER_MANUAL_SHORT.md\n- docs/USER_MANUAL_FULL.md\n- docs/TECHNICAL_OVERVIEW.md\n- docs/ARCHITECTURE.md\n- docs/DATA_MODEL_AND_SCHEMAS.md\n- docs/CLI_REFERENCE.md\n- docs/SIMA_ANALYZER_GUIDE.md\n- docs/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/TESTING_AND_SELF_TESTING.md\n- docs/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/SECURITY.md\n- docs/RESPONSIBLE_USE.md\n- docs/RELEASE_BOUNDARIES.md\n- docs/PRIVACY_AND_ANONYMIZATION.md\n- docs/MAINTENANCE_PAUSE_NOTICE.md\n- docs/FINAL_RELEASE_READINESS.md\n- docs/FAQ.md\n"
+    },
+    {
+      "category": "integrity",
+      "name": "fr package unzip",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "category": "redaction",
+      "name": "fr zip private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "fr zip forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "fr package internal checksums",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "redaction",
+      "name": "fr tree private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "fr tree forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "documentation",
+      "name": "fr required docs coverage",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "localization",
+      "name": "fr package docs command",
+      "status": "PASS",
+      "detail": "Index de documentation statique BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/README.md\n- docs/INSTALL.md\n- docs/QUICKSTART.md\n- docs/USER_MANUAL_SHORT.md\n- docs/USER_MANUAL_FULL.md\n- docs/TECHNICAL_OVERVIEW.md\n- docs/ARCHITECTURE.md\n- docs/DATA_MODEL_AND_SCHEMAS.md\n- docs/CLI_REFERENCE.md\n- docs/SIMA_ANALYZER_GUIDE.md\n- docs/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/TESTING_AND_SELF_TESTING.md\n- docs/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/SECURITY.md\n- docs/RESPONSIBLE_USE.md\n- docs/RELEASE_BOUNDARIES.md\n- docs/PRIVACY_AND_ANONYMIZATION.md\n- docs/MAINTENANCE_PAUSE_NOTICE.md\n- docs/FINAL_RELEASE_READINESS.md\n- docs/FAQ.md\n"
+    },
+    {
+      "category": "integrity",
+      "name": "ru package unzip",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "category": "redaction",
+      "name": "ru zip private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "ru zip forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "ru package internal checksums",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "redaction",
+      "name": "ru tree private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "ru tree forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "documentation",
+      "name": "ru required docs coverage",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "localization",
+      "name": "ru package docs command",
+      "status": "PASS",
+      "detail": "Индекс статической документации BOIS:SIMA&BORIS\n- docs/INDEX.md\n- docs/README.md\n- docs/INSTALL.md\n- docs/QUICKSTART.md\n- docs/USER_MANUAL_SHORT.md\n- docs/USER_MANUAL_FULL.md\n- docs/TECHNICAL_OVERVIEW.md\n- docs/ARCHITECTURE.md\n- docs/DATA_MODEL_AND_SCHEMAS.md\n- docs/CLI_REFERENCE.md\n- docs/SIMA_ANALYZER_GUIDE.md\n- docs/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/TESTING_AND_SELF_TESTING.md\n- docs/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/SECURITY.md\n- docs/RESPONSIBLE_USE.md\n- docs/RELEASE_BOUNDARIES.md\n- docs/PRIVACY_AND_ANONYMIZATION.md\n- docs/MAINTENANCE_PAUSE_NOTICE.md\n- docs/FINAL_RELEASE_READINESS.md\n- docs/FAQ.md\n"
+    },
+    {
+      "category": "integrity",
+      "name": "zh package unzip",
+      "status": "PASS",
+      "detail": "None"
+    },
+    {
+      "category": "redaction",
+      "name": "zh zip private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "zh zip forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "integrity",
+      "name": "zh package internal checksums",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "redaction",
+      "name": "zh tree private-token scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "hygiene",
+      "name": "zh tree forbidden-file scan",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "documentation",
+      "name": "zh required docs coverage",
+      "status": "PASS",
+      "detail": "[]"
+    },
+    {
+      "category": "localization",
+      "name": "zh package docs command",
+      "status": "PASS",
+      "detail": "BOIS:SIMA&BORIS 静态文档索引\n- docs/INDEX.md\n- docs/README.md\n- docs/INSTALL.md\n- docs/QUICKSTART.md\n- docs/USER_MANUAL_SHORT.md\n- docs/USER_MANUAL_FULL.md\n- docs/TECHNICAL_OVERVIEW.md\n- docs/ARCHITECTURE.md\n- docs/DATA_MODEL_AND_SCHEMAS.md\n- docs/CLI_REFERENCE.md\n- docs/SIMA_ANALYZER_GUIDE.md\n- docs/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/TESTING_AND_SELF_TESTING.md\n- docs/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/SECURITY.md\n- docs/RESPONSIBLE_USE.md\n- docs/RELEASE_BOUNDARIES.md\n- docs/PRIVACY_AND_ANONYMIZATION.md\n- docs/MAINTENANCE_PAUSE_NOTICE.md\n- docs/FINAL_RELEASE_READINESS.md\n- docs/FAQ.md\n"
+    }
+  ]
+}

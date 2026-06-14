@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIMA public input schema v0.1",
+  "type": "object",
+  "required": [
+    "object_id",
+    "object_type",
+    "domain",
+    "value_interface",
+    "substrate",
+    "observations"
+  ],
+  "properties": {
+    "object_id": {
+      "type": "string"
+    },
+    "object_type": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "value_interface": {
+      "type": "object"
+    },
+    "substrate": {
+      "type": "object"
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

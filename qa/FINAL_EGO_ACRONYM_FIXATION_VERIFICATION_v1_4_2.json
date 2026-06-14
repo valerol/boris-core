@@ -1,0 +1,7 @@
+{
+  "version": "1.4.2",
+  "fixed_utc": "2026-06-12T03:45:00Z",
+  "status": "PASSED_PENDING_RUNTIME_TESTS",
+  "ego": "Ethical Goal Orchestrator",
+  "goal_boundary": "G0 operator; G1-G4 BORIS EGO may orchestrate under gates"
+}

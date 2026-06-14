@@ -1,0 +1,13 @@
+{
+  "status": "PASSED",
+  "public_release": "1.4.8",
+  "bois_boris_main": "2.21",
+  "boris_ego": "1.5",
+  "applied_methods": [
+    "Method 3",
+    "Method 6",
+    "Method 7"
+  ],
+  "hard_cap_mb": 200,
+  "historical_binary_archives_embedded": false
+}

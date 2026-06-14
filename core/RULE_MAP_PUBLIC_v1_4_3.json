@@ -1,0 +1,125 @@
+{
+  "version": "1.4.3",
+  "fixed_utc": "2026-06-12T04:30:00Z",
+  "active_kernel": {
+    "bois_boris_main": "2.16",
+    "sima": "0.4",
+    "boris_ego": "1.0"
+  },
+  "rules": [
+    "BR-080",
+    "BR-081",
+    "BR-082",
+    "BR-083",
+    "BR-084",
+    "BR-085",
+    "BR-086",
+    "BR-087",
+    "BR-088",
+    "BR-089",
+    "BR-090",
+    "BR-091",
+    {
+      "id": "BR-092",
+      "name": "Immune Test Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-093",
+      "name": "Developed Physiology Preservation Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-094",
+      "name": "EGO-to-Physiology Integration Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-095",
+      "name": "Post-Test Physiology Stability Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-096",
+      "name": "Current Archive Compatibility Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-097",
+      "name": "Active EGO Semantic Localization Repair Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-098",
+      "name": "Source Tree Entry and Offline Packaging Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-099",
+      "name": "EGO Acronym and Derivative Goal Scope Fixation Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-100",
+      "name": "EGO Default Core Adoption Gate",
+      "version": "v0.1",
+      "active": true,
+      "supersedes": [
+        "Mode 10 activation requirement",
+        "mandatory 10-answer EGO counter",
+        "Mode 10 extension prompt"
+      ]
+    },
+    {
+      "id": "BR-101",
+      "name": "Post-Change Downloadable Artifact Rule",
+      "version": "v0.1",
+      "active": true
+    }
+  ],
+  "un_languages": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "no_preferred_public_language": true,
+  "active_core_by_lang": {
+    "ar": "core/BORIS_EGO_LAYER_v1_0_AR.md",
+    "zh": "core/BORIS_EGO_LAYER_v1_0_ZH.md",
+    "en": "core/BORIS_EGO_LAYER_v1_0_EN.md",
+    "fr": "core/BORIS_EGO_LAYER_v1_0_FR.md",
+    "ru": "core/BORIS_EGO_LAYER_v1_0_RU.md",
+    "es": "core/BORIS_EGO_LAYER_v1_0_ES.md"
+  },
+  "public_release": "1.4.3",
+  "bois_boris_main": "2.16",
+  "boris_ego": "1.0",
+  "immune_ready": true,
+  "global_physiology_rewrite_required": false,
+  "ego_default_core_mode": true,
+  "special_ego_mode_limits_superseded": true,
+  "post_change_download_offer_required": true,
+  "ego_expansion": {
+    "EGO": "Ethical Goal Orchestrator",
+    "ru": "этический оркестратор производных целей",
+    "final_goals_source": "operator",
+    "ego_goal_scope": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "ego_final_goal_source": false
+  }
+}

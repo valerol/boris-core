@@ -1,0 +1,65 @@
+[
+  {
+    "id": "R-001",
+    "risk": "Personal data leakage",
+    "failure_mode": "Personal names/emails/location/private biography remain in archive",
+    "initial": "R4",
+    "mitigation": "Removed personal metadata; redaction scan",
+    "residual": "R1",
+    "status": "PASS"
+  },
+  {
+    "id": "R-002",
+    "risk": "Private project leakage",
+    "failure_mode": "private project or related business idea remains in archive",
+    "initial": "R4",
+    "mitigation": "Removed private project material; bundled article added by explicit release-owner request",
+    "residual": "R1",
+    "status": "PASS"
+  },
+  {
+    "id": "R-003",
+    "risk": "False validation",
+    "failure_mode": "Users treat candidate reconstruction as truth",
+    "initial": "R3",
+    "mitigation": "Warnings, limits, docs, tests",
+    "residual": "R2",
+    "status": "PASS"
+  },
+  {
+    "id": "R-004",
+    "risk": "High-stakes misuse",
+    "failure_mode": "Package used for rights/safety decisions",
+    "initial": "R4",
+    "mitigation": "Responsible-use boundaries and non-coercive governance statement",
+    "residual": "R2",
+    "status": "PASS"
+  },
+  {
+    "id": "R-005",
+    "risk": "Security channel absent",
+    "failure_mode": "No personal security email outside bundled article files",
+    "initial": "R2",
+    "mitigation": "Use future repository private vulnerability reporting; no sensitive public details",
+    "residual": "R2",
+    "status": "PASS"
+  },
+  {
+    "id": "R-006",
+    "risk": "Localization error",
+    "failure_mode": "UN-language docs not native-reviewed",
+    "initial": "R2",
+    "mitigation": "Complete static localization with caveat; stable schema keys in English",
+    "residual": "R2",
+    "status": "PASS"
+  },
+  {
+    "id": "R-007",
+    "risk": "Supply-chain risk",
+    "failure_mode": "Hidden network/shell/dynamic behavior",
+    "initial": "R3",
+    "mitigation": "Self-check and independent source scan",
+    "residual": "R1",
+    "status": "PASS"
+  }
+]

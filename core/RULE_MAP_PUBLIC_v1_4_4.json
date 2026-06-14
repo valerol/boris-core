@@ -1,0 +1,111 @@
+{
+  "version": "1.4.4",
+  "fixed_utc": "2026-06-12T06:20:00Z",
+  "active_kernel": {
+    "bois_boris_main": "2.17",
+    "sima": "0.4",
+    "boris_ego": "1.1"
+  },
+  "rules": [
+    "BR-080",
+    "BR-081",
+    "BR-082",
+    "BR-083",
+    "BR-084",
+    "BR-085",
+    "BR-086",
+    "BR-087",
+    "BR-088",
+    "BR-089",
+    "BR-090",
+    "BR-091",
+    "BR-092",
+    "BR-093",
+    "BR-094",
+    "BR-095",
+    "BR-096",
+    "BR-097",
+    "BR-098",
+    "BR-099",
+    "BR-100",
+    "BR-101",
+    {
+      "id": "BR-102",
+      "name": "Anti-Bureaucratic Viability Review Rule",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-103",
+      "name": "Maximum Operational Response Format Default Rule",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-104",
+      "name": "Cross-Chat Format Restoration Guard",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-105",
+      "name": "Latest Rule Conflict Resolution Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-106",
+      "name": "Physiology-as-Core-Transit Rule",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-107",
+      "name": "Context Preservation With Meaning-Preserving Compression Rule",
+      "version": "v0.1",
+      "active": true
+    }
+  ],
+  "un_languages": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "no_preferred_public_language": true,
+  "active_core_by_lang": {
+    "ar": "core/BORIS_EGO_LAYER_v1_1_AR.md",
+    "zh": "core/BORIS_EGO_LAYER_v1_1_ZH.md",
+    "en": "core/BORIS_EGO_LAYER_v1_1_EN.md",
+    "fr": "core/BORIS_EGO_LAYER_v1_1_FR.md",
+    "ru": "core/BORIS_EGO_LAYER_v1_1_RU.md",
+    "es": "core/BORIS_EGO_LAYER_v1_1_ES.md"
+  },
+  "public_release": "1.4.4",
+  "bois_boris_main": "2.17",
+  "boris_ego": "1.1",
+  "immune_ready": true,
+  "global_physiology_rewrite_required": false,
+  "ego_default_core_mode": true,
+  "special_ego_mode_limits_superseded": true,
+  "post_change_download_offer_required": true,
+  "default_response_format": "MAXIMUM_OPERATIONAL_RESPONSE",
+  "anti_bureaucratic_revision_active": true,
+  "context_preservation_required": true,
+  "meaning_preserving_compression_allowed": true,
+  "physiology_as_core_transit": true,
+  "ego_expansion": {
+    "EGO": "Ethical Goal Orchestrator",
+    "ru": "этический оркестратор производных целей",
+    "final_goals_source": "operator",
+    "ego_goal_scope": [
+      "G1",
+      "G2",
+      "G3",
+      "G4"
+    ],
+    "ego_final_goal_source": false
+  }
+}

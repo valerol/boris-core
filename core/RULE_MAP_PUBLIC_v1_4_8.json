@@ -1,0 +1,275 @@
+{
+  "version": "1.4.8",
+  "public_release": "1.4.8",
+  "bois_boris_main": "2.21",
+  "sima": "0.4",
+  "boris_ego": "1.5",
+  "active_core": "core/ACTIVE_CORE_REFERENCE_v1_4_8.md",
+  "active_core_by_lang": {
+    "ar": "core/BORIS_EGO_LAYER_v1_5_AR.md",
+    "zh": "core/BORIS_EGO_LAYER_v1_5_ZH.md",
+    "en": "core/BORIS_EGO_LAYER_v1_5_EN.md",
+    "fr": "core/BORIS_EGO_LAYER_v1_5_FR.md",
+    "ru": "core/BORIS_EGO_LAYER_v1_5_RU.md",
+    "es": "core/BORIS_EGO_LAYER_v1_5_ES.md"
+  },
+  "rules": [
+    {
+      "id": "BR-102",
+      "name": "Anti-Bureaucratic Viability Review Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-103",
+      "name": "Maximum Operational Response Format Default Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-104",
+      "name": "Cross-Chat Format Restoration Guard",
+      "status": "active"
+    },
+    {
+      "id": "BR-105",
+      "name": "Latest Rule Conflict Resolution Gate",
+      "status": "active"
+    },
+    {
+      "id": "BR-106",
+      "name": "Physiology-as-Core-Transit Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-107",
+      "name": "Context Preservation With Meaning-Preserving Compression Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-108",
+      "name": "Selected Non-English Language Translation Every Occurrence Rule",
+      "ru": "правило перевода на выбранный неанглийский язык при каждом появлении",
+      "status": "active"
+    },
+    {
+      "id": "BR-109",
+      "name": "Local Block Adjacent Translation Rule",
+      "ru": "правило соседнего перевода в локальном блоке",
+      "status": "active"
+    },
+    {
+      "id": "BR-110",
+      "name": "Release Evidence Source Priority and External Feedback Regression Rule",
+      "ru": "правило приоритета источников релизного доказательства и регрессии по внешним отзывам",
+      "status": "active"
+    },
+    {
+      "id": "BR-111",
+      "name": "Changelog Hygiene and Deduplication Rule",
+      "ru": "правило гигиены и дедупликации журнала изменений",
+      "status": "active"
+    },
+    {
+      "id": "BR-112",
+      "name": "Legal Code Registration Text Content Companion Rule",
+      "ru": "правило сопровождения текстовым содержанием для регистрации кода",
+      "status": "active"
+    },
+    {
+      "id": "BR-113",
+      "name": "Manifest-Only Historical Continuity Rule",
+      "ru": "правило исторической преемственности через манифест",
+      "status": "active"
+    },
+    {
+      "id": "BR-114",
+      "name": "Canonical Single-Copy Rule",
+      "ru": "правило единственной канонической копии",
+      "status": "active"
+    },
+    {
+      "id": "BR-115",
+      "name": "Archive Role Separation Rule",
+      "ru": "правило разделения ролей архивов",
+      "status": "active"
+    },
+    {
+      "id": "BR-116",
+      "name": "Compact Full Actual Size Gate Rule",
+      "ru": "правило ограничения размера полной актуальной компактной версии",
+      "status": "active"
+    }
+  ],
+  "active_rules": [
+    {
+      "id": "BR-102",
+      "name": "Anti-Bureaucratic Viability Review Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-103",
+      "name": "Maximum Operational Response Format Default Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-104",
+      "name": "Cross-Chat Format Restoration Guard",
+      "status": "active"
+    },
+    {
+      "id": "BR-105",
+      "name": "Latest Rule Conflict Resolution Gate",
+      "status": "active"
+    },
+    {
+      "id": "BR-106",
+      "name": "Physiology-as-Core-Transit Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-107",
+      "name": "Context Preservation With Meaning-Preserving Compression Rule",
+      "status": "active"
+    },
+    {
+      "id": "BR-108",
+      "name": "Selected Non-English Language Translation Every Occurrence Rule",
+      "ru": "правило перевода на выбранный неанглийский язык при каждом появлении",
+      "status": "active"
+    },
+    {
+      "id": "BR-109",
+      "name": "Local Block Adjacent Translation Rule",
+      "ru": "правило соседнего перевода в локальном блоке",
+      "status": "active"
+    },
+    {
+      "id": "BR-110",
+      "name": "Release Evidence Source Priority and External Feedback Regression Rule",
+      "ru": "правило приоритета источников релизного доказательства и регрессии по внешним отзывам",
+      "status": "active"
+    },
+    {
+      "id": "BR-111",
+      "name": "Changelog Hygiene and Deduplication Rule",
+      "ru": "правило гигиены и дедупликации журнала изменений",
+      "status": "active"
+    },
+    {
+      "id": "BR-112",
+      "name": "Legal Code Registration Text Content Companion Rule",
+      "ru": "правило сопровождения текстовым содержанием для регистрации кода",
+      "status": "active"
+    },
+    {
+      "id": "BR-113",
+      "name": "Manifest-Only Historical Continuity Rule",
+      "ru": "правило исторической преемственности через манифест",
+      "status": "active"
+    },
+    {
+      "id": "BR-114",
+      "name": "Canonical Single-Copy Rule",
+      "ru": "правило единственной канонической копии",
+      "status": "active"
+    },
+    {
+      "id": "BR-115",
+      "name": "Archive Role Separation Rule",
+      "ru": "правило разделения ролей архивов",
+      "status": "active"
+    },
+    {
+      "id": "BR-116",
+      "name": "Compact Full Actual Size Gate Rule",
+      "ru": "правило ограничения размера полной актуальной компактной версии",
+      "status": "active"
+    }
+  ],
+  "manifest_only_historical_continuity": true,
+  "canonical_copy_packaging": true,
+  "artifact_type_separation": true,
+  "compact_full_archive_rule": {
+    "method_3_manifest_only_history": true,
+    "method_6_canonical_copy": true,
+    "method_6_canonical_copy_rule": true,
+    "method_7_archive_role_separation": true,
+    "method_7_archive_type_separation": true,
+    "full_actual_compact_hard_limit_mb": 200,
+    "full_actual_compact_target_mb": 50,
+    "nested_full_archives_allowed_in_full_actual_compact": false,
+    "historical_versions_storage": "local_and_chat_histories",
+    "hard_cap_mb": 200,
+    "target_mb": 50,
+    "historical_binary_archives_embedded": false,
+    "historical_binary_archives_embedded_in_working_archive": false,
+    "historical_binary_archives_embedded_in_working_full_archive": false
+  },
+  "archive_packaging": {
+    "method_3_manifest_only_history": true,
+    "method_6_canonical_copy": true,
+    "method_6_canonical_copy_rule": true,
+    "method_7_archive_role_separation": true,
+    "method_7_archive_type_separation": true,
+    "full_actual_compact_hard_limit_mb": 200,
+    "full_actual_compact_target_mb": 50,
+    "nested_full_archives_allowed_in_full_actual_compact": false,
+    "historical_versions_storage": "local_and_chat_histories",
+    "hard_cap_mb": 200,
+    "target_mb": 50,
+    "historical_binary_archives_embedded": false,
+    "historical_binary_archives_embedded_in_working_archive": false,
+    "historical_binary_archives_embedded_in_working_full_archive": false
+  },
+  "artifact_policy": {
+    "hard_size_limit_mb": 200,
+    "target_size_mb": 50,
+    "historical_binary_archives_embedded": false
+  },
+  "compact_full_actual": {
+    "target_mb": 50,
+    "hard_cap_mb": 200,
+    "embed_historical_binary_archives": false
+  },
+  "public_release_pairing": {
+    "provide_public_release": true,
+    "provide_full_actual_compact": true
+  },
+  "default_response_format": "MAXIMUM_OPERATIONAL_RESPONSE",
+  "physiology_as_core_transit": true,
+  "anti_bureaucratic_revision_active": true,
+  "context_preservation_required": true,
+  "meaning_preserving_compression_allowed": true,
+  "compact_packaging": {
+    "method_3_manifest_only_history": true,
+    "method_6_canonical_copy": true,
+    "method_6_canonical_copy_rule": true,
+    "method_7_archive_role_separation": true,
+    "method_7_archive_type_separation": true,
+    "full_actual_compact_hard_limit_mb": 200,
+    "full_actual_compact_target_mb": 50,
+    "nested_full_archives_allowed_in_full_actual_compact": false,
+    "historical_versions_storage": "local_and_chat_histories",
+    "hard_cap_mb": 200,
+    "target_mb": 50,
+    "historical_binary_archives_embedded": false,
+    "historical_binary_archives_embedded_in_working_archive": false,
+    "historical_binary_archives_embedded_in_working_full_archive": false
+  },
+  "ego_default_core_mode": true,
+  "special_mode_limits_superseded": true,
+  "fixed_utc": "2026-06-12T18:10:00Z",
+  "active_kernel": {
+    "bois_boris_main": "2.21",
+    "sima": "0.4",
+    "boris_ego": "1.5"
+  },
+  "release_evidence_source_priority": [
+    "ACTIVE_CORE.md",
+    "core/ACTIVE_CORE_REFERENCE_v1_4_8.md",
+    "core/RULE_MAP_PUBLIC_v1_4_8.md",
+    "core/RULE_MAP_PUBLIC_v1_4_8.json",
+    "MEMORY_BORIS_EGO_v1_5.md",
+    "qa/*.md/json",
+    "CHANGELOG.md"
+  ]
+}

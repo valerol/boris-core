@@ -1,0 +1,36 @@
+{
+  "fixed_utc": "2026-06-12T04:35:00Z",
+  "public_release": "1.4.2",
+  "bois_boris_main": "2.15",
+  "sima": "0.4",
+  "boris_ego": "0.9",
+  "ego_expansion": "Ethical Goal Orchestrator",
+  "ego_expansion_ru": "этический оркестратор производных целей",
+  "tests": {
+    "pytest": "68 passed",
+    "self_check": "ok=true",
+    "source_tree_direct_run": "pass",
+    "offline_editable_install_no_index": "pass",
+    "cli_docs_un_languages": "pass"
+  },
+  "package_checks": {
+    "main_zip_integrity": "pass",
+    "transition_zip_integrity": "pass",
+    "unsafe_paths": 0,
+    "duplicate_entries": 0,
+    "cache_artifacts": 0,
+    "main_files": 384,
+    "transition_files": 21,
+    "main_internal_checksum_rows": 383,
+    "transition_internal_checksum_rows": 20,
+    "main_sha256": "d9e4e58602e010692fa9f210d56782c99436fd74e84937a9517f3a0fa8dd3102",
+    "transition_sha256": "29be8afdff138c958e555cc52646bdcdb31d3c4876f82d71d0de45a0f71fedda"
+  },
+  "architecture": {
+    "final_goals_source": "operator",
+    "boris_ego_can_set_derivative_goals_g1_to_g4": true,
+    "boris_ego_can_change_non_basic_physiology_within_boundaries": true,
+    "l0_editable_by_boris_ego": false,
+    "significant_calculation_routes_to_bois_core": true
+  }
+}

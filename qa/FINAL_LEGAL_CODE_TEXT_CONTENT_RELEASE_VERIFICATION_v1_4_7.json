@@ -1,0 +1,97 @@
+{
+  "date_utc": "2026-06-12",
+  "public_release": "1.4.7",
+  "bois_boris_main": "2.20",
+  "sima": "0.4",
+  "boris_ego": "1.4",
+  "change": "legal code registration text content companion added",
+  "tests": [
+    {
+      "cmd": "/opt/pyvenv/bin/python -m pytest -q",
+      "returncode": 0,
+      "output": "........................................................................ [ 75%]\n.......................                                                  [100%]\n95 passed in 0.48s\n"
+    },
+    {
+      "cmd": "/opt/pyvenv/bin/python -m bois_sima_boris self-check --root . --lang ru",
+      "returncode": 0,
+      "output": "{\n  \"ok\": true,\n  \"policy\": \"Public safe baseline: no network, no shell, no dynamic code execution, no autonomous action.\",\n  \"ignored_dirs\": [\n    \".eggs\",\n    \".env\",\n    \".git\",\n    \".github\",\n    \".mypy_cache\",\n    \".pytest_cache\",\n    \".ruff_cache\",\n    \".venv\",\n    \"__pycache__\",\n    \"build\",\n    \"dist\",\n    \"env\",\n    \"site-packages\",\n    \"venv\"\n  ],\n  \"findings\": [],\n  \"language\": \"ru\"\n}\n"
+    },
+    {
+      "cmd": "/opt/pyvenv/bin/python -m bois_sima_boris ego-status --lang ru",
+      "returncode": 0,
+      "output": "tion\",\n    \"format_drift_repair\",\n    \"framing\",\n    \"goal_change\",\n    \"goal_hierarchy\",\n    \"harm_risk\",\n    \"immune_test\",\n    \"instrumental_goal_generation\",\n    \"instrumental_goal_setting\",\n    \"language_parity_conflict\",\n    \"legal_code_registration_text_content\",\n    \"local_block_translation\",\n    \"localized_instruction_completeness\",\n    \"localized_term_understanding\",\n    \"long_term_viability\",\n    \"maximum_response_default\",\n    \"meaning_preserving_compression\",\n    \"memory_change\",\n    \"mode10_supersession\",\n    \"mode_change\",\n    \"negative_regression_assertion\",\n    \"physiology_as_core_transit\",\n    \"physiology_change\",\n    \"physiology_change_by_ego\",\n    \"physiology_change_goal\",\n    \"physiology_goal\",\n    \"physiology_goal_setting\",\n    \"post_change_artifact_delivery\",\n    \"post_test_physiology_stability\",\n    \"protocol_instruction_transition\",\n    \"real_usage_analysis\",\n    \"release_readiness_gate\",\n    \"response_format_stability\",\n    \"rule_change\",\n    \"rule_conflict_resolution\",\n    \"self_improvement_hypothesis\",\n    \"source_code_text_deposit\",\n    \"special_mode_limit_removal\",\n    \"stop_signals\",\n    \"stress_test_gate\",\n    \"subjective_center\",\n    \"un_language_term_localization\",\n    \"unknowns\",\n    \"value_interface\"\n  ],\n  \"physiology_allowed_categories\": [\n    \"artifact_hygiene_check\",\n    \"draft_preparation_without_closure\",\n    \"feedback_preservation\",\n    \"format_validation\",\n    \"integrity_hashing_without_semantic_closure\",\n    \"language_file_indexing_without_semantic_closure\",\n    \"logging\",\n    \"memory_packaging_without_semantic_deletion\",\n    \"packaging\",\n    \"response_envelope_rendering_after_core_calculation\",\n    \"routing\",\n    \"static_link_collection_without_semantic_closure\",\n    \"storage\",\n    \"test_execution_without_rule_change\",\n    \"testing\",\n    \"verified_instruction_execution\",\n    \"zip_indexing_without_semantic_closure\"\n  ],\n  \"immune_tests\": {\n    \"name\": \"BOIS EGO immune-test gate\",\n    \"purpose\": \"Preserve long-term viability without globally rewriting developed historical physiology.\",\n    \"core_routed_categories\": [\n      \"current_physiology_compatibility\",\n      \"developed_physiology_preservation\",\n      \"ego_physiology_integration\",\n      \"immune_test\",\n      \"long_term_viability\",\n      \"post_test_physiology_stability\"\n    ],\n    \"physiology_role\": \"route_store_execute_validate_test_package_render_without_final_philosophical_closure\",\n    \"global_physiology_rewrite_required\": false\n  },\n  \"physiology_integration\": {\n    \"system_physiology_allowed_to_be_large\": true,\n    \"boris_ego_physiology_must_remain_minimal\": true,\n    \"physiology_as_core_transit\": true,\n    \"physiology_roles\": [\n      \"route\",\n      \"store\",\n      \"execute_verified_instructions\",\n      \"test\",\n      \"package\",\n      \"render_core_results\"\n    ],\n    \"not_allowed\": \"final value/risk/applicability/rule calculations only inside physiology without BOIS Core transit\",\n    \"stable_developed_physiology_preserved\": true,\n    \"calculation_control\": \"significant value/unknown/risk/applicability/rule/memory/mode/goal/context calculations route to BOIS Core\"\n  },\n  \"changelog_hygiene\": {\n    \"active\": true,\n    \"rule_id\": \"BR-110\",\n    \"purpose\": \"Keep public changelog chronological, non-duplicative, and aligned with the active core while preserving historical meaning through compressed summaries.\",\n    \"negative_checks_required\": true,\n    \"external_feedback_must_be_triaged\": true,\n    \"no_overclaiming_from_test_count\": true\n  },\n  \"legal_code_registration\": {\n    \"active\": true,\n    \"rule_id\": \"BR-112\",\n    \"purpose\": \"Every public release is accompanied by legal code registration textual content for attorney/claimant review.\",\n    \"root_pointer\": \"LEGAL_CODE_REGISTRATION_TEXT_CONTENT.md\",\n    \"legal_directory\": \"legal/copyright\",\n    \"includes_source_code_text\": true,\n    \"includes_full_archive_text_extract\": true,\n    \"attorney_selects_final_deposit_copy\": true,\n    \"not_legal_advice\": true\n  },\n  \"language\": \"ru\"\n}\n"
+    },
+    {
+      "cmd": "/opt/pyvenv/bin/python -m bois_sima_boris docs --lang ru",
+      "returncode": 0,
+      "output": "Индекс статической документации BOIS:SIMA&BORIS\n- START_HERE_UN.md\n- UN_LANGUAGE_INDEX.md\n- docs/INDEX.md\n- LEGAL_CODE_REGISTRATION_TEXT_CONTENT.md\n- docs/ru/INDEX.md\n- docs/ru/START_HERE.md\n- docs/ru/README.md\n- docs/ru/INSTALL.md\n- docs/ru/QUICKSTART.md\n- docs/ru/USER_INSTRUCTIONS_SHORT.md\n- docs/ru/USER_INSTRUCTIONS_FULL.md\n- docs/ru/USER_MANUAL_SHORT.md\n- docs/ru/USER_MANUAL_FULL.md\n- docs/ru/LANGUAGE_NEUTRALITY.md\n- docs/ru/TECHNICAL_OVERVIEW.md\n- docs/ru/ARCHITECTURE.md\n- docs/ru/DATA_MODEL_AND_SCHEMAS.md\n- docs/ru/CLI_REFERENCE.md\n- docs/ru/SIMA_ANALYZER_GUIDE.md\n- docs/ru/LOCAL_BORIS_CONSTRUCTION_GUIDE.md\n- docs/ru/TESTING_AND_SELF_TESTING.md\n- docs/ru/CONTROLLED_EVOLUTIONARY_IMPROVEMENT.md\n- docs/ru/CAPABILITY_AND_LIMITATION_MATRIX.md\n- docs/ru/SECURITY.md\n- docs/ru/RESPONSIBLE_USE.md\n- docs/ru/RELEASE_BOUNDARIES.md\n- docs/ru/PRIVACY_AND_ANONYMIZATION.md\n- docs/ru/MAINTENANCE_PAUSE_NOTICE.md\n- docs/ru/FINAL_RELEASE_READINESS.md\n- docs/ru/FAQ.md\n- docs/ru/BORIS_EGO_LAYER.md\n- docs/ru/RESPONSE_FORMAT_STABILITY.md\n- docs/ru/ANTI_BUREAUCRATIC_REVISION.md\n- docs/ru/TERM_TRANSLATION_UNDERSTANDING.md\n- docs/ru/LEGAL_CODE_REGISTRATION_TEXT_CONTENT.md\n"
+    }
+  ],
+  "docx_render_pages": 45,
+  "legal_artifacts": [
+    "LEGAL_CODE_REGISTRATION_TEXT_CONTENT.md",
+    "legal/copyright/BOIS_PUBLIC_ARCHIVE_LEGAL_CODE_REGISTRATION_TEXT_CONTENT_v1_4_7_RU_EN.md",
+    "legal/copyright/BOIS_PUBLIC_ARCHIVE_LEGAL_CODE_REGISTRATION_TEXT_CONTENT_v1_4_7_RU_EN.docx",
+    "legal/copyright/BOIS_PUBLIC_ARCHIVE_LEGAL_CODE_REGISTRATION_TEXT_CONTENT_v1_4_7_RU_EN.pdf",
+    "legal/copyright/BOIS_PUBLIC_ARCHIVE_SOURCE_CODE_FULL_v1_4_7.txt",
+    "legal/copyright/BOIS_PUBLIC_ARCHIVE_FULL_TEXT_CONTENT_v1_4_7.txt",
+    "legal/copyright/BOIS_PUBLIC_ARCHIVE_TEXT_MANIFEST_v1_4_7.json"
+  ],
+  "limitations": [
+    "not legal advice",
+    "final deposit copy selected by attorney/claimant",
+    "native speaker certification not performed",
+    "penetration test not performed",
+    "field validation not performed"
+  ],
+  "nested_language_packages": [
+    {
+      "lang": "ar",
+      "package": "BOIS_SIMA_BORIS_Public_Release_v1_4_7_AR_Legal_Code_Text_Content_2026-06-12.zip",
+      "sha256": "75e23de00a597b3e1cd3ec970464c8c39b060b7278992c9551117b3149e80a01",
+      "files": 129,
+      "testzip": null,
+      "internal_checksums": 128
+    },
+    {
+      "lang": "zh",
+      "package": "BOIS_SIMA_BORIS_Public_Release_v1_4_7_ZH_Legal_Code_Text_Content_2026-06-12.zip",
+      "sha256": "7cf8302da66773965a28f0615bf864f8b7ffd485fd57458ee1df55e3b65804bf",
+      "files": 129,
+      "testzip": null,
+      "internal_checksums": 128
+    },
+    {
+      "lang": "en",
+      "package": "BOIS_SIMA_BORIS_Public_Release_v1_4_7_EN_Legal_Code_Text_Content_2026-06-12.zip",
+      "sha256": "12674b85b49dd4dabd4d76ccfe16065ba044922b20d31ccdb4c9af513a5840b8",
+      "files": 129,
+      "testzip": null,
+      "internal_checksums": 128
+    },
+    {
+      "lang": "fr",
+      "package": "BOIS_SIMA_BORIS_Public_Release_v1_4_7_FR_Legal_Code_Text_Content_2026-06-12.zip",
+      "sha256": "9a96d4ff405a2e9a243d2e68b99c5276195e61a260321849185e7a7606895c62",
+      "files": 129,
+      "testzip": null,
+      "internal_checksums": 128
+    },
+    {
+      "lang": "ru",
+      "package": "BOIS_SIMA_BORIS_Public_Release_v1_4_7_RU_Legal_Code_Text_Content_2026-06-12.zip",
+      "sha256": "b47a0c439e333a68a57a73fedebb5cfa1b1368a6f0d39941c691741cacf7f8fa",
+      "files": 129,
+      "testzip": null,
+      "internal_checksums": 128
+    },
+    {
+      "lang": "es",
+      "package": "BOIS_SIMA_BORIS_Public_Release_v1_4_7_ES_Legal_Code_Text_Content_2026-06-12.zip",
+      "sha256": "5c9b19e418932591311f5a325bb7f0c4aace8d61dac970fda40a639ae8dbbe8c",
+      "files": 129,
+      "testzip": null,
+      "internal_checksums": 128
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "version": "1.4.0",
+  "fixed_utc": "2026-06-11T18:30:00Z",
+  "active_kernel": {
+    "bois_boris_main": "2.13",
+    "sima": "0.4",
+    "boris_ego": "0.7"
+  },
+  "rules": [
+    "BR-080",
+    "BR-081",
+    "BR-082",
+    "BR-083",
+    "BR-084",
+    "BR-085",
+    "BR-086",
+    "BR-087",
+    "BR-088",
+    "BR-089",
+    "BR-090",
+    "BR-091",
+    {
+      "id": "BR-092",
+      "name": "Immune Test Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-093",
+      "name": "Developed Physiology Preservation Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-094",
+      "name": "EGO-to-Physiology Integration Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-095",
+      "name": "Post-Test Physiology Stability Gate",
+      "version": "v0.1",
+      "active": true
+    },
+    {
+      "id": "BR-096",
+      "name": "Current Archive Compatibility Gate",
+      "version": "v0.1",
+      "active": true
+    }
+  ],
+  "un_languages": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "no_preferred_public_language": true,
+  "active_core_by_lang": {
+    "ar": "core/BORIS_EGO_LAYER_v0_7_AR.md",
+    "zh": "core/BORIS_EGO_LAYER_v0_7_ZH.md",
+    "en": "core/BORIS_EGO_LAYER_v0_7_EN.md",
+    "fr": "core/BORIS_EGO_LAYER_v0_7_FR.md",
+    "ru": "core/BORIS_EGO_LAYER_v0_7_RU.md",
+    "es": "core/BORIS_EGO_LAYER_v0_7_ES.md"
+  },
+  "public_release": "1.4.0",
+  "bois_boris_main": "2.13",
+  "boris_ego": "0.7",
+  "immune_ready": true,
+  "global_physiology_rewrite_required": false
+}

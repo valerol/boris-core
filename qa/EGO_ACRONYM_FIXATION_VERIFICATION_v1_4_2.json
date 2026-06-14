@@ -1,0 +1,19 @@
+{
+  "fixed_utc": "2026-06-12T03:50:00Z",
+  "public_release": "1.4.2",
+  "bois_boris_main": "2.15",
+  "sima": "0.4",
+  "boris_ego": "0.9",
+  "ego_expansion": "Ethical Goal Orchestrator",
+  "ego_expansion_ru": "этический оркестратор производных целей",
+  "goal_scope": {
+    "G0": "operator final goals only",
+    "G1_G4": "BORIS EGO may orchestrate derivative/local/physiology/response goals when traceable to G0"
+  },
+  "tests": {
+    "pytest": "68 passed",
+    "self_check": "ok true",
+    "source_tree_ego_status": "ok"
+  },
+  "status": "RELEASE_CANDIDATE_READY"
+}

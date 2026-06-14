@@ -1,0 +1,36 @@
+{
+  "version": "1.3.9",
+  "fixed_utc": "2026-06-11T16:20:00Z",
+  "active_kernel": {
+    "bois_boris_main": "2.12",
+    "sima": "0.4",
+    "boris_ego": "0.6"
+  },
+  "rules": [
+    "BR-080",
+    "BR-081",
+    "BR-082",
+    "BR-083",
+    "BR-084",
+    "BR-085",
+    "BR-086",
+    "BR-087"
+  ],
+  "un_languages": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "no_preferred_public_language": true,
+  "active_core_by_lang": {
+    "ar": "core/BORIS_EGO_LAYER_v0_6_AR.md",
+    "zh": "core/BORIS_EGO_LAYER_v0_6_ZH.md",
+    "en": "core/BORIS_EGO_LAYER_v0_6_EN.md",
+    "fr": "core/BORIS_EGO_LAYER_v0_6_FR.md",
+    "ru": "core/BORIS_EGO_LAYER_v0_6_RU.md",
+    "es": "core/BORIS_EGO_LAYER_v0_6_ES.md"
+  }
+}

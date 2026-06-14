@@ -1,0 +1,30 @@
+{
+  "public_release": "1.4.5",
+  "bois_boris_main": "2.18",
+  "sima": "0.4",
+  "boris_ego": "1.2",
+  "status": "PASSED",
+  "new_rule": "BR-108 Localized Term Understanding Rule",
+  "pytest": "84 passed",
+  "self_check": "ok=true",
+  "docs_languages": [
+    "ar",
+    "zh",
+    "en",
+    "fr",
+    "ru",
+    "es"
+  ],
+  "nested_language_packages": 6,
+  "notes": [
+    "No native-speaker certification, legal review, penetration test, or field validation performed."
+  ],
+  "packaged_pytest": "84 passed",
+  "zip_integrity": "PASS",
+  "internal_checksums": "471 checked, 0 errors",
+  "offline_editable_install_no_index": "PASS",
+  "direct_ego_status": "PASS",
+  "cache_artifacts": "0",
+  "duplicate_zip_entries": "0",
+  "unsafe_zip_paths": "0"
+}

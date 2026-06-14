@@ -1,0 +1,119 @@
+{
+  "release": "1.4.1",
+  "boris_ego": "0.8",
+  "bois_boris_main": "2.14",
+  "sima": "0.4",
+  "pytest": {
+    "returncode": 0,
+    "stdout_tail": [
+      "...............................................                          [100%]",
+      "47 passed in 0.27s"
+    ],
+    "stderr_tail": []
+  },
+  "self_check": {
+    "ok": true,
+    "policy": "Public safe baseline: no network, no shell, no dynamic code execution, no autonomous action.",
+    "ignored_dirs": [
+      ".eggs",
+      ".env",
+      ".git",
+      ".github",
+      ".mypy_cache",
+      ".pytest_cache",
+      ".ruff_cache",
+      ".venv",
+      "__pycache__",
+      "build",
+      "dist",
+      "env",
+      "site-packages",
+      "venv"
+    ],
+    "findings": [],
+    "language": "en"
+  },
+  "source_tree_entry": {
+    "returncode": 0,
+    "head": [
+      "{",
+      "  \"public_release\": \"1.4.1\",",
+      "  \"bois_boris_main\": \"2.14\",",
+      "  \"sima\": \"0.4\",",
+      "  \"boris_ego\": \"0.8\",",
+      "  \"active_core_by_lang\": {",
+      "    \"ar\": \"core/BORIS_EGO_LAYER_v0_8_AR.md\",",
+      "    \"zh\": \"core/BORIS_EGO_LAYER_v0_8_ZH.md\","
+    ],
+    "stderr": ""
+  },
+  "offline_editable_install": {
+    "install_returncode": 0,
+    "install_tail": [
+      "  Getting requirements to build editable: finished with status 'done'",
+      "  Preparing editable metadata (pyproject.toml): started",
+      "  Preparing editable metadata (pyproject.toml): finished with status 'done'",
+      "Building wheels for collected packages: bois-sima-boris",
+      "  Building editable for bois-sima-boris (pyproject.toml): started",
+      "  Building editable for bois-sima-boris (pyproject.toml): finished with status 'done'",
+      "  Created wheel for bois-sima-boris: filename=bois_sima_boris-1.4.1-py3-none-any.whl size=1364 sha256=7b1698b28799437ca106f8ff407b859a961ac35fafea7e6ef07b0b7be0829357",
+      "  Stored in directory: /tmp/pip-ephem-wheel-cache-rki81sfi/wheels/e1/b4/61/8c6a4389d7d0a193d908f5a0675aa48935e36c0043c85c48d5",
+      "Successfully built bois-sima-boris",
+      "Installing collected packages: bois-sima-boris",
+      "Successfully installed bois-sima-boris-1.4.1",
+      "WARNING: The directory '/home/oai/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag."
+    ],
+    "ego_status_returncode": 0,
+    "ego_status_head": [
+      "{",
+      "  \"public_release\": \"1.4.1\",",
+      "  \"bois_boris_main\": \"2.14\",",
+      "  \"sima\": \"0.4\",",
+      "  \"boris_ego\": \"0.8\",",
+      "  \"active_core_by_lang\": {",
+      "    \"ar\": \"core/BORIS_EGO_LAYER_v0_8_AR.md\",",
+      "    \"zh\": \"core/BORIS_EGO_LAYER_v0_8_ZH.md\","
+    ]
+  },
+  "cli_docs": [
+    {
+      "lang": "ar",
+      "returncode": 0,
+      "paths": 30,
+      "missing": []
+    },
+    {
+      "lang": "zh",
+      "returncode": 0,
+      "paths": 30,
+      "missing": []
+    },
+    {
+      "lang": "en",
+      "returncode": 0,
+      "paths": 30,
+      "missing": []
+    },
+    {
+      "lang": "fr",
+      "returncode": 0,
+      "paths": 30,
+      "missing": []
+    },
+    {
+      "lang": "ru",
+      "returncode": 0,
+      "paths": 30,
+      "missing": []
+    },
+    {
+      "lang": "es",
+      "returncode": 0,
+      "paths": 30,
+      "missing": []
+    }
+  ],
+  "active_localization_leaks": [],
+  "markdown_link_missing": [],
+  "gate": "PASSED"
+}

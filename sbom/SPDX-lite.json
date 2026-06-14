@@ -1,0 +1,16 @@
+{
+  "spdxVersion": "SPDX-2.3-lite",
+  "name": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_EGO_Ethical_Goal_Orchestrator_2026-06-12",
+  "version": "v1.4.2",
+  "creators": [
+    "Organization: BOIS:SIMA&BORIS Project Contributors"
+  ],
+  "packages": [
+    {
+      "name": "bois-sima-boris",
+      "versionInfo": "v1.4.2",
+      "licenseConcluded": "MIT",
+      "externalRefs": []
+    }
+  ]
+}

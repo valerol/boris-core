@@ -1,0 +1,19 @@
+{
+  "release": "1.4.2",
+  "bois_boris_main": "2.15",
+  "sima": "0.4",
+  "boris_ego": "0.9",
+  "ego_expansion": "Ethical Goal Orchestrator",
+  "ego_expansion_ru": "этический оркестратор производных целей",
+  "g0_source": "operator",
+  "boris_ego_may_orchestrate": [
+    "G1",
+    "G2",
+    "G3",
+    "G4"
+  ],
+  "boris_ego_may_not_create_or_replace": [
+    "G0"
+  ],
+  "package_report_role": "in-package pre-final note; external report contains final archive hashes"
+}

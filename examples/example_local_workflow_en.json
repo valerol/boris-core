@@ -1,0 +1,102 @@
+{
+  "object_id": "demo-local-workflow",
+  "object_type": "local_workflow",
+  "domain": "generic local documentation workflow",
+  "value_interface": {
+    "goals": [
+      "reconstruct candidate philosophical machines",
+      "preserve uncertainty",
+      "support human review"
+    ],
+    "constraints": [
+      "local-only",
+      "no autonomous action",
+      "no high-stakes decisions"
+    ],
+    "forbidden_losses": [
+      "loss of human agency",
+      "false validation",
+      "hidden value authority"
+    ]
+  },
+  "substrate": {
+    "units": [
+      "human operator",
+      "local Python CLI",
+      "JSON files",
+      "Markdown reports"
+    ],
+    "channels": [
+      "command line",
+      "local file system",
+      "static documentation"
+    ],
+    "memory": [
+      "input JSON",
+      "generated Markdown",
+      "checksums"
+    ],
+    "costs": [
+      "attention",
+      "time",
+      "review effort"
+    ],
+    "failure_modes": [
+      "missing evidence",
+      "false certainty",
+      "misuse of report as authority"
+    ],
+    "stop_authority": [
+      "human operator",
+      "repository maintainer"
+    ]
+  },
+  "observations": [
+    {
+      "id": "oper-001",
+      "trigger": "user supplies local object description",
+      "distinction": "declaration versus observation",
+      "evidence": "JSON fields and observed episodes",
+      "carrier": "local CLI and human reviewer",
+      "authority": "human operator",
+      "value_risk_gate": "no autonomous coercive governance",
+      "transformation": "candidate opers are extracted",
+      "memory_write": "analysis JSON and Markdown report",
+      "closure_signal": "report generated with limits",
+      "transition_residue": "next test recommendation",
+      "cost": "attention and review time",
+      "confidence": "medium"
+    },
+    {
+      "id": "oper-002",
+      "trigger": "missing or weak evidence is detected",
+      "distinction": "verified result versus hypothesis",
+      "evidence": "validation findings",
+      "carrier": "SIMA validator",
+      "authority": "human reviewer",
+      "value_risk_gate": "avoid false certainty",
+      "transformation": "risk flag is produced",
+      "memory_write": "risk flag in output",
+      "closure_signal": "analysis remains candidate",
+      "transition_residue": "collect more observations",
+      "cost": "slower but safer analysis",
+      "confidence": "high"
+    },
+    {
+      "id": "oper-003",
+      "trigger": "candidate machine is reconstructed",
+      "distinction": "machine map versus real object",
+      "evidence": "opers and substrate declaration",
+      "carrier": "human reviewer and local report",
+      "authority": "human operator",
+      "value_risk_gate": "no high-stakes use without independent process",
+      "transformation": "M=<O,E,A,V,R,C,T> is mapped",
+      "memory_write": "candidate machine section",
+      "closure_signal": "limits and next step are explicit",
+      "transition_residue": "experience test before instruction",
+      "cost": "review attention",
+      "confidence": "medium"
+    }
+  ],
+  "language": "en"
+}

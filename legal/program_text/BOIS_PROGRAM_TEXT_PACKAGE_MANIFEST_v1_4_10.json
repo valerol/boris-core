@@ -1,0 +1,73 @@
+{
+  "public_release": "1.4.10",
+  "bois_boris_main": "2.23",
+  "boris_ego": "1.7",
+  "package_type": "PROGRAM_TEXT_PACKAGE",
+  "rule": "BR-117",
+  "integrity_rule": "BR-118",
+  "source_listing_lines": 2796,
+  "source_listing_page_model": {
+    "lines_per_page": 54,
+    "pages": 52
+  },
+  "deposit_selection": {
+    "first_pages": 10,
+    "last_pages": 10,
+    "selected_source_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52
+    ]
+  },
+  "files": [
+    {
+      "path": "legal/program_text/BOIS_PROGRAM_TEXT_PACKAGE_README_v1_4_10_RU_EN.md",
+      "bytes": 1277,
+      "sha256": "c924df22daec7346c9d69b140c59d6362b0da2506a9155c8df656003ece40f21"
+    },
+    {
+      "path": "legal/program_text/BOIS_PUBLIC_RELEASE_SOURCE_CODE_DEPOSIT_FIRST10_LAST10_v1_4_10.docx",
+      "bytes": 59360,
+      "sha256": "5b865bffd8a1a18bb62847412decf3a49c2603c50ffd3e38467e2fb43581ac99"
+    },
+    {
+      "path": "legal/program_text/BOIS_PUBLIC_RELEASE_SOURCE_CODE_DEPOSIT_FIRST10_LAST10_v1_4_10.md",
+      "bytes": 61606,
+      "sha256": "f4ca104bc86d6878f46b32c2365c0bdc7840df19322fb36dbd6cadc69a05a98a"
+    },
+    {
+      "path": "legal/program_text/BOIS_PUBLIC_RELEASE_SOURCE_CODE_DEPOSIT_FIRST10_LAST10_v1_4_10.pdf",
+      "bytes": 268958,
+      "sha256": "971d673f1037f39ac549f59933ae30a997709a13f16f8a31a93b81a46818e888"
+    },
+    {
+      "path": "legal/program_text/BOIS_PUBLIC_RELEASE_SOURCE_CODE_DEPOSIT_FIRST10_LAST10_v1_4_10.txt",
+      "bytes": 61482,
+      "sha256": "6df56f7647b2a77441837f3a756beef4ae7d697f8f7845ba4f27a78c67a773d4"
+    },
+    {
+      "path": "legal/program_text/BOIS_PUBLIC_RELEASE_SOURCE_CODE_FULL_v1_4_10.txt",
+      "bytes": 148205,
+      "sha256": "6684f64a3d22f512d91efef30a9bb61f5d75d25d71b6fee875b8d69f475af461"
+    }
+  ],
+  "not_legal_advice": true,
+  "attorney_selects_final_deposit_copy": true
+}

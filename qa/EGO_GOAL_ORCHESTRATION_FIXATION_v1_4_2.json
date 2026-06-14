@@ -1,0 +1,17 @@
+{
+  "version": "1.4.2",
+  "fixed_utc": "2026-06-12T04:20:00Z",
+  "active_kernel": {
+    "bois_boris_main": "2.15",
+    "sima": "0.4",
+    "boris_ego": "0.9"
+  },
+  "change_type": "semantic_core_fixation",
+  "ego_expansion": "Ethical Goal Orchestrator",
+  "ego_expansion_ru": "этический оркестратор производных целей",
+  "g0_final_goals_operator_only": true,
+  "g1_to_g4_derivative_goal_orchestration_allowed": true,
+  "architecture_changed": true,
+  "operator_approved": true,
+  "tests": "to be filled after run"
+}

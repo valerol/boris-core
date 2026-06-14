@@ -1,0 +1,31 @@
+{
+  "package": "BOIS:SIMA&BORIS anonymized public release",
+  "version": "v1.3.0",
+  "base_layers": [
+    "BOIS core grammar",
+    "SIMA analytic layer",
+    "BORIS human-led implementation layer"
+  ],
+  "rules": [
+    {
+      "id": "BR-078",
+      "name": "Business-as-Activity Domain Rule",
+      "summary": "Business means organized consequential activity within D, V, S and experience tests."
+    },
+    {
+      "id": "BR-079",
+      "name": "Summary-First Operational Response Format Rule",
+      "summary": "Operational reports begin with status, UTC time, verdict, changes, tests, artifacts, rollback, and open questions."
+    },
+    {
+      "id": "PR-001",
+      "name": "Anonymized Public Release Rule",
+      "summary": "Public packages must exclude personal data, private projects, and nonessential historical context."
+    }
+  ],
+  "limits": [
+    "not field validation",
+    "not autonomous governance",
+    "not high-stakes decision system"
+  ]
+}

@@ -1,0 +1,6 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Documentation in this package is intended to be licensed under CC BY 4.0.
+Attribution should be given to: BOIS:SIMA&BORIS Project Contributors.
+This short notice does not replace the official license text.
+Official license: https://creativecommons.org/licenses/by/4.0/legalcode

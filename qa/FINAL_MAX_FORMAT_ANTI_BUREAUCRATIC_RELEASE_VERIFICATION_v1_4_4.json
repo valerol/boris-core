@@ -1,0 +1,39 @@
+{
+  "version": "1.4.4",
+  "fixed_utc": "2026-06-12T06:10:30Z",
+  "active_kernel": {
+    "bois_boris_main": "2.17",
+    "sima": "0.4",
+    "boris_ego": "1.1"
+  },
+  "status": "PASSED_WITH_ENVIRONMENT_CAVEAT",
+  "package_sha256_note": "Use external .sha256 files as source of truth; package hashes are intentionally not embedded here to avoid recursive self-reference.",
+  "tests": {
+    "worktree_pytest": "82 passed",
+    "packaged_pytest": "82 passed",
+    "self_check": "ok=true findings=0",
+    "cli_ego_status": "pass",
+    "cli_docs_all_un_languages": "pass",
+    "cli_validate": "ok=true",
+    "cli_analyze": "pass",
+    "direct_build_backend": "pass v1.4.4",
+    "zip_integrity": "pass",
+    "internal_checksums": "pass for main package",
+    "unsafe_paths": "pass",
+    "cache_artifacts": "pass"
+  },
+  "environment_caveat": "pip editable offline install subprocess was interrupted by this environment; direct dependency-free build backend test passed.",
+  "anti_bureaucratic_revision": {
+    "semantic_loss_detected": false,
+    "global_physiology_rewrite": false,
+    "preserve_all_contexts": true,
+    "compression_allowed": "meaning-preserving with manifest"
+  },
+  "limitations": [
+    "native speaker certification not performed",
+    "legal review not performed",
+    "penetration test not performed",
+    "field validation not performed",
+    "proof of AI consciousness not claimed"
+  ]
+}

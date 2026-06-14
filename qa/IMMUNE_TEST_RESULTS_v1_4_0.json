@@ -1,0 +1,43 @@
+{
+  "package": "BOIS:SIMA&BORIS Public Release v1.4.0 EGO Immune Ready",
+  "fixed_utc": "2026-06-11T18:30:00Z",
+  "tree_checks": {
+    "pytest_all_tests": {
+      "ok": true,
+      "detail": "...........................................                              [100%]\n43 passed in 1.08s"
+    },
+    "cli_self_check": {
+      "ok": true,
+      "detail": "{\n  \"ok\": true,\n  \"policy\": \"Public safe baseline: no network, no shell, no dynamic code execution, no autonomous action.\",\n  \"ignored_dirs\": [\n    \".eggs\",\n    \".env\",\n    \".git\",\n    \".github\",\n    \".mypy_cache\",\n    \".pytest_cache\",\n    \".ruff_cache\",\n    \".venv\",\n    \"__pycache__\",\n    \"build\",\n    \"dist\",\n    \"env\",\n    \"site-packages\",\n    \"venv\"\n  ],\n  \"findings\": [],\n  \"language\": \"en\"\n}\n"
+    },
+    "cli_ego_status": {
+      "ok": true,
+      "detail": "    \"core_routed_categories\": [\n      \"current_physiology_compatibility\",\n      \"developed_physiology_preservation\",\n      \"ego_physiology_integration\",\n      \"immune_test\",\n      \"long_term_viability\",\n      \"post_test_physiology_stability\"\n    ],\n    \"physiology_role\": \"route_store_execute_validate_test_package_without_final_philosophical_closure\",\n    \"global_physiology_rewrite_required\": false\n  },\n  \"physiology_integration\": {\n    \"system_physiology_allowed_to_be_large\": true,\n    \"boris_ego_physiology_must_remain_minimal\": true,\n    \"calculation_control\": \"significant value/unknown/risk/applicability/rule/memory/mode/cycle calculations route to BOIS Core\",\n    \"knowledge_to_physiology_allowed_when_verified_with_scope_stop_signals_version_and_rollback\": true\n  },\n  \"language\": \"en\"\n}\n"
+    },
+    "no_cache_artifacts_tree_after_tests": {
+      "ok": true,
+      "detail": []
+    },
+    "un_language_docs": {
+      "ok": true,
+      "detail": []
+    },
+    "un_language_core_mirrors": {
+      "ok": true,
+      "detail": []
+    },
+    "active_metadata_consistency": {
+      "ok": true,
+      "detail": []
+    },
+    "active_core_sima_version_typo_absent": {
+      "ok": true,
+      "detail": []
+    },
+    "markdown_internal_links": {
+      "ok": true,
+      "detail": []
+    }
+  },
+  "ok": true
+}

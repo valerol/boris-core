@@ -1,0 +1,38 @@
+{
+  "version": "1.4.4",
+  "fixed_utc": "2026-06-12T08:10:00Z",
+  "active_kernel": {
+    "bois_boris_main": "2.17",
+    "sima": "0.4",
+    "boris_ego": "1.1"
+  },
+  "changes": [
+    "default maximum response format fixed as active rule",
+    "anti-bureaucracy without semantic loss fixed as active rule",
+    "latest active rule precedence fixed for conflicts",
+    "physiology transit to BOIS Core fixed as active rule",
+    "full current core with all memory archive and development log archive prepared"
+  ],
+  "pytest": {
+    "status": "pending"
+  },
+  "self_check": {
+    "status": "pending"
+  },
+  "cli": {
+    "status": "pending"
+  },
+  "offline_install": {
+    "status": "pending"
+  },
+  "archive_tests": {
+    "status": "pending"
+  },
+  "limitations": [
+    "native-speaker certification not performed",
+    "legal review not performed",
+    "penetration test not performed",
+    "field validation not performed",
+    "no factual claim of AI consciousness"
+  ]
+}

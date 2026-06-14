@@ -1,0 +1,11 @@
+{
+  "public_release": "1.4.10",
+  "bois_boris_main": "2.23",
+  "boris_ego": "1.7",
+  "work_tree_pytest": "102 passed",
+  "self_check": "ok=true",
+  "program_text_package_embedded": true,
+  "program_text_sidecar_required": true,
+  "docx_render_pages": 21,
+  "legal_review_performed": false
+}

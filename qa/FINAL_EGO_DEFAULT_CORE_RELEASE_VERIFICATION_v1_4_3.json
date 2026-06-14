@@ -1,0 +1,17 @@
+{
+  "fixed_utc": "2026-06-12T04:30:00Z",
+  "public_release": "1.4.3",
+  "bois_boris_main": "2.16",
+  "sima": "0.4",
+  "boris_ego": "1.0",
+  "result": "PASSED_LOCAL_AFTER_TESTS_PENDING_PACKAGING",
+  "ego_default_core_mode": true,
+  "mode10_special_limits_superseded": true,
+  "post_change_download_offer_required": true,
+  "limitations": [
+    "no native-speaker certification",
+    "no legal review",
+    "no penetration test",
+    "no field validation"
+  ]
+}

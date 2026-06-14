@@ -1,0 +1,68 @@
+{
+  "main_zip": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_EGO_Acronym_Fixation_BORIS_EGO_v0_9_2026-06-12.zip",
+  "main_sha256": "f2ff8365b1f24b5ad98efe7b094323e3b6de9d503494db55866a7ce39e53b4cf",
+  "main_files": 382,
+  "main_checksum_rows": 381,
+  "transition_zip": "BOIS_SIMA_BORIS_EGO_v0_9_Acronym_Fixation_Transition_Package_v1_4_2_2026-06-12.zip",
+  "transition_sha256": "14d4b22e9436a11232eea54705065bcfaa431c7ea8cf4db1ca53874bebb9c5bc",
+  "transition_files": 31,
+  "transition_checksum_rows": 30,
+  "language_packages": [
+    {
+      "lang": "ar",
+      "zip": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_AR_EGO_Acronym_Fixation_2026-06-12.zip",
+      "sha256": "af5cf25813acf4ec10c1ca05320bd07eccf79ce632574195aa82fec773244630",
+      "files": 235,
+      "internal_checksum_rows": 234,
+      "zip_test": "PASS"
+    },
+    {
+      "lang": "zh",
+      "zip": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_ZH_EGO_Acronym_Fixation_2026-06-12.zip",
+      "sha256": "1e2123c7066742172b8aa94d3742ddd18766c2092f13f5e9de7d9d8ce32efb54",
+      "files": 235,
+      "internal_checksum_rows": 234,
+      "zip_test": "PASS"
+    },
+    {
+      "lang": "en",
+      "zip": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_EN_EGO_Acronym_Fixation_2026-06-12.zip",
+      "sha256": "90d54445c59672f5f3a1e91ca336e8979f3cdd34409d4702197084ee04525867",
+      "files": 235,
+      "internal_checksum_rows": 234,
+      "zip_test": "PASS"
+    },
+    {
+      "lang": "fr",
+      "zip": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_FR_EGO_Acronym_Fixation_2026-06-12.zip",
+      "sha256": "2bf08d609e4218944849af91c2307bd22706b897cd3c755a151734382b172bef",
+      "files": 235,
+      "internal_checksum_rows": 234,
+      "zip_test": "PASS"
+    },
+    {
+      "lang": "ru",
+      "zip": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_RU_EGO_Acronym_Fixation_2026-06-12.zip",
+      "sha256": "798861b310a52c899975c45cbbbe57e9d42000eb65510d00238c8689eb4b2818",
+      "files": 235,
+      "internal_checksum_rows": 234,
+      "zip_test": "PASS"
+    },
+    {
+      "lang": "es",
+      "zip": "BOIS_SIMA_BORIS_Public_Release_v1_4_2_ES_EGO_Acronym_Fixation_2026-06-12.zip",
+      "sha256": "925690da2813cac59cdceaf318df942a913b6e091b84e772e479111e7b45b5fe",
+      "files": 235,
+      "internal_checksum_rows": 234,
+      "zip_test": "PASS"
+    }
+  ],
+  "main_zip_test": "PASS",
+  "main_duplicates": 0,
+  "main_unsafe_paths": 0,
+  "main_cache_artifacts": 0,
+  "transition_zip_test": "PASS",
+  "transition_duplicates": 0,
+  "transition_unsafe_paths": 0,
+  "transition_cache_artifacts": 0
+}
