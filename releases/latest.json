@@ -1,0 +1,16 @@
+{
+  "system": "BOIS/BORIS",
+  "version": "0.0.1-mvp",
+  "type": "core_latest",
+  "status": "draft",
+  "kernel": {
+    "bois": "mvp",
+    "sima": "mvp",
+    "boris": "mvp"
+  },
+  "rules": [
+    "Do not store user archives on the server.",
+    "User local package is provided per request.",
+    "Output must be exportable by the user."
+  ]
+}
