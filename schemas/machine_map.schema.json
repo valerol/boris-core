@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bois-machine-map.schema.json",
+  "title": "BOIS machine map schema v3.2.4",
+  "type": "object",
+  "required": [
+    "package",
+    "version",
+    "language",
+    "canon",
+    "theory_control_source",
+    "active_rules_count",
+    "active_rules_sha256",
+    "priorities",
+    "organs",
+    "terms",
+    "active_rules",
+    "stops",
+    "procedures",
+    "tests",
+    "criteria",
+    "qa_levels",
+    "cycles",
+    "state_schema",
+    "conflict_policy",
+    "load_order"
+  ],
+  "properties": {
+    "package": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "active_rules_count": {
+      "type": "integer"
+    },
+    "active_rules_sha256": {
+      "type": "string"
+    },
+    "active_rules": {
+      "type": "array"
+    },
+    "stops": {
+      "type": "array"
+    },
+    "tests": {
+      "type": "array"
+    },
+    "criteria": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

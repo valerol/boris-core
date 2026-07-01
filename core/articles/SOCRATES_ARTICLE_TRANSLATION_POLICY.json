@@ -1,0 +1,24 @@
+{
+  "id": "BOIS-SOCRATES-ARTICLE-READABLE-LAYOUT-R2",
+  "build_utc": "2026-06-23T06:52:47Z",
+  "source_language": "ru",
+  "base_distribution_language": "en",
+  "canonical_development_language": "ru",
+  "ru_canonical_article": {
+    "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v2_CORE.pdf",
+    "sha256": "2095ac4c613822cfe930ebc1b6dba130f7354686e173634f8ff1e6db0be125f2",
+    "pages": 24,
+    "source": "readable-layout rebuild from operator-uploaded Russian canonical source",
+    "source_sha256": "cb5775d8dda3c48cd75b1d24aab98be6f363937bd4b0845b48c28e0554ef5819",
+    "layout": "landscape readable-layout r2; high-contrast diagrams; no text-overlap design"
+  },
+  "en_translation_article": {
+    "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v2_CORE.pdf",
+    "sha256": "1082c0009bb8fea5443d60e0030434a80eb8bef4c561c1702041b85e86ab072b",
+    "pages": 24,
+    "layout": "same 24-page readable-layout r2 structure, diagrams, tables, and callout hierarchy as the Russian version",
+    "source_language": "ru"
+  },
+  "quality_boundary": "Readable layout and translation were statically reviewed by rendering; human third-party linguistic certification is not claimed.",
+  "qa_e_field_effectiveness_claimed": false
+}

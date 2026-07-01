@@ -1,0 +1,30 @@
+{
+  "status": "PASS-static",
+  "scenarios": [
+    {
+      "id": "SCN-LOAD-EN",
+      "status": "PASS",
+      "description": "Load starts from English canonical boot PDF."
+    },
+    {
+      "id": "SCN-LANGUAGE-FOLDERS",
+      "status": "PASS",
+      "description": "English and Russian language folders contain physiology surfaces, article surfaces, tables, templates, and support messages."
+    },
+    {
+      "id": "SCN-AUTHOR-SUPPORT",
+      "status": "PASS",
+      "description": "Support message includes Patreon, Ko-fi, Buy Me a Coffee, and About me."
+    },
+    {
+      "id": "SCN-QA-E",
+      "status": "PASS",
+      "description": "QA-E field effectiveness is not claimed."
+    },
+    {
+      "id": "SCN-ISOLATION",
+      "status": "PASS",
+      "description": "No chat history, previous window memory, or private user rules are included."
+    }
+  ]
+}

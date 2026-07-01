@@ -1,0 +1,16 @@
+1. BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN.pdf
+2. language_policy.json
+3. core/BOIS_Core_v3_2_4_Sokrat.machine.json
+4. tables/*.csv
+5. languages/en/tables/*.csv
+6. languages/ru/tables/*.csv
+7. runtime/author_support_message.json
+8. core/conflict_policy.json
+9. core/state.schema.json
+10. languages/en/core/articles/*.pdf
+11. languages/ru/core/articles/*.pdf
+12. languages/en/templates/*.md
+13. languages/ru/templates/*.md
+14. integrity/manifest.json
+15. integrity/hashes.sha256
+16. qa/visual_qa_report.json

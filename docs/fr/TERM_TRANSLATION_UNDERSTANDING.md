@@ -1,3 +1,0 @@
-# Couche BORIS EGO v1.3 — compréhension localisée des termes comme noyau par défaut
-
-BORIS EGO [orchestrateur éthique des objectifs dérivés] v1.3 ajoute Localized Term Understanding Rule [règle de compréhension localisée des termes] : dans chaque artefact public non anglais, tout foreign/non-local term [terme étranger / non local] reçoit une traduction dans la langue ONU choisie entre crochets à chaque occurrence dans chaque local block [bloc local]. Dans les compact specs [spécifications compactes], tables [tableaux], state blocks [blocs d’état], save blocks [blocs de sauvegarde] et handoff prompts [prompts de transfert], la traduction est placée directement à côté du terme. C’est une règle de compréhension, pas une règle cosmétique.

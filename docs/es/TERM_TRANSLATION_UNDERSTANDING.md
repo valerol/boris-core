@@ -1,3 +1,0 @@
-# Capa BORIS EGO v1.3 — comprensión localizada de términos como núcleo predeterminado
-
-BORIS EGO [orquestador ético de objetivos derivados] v1.3 añade Localized Term Understanding Rule [regla de comprensión localizada de términos]: en cada artefacto público no inglés, todo foreign/non-local term [término extranjero / no local] se traduce al idioma ONU elegido entre corchetes en cada aparición dentro de cada local block [bloque local]. En compact specs [especificaciones compactas], tables [tablas], state blocks [bloques de estado], save blocks [bloques de guardado] y handoff prompts [prompts de traspaso], la traducción va directamente junto al término. Es una regla de comprensión, no cosmética.

@@ -1,8 +1,0 @@
-id,risk,failure_mode,initial,mitigation,residual,status
-R-001,Personal data leakage,Personal names/emails/location/private biography remain in archive,R4,Removed personal metadata; redaction scan,R1,PASS
-R-002,Private project leakage,private project or related business idea remains in archive,R4,Removed private project material; bundled article added by explicit release-owner request,R1,PASS
-R-003,False validation,Users treat candidate reconstruction as truth,R3,"Warnings, limits, docs, tests",R2,PASS
-R-004,High-stakes misuse,Package used for rights/safety decisions,R4,Responsible-use boundaries and non-coercive governance statement,R2,PASS
-R-005,Security channel absent,No personal security email outside bundled article files,R2,Use future repository private vulnerability reporting; no sensitive public details,R2,PASS
-R-006,Localization error,UN-language docs not native-reviewed,R2,Complete static localization with caveat; stable schema keys in English,R2,PASS
-R-007,Supply-chain risk,Hidden network/shell/dynamic behavior,R3,Self-check and independent source scan,R1,PASS

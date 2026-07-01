@@ -1,0 +1,10 @@
+{
+  "status": "PASS-static",
+  "scenarios": [
+    "load from English boot PDF",
+    "load language policy",
+    "verify support message update",
+    "verify non-excludable articles",
+    "verify QA-E not claimed"
+  ]
+}

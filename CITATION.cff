@@ -1,8 +1,0 @@
-cff-version: 1.2.0
-message: "If you use this package, cite the public release."
-title: "BOIS:SIMA&BORIS Public Release v1.4.3: EGO Ethical Goal Orchestrator"
-version: "v1.4.3"
-date-released: "2026-06-12"
-authors:
-  - name: "BOIS:SIMA&BORIS Project Contributors"
-license: "MIT AND CC-BY-4.0"
