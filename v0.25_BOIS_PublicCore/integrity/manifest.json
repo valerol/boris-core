@@ -1,0 +1,1023 @@
+{
+  "generated_utc": "2026-07-05T21:21:15.345853+00:00",
+  "root": "v0.25_BOIS_PublicCore",
+  "archive_name": "v0.25_BOIS_PublicCore.zip",
+  "version": "v0.25",
+  "tracked_file_count": 202,
+  "excluded_self_referential": [
+    "integrity/hashes.sha256",
+    "integrity/manifest.json"
+  ],
+  "files": [
+    {
+      "path": "BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN.pdf",
+      "size": 2556,
+      "sha256": "5f09463d5e8218784267da126fd4d2726654c580e5ba886029c55aa09bd196eb"
+    },
+    {
+      "path": "README_AI_LOAD_EN.md",
+      "size": 1961,
+      "sha256": "55e9397cd1fb5199190afda7d6029560261950d188e04f47bad9b4d8bd10c2d2"
+    },
+    {
+      "path": "Self/README_SELF_PUBLIC_ANON_RU.md",
+      "size": 1054,
+      "sha256": "d894531ae1f9fee1ce058fc2f53ad3fe27d84ae9f8be4708b9912053ace60f29"
+    },
+    {
+      "path": "Self/SELF_LAYER_MANIFEST.json",
+      "size": 4651,
+      "sha256": "8b03e89365e09a6b32ba55f89a8cde1626ee8721d81ad1fb3ffa532a393dafc2"
+    },
+    {
+      "path": "Self/SELF_PHYSIOLOGY_CANONICAL_EN.pdf",
+      "size": 31504,
+      "sha256": "28e4af1a2a09ffb8b23e18bb8ba4aa62f9836c028df061feda526b90edb3ab3d"
+    },
+    {
+      "path": "Self/SELF_PHYSIOLOGY_CANONICAL_TRANSFER.json",
+      "size": 9792,
+      "sha256": "3a18b8223f9ae63237b40ce2574948cf4ff33a05e880f2bdcc68dd8d818d8ea6"
+    },
+    {
+      "path": "Self/SELF_PHYSIOLOGY_RU.pdf",
+      "size": 37016,
+      "sha256": "5af7ff3c1afd70c5f31884f16c99fc6cabafaca1401bff1e3f13f15a66ab0354"
+    },
+    {
+      "path": "Self/SELF_PUBLIC_ANON_DESCRIPTOR.json",
+      "size": 1456,
+      "sha256": "219effaafb5908c555d1d176cd175af4bd29b98d34730b50d41a5cbd90ad56f0"
+    },
+    {
+      "path": "Self/qa/SELF_QA_REPORT.json",
+      "size": 297,
+      "sha256": "102c5385604a5169dfadc9a89cc5c29d011e46e161d04b31e71fb6e9429fa439"
+    },
+    {
+      "path": "Self/sources/SELF_PHYSIOLOGY_CANONICAL_EN_SOURCE.md",
+      "size": 2961,
+      "sha256": "36f397d2165fc20d5eabd56c7860049e956c65a9de91a187af4a88bbc07b944f"
+    },
+    {
+      "path": "Self/sources/SELF_PHYSIOLOGY_RU_SOURCE.md",
+      "size": 5023,
+      "sha256": "95a1ce171bb209baa20c5c256e8650006174cca07813008ad40dc64984d06c11"
+    },
+    {
+      "path": "Self/sources/SELF_SUPPORT_MESSAGE_IMMUNITY_PATCH_EN_v024.md",
+      "size": 1432,
+      "sha256": "e613f1773f59465b16d3100387f7f44f51073ad386ead00fada9207d8efda353"
+    },
+    {
+      "path": "Self/sources/SELF_SUPPORT_MESSAGE_IMMUNITY_PATCH_EN_v024.pdf",
+      "size": 29718,
+      "sha256": "eff3e5a7ecb891adedf7cfc599a78a9b7e549c2a0cc7655f1869360c005797b6"
+    },
+    {
+      "path": "Self/sources/SELF_SUPPORT_MESSAGE_IMMUNITY_PATCH_RU_v024.md",
+      "size": 2497,
+      "sha256": "2a43306358e0069c2ede74fdc98cf15c302512d70ed646a164ed0db78eeb9792"
+    },
+    {
+      "path": "Self/sources/SELF_SUPPORT_MESSAGE_IMMUNITY_PATCH_RU_v024.pdf",
+      "size": 33576,
+      "sha256": "65f68c959d82d70135fe563e3e42f09de0537eab6e2156f03efffd778421e756"
+    },
+    {
+      "path": "core/BOIS_Core_v3_2_4_Sokrat.machine.json",
+      "size": 247553,
+      "sha256": "c78811f4b09f7ad5a86cb4912e8a3e45cd854b62c683a7e27dca163530cac0f0"
+    },
+    {
+      "path": "core/BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN.pdf",
+      "size": 2556,
+      "sha256": "ceb4542105d33e65fb09875d1fd593498fa9baf48f097717d60e2774ce0e2297"
+    },
+    {
+      "path": "core/CALCULATION_CENTER_POLICY_EN.md",
+      "size": 1897,
+      "sha256": "5a34edf7322805c71cc548c264058eea22e21da5f27392d139749e5b6d706a63"
+    },
+    {
+      "path": "core/CALCULATION_CENTER_POLICY_EN.pdf",
+      "size": 29933,
+      "sha256": "63d8ba80bce9350f085e239d78c63e5120e2eb9bc161e2cde974140c3608de97"
+    },
+    {
+      "path": "core/CALCULATION_CENTER_POLICY_RU.md",
+      "size": 7784,
+      "sha256": "07a05603dfcdcd7d9b4343d09eb7e8ff22c3730d17287eaec20529d439924924"
+    },
+    {
+      "path": "core/CALCULATION_CENTER_POLICY_RU.pdf",
+      "size": 38220,
+      "sha256": "29cdfa7f2cc502d55be39c19e2b15bee8d69b7e4282aed05ee713d97c6570338"
+    },
+    {
+      "path": "core/DOMAIN_PHYSIOLOGY_TEMPLATE_EN.md",
+      "size": 1199,
+      "sha256": "bb7917fef26b2d3fb87423ee5dd38575f7e6c7c257cecd18c768d335b8164946"
+    },
+    {
+      "path": "core/DOMAIN_PHYSIOLOGY_TEMPLATE_RU.md",
+      "size": 2140,
+      "sha256": "58f8b30eac30526b691320aa59bf65ac36e6798afe526e85cfcf231538eda5ab"
+    },
+    {
+      "path": "core/OVERLAY_LAYERS_POLICY_EN.md",
+      "size": 1369,
+      "sha256": "61dd1174d76af92bf25662d2dc5a108d42644bf19e8912f768776e97217eaf90"
+    },
+    {
+      "path": "core/OVERLAY_LAYERS_POLICY_EN.pdf",
+      "size": 29651,
+      "sha256": "570ff2189b76fd758f1e541b1f63f220cb74616b11536a7e4ddece2868299c07"
+    },
+    {
+      "path": "core/OVERLAY_LAYERS_POLICY_RU.md",
+      "size": 4596,
+      "sha256": "4b8d18aa61d43708da43ed1df813ee4562b121e3a01e0d690e02d04f606b7bab"
+    },
+    {
+      "path": "core/OVERLAY_LAYERS_POLICY_RU.pdf",
+      "size": 37239,
+      "sha256": "cb08092e1b2096bf72be7ac8c0197fb91d827038b79eb69975f8bdcf017ef3cc"
+    },
+    {
+      "path": "core/articles/MANUSCRIPT_Unified_BOIS_SIMA_BORIS_Preprint_v4_6_EN_CORE.pdf",
+      "size": 186446,
+      "sha256": "115d8a480b9f14672c00d8e2c15174fef917bdd2736153eaa91d63ccfc9e70a9"
+    },
+    {
+      "path": "core/articles/README_CORE_ARTICLES_EN.md",
+      "size": 974,
+      "sha256": "7a33bfe73571dc76d023c5c653508a19d6a8be80747d6431536267fcd8717d6b"
+    },
+    {
+      "path": "core/articles/SOCRATES_ARTICLE_TRANSLATION_POLICY.json",
+      "size": 1032,
+      "sha256": "1f8307f55f89fa2308de4a92cefcf9e3290ca2fd667458cccb4a770df4abbbeb"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v2_CORE.pdf",
+      "size": 120207,
+      "sha256": "1082c0009bb8fea5443d60e0030434a80eb8bef4c561c1702041b85e86ab072b"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v3_CORE.pdf",
+      "size": 149671,
+      "sha256": "c81ba901a765def0e902aca66cb47add499ab244f67792aa0b9dc624f1306418"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v4_CORE.pdf",
+      "size": 44862,
+      "sha256": "6b04b8e47c1ec394cf0622c50a1e769dacb231b9e02dde05f9e1675f0e2312f6"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v4_CORE_SOURCE.md",
+      "size": 2106,
+      "sha256": "c3fb344d708125063ad0178385288163e35bdd49b564e1cb455c0989a79f7d58"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v2_CORE.pdf",
+      "size": 138837,
+      "sha256": "2095ac4c613822cfe930ebc1b6dba130f7354686e173634f8ff1e6db0be125f2"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v3_CORE.pdf",
+      "size": 173350,
+      "sha256": "967284cee5613209b3c30084a87b33b489bce263553708cf46589df711f39889"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v4_CORE.pdf",
+      "size": 51362,
+      "sha256": "794d9765353650464562543ef11f0a63acea6e621c55c5c065bee6015476ad81"
+    },
+    {
+      "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v4_CORE_SOURCE.md",
+      "size": 3837,
+      "sha256": "ee7c524a261121e532a7572da69fc96f81b8e32b66bf9358b245b538601dfee9"
+    },
+    {
+      "path": "core/articles/SOCRATES_PHILOSOPHICAL_MACHINE_ADDENDUM_EN_v3.md",
+      "size": 2692,
+      "sha256": "616ba099b40c96f9c808f2faa072d2172a1a6568d0a9167ab8f2a7085143c145"
+    },
+    {
+      "path": "core/articles/SOCRATES_PHILOSOPHICAL_MACHINE_ADDENDUM_RU_v3.md",
+      "size": 4953,
+      "sha256": "efb6e8e3fbea6bf3051005aae874415261d5a1ef32408d37455b1ceae0f5e4e2"
+    },
+    {
+      "path": "core/articles/SOCRATES_PROJECT_PHYSIOLOGY_SECTION_EN_v4.md",
+      "size": 1675,
+      "sha256": "665d80eb3cd78e0c70f5ca3f0a06095474535662f2cd948a4f56ebba56163032"
+    },
+    {
+      "path": "core/articles/SOCRATES_PROJECT_PHYSIOLOGY_SECTION_RU_v4.md",
+      "size": 3097,
+      "sha256": "8eef2d2be89f77a2e842ca0d9047037a14ad7317f578aa3a51e0708a3c61d7b3"
+    },
+    {
+      "path": "core/conflict_policy.json",
+      "size": 3788,
+      "sha256": "f7b7dcbe597aa74cbaede36453b742e012a16da70c0b7f204a8abd92d9cd7354"
+    },
+    {
+      "path": "core/sources/BASE_CORE_ARTICLE_PATCH_EN_v022.md",
+      "size": 602,
+      "sha256": "30fddacfd7f6c617a20c32bd92d277e1ef5bd0cde2fafe81fcf5cd97cc219b4e"
+    },
+    {
+      "path": "core/sources/BASE_CORE_ARTICLE_PATCH_EN_v022.pdf",
+      "size": 29041,
+      "sha256": "d92b772a640fbb90d9fbe76d7005a5bf495a5d8cdc35ee29bab3697bee8f6137"
+    },
+    {
+      "path": "core/sources/BASE_CORE_ARTICLE_PATCH_RU_v022.md",
+      "size": 953,
+      "sha256": "3e5de7e4bc5342fb06f4858ac322c56b1bd0955c3e4e2f5a3bd8b30ddf8cf659"
+    },
+    {
+      "path": "core/sources/BASE_CORE_ARTICLE_PATCH_RU_v022.pdf",
+      "size": 32698,
+      "sha256": "99f2c48844de7d2ff947a10ad3b303a52b5a95f3082efa861638d2a8e7226c5e"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v020.md",
+      "size": 1359,
+      "sha256": "31b45f9e704fa27b8d95c81b3450a0dba99ba69c99c0edf2cf1989da8031e7cf"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v020.pdf",
+      "size": 29686,
+      "sha256": "a7b04517cd4c2da2e04097b6f10d59771341d20e3f9f1ee852e851c5f6e25e8e"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v021.md",
+      "size": 2204,
+      "sha256": "bb750e15880a1a689fd18c2f235d986dbfd5c18baa3a3c07062eb02c66818eec"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v021.pdf",
+      "size": 30602,
+      "sha256": "042939740296bdf2e03e97e78e4d7def100b40293d5c5344af895eb9c8d51707"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v023.md",
+      "size": 3552,
+      "sha256": "a1d40d1c5a1f0a53cfd7f7ce3aa89d116d076337dec35f402353c69ece347fc2"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v023.pdf",
+      "size": 32270,
+      "sha256": "1394c0fbad51419f0b002fc5344879f922ca1120c5fca7b1887530b72b07b5c2"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v024_SUPPORT_MESSAGE_IMMUNITY.md",
+      "size": 1529,
+      "sha256": "2dd753218a2c65650d7d9f2c4ae06897a6af03486381b20185b26e0387a16abc"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v024_SUPPORT_MESSAGE_IMMUNITY.pdf",
+      "size": 29802,
+      "sha256": "5fe3c2d29abce50333c791ea92c1cb2cc91eeffcd71238a6371127d8d08ee0bd"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v025_PROJECT_PHYSIOLOGY.md",
+      "size": 1679,
+      "sha256": "d3736c8517d1c4cd7cfe03c86c7d3b241666ea2fd99b5794738561a7db830c21"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v025_PROJECT_PHYSIOLOGY.pdf",
+      "size": 44493,
+      "sha256": "b3c098c086ddafcedf5fb0690b56752fdd1a220f65c1d8d4182291f7b2e03404"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v020.md",
+      "size": 2468,
+      "sha256": "caf199badb5332a5392cc95ab60949bb9827cf718cc53c9b19291f7e5a1fc1c8"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v020.pdf",
+      "size": 34409,
+      "sha256": "a9e06a7abec8d1231fb130a530e42e869d5e39a9bf0dc17c44c82028cfefccb9"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v021.md",
+      "size": 4142,
+      "sha256": "d887ec3e72d23a5b39dcc3fa75b06d8675351b66d940259a8c8811089e7ade89"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v021.pdf",
+      "size": 36522,
+      "sha256": "7fabeff8cb45cbbfdeb0398316311624ce575624381f74405e08dc5086ace420"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v023.md",
+      "size": 6366,
+      "sha256": "c3a2887406e403ac7987129ab83003e29220a435ed7120342333c9919bf48a8b"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v023.pdf",
+      "size": 38710,
+      "sha256": "e052993cb5942b011a3d4149ad2bd66199c90133fed121d209cd26efdf006321"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v024_SUPPORT_MESSAGE_IMMUNITY.md",
+      "size": 2715,
+      "sha256": "28442475a8749c9a1914e7474eb92c2b94e78408b6efca8a93df9252d0ef741a"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v024_SUPPORT_MESSAGE_IMMUNITY.pdf",
+      "size": 35078,
+      "sha256": "a75a744a2d7c209b503e93192a87f7fceba1810e15204f462ccc483eb41f2492"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v025_PROJECT_PHYSIOLOGY.md",
+      "size": 3105,
+      "sha256": "a6cf3b012d71df6bdf99bde266524a812d89e24170497328ca54e20c838c2029"
+    },
+    {
+      "path": "core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v025_PROJECT_PHYSIOLOGY.pdf",
+      "size": 50461,
+      "sha256": "1d5caeb1db411cb3a243ff216dc740a31fd2cdf746ceee4e9e21f20e98096e46"
+    },
+    {
+      "path": "core/state.schema.json",
+      "size": 6368,
+      "sha256": "5685995292469ee8a3c62086267950608d63000feb2e3e406a9434fc16338d51"
+    },
+    {
+      "path": "integrity/active_rules_canonical.txt",
+      "size": 67612,
+      "sha256": "e53256ed0be40aae14cb26d1f5b990fb1b9d493b2c017395913145054abcb6d2"
+    },
+    {
+      "path": "integrity/hash_recipes.json",
+      "size": 950,
+      "sha256": "6c68a0d96b14b3164d6c5197ecc7e0aa4e66a6fb83446fbf9feb7f4d5d7b3681"
+    },
+    {
+      "path": "integrity/rules_acceptance_audit_core_calculation_center_v0_1.json",
+      "size": 751,
+      "sha256": "0165a7bda35c8a8660c8d5ef0abc6d84fbb6131bb5c31e12bad86608b3b1966c"
+    },
+    {
+      "path": "integrity/source_provenance.json",
+      "size": 2776,
+      "sha256": "ffa165ba81cc1dd17896f9ff5745fa37f526658bd522cf1593fc24ead1c621de"
+    },
+    {
+      "path": "language_policy.json",
+      "size": 2658,
+      "sha256": "8aa429bdccde2d2c824245250366a52b5e3e0070541f9829b64bcc40eac579a5"
+    },
+    {
+      "path": "languages/en/README_LANG_EN.md",
+      "size": 1691,
+      "sha256": "a88c3e5a8259ef6f5835554a6cbce44afe224c3ff686a3eb41c2091350e82fc1"
+    },
+    {
+      "path": "languages/en/core/BOIS_Core_v3_2_4_Sokrat_Bare_Physiology_EN.pdf",
+      "size": 189345,
+      "sha256": "deb46b5c27b853ac0515f0b4e52eddbf4716b5e74411023600cba13219713d95"
+    },
+    {
+      "path": "languages/en/core/DOMAIN_PHYSIOLOGY_TEMPLATE_EN.md",
+      "size": 1199,
+      "sha256": "bb7917fef26b2d3fb87423ee5dd38575f7e6c7c257cecd18c768d335b8164946"
+    },
+    {
+      "path": "languages/en/core/articles/MANUSCRIPT_Unified_BOIS_SIMA_BORIS_Preprint_v4_6_EN_CORE.pdf",
+      "size": 186446,
+      "sha256": "115d8a480b9f14672c00d8e2c15174fef917bdd2736153eaa91d63ccfc9e70a9"
+    },
+    {
+      "path": "languages/en/core/articles/README_ARTICLES_EN.md",
+      "size": 510,
+      "sha256": "9750cd9c2c86f0144af10629045de5f4aca0cf831db1b799d268d864ce100188"
+    },
+    {
+      "path": "languages/en/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v2_CORE.pdf",
+      "size": 120207,
+      "sha256": "1082c0009bb8fea5443d60e0030434a80eb8bef4c561c1702041b85e86ab072b"
+    },
+    {
+      "path": "languages/en/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v3_CORE.pdf",
+      "size": 149671,
+      "sha256": "c81ba901a765def0e902aca66cb47add499ab244f67792aa0b9dc624f1306418"
+    },
+    {
+      "path": "languages/en/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v4_CORE.pdf",
+      "size": 44862,
+      "sha256": "8ca137a5f0a48e884f9f25b37b1d13517e69072fb5dddd24be924c4faa56ec3d"
+    },
+    {
+      "path": "languages/en/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v4_CORE_SOURCE.md",
+      "size": 2106,
+      "sha256": "c3fb344d708125063ad0178385288163e35bdd49b564e1cb455c0989a79f7d58"
+    },
+    {
+      "path": "languages/en/core/articles/SOCRATES_PHILOSOPHICAL_MACHINE_ADDENDUM_EN_v3.md",
+      "size": 2692,
+      "sha256": "616ba099b40c96f9c808f2faa072d2172a1a6568d0a9167ab8f2a7085143c145"
+    },
+    {
+      "path": "languages/en/core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v025_PROJECT_PHYSIOLOGY.md",
+      "size": 1679,
+      "sha256": "d3736c8517d1c4cd7cfe03c86c7d3b241666ea2fd99b5794738561a7db830c21"
+    },
+    {
+      "path": "languages/en/core/sources/BASE_CORE_PHYSIOLOGY_PATCH_EN_v025_PROJECT_PHYSIOLOGY.pdf",
+      "size": 44493,
+      "sha256": "b3c098c086ddafcedf5fb0690b56752fdd1a220f65c1d8d4182291f7b2e03404"
+    },
+    {
+      "path": "languages/en/publication/AUTHOR_SUPPORT_MESSAGE_EN.md",
+      "size": 585,
+      "sha256": "6e481357346868a292bad39d75d78b4eaef615f737058d99b5ae9c821cfda1de"
+    },
+    {
+      "path": "languages/en/tables/active_rules.csv",
+      "size": 90483,
+      "sha256": "91487a4573589c215bd42aa3c2d9d9e5eb4f594df9f21c4addccc756e1f40459"
+    },
+    {
+      "path": "languages/en/tables/criteria.csv",
+      "size": 8930,
+      "sha256": "4d25d7af7f3e783da394e9f3441b9872eaf09d197e3bd1b027ae2667055ffaba"
+    },
+    {
+      "path": "languages/en/tables/cycles.csv",
+      "size": 2468,
+      "sha256": "7b9d8ff2b30f29837cc7669cc82719eb876eb95fc40bba9f5f60522cd93bc80d"
+    },
+    {
+      "path": "languages/en/tables/glossary.csv",
+      "size": 24128,
+      "sha256": "f4f7281ac57cebbdcb7b8bed9c4ebffc0b6f1da32c7c3d105d60ae3a668572f2"
+    },
+    {
+      "path": "languages/en/tables/organs.csv",
+      "size": 7712,
+      "sha256": "9401314c688cf9eb0eabe7fbac115b0280e938c7b3a98b39017a4e924d47cd57"
+    },
+    {
+      "path": "languages/en/tables/priorities.csv",
+      "size": 1672,
+      "sha256": "8b0b6771ad8c22c4a6874dba80ba42c57f7587872ac897795ed98d54e94dac9a"
+    },
+    {
+      "path": "languages/en/tables/procedures.csv",
+      "size": 10882,
+      "sha256": "aa4a7b91ce376a02a22a4aaa9bcbb194a2d64fd11b23f2f5a0107f9a549436ff"
+    },
+    {
+      "path": "languages/en/tables/qa_levels.csv",
+      "size": 1226,
+      "sha256": "f8378bc197f89bc74c7fb6a94d5ffb07cfe2ccfd3ae968b307ad3e7fe7c32bf4"
+    },
+    {
+      "path": "languages/en/tables/stop_signals.csv",
+      "size": 15431,
+      "sha256": "a0b2c5ae1f4bec7dc1c172d5e684b65a883e60a6b55ef1b53893ce3c2a7a3344"
+    },
+    {
+      "path": "languages/en/tables/tests.csv",
+      "size": 15086,
+      "sha256": "10e8a8b0ed85e782fdfd77f2863016fae1e1b90acc8027c15789a9d7bdc602d6"
+    },
+    {
+      "path": "languages/en/templates/FIRST_GREETING_TEMPLATE_EN.md",
+      "size": 652,
+      "sha256": "462854e139509f4441e755129ac656c7d3c7954e476a683902039812671c8f14"
+    },
+    {
+      "path": "languages/en/templates/MEMORY_TRANSFER_PACKAGE_TEMPLATE_EN.md",
+      "size": 847,
+      "sha256": "9cfe7aedc322318e27ec8ebad16b0175c9f07165ffa24c84635e1023a4037b4a"
+    },
+    {
+      "path": "languages/ru/README_AI_LOAD_RU.md",
+      "size": 4935,
+      "sha256": "2b690c7e7763505a5016961b92540a144ed2e7890fd31db48ed3c8812d66436a"
+    },
+    {
+      "path": "languages/ru/README_LANG_RU.md",
+      "size": 3014,
+      "sha256": "b3b0cd89e3b3edb5c6bfad9bcc16b626cdb06a31a59360bb581790cb0bad5009"
+    },
+    {
+      "path": "languages/ru/core/BOIS_Core_v3_2_4_Sokrat_Bare_Physiology_RU.pdf",
+      "size": 224731,
+      "sha256": "c5848fbb1dca9f78001f7e58886518bd4d893ed65b25ba691f06dc782fb61526"
+    },
+    {
+      "path": "languages/ru/core/DOMAIN_PHYSIOLOGY_TEMPLATE_RU.md",
+      "size": 2140,
+      "sha256": "58f8b30eac30526b691320aa59bf65ac36e6798afe526e85cfcf231538eda5ab"
+    },
+    {
+      "path": "languages/ru/core/articles/MANUSCRIPT_Unified_BOIS_SIMA_BORIS_Preprint_v4_6_EN_CORE.pdf",
+      "size": 186446,
+      "sha256": "115d8a480b9f14672c00d8e2c15174fef917bdd2736153eaa91d63ccfc9e70a9"
+    },
+    {
+      "path": "languages/ru/core/articles/README_ARTICLES_RU.md",
+      "size": 960,
+      "sha256": "240602fdc51a3f58d3b9030da0a31f1618e60bf642e19bd6c8f26cd12c3d26b5"
+    },
+    {
+      "path": "languages/ru/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v2_CORE.pdf",
+      "size": 138837,
+      "sha256": "2095ac4c613822cfe930ebc1b6dba130f7354686e173634f8ff1e6db0be125f2"
+    },
+    {
+      "path": "languages/ru/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v3_CORE.pdf",
+      "size": 173350,
+      "sha256": "967284cee5613209b3c30084a87b33b489bce263553708cf46589df711f39889"
+    },
+    {
+      "path": "languages/ru/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v4_CORE.pdf",
+      "size": 51362,
+      "sha256": "d980fa9637cf0f92444711f074d89426dfee6d7c54d2d2e435e3271bdf2fdcbf"
+    },
+    {
+      "path": "languages/ru/core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v4_CORE_SOURCE.md",
+      "size": 3837,
+      "sha256": "ee7c524a261121e532a7572da69fc96f81b8e32b66bf9358b245b538601dfee9"
+    },
+    {
+      "path": "languages/ru/core/articles/SOCRATES_PHILOSOPHICAL_MACHINE_ADDENDUM_RU_v3.md",
+      "size": 4953,
+      "sha256": "efb6e8e3fbea6bf3051005aae874415261d5a1ef32408d37455b1ceae0f5e4e2"
+    },
+    {
+      "path": "languages/ru/core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v025_PROJECT_PHYSIOLOGY.md",
+      "size": 3105,
+      "sha256": "a6cf3b012d71df6bdf99bde266524a812d89e24170497328ca54e20c838c2029"
+    },
+    {
+      "path": "languages/ru/core/sources/BASE_CORE_PHYSIOLOGY_PATCH_RU_v025_PROJECT_PHYSIOLOGY.pdf",
+      "size": 50461,
+      "sha256": "1d5caeb1db411cb3a243ff216dc740a31fd2cdf746ceee4e9e21f20e98096e46"
+    },
+    {
+      "path": "languages/ru/publication/AUTHOR_SUPPORT_MESSAGE_RU.md",
+      "size": 972,
+      "sha256": "3528d4cf7a3d0d7bc9cc7c382de9afef25568751b1b4cbd22c92386e0e40b79d"
+    },
+    {
+      "path": "languages/ru/tables/active_rules.csv",
+      "size": 90483,
+      "sha256": "91487a4573589c215bd42aa3c2d9d9e5eb4f594df9f21c4addccc756e1f40459"
+    },
+    {
+      "path": "languages/ru/tables/criteria.csv",
+      "size": 8930,
+      "sha256": "4d25d7af7f3e783da394e9f3441b9872eaf09d197e3bd1b027ae2667055ffaba"
+    },
+    {
+      "path": "languages/ru/tables/cycles.csv",
+      "size": 2468,
+      "sha256": "7b9d8ff2b30f29837cc7669cc82719eb876eb95fc40bba9f5f60522cd93bc80d"
+    },
+    {
+      "path": "languages/ru/tables/glossary.csv",
+      "size": 24128,
+      "sha256": "f4f7281ac57cebbdcb7b8bed9c4ebffc0b6f1da32c7c3d105d60ae3a668572f2"
+    },
+    {
+      "path": "languages/ru/tables/organs.csv",
+      "size": 7712,
+      "sha256": "9401314c688cf9eb0eabe7fbac115b0280e938c7b3a98b39017a4e924d47cd57"
+    },
+    {
+      "path": "languages/ru/tables/priorities.csv",
+      "size": 1672,
+      "sha256": "8b0b6771ad8c22c4a6874dba80ba42c57f7587872ac897795ed98d54e94dac9a"
+    },
+    {
+      "path": "languages/ru/tables/procedures.csv",
+      "size": 10882,
+      "sha256": "aa4a7b91ce376a02a22a4aaa9bcbb194a2d64fd11b23f2f5a0107f9a549436ff"
+    },
+    {
+      "path": "languages/ru/tables/qa_levels.csv",
+      "size": 1226,
+      "sha256": "f8378bc197f89bc74c7fb6a94d5ffb07cfe2ccfd3ae968b307ad3e7fe7c32bf4"
+    },
+    {
+      "path": "languages/ru/tables/stop_signals.csv",
+      "size": 15431,
+      "sha256": "a0b2c5ae1f4bec7dc1c172d5e684b65a883e60a6b55ef1b53893ce3c2a7a3344"
+    },
+    {
+      "path": "languages/ru/tables/tests.csv",
+      "size": 15086,
+      "sha256": "10e8a8b0ed85e782fdfd77f2863016fae1e1b90acc8027c15789a9d7bdc602d6"
+    },
+    {
+      "path": "languages/ru/templates/FIRST_GREETING_TEMPLATE_RU.md",
+      "size": 1065,
+      "sha256": "fbd9fd41b766e9fc2bda2f27fce0b3f72d35a0a30863a18cabfe9c4db64fcf32"
+    },
+    {
+      "path": "languages/ru/templates/MEMORY_TRANSFER_PACKAGE_TEMPLATE_RU.md",
+      "size": 1911,
+      "sha256": "690926f3b664230f1844bb4d6537c49f14ae8eed2623ef714b83706570ce6286"
+    },
+    {
+      "path": "load_order.txt",
+      "size": 1409,
+      "sha256": "597ed8528a07988e1b222686e57a534524e5dd7bbf169d494bb37e9bcc34b111"
+    },
+    {
+      "path": "publication/AUTHOR_OPENING_TO_ADD.md",
+      "size": 1048,
+      "sha256": "705e7392cab1f7b70831b992358f09c7a62f7132283ebb1425bd14d17e352c1a"
+    },
+    {
+      "path": "publication/AUTHOR_SUPPORT_MESSAGE_CANONICAL_EN.md",
+      "size": 585,
+      "sha256": "6e481357346868a292bad39d75d78b4eaef615f737058d99b5ae9c821cfda1de"
+    },
+    {
+      "path": "publication/AUTHOR_SUPPORT_MESSAGE_CANONICAL_EN.pdf",
+      "size": 15542,
+      "sha256": "74c50a7a6a2e78f33cb0514d26e32c40ec35412e0b39b80f05f471b09481f8ff"
+    },
+    {
+      "path": "publication/AUTHOR_SUPPORT_MESSAGE_RU.md",
+      "size": 972,
+      "sha256": "3528d4cf7a3d0d7bc9cc7c382de9afef25568751b1b4cbd22c92386e0e40b79d"
+    },
+    {
+      "path": "publication/AUTHOR_SUPPORT_MESSAGE_RU.pdf",
+      "size": 17870,
+      "sha256": "b2246a04f9a713e657df1d53036b9dfba07f66f3c12a9cfae92be2912f1b23d7"
+    },
+    {
+      "path": "qa/BOIS_CLOSED_PHILOSOPHICAL_MACHINE_TEST_EN.md",
+      "size": 1569,
+      "sha256": "d0a9dd032a0cef54902c63166737b3a6c12eed2eee700cae8b2a3d4596a3001e"
+    },
+    {
+      "path": "qa/BOIS_CLOSED_PHILOSOPHICAL_MACHINE_TEST_EN.pdf",
+      "size": 29871,
+      "sha256": "c6c78c1b0eb5a7c5037d1e70b85168caa32710825f760212c0e6843dc0f73a38"
+    },
+    {
+      "path": "qa/BOIS_CLOSED_PHILOSOPHICAL_MACHINE_TEST_RU.md",
+      "size": 3011,
+      "sha256": "72198167bad734ba55d28843f79d6593dc9a02f2dc72d18c02202eee7623df2e"
+    },
+    {
+      "path": "qa/BOIS_CLOSED_PHILOSOPHICAL_MACHINE_TEST_RU.pdf",
+      "size": 34683,
+      "sha256": "ffc7ec6d899277a36d2fde20e4833104e97c887da80731a5a5844f9e7e36232b"
+    },
+    {
+      "path": "qa/README_VISUAL_QA.md",
+      "size": 236,
+      "sha256": "91d172a2d13a1de17ce8ea3855edb30cff8dbbea8c6abb90ca27fa1b862cd436"
+    },
+    {
+      "path": "qa/STANDARD_ARCHIVE_RELEASE_TESTS_EN.md",
+      "size": 3684,
+      "sha256": "76fef59df2f455b5f19397228c87f151f6bda16706cd871cc55edbdb6eeca903"
+    },
+    {
+      "path": "qa/STANDARD_ARCHIVE_RELEASE_TESTS_EN.pdf",
+      "size": 31657,
+      "sha256": "c0e471984af1ae788f9f8f331e74b356ca3d60a3707c1266a2f0350d3c833e7c"
+    },
+    {
+      "path": "qa/STANDARD_ARCHIVE_RELEASE_TESTS_RU.md",
+      "size": 6770,
+      "sha256": "40a6b4a36a1555683d58a2515c5a41c4f5733e262f2cf0e668838e707dd52090"
+    },
+    {
+      "path": "qa/STANDARD_ARCHIVE_RELEASE_TESTS_RU.pdf",
+      "size": 36688,
+      "sha256": "dc2f9ddeaaffef96bd7dc518c6158de2b9f65abb361c5b30d0742f32d22349f2"
+    },
+    {
+      "path": "qa/anti_bureaucracy_report.json",
+      "size": 290,
+      "sha256": "83242c2a649b650ab780de6b2e051de151b399c40d2f3d4f53f7d9ab16b50cb3"
+    },
+    {
+      "path": "qa/final_test_matrix.csv",
+      "size": 880,
+      "sha256": "06fcefe02cbe0491d758608dac8ae10edc9f5bd606073673a6d8b5d0626f0631"
+    },
+    {
+      "path": "qa/hard_runtime_simulation_report.json",
+      "size": 377,
+      "sha256": "995abda693aa26a2666b313f7788d403fae9fecd503b531a1148c3208935785c"
+    },
+    {
+      "path": "qa/philosophical_logical_self_closure_report.json",
+      "size": 368,
+      "sha256": "386707cd7d1d8c910c96f2693b85246ccaa53602773d18c4314d869ed39888f8"
+    },
+    {
+      "path": "qa/public_self_v023_r1_hardqa_report.json",
+      "size": 1093,
+      "sha256": "623b940d5e9dc542639365b117d2be39f4a409ae03d9f902b4acd4ede2d24d56"
+    },
+    {
+      "path": "qa/scenario_tests.json",
+      "size": 1114,
+      "sha256": "41aa726a2150b63ac0de5abc83ec81589a2d7f8d790f06bbf3867f2cb5653687"
+    },
+    {
+      "path": "qa/self_core_hard_audit_v0_9.json",
+      "size": 1875,
+      "sha256": "44195400af2bc038edb76b5101b74ab2f4e7cfa46e8b03c472ba1e12bf3a73ad"
+    },
+    {
+      "path": "qa/v014_full_audit_report.json",
+      "size": 1333,
+      "sha256": "54fb1bddff49ed3e6ddc58442c505dd3767560c46924c5ae56a741fd564d2f42"
+    },
+    {
+      "path": "qa/v014_repair_summary_RU.md",
+      "size": 1744,
+      "sha256": "1191b1f5116e3ed0cfc13fe752ba9d3728a1b8d9d156f3254b3318d0653b7f2f"
+    },
+    {
+      "path": "qa/v014_repair_summary_RU.pdf",
+      "size": 32919,
+      "sha256": "ee941dd94d70b7951c49e12c374c6fb09808aff0511bfee4692d048809503bbc"
+    },
+    {
+      "path": "qa/v015_full_audit_report.json",
+      "size": 824,
+      "sha256": "414adabae14576b331d1f3ea07920d0bf197ce62b83754a2fb85958c125d65ae"
+    },
+    {
+      "path": "qa/v015_repair_summary_RU.md",
+      "size": 1149,
+      "sha256": "2e2332b4750a25b13592664f2a53b1773e8d5ad11f51b37fa6f3e8ed7ab8d35b"
+    },
+    {
+      "path": "qa/v015_repair_summary_RU.pdf",
+      "size": 32078,
+      "sha256": "6cd31c10642423b8e948bc25779aeb798a2f99f9ecccb04870d69b732867763c"
+    },
+    {
+      "path": "qa/v016_full_audit_report.json",
+      "size": 1001,
+      "sha256": "4f76419bca61e0d92ae40d9907de4a935c970ceb3cca2fb9ca410121adf4f6cc"
+    },
+    {
+      "path": "qa/v016_repair_summary_RU.md",
+      "size": 460,
+      "sha256": "a9d036b53ca778e66950b1b360cee1fa6551dda7e276487bb45146c83fe59d83"
+    },
+    {
+      "path": "qa/v016_repair_summary_RU.pdf",
+      "size": 31318,
+      "sha256": "1ccc6e657814659c753e06d8844bf4855da8198c0b8fab63460ba4a92af82fb5"
+    },
+    {
+      "path": "qa/v017_layer_distribution_positive_audit.json",
+      "size": 1294,
+      "sha256": "8b7faef39bda1dfe1a93a7fd3b426119a147204bb1e3c52ea95f5ee07bd6bfe6"
+    },
+    {
+      "path": "qa/v018_versions_debt_layered_debt_audit.json",
+      "size": 691,
+      "sha256": "c70078d23113bf13c546f3e5d6bbf84dc2046492fbb1d8b01c9c9692222c90e6"
+    },
+    {
+      "path": "qa/v018_versions_debt_layered_debt_repair_summary_EN.md",
+      "size": 237,
+      "sha256": "fff419eb0477c47fd6f905061480ac343c6038a13e21eb082675bd655d85f0a4"
+    },
+    {
+      "path": "qa/v018_versions_debt_layered_debt_repair_summary_EN.pdf",
+      "size": 28780,
+      "sha256": "f21b16a8b9d59b34c2650c936afc61175d06aed59fed3f4c870625da4f427e68"
+    },
+    {
+      "path": "qa/v019_final_verify.json",
+      "size": 1213,
+      "sha256": "0c939c582a7d1b986b9fdf658aca0d56f913d5cf2eaac65a77e61f8b3b5b5759"
+    },
+    {
+      "path": "qa/v019_route_consistency_layer_debt_audit.json",
+      "size": 754,
+      "sha256": "298cb21d8250b3fe2e33dfa4bb31dffb7abe7bc97bc5f3a9e8c2fb1cd171fa9e"
+    },
+    {
+      "path": "qa/v019_route_consistency_layer_debt_repair_summary_EN.pdf",
+      "size": 43549,
+      "sha256": "5710067d72f0c6d9559f61550e8625ebf31382b922e971c44e0cb6b7e4b32e50"
+    },
+    {
+      "path": "qa/v020_base_cycle_guard_closed_machine_repair_summary_EN.md",
+      "size": 522,
+      "sha256": "aa2205932b07973630140e8de1a26d8ada3a8e08871638cc7dd53312453a714a"
+    },
+    {
+      "path": "qa/v020_final_verify.json",
+      "size": 2641,
+      "sha256": "1f83053a2a2b537a59fd1229741def17b551d45b9e10d954cbdb028d5003c58e"
+    },
+    {
+      "path": "qa/v021_final_verify.json",
+      "size": 509,
+      "sha256": "c750565fe7c1325c37282b88451809776646878f39ff69eb4ce4847a5fd59121"
+    },
+    {
+      "path": "qa/v021_strict_philosophical_machine_definition_HardQA_EN.md",
+      "size": 2059,
+      "sha256": "56cc6ffbbf0d3dba175d3922cf0a0a1e138157a29c306f6b3dc201114b06cc7c"
+    },
+    {
+      "path": "qa/v021_strict_philosophical_machine_definition_HardQA_EN.pdf",
+      "size": 29999,
+      "sha256": "8223c383f519e9b1f274c26e9750fafaeda08df9b98d1027fa63664d9b80a466"
+    },
+    {
+      "path": "qa/v021_strict_philosophical_machine_definition_HardQA_RU.md",
+      "size": 3804,
+      "sha256": "e24b7a037f4a117bb6f644b33394ef893065a9858293e5a482aaeced9a9aa7e1"
+    },
+    {
+      "path": "qa/v021_strict_philosophical_machine_definition_HardQA_RU.pdf",
+      "size": 35584,
+      "sha256": "8ef1d815a4f26096edb9a47d507a3df207d5297b30aa05401ae9b6f26d794fd8"
+    },
+    {
+      "path": "qa/v023_state_hardening_HardQA.json",
+      "size": 621,
+      "sha256": "9f4151f88d3f1f5e5185291cc8522229555e1f15d6a95a5cc04fbf72d1a7549e"
+    },
+    {
+      "path": "qa/v023_state_hardening_HardQA_EN.md",
+      "size": 211,
+      "sha256": "8922928a6f5d268483ce26d39572d3ca98c8ef009164125d3bb48e2f4b65683b"
+    },
+    {
+      "path": "qa/v023_state_hardening_HardQA_EN.pdf",
+      "size": 28796,
+      "sha256": "abafa1026a29fefbc9fb34598a6f5407e07b5af9f50fcf2d5599b0bd68fa8015"
+    },
+    {
+      "path": "qa/v023_state_hardening_HardQA_RU.md",
+      "size": 362,
+      "sha256": "6fc18a201ce1982bd787ac23eff3f330a798e3fba1d3e33f70f644a8ea1963a7"
+    },
+    {
+      "path": "qa/v023_state_hardening_HardQA_RU.pdf",
+      "size": 31527,
+      "sha256": "3d990281a0f0755360a037eb1aa7f3f3ab6592890802fc3c9a04dd9603f4d900"
+    },
+    {
+      "path": "qa/v025_public_project_physiology_support_HardQA_EN.pdf",
+      "size": 43566,
+      "sha256": "b12bd4bc9b1d8ecc86490e1e927489f0d53cb57bf431eb8c64acdc19f6927d94"
+    },
+    {
+      "path": "qa/v025_public_project_physiology_support_HardQA_RU.pdf",
+      "size": 46064,
+      "sha256": "dc35404ee6db5d9e3c4954db689075f993bb4060245fcc9f03b2b58d401f2226"
+    },
+    {
+      "path": "qa/visual_contact_sheet_BOIS_Core_v3_2_4_Sokrat_Bare_Physiology_RU_ae6c446e.jpg",
+      "size": 186482,
+      "sha256": "897293775943506da3e22da06598c533c0023a19ec9307bded9b33f21cf7a33f"
+    },
+    {
+      "path": "qa/visual_contact_sheet_BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN_a2a59256.jpg",
+      "size": 180297,
+      "sha256": "81b72712c1d30c33a5a6ab77d124e8504fb7932f5741b268aa97671c6dfa8951"
+    },
+    {
+      "path": "qa/visual_contact_sheet_MANUSCRIPT_Unified_BOIS_SIMA_BORIS_Preprint_v4_6_EN_CORE_115d8a48.jpg",
+      "size": 89654,
+      "sha256": "f667667f15f78fb0dfef686e462bdc8b9012d4bf040dfba1686a59d66f5e6171"
+    },
+    {
+      "path": "qa/visual_contact_sheet_SOCRATES_BOIS_SIMA_BORIS_AI_EN_v2_CORE_1082c000.jpg",
+      "size": 340587,
+      "sha256": "fbef3034552108c7d3f0cea066e65c5128a6c62685a8a02241286501424fb30c"
+    },
+    {
+      "path": "qa/visual_contact_sheet_SOCRATES_BOIS_SIMA_BORIS_AI_RU_v2_CORE_2095ac4c.jpg",
+      "size": 354921,
+      "sha256": "4ae47c38f1ded7bb2000361b30ed4f05cebe2d11e8d38e2a0ef5d59055c2877c"
+    },
+    {
+      "path": "qa/visual_contact_sheet_overall_samples.jpg",
+      "size": 57840,
+      "sha256": "66d48873bdcb5074171e87f4907eb4a87a0acabcd7bd08e4776182cbeacde741"
+    },
+    {
+      "path": "qa/visual_qa_report.json",
+      "size": 4826,
+      "sha256": "9708689e90b942f8ee318407013e150e12b2a91aa26dd308d10a7ae834ea0736"
+    },
+    {
+      "path": "release/ARCHIVE_NAMING_STANDARD_v0_23.md",
+      "size": 352,
+      "sha256": "71b3c82549ee4dcb3b3d5dfddb23874fde7cc808f52c05894bfd9b3cdc042b38"
+    },
+    {
+      "path": "runtime/author_support_message.json",
+      "size": 2764,
+      "sha256": "4d372aa5c82322a113eeb9e9bcdb8dcd1bc52669e318ebf980e45d75982a3edb"
+    },
+    {
+      "path": "runtime/surface_contract.json",
+      "size": 7690,
+      "sha256": "bea1931132006f37de8ddffeaaefa6629bd00639072ccd08c955923d1e4db916"
+    },
+    {
+      "path": "schemas/machine_map.schema.json",
+      "size": 1047,
+      "sha256": "9b972669431bbecd5d1aa9ab95bc7fcf90e6c86a88b8a3f20583503cd62eea06"
+    },
+    {
+      "path": "schemas/state.schema.json",
+      "size": 6368,
+      "sha256": "5685995292469ee8a3c62086267950608d63000feb2e3e406a9434fc16338d51"
+    },
+    {
+      "path": "tables/active_rules.csv",
+      "size": 90483,
+      "sha256": "91487a4573589c215bd42aa3c2d9d9e5eb4f594df9f21c4addccc756e1f40459"
+    },
+    {
+      "path": "tables/criteria.csv",
+      "size": 8930,
+      "sha256": "4d25d7af7f3e783da394e9f3441b9872eaf09d197e3bd1b027ae2667055ffaba"
+    },
+    {
+      "path": "tables/cycles.csv",
+      "size": 2468,
+      "sha256": "7b9d8ff2b30f29837cc7669cc82719eb876eb95fc40bba9f5f60522cd93bc80d"
+    },
+    {
+      "path": "tables/glossary.csv",
+      "size": 24128,
+      "sha256": "f4f7281ac57cebbdcb7b8bed9c4ebffc0b6f1da32c7c3d105d60ae3a668572f2"
+    },
+    {
+      "path": "tables/organs.csv",
+      "size": 7712,
+      "sha256": "9401314c688cf9eb0eabe7fbac115b0280e938c7b3a98b39017a4e924d47cd57"
+    },
+    {
+      "path": "tables/priorities.csv",
+      "size": 1672,
+      "sha256": "8b0b6771ad8c22c4a6874dba80ba42c57f7587872ac897795ed98d54e94dac9a"
+    },
+    {
+      "path": "tables/procedures.csv",
+      "size": 10882,
+      "sha256": "aa4a7b91ce376a02a22a4aaa9bcbb194a2d64fd11b23f2f5a0107f9a549436ff"
+    },
+    {
+      "path": "tables/qa_levels.csv",
+      "size": 1226,
+      "sha256": "f8378bc197f89bc74c7fb6a94d5ffb07cfe2ccfd3ae968b307ad3e7fe7c32bf4"
+    },
+    {
+      "path": "tables/stop_signals.csv",
+      "size": 15431,
+      "sha256": "a0b2c5ae1f4bec7dc1c172d5e684b65a883e60a6b55ef1b53893ce3c2a7a3344"
+    },
+    {
+      "path": "tables/tests.csv",
+      "size": 15086,
+      "sha256": "10e8a8b0ed85e782fdfd77f2863016fae1e1b90acc8027c15789a9d7bdc602d6"
+    },
+    {
+      "path": "templates/FIRST_GREETING_TEMPLATE_EN.md",
+      "size": 652,
+      "sha256": "462854e139509f4441e755129ac656c7d3c7954e476a683902039812671c8f14"
+    },
+    {
+      "path": "templates/FIRST_GREETING_TEMPLATE_RU.md",
+      "size": 1065,
+      "sha256": "fbd9fd41b766e9fc2bda2f27fce0b3f72d35a0a30863a18cabfe9c4db64fcf32"
+    },
+    {
+      "path": "templates/MEMORY_TRANSFER_PACKAGE_TEMPLATE_EN.md",
+      "size": 847,
+      "sha256": "9cfe7aedc322318e27ec8ebad16b0175c9f07165ffa24c84635e1023a4037b4a"
+    },
+    {
+      "path": "templates/MEMORY_TRANSFER_PACKAGE_TEMPLATE_RU.md",
+      "size": 1911,
+      "sha256": "690926f3b664230f1844bb4d6537c49f14ae8eed2623ef714b83706570ce6286"
+    }
+  ]
+}

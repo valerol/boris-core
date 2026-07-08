@@ -1,0 +1,9 @@
+{
+  "version": "v3.2.4-sokrat-bare-enbase-rudev+self-v0.23-state-hardening",
+  "file_hashes": "SHA-256 over raw file bytes for each path listed in integrity/hashes.sha256, excluding integrity/hashes.sha256 itself.",
+  "zip_hash": "SHA-256 over final ZIP bytes; stored as sidecar .zip.sha256 outside the archive.",
+  "active_rules_canonical": "SHA-256 over UTF-8 bytes of integrity/active_rules_canonical.txt. Canonical line format is owner|id|title|formulation in active_rules.csv order.",
+  "render_check": "All unique PDF hashes rendered by Poppler pdftoppm at 72 dpi after generation; duplicate PDFs verified by identical SHA-256.",
+  "qa_boundary": "QA-A/B/C/D only; QA-E field effectiveness is not PASS unless completed validation evidence exists. Current validation projects use validation-in-progress.",
+  "prefix_aware_hashes": "When a ZIP contains a wrapper root, paths in integrity/hashes.sha256 are interpreted relative to package root."
+}

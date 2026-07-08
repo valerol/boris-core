@@ -1,0 +1,12 @@
+{
+  "version": "v0.17",
+  "status": "PASS",
+  "checks": {
+    "calculation_center_preserved": "PASS",
+    "tail_blocks_do_not_change_semantics": "PASS",
+    "archive_verification_separated_from_versions_debt": "PASS",
+    "author_support_last_resolves_order_conflict": "PASS",
+    "self_closure_files_updated": "PASS"
+  },
+  "qa_e_field_effectiveness": "not_claimed"
+}

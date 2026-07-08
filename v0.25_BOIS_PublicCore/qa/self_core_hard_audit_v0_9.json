@@ -1,0 +1,87 @@
+{
+  "version": "v0.9-drive-bare",
+  "date": "2026-06-30",
+  "tests": [
+    {
+      "id": "MANIFEST-ALL-FILES",
+      "result": "PASS",
+      "detail": {
+        "files": 108,
+        "missing": [],
+        "bad": []
+      }
+    },
+    {
+      "id": "HASHES-SHA256",
+      "result": "PASS",
+      "detail": {
+        "entries": 108,
+        "bad": []
+      }
+    },
+    {
+      "id": "JSON-PARSE",
+      "result": "PASS",
+      "detail": {
+        "count": 23,
+        "bad": []
+      }
+    },
+    {
+      "id": "CSV-PARSE",
+      "result": "PASS",
+      "detail": {
+        "count": 31,
+        "bad": []
+      }
+    },
+    {
+      "id": "VERSION-POLICY-ACCUMULATE",
+      "result": "PASS",
+      "detail": "Versions accumulates all verified boot archives; no 11-version cap in source"
+    },
+    {
+      "id": "LANGUAGE-EVERY-USE",
+      "result": "PASS",
+      "detail": "Russian explanation at every meaningful use"
+    },
+    {
+      "id": "CALC-ROUTE-CORE",
+      "result": "PASS",
+      "detail": "Self calculations route to base philosophical core"
+    },
+    {
+      "id": "POSITIVE-WORDING-STRICT",
+      "result": "PASS",
+      "detail": {
+        "Self/sources/SELF_PHYSIOLOGY_RU_SOURCE.md": 0,
+        "core/CALCULATION_CENTER_POLICY_RU.md": 0,
+        "core/OVERLAY_LAYERS_POLICY_RU.md": 0
+      }
+    },
+    {
+      "id": "ANTI-BUREAUCRACY-WORD-COUNT",
+      "result": "PASS",
+      "detail": {
+        "old_words": 851,
+        "new_words": 808,
+        "delta": -43
+      }
+    },
+    {
+      "id": "CORE-CALC-POLICY-ROUTE",
+      "result": "PASS",
+      "detail": "Core calculation policy routes substantial calculation to philosophical center"
+    },
+    {
+      "id": "OVERLAY-VERSIONS-ACCUMULATE",
+      "result": "PASS",
+      "detail": "Overlay policy uses accumulation model"
+    }
+  ],
+  "summary": {
+    "pass": 11,
+    "fail": 0,
+    "warn": 0
+  }
+}

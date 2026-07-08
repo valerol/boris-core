@@ -1,0 +1,83 @@
+{
+  "archive": "v.0.20_BOIS_Self.zip",
+  "version": "v0.20",
+  "status": "PASS",
+  "semantic_root": "Cycle Guard and all universal BOIS-release tests must be Base-owned; each archive must also pass closed philosophical machine over time simulation.",
+  "repair_iterations": [
+    "pass1 built new rules",
+    "pass2 fixed dangling owners and remaining Game owner drift",
+    "pass3 fixed malformed CSV width",
+    "pass4 removed stale Self canonical-PDF wording that still described personal Cycle Guard execution"
+  ],
+  "checks": {
+    "json": {
+      "count": 32,
+      "errors": []
+    },
+    "csv": {
+      "count": 31,
+      "parse_errors": [],
+      "width_errors": []
+    },
+    "pdf_render": {
+      "pdf_count": 28,
+      "page_count": 243,
+      "errors": []
+    },
+    "owner_consistency_errors": [],
+    "duplicate_id_errors": [],
+    "canonical_pdf_markers": {
+      "layer_pdf": {
+        "Base Cycle Guard": true,
+        "PHIL-MACHINE-CLOSURE-01": true
+      },
+      "base_pdf": {
+        "CYCLE-GUARD-01": true,
+        "PHIL-MACHINE-CLOSURE-01": true,
+        "STOP-PHIL-MACHINE-DEGRADATION": true
+      },
+      "closed_machine_pdf": {
+        "PASS criteria": true,
+        "Base Cycle Guard remains Base-owned": true,
+        "QA-E remains not_claimed": true
+      }
+    },
+    "closed_philosophical_machine": {
+      "issues": [],
+      "simulation_steps": [
+        {
+          "step": "load"
+        },
+        {
+          "step": "cycle"
+        },
+        {
+          "step": "time"
+        },
+        {
+          "step": "stability"
+        },
+        {
+          "step": "next_state"
+        }
+      ],
+      "pass": true
+    },
+    "positive_formulation_weaknesses": [],
+    "machine_json": {
+      "active_rules_count_matches": true,
+      "base_cycle_guard_owner": true,
+      "has_closed_machine_test": true
+    },
+    "qa_e_field_effectiveness": "not_claimed"
+  },
+  "sample_renders": [
+    "/mnt/data/v020_samples_final_pass4/self/BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN.pdf_page_1.png",
+    "/mnt/data/v020_samples_final_pass4/self/BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN.pdf_page_23.png",
+    "/mnt/data/v020_samples_final_pass4/self/Self_SELF_PHYSIOLOGY_CANONICAL_EN.pdf_page_1.png",
+    "/mnt/data/v020_samples_final_pass4/self/Self_SELF_PHYSIOLOGY_CANONICAL_EN.pdf_page_5.png",
+    "/mnt/data/v020_samples_final_pass4/self/core_BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN.pdf_page_1.png",
+    "/mnt/data/v020_samples_final_pass4/self/core_BOOTSTRAP_BARE_PHYSIOLOGY_CANONICAL_EN.pdf_page_23.png",
+    "/mnt/data/v020_samples_final_pass4/self/qa_BOIS_CLOSED_PHILOSOPHICAL_MACHINE_TEST_EN.pdf_page_1.png"
+  ]
+}

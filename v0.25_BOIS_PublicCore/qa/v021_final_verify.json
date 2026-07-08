@@ -1,0 +1,23 @@
+{
+  "json_parse": "PASS 33 JSON",
+  "json_errors": [],
+  "csv_parse": "PASS 31 CSV",
+  "csv_errors": [],
+  "duplicate_ids": "PASS",
+  "duplicate_id_errors": [],
+  "owner_consistency": "PASS",
+  "owner_errors": [],
+  "hash_check": "PASS",
+  "hash_info": {
+    "count": 150,
+    "bad": []
+  },
+  "pdf_open": "PASS 32 PDF / 250 pages",
+  "pdf_errors": [],
+  "pdf_count": 32,
+  "pdf_pages": 250,
+  "new_organs": 0,
+  "strict_philosophical_machine_definition": "PASS",
+  "qa_e": "not_claimed",
+  "hardqa": "PASS"
+}

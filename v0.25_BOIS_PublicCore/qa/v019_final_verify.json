@@ -1,0 +1,37 @@
+{
+  "archive": "v.0.20_BOIS_Self.zip",
+  "version": "v0.20",
+  "status": "PENDING",
+  "checks": {
+    "json": {
+      "count": 31,
+      "errors": []
+    },
+    "csv": {
+      "count": 31,
+      "errors": []
+    },
+    "pdf_render": {
+      "pdf_count": 24,
+      "page_count": 233,
+      "errors": []
+    },
+    "canonical_pdf_markers": {
+      "ROUTE-CONSISTENCY-01": true,
+      "DEBT-LAYERS-01 repair": true,
+      "STOP-ROUTE-CONSISTENCY-DRIFT": true
+    },
+    "route_consistency_check_added": true,
+    "layer_owned_debt_policy_repaired": true,
+    "new_organs": 0,
+    "qa_e_field_effectiveness": "not_claimed"
+  },
+  "standard_archive_test_delta": "Test 19 now includes route consistency of the routes themselves.",
+  "debt_block_delta": "Project-owned accounts/platforms/sites/canonical links remain under the owning project.",
+  "sample_renders": [
+    "/mnt/data/v019_v017_samples_pass2/self/SELF_PHYSIOLOGY_CANONICAL_EN_page_1.png",
+    "/mnt/data/v019_v017_samples_pass2/self/SELF_PHYSIOLOGY_CANONICAL_EN_page_4.png",
+    "/mnt/data/v019_v017_samples_pass2/self/SELF_PHYSIOLOGY_CANONICAL_EN_page_5.png",
+    "/mnt/data/v019_v017_samples_pass2/self/STANDARD_ARCHIVE_RELEASE_TESTS_EN_page_1.png"
+  ]
+}

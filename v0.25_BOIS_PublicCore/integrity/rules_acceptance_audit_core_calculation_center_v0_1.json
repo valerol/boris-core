@@ -1,0 +1,22 @@
+{
+  "id": "rules_acceptance_audit_core_calculation_center_v0_1",
+  "date": "2026-06-30",
+  "scope": "core calculation center and layer routing policy",
+  "operator_instruction_summary": "Base calculation layer is the philosophical core; physiology cannot trap calculation; projects are overlays; layers may declare philosophical machines with explicit routing; public Self layers remain separate.",
+  "qa_boundary": "QA-A/B/C/D only; QA-E field effectiveness not claimed",
+  "accepted_rules": [
+    "CC-R01",
+    "CC-R02",
+    "CC-R03",
+    "CC-R04",
+    "CC-R05",
+    "CC-R06",
+    "CC-R07"
+  ],
+  "stops": [
+    "STOP-CALCULATION-LOCK",
+    "STOP-PROJECT-CORE-CONFLATION",
+    "STOP-UNDECLARED-PHIL-MACHINE",
+    "STOP-PERSONAL-TRANSFER-LEAK"
+  ]
+}

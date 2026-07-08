@@ -1,0 +1,23 @@
+{
+  "id": "BOIS-SOCRATES-ARTICLE-READABLE-LAYOUT-R3-PHIL-MACHINE-ADDENDUM",
+  "build_utc": "2026-07-05T08:10:00Z",
+  "source_language": "ru+en addendum surfaces",
+  "base_distribution_language": "en",
+  "canonical_development_language": "ru",
+  "current_article_release": "v3_CORE",
+  "ru_article": {
+    "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_RU_v3_CORE.pdf",
+    "sha256": "967284cee5613209b3c30084a87b33b489bce263553708cf46589df711f39889",
+    "pages": 26,
+    "change": "v0.22 addendum: strict philosophical-machine definition"
+  },
+  "en_article": {
+    "path": "core/articles/SOCRATES_BOIS_SIMA_BORIS_AI_EN_v3_CORE.pdf",
+    "sha256": "c81ba901a765def0e902aca66cb47add499ab244f67792aa0b9dc624f1306418",
+    "pages": 26,
+    "change": "v0.22 addendum: strict philosophical-machine definition"
+  },
+  "historical_r2_retained": true,
+  "quality_boundary": "Readable addendum pages were generated and rendered. Human third-party linguistic certification is not claimed.",
+  "qa_e_field_effectiveness_claimed": false
+}

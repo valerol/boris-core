@@ -1,0 +1,23 @@
+{
+  "version": "v0.20",
+  "audit": "versions_debt_precheck_layered_debts_and_standard_archive_tests",
+  "semantic_root": "Stale debt appeared because the debt list was copied without checking the actual Versions folder and because all debts were printed as one flat list.",
+  "rules_added": [
+    "ARCHIVE-TESTS-01",
+    "VER-DEBT-01",
+    "VER-DEBT-02",
+    "DEBT-LAYERS-01"
+  ],
+  "stops_added": [
+    "STOP-SELF-VERSIONS-DEBT-STALE",
+    "STOP-SELF-DEBT-LAYER-MIXED",
+    "STOP-SELF-ARCHIVE-TEST-INVENTORY-MISSING"
+  ],
+  "tests_added": [
+    "TST-ARCHIVE-RELEASE-STANDARD",
+    "TST-VERSIONS-DEBT-PRECHECK",
+    "TST-LAYERED-DEBT-BLOCK"
+  ],
+  "new_organs_added": 0,
+  "status": "PASS"
+}

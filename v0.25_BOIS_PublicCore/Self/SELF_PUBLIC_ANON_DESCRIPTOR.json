@@ -1,0 +1,22 @@
+{
+  "layer": "Self",
+  "role": "public anonymized base layer",
+  "version": "v0.24",
+  "archive_name": "v0.24_BOIS_Self_PublicAnon.zip",
+  "source_base": "canonical historical Temnik/Base v0.22 + v0.23 state-hardening physiology, anonymized into Self",
+  "anonymization_boundary": "No personal Temnik operational memory is included. This archive carries public core physiology plus a base Self layer.",
+  "drive_branch_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "drive_versions_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "created_for_project_context": "Game project validation and public core reuse",
+  "qa_e_status": "not claimed; validation evidence required",
+  "drive_root_folder_id": "1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "drive_root_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "versions_folder_id": "1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "versions_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "author_support_message_non_excludable": true,
+  "author_support_message_non_anonymizable": true,
+  "author_support_message_urls_preserved": true,
+  "r2_repair": "Support message and URLs restored; anonymization cannot remove or replace author support surface.",
+  "revision_policy": "version_sequence_only_no_R_suffixes",
+  "support_message_non_anonymizable": true
+}

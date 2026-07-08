@@ -1,0 +1,190 @@
+{
+  "layer": "Self",
+  "version": "v0.24",
+  "date": "2026-07-05",
+  "canonical_surface": "Self/SELF_PHYSIOLOGY_CANONICAL_EN.pdf",
+  "drive_root_folder_id": "1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "drive_root_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "current_folder_id": "",
+  "versions_folder_id": "1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "bare_archive": true,
+  "contains_actual_memory_state": false,
+  "archive_name": "v0.24_BOIS_Self_PublicAnon.zip",
+  "complex_definition": "Base core archive + Self bare physiology archive + Google Drive memory substrate form one working complex.",
+  "version_policy": "Versions accumulates all verified boot ZIP archives. No automatic limit of 11 versions is applied.",
+  "calculation_route": "Substantial Self calculations route to the base BOIS:SIMA&BORIS philosophical core or to an explicitly declared philosophical center of the layer if the layer has set one and the question is inside its domain.",
+  "language_surface_rule": "Every meaningful non-Russian term receives Russian bracket meaning at every significant use until the operator explicitly exempts that term.",
+  "anti_bureaucracy_rule": "A rule remains only when it has defect source, owner, verifiable function, test, and lower maintenance cost than merging with an existing rule.",
+  "qa_e_field_effectiveness": "not_claimed",
+  "rules": [
+    {
+      "id": "T-v0.240",
+      "summary": "Substantial calculation passes through philosophical center."
+    },
+    {
+      "id": "T-v0.241",
+      "summary": "Load order: philosophical core, core physiology, Self, project."
+    },
+    {
+      "id": "T-v0.242",
+      "summary": "Documents and memory route conclusions to the philosophical center."
+    },
+    {
+      "id": "T-v0.243",
+      "summary": "Self is a personal adapted layer."
+    },
+    {
+      "id": "T-v0.244",
+      "summary": "Transferable projects use their own public project surface."
+    },
+    {
+      "id": "T-v0.245",
+      "summary": "Self keeps separate physiology, memory, manifest, QA boundary."
+    },
+    {
+      "id": "T-v0.246",
+      "summary": "Self philosophical machine activates after explicit declaration."
+    },
+    {
+      "id": "T-R42",
+      "summary": "Without such declaration, calculation returns to base philosophical core."
+    },
+    {
+      "id": "T-R32",
+      "summary": "Versions accumulates verified boot ZIP archives."
+    },
+    {
+      "id": "T-R40",
+      "summary": "Every meaningful non-Russian term gets Russian meaning at every use."
+    },
+    {
+      "id": "T-R43",
+      "summary": "Every working result explicitly shows debt status."
+    },
+    {
+      "id": "T-R44",
+      "summary": "Hidden debt is anti-BOIS behavior and triggers repair."
+    },
+    {
+      "id": "T-R45",
+      "summary": "Cycle Guard is a Self organ for answer format and drift prevention."
+    },
+    {
+      "id": "T-R46",
+      "summary": "Layer/project organ precedence governs execution surface; calculation returns to BOIS:SIMA&BORIS or to an explicitly declared layer philosophical center in its domain."
+    },
+    {
+      "id": "T-R47",
+      "summary": "Any Cycle Guard miss triggers repair before ordinary output."
+    },
+    {
+      "id": "T-R49",
+      "summary": "Layer philosophical center may receive calculation only when explicitly declared and in-domain; otherwise base core is used."
+    },
+    {
+      "id": "T-R50",
+      "summary": "Auxiliary manifests and transfer fields must use the full calculation route: base core or explicit layer philosophical center in-domain."
+    },
+    {
+      "id": "T-R51",
+      "summary": "Bare archive is bare physiology without memory, with formation/QA tools and Drive pointer."
+    },
+    {
+      "id": "T-R52",
+      "summary": "Full state lives in personal Self versions and project archives with project-domain memory."
+    },
+    {
+      "id": "T-R53",
+      "summary": "Full boot transfer requires base core/physiology plus memory/state or verifiable SHA-256 pointer; memory-only is memory_snapshot."
+    },
+    {
+      "id": "T-R54",
+      "summary": "Cycle Guard checks detail, source boundary, package completeness, author support triggers, and stops ordinary output on miss."
+    },
+    {
+      "id": "T-R55",
+      "summary": "Author support message triggers on first greeting, physiology archives, #50 transition, and every downloadable BOIS product/archive."
+    },
+    {
+      "id": "T-R56",
+      "summary": "Material operator questions are asked before answer calculation; standing debts remain a separate block."
+    },
+    {
+      "id": "T-R57",
+      "summary": "Local repair is not canon until a new verified physiology version is released or accepted substrate is updated."
+    },
+    {
+      "id": "T-R58",
+      "summary": "Terminal copy tail uses three separate human-readable blocks."
+    },
+    {
+      "id": "T-R59",
+      "summary": "Author support message is the final visible element."
+    },
+    {
+      "id": "T-R60",
+      "summary": "Uploaded archive verification is performed without confirmation when required."
+    },
+    {
+      "id": "T-R61",
+      "summary": "Local archive verification is separate from external Versions upload/verify debt."
+    },
+    {
+      "id": "ARCHIVE-TESTS-01",
+      "summary": "Standard archive release tests are executed and reported."
+    },
+    {
+      "id": "VER-DEBT-01",
+      "summary": "Versions debt is prechecked against the target folder before it is repeated."
+    },
+    {
+      "id": "VER-DEBT-02",
+      "summary": "Local archive verification is executed directly and separated from external Versions state."
+    },
+    {
+      "id": "DEBT-LAYERS-01",
+      "summary": "Debt blocks are grouped by layer/substrate."
+    }
+  ],
+  "debt_visibility_rule": "Every working result explicitly states open, closed, partial, blocked, deferred, and manual-action debts. Hidden debt is anti-BOIS behavior and triggers repair.",
+  "cycle_guard": "T-ORG-20 Cycle Guard Gate enforces answer number, mode, Подробность, BOIS-check, Versions status, source boundary, package completeness, author support trigger for BOIS products, and debt block until the operator changes the cycle.",
+  "organ_precedence": "Layer/project organ is primary for layer execution when duplicated, but substantial calculation routes to BOIS:SIMA&BORIS or to an explicitly declared layer philosophical center in its domain.",
+  "bare_archive_definition": "Bare archive is bare physiology without memory, but with formation and QA tools plus Drive pointer.",
+  "full_state_definition": "Full state is not the bare archive. It consists of personal verified versions with the non-anonymized Self layer plus project archives, e.g. Game, containing project-domain memory.",
+  "transfer_package_policy": "Full boot transfer requires base core/physiology plus memory/state or a verifiable immutable SHA-256 pointer; memory-only package is memory_snapshot only.",
+  "author_support_message_policy": "Show at first greeting, physiology archive request/preparation/delivery, #50 transition package, and every downloadable BOIS-based product/archive.",
+  "operator_question_policy": "Ask material operator questions before calculating a substantial answer until they are exhausted, waived, blocked, or declared unavailable; debts are tracked separately.",
+  "terminal_copy_blocks": "BOIS-check, Versions, Debts as three separate copyable human-readable blocks.",
+  "archive_verification_no_confirmation": true,
+  "versions_debt_precheck_rule": "Before a Versions upload/verify debt is printed, inspect the target Versions folder when access exists; close matched debt by metadata.",
+  "layered_debt_block_rule": "Debts are grouped by Self/core and each project layer separately.",
+  "previous_canonical_version": "v0.22",
+  "previous_canonical_sha256": "abc70fc4218fa5cb970281dcc4be8d9b7b37203f0d633e5c98d720024addcc41",
+  "drive_root": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "current_folder": "https://drive.google.com/drive/folders/",
+  "versions_folder": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "current_folder_url": "https://drive.google.com/drive/folders/",
+  "versions_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "v023_patch": "state-hardening, prefix-aware hashes, append-only correction, active Cycle Guard mode, artifact branch substrate, project/runtime/publication boundary, QA-E validation gate, copyable theme blocks",
+  "v023_rules": [
+    "PREFIX-AWARE-HASH-01",
+    "CURRENT-CORRECTION-APPEND-01",
+    "ACTIVE-CYCLE-GUARD-MODE-01",
+    "ARTIFACT-BRANCH-DRIVE-SUBSTRATE-01",
+    "PROJECT-RUNTIME-BOUNDARY-01",
+    "QA-E-HUMAN-VALIDATION-GATE-01",
+    "COPYABLE-THEME-BLOCKS-01"
+  ],
+  "artifact_branch_substrate_policy": "Version-tracked artifact branches require a Drive folder or accepted replacement substrate; the link must be stored in the archive and owning physiological PDF.",
+  "self_drive_root_required_in_physiology_pdf": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "drive_branch_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "drive_versions_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "anonymized_public_core": true,
+  "personal_memory_included": false,
+  "author_support_message_non_excludable": true,
+  "author_support_message_non_anonymizable": true,
+  "author_support_message_urls_preserved": true,
+  "r2_repair": "Support message and URLs restored; anonymization cannot remove or replace author support surface.",
+  "revision_policy": "version_sequence_only_no_R_suffixes",
+  "support_message_non_anonymizable": true
+}

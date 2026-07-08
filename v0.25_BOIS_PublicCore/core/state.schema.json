@@ -1,0 +1,280 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bois-state.schema.json",
+  "title": "BOIS runtime state v3.2.4 [состояние исполнения]",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "state_id",
+    "created_at",
+    "active_core_version",
+    "D",
+    "V",
+    "S",
+    "loaded_sources",
+    "accepted_rules",
+    "active_stops",
+    "evidence_boundary",
+    "current_mode",
+    "operator_message_count",
+    "completion_policy"
+  ],
+  "properties": {
+    "state_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "active_core_version": {
+      "type": "string",
+      "const": "v3.2.4-sokrat-bare"
+    },
+    "active_domain_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_scope": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "D": {
+      "type": "object"
+    },
+    "V": {
+      "type": "object"
+    },
+    "S": {
+      "type": "object"
+    },
+    "loaded_sources": {
+      "type": "array"
+    },
+    "accepted_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_conflicts": {
+      "type": "array"
+    },
+    "active_stops": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "evidence_boundary": {
+      "type": "string"
+    },
+    "current_mode": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "array"
+    },
+    "rollback_point": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transition_package": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operator_message_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Счётчик сообщений оператора в текущей рабочей сессии."
+    },
+    "completion_policy": {
+      "type": "object",
+      "required": [
+        "auto_complete_at_operator_message",
+        "enabled"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "auto_complete_at_operator_message": {
+          "type": "integer",
+          "const": 50
+        },
+        "explicit_marker": {
+          "type": "string",
+          "const": "#50"
+        },
+        "cancel_requires_explicit_operator_instruction": {
+          "type": "boolean"
+        },
+        "after_50_every_message_finalizing": {
+          "type": "boolean",
+          "const": true
+        },
+        "visible_ordinal_required": {
+          "type": "boolean",
+          "const": true
+        },
+        "verbosity_visible_in_any_format": {
+          "type": "boolean",
+          "const": true
+        },
+        "continue_after_50_mode": {
+          "type": "string",
+          "const": "every_next_message_is_finalizing"
+        }
+      },
+      "additionalProperties": true
+    },
+    "completion_trigger": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "operator_message_50",
+        "explicit_marker_50",
+        "post_50_continuation",
+        "operator_cancel",
+        "none",
+        null
+      ]
+    },
+    "open_debts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "state_delta": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "surface_contract": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "compact",
+        "standard",
+        "full/audit",
+        "transition",
+        null
+      ],
+      "description": "Класс видимой поверхности ответа; степень подробности должна проговариваться в любом формате."
+    },
+    "visible_message_ordinal": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Видимый номер ответа, показываемый оператору на поверхности сообщения, например № 08/50 или № 51/50+."
+    },
+    "post_50_status": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "not_reached",
+        "transition_required",
+        "continuation_finalizing",
+        "completed",
+        null
+      ]
+    },
+    "active_source_order": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Canonical order of sources loaded during recovery; transfer memory is subordinate to active physiology unless repair is accepted."
+    },
+    "package_role": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "full_boot_transfer",
+        "memory_snapshot",
+        "bare_physiology",
+        "product_archive",
+        "repair_candidate",
+        null
+      ],
+      "description": "Role of the current package; memory_snapshot is not a boot package."
+    },
+    "base_core_archive": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Name/version/SHA-256/path or URL for the active base core/physiology archive."
+    },
+    "layer_physiology_archive": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Name/version/SHA-256/path or URL for the active layer physiology archive, e.g. Self."
+    },
+    "previous_transfer_archive": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "description": "Previous transfer packet, if used, with subordinate memory/state status."
+    },
+    "canonical_visible_header": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Canonical surface header, including №, Режим, Подробность."
+    },
+    "rules_source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Rule IDs used as basis for repair or transition."
+    },
+    "qa_e_field_effectiveness": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "not_claimed",
+        "claimed_with_field_evidence",
+        null
+      ],
+      "description": "QA-E field effectiveness status; default is not_claimed."
+    }
+  }
+}

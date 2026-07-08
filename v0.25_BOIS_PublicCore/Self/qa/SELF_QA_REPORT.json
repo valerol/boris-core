@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "archive": "v0.24_BOIS_Self_PublicAnon.zip",
+  "checks": [
+    "anonymized Self layer present",
+    "personal Temnik Drive folder not used as public core substrate",
+    "Self Drive branch link present",
+    "PDF surfaces regenerated"
+  ],
+  "qa_e_status": "not claimed"
+}

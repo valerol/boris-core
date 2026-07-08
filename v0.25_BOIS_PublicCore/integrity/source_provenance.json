@@ -1,0 +1,48 @@
+{
+  "version": "v3.2.4-sokrat-bare-enbase-rudev+socrates-article-readable-r2",
+  "build_utc": "2026-07-03T18:30:00Z",
+  "source_archive": {
+    "path": "/mnt/data/BOIS_Core_v3_2_4_Sokrat_Bare_Physiology_RU(1).zip",
+    "sha256": "cdca073b50ae8070a62ade1d82d55ec229f7a885fed6ae57415f403ce86e73e5",
+    "role": "Russian development-canonical prior bare physiology archive"
+  },
+  "operator_uploaded_theoretical_article_en": {
+    "filename": "MANUSCRIPT_Unified_BOIS_SIMA_BORIS_Preprint_v4_6_EN(3).pdf",
+    "sha256": "115d8a480b9f14672c00d8e2c15174fef917bdd2736153eaa91d63ccfc9e70a9",
+    "role": "canonical English translation of theoretical article supplied by operator"
+  },
+  "translation_source_rule": "SOCRATES article translations derive from the canonical Russian article supplied by the operator in this isolated session; readable-layout r2 is a layout/accessibility correction, not a mechanics change.",
+  "author_support_message_update": "Added About me link as supplied by operator; support message files and runtime JSON updated.",
+  "operator_uploaded_socrates_article_ru": {
+    "filename": "SOCRATES_BOIS_SIMA_BORIS_AI_RU_v2(4).pdf",
+    "sha256": "cb5775d8dda3c48cd75b1d24aab98be6f363937bd4b0845b48c28e0554ef5819",
+    "role": "canonical Russian SOCRATES article supplied by operator for this isolated rebuild"
+  },
+  "generated_socrates_article_en_translation": {
+    "filename": "SOCRATES_BOIS_SIMA_BORIS_AI_EN_v2_CORE.pdf",
+    "sha256": "1082c0009bb8fea5443d60e0030434a80eb8bef4c561c1702041b85e86ab072b",
+    "role": "English readable-layout r2 translation generated from the canonical Russian article"
+  },
+  "generated_socrates_article_ru_readable_layout": {
+    "filename": "SOCRATES_BOIS_SIMA_BORIS_AI_RU_v2_CORE.pdf",
+    "sha256": "2095ac4c613822cfe930ebc1b6dba130f7354686e173634f8ff1e6db0be125f2",
+    "role": "readable-layout r2 Russian article rebuilt from operator canonical source; high-contrast diagrams and no text-overlap design"
+  },
+  "v016_source_archive": {
+    "path": "/mnt/data/v.0.13_BOIS_Self.zip",
+    "sha256": "1099f9cebd4b85845e232f2ec48c35664c884a87e88735c33e89de0c429db82c",
+    "role": "input archive repaired into v0.17"
+  },
+  "v016_repair": "Operator accepted rules and requested minimal organs; repair implemented locally in this isolated session.",
+  "v021_strict_philosophical_machine_definition": {
+    "operator_accepted_rule": "PHIL-MACHINE-DEF-01",
+    "implemented_in": "Base core physiology tables and v0.22 patch surfaces",
+    "date": "2026-07-05",
+    "no_new_organs": true
+  },
+  "v0.22_article_patch": {
+    "implemented_in": "Socrates article v3 addendum surfaces",
+    "operator_request": "Add PHIL-MACHINE-DEF-01 strict philosophical machine definition to Socrates article",
+    "date": "2026-07-05"
+  }
+}

@@ -1,9 +1,0 @@
-level,priority,checks,not_cancelled,source_priority_ru,source_checks_ru,source_not_cancelled_ru
-P0,Safety and authority,"Harm, pressure, lack of consent, lack of authority, right to stop.","Safety, operator agency, right to stop.",Безопасность и полномочие,"Вред, давление, отсутствие согласия, отсутствие полномочия, право остановки.","Безопасность, агентность оператора, право остановки."
-P1,Evidence,Whether a hypothesis is being presented as fact; whether an inference exceeds evidence.,Evidence boundary.,Доказательность,Не выдаётся ли гипотеза за факт; не превышает ли вывод свидетельства.,Граница доказательности.
-P2,D/V/S,"Whether the domain, value interface, and substrate are the same; whether transfer is allowed.",Applicability and substrate boundary.,D/V/S,"Та же ли область, ценностный интерфейс и субстрат; допустим ли перенос.",Применимость и субстратная граница.
-P3,Stops and high risk,"Whether STOP conditions, a human procedure, or substrate limitation exist.","Stop, escalation, rollback, repair.",Стопы и высокий риск,"Есть ли STOP-условия, человеческая процедура или ограничение субстрата.","Остановка, эскалация, откат, ремонт."
-P4,Owner,"Who owns the norm, state, test, package, and failure mode.",Single-writer ownership.,Владелец,"Кто владеет нормой, состоянием, тестом, пакетом и режимом отказа.",Единственный владелец записи.
-P5,Domain,Which domain profile applies after P0-P4.,A domain does not create authority and does not cancel the core.,Домен,Какой доменный профиль применим после P0-P4.,Домен не создаёт полномочие и не отменяет ядро.
-P6,Artifact,"How to preserve, show, package, and recover.","Meaning, evidence, PDF canon.",Артефакт,"Как сохранить, показать, упаковать и восстановить.","Смысл, доказательность, PDF-канон."
-P7,Convenience,How to make the surface clear and economical.,All levels P0-P6.,Удобство,Как сделать поверхность понятной и экономной.,Все уровни P0-P6.

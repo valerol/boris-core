@@ -1,0 +1,18 @@
+{
+  "version": "v0.23",
+  "built_on_historical_v022_sha256": "abc70fc4218fa5cb970281dcc4be8d9b7b37203f0d633e5c98d720024addcc41",
+  "accepted_rules": [
+    "PREFIX-AWARE-HASH-01",
+    "CURRENT-CORRECTION-APPEND-01",
+    "ACTIVE-CYCLE-GUARD-MODE-01",
+    "ARTIFACT-BRANCH-DRIVE-SUBSTRATE-01",
+    "PROJECT-RUNTIME-BOUNDARY-01",
+    "QA-E-HUMAN-VALIDATION-GATE-01",
+    "COPYABLE-THEME-BLOCKS-01"
+  ],
+  "new_organs": [
+    "ORG-ARTIFACT-REGISTRY"
+  ],
+  "self_drive_root_folder_url": "https://drive.google.com/drive/folders/1AjdFgdnskRJ2-hz1EDDPAyPcPXM_CYWh",
+  "status": "built_pending_final_hash_manifest_at_this_stage"
+}
