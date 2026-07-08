@@ -22,6 +22,6 @@ SUPPORT-MESSAGE-ANONYMIZATION-IMMUNITY-01. Авторское сообщение
 [Поддержать на Patreon](https://www.patreon.com/cw/MaOS_aigame)
 [Разовое пожертвование на Ko-fi](https://ko-fi.com/temnik)
 [Разовое пожертвование на Buy Me a Coffee](https://buymeacoffee.com/temnik)
-[About me](www.temnik.com)
+[About me](https://www.temnik.com)
 
 Спасибо за поддержку. Она помогает мне продолжать работу над следующими уровнями.
