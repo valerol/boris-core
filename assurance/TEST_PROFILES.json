@@ -1,0 +1,240 @@
+{
+  "artifact_version": "2.22",
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "profiles": [
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-NORM-POSITIVE-STATE",
+      "input_contract": "norm card plus positive fixture",
+      "operation": "evaluate target state and success criterion",
+      "profile_id": "TP-NORM-POSITIVE-STATE",
+      "purpose": "Verify a norm card reaches its declared positive state under satisfied conditions",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "HOLD_OR_STOP",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-NORM-NEGATIVE-BOUNDARY",
+      "input_contract": "norm card plus negative fixture",
+      "operation": "evaluate HOLD, STOP, forbidden state, and repair route",
+      "profile_id": "TP-NORM-NEGATIVE-BOUNDARY",
+      "purpose": "Verify a norm blocks or holds its declared counterstate",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-PRIMARY-FORMULATION-POSITIVITY",
+      "input_contract": "canonical formulation",
+      "operation": "linguistic contract check without changing normative meaning",
+      "profile_id": "TP-PRIMARY-FORMULATION-POSITIVITY",
+      "purpose": "Verify the canonical formulation first states a desired route or state",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-OBJECT-STRUCTURE",
+      "input_contract": "object catalog row plus core schema",
+      "operation": "JSON Schema and catalog equivalence check",
+      "profile_id": "TP-OBJECT-STRUCTURE",
+      "purpose": "Verify required object fields and declared field types",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-OBJECT-BEHAVIOR",
+      "input_contract": "object contract",
+      "operation": "state-machine contract check",
+      "profile_id": "TP-OBJECT-BEHAVIOR",
+      "purpose": "Verify declared states, transitions, owners, and closure",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-ALIAS-RESOLUTION",
+      "input_contract": "alias schema and fixtures",
+      "operation": "allOf specialization validation",
+      "profile_id": "TP-ALIAS-RESOLUTION",
+      "purpose": "Verify alias specialization resolves to a canonical object and rejects a violating fixture",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-GATE-PREDICATE",
+      "input_contract": "gate vector",
+      "operation": "three-valued Predicate DSL evaluation and GateDecision mapping",
+      "profile_id": "TP-GATE-PREDICATE",
+      "purpose": "Verify a phase gate predicate with positive and negative fixtures",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-JUSTIFICATION-TRACE",
+      "input_contract": "justification graph",
+      "operation": "node, edge, canonical reference, and test reference closure",
+      "profile_id": "TP-JUSTIFICATION-TRACE",
+      "purpose": "Verify foundation, profile, and norm derivation references are closed",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-PACKAGE-INTEGRITY",
+      "input_contract": "archive and manifest",
+      "operation": "package integrity check",
+      "profile_id": "TP-PACKAGE-INTEGRITY",
+      "purpose": "Verify archive identity, file inventory, hashes, language, and passive-data boundary",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-PREDICATE-DSL",
+      "input_contract": "core canon and schema",
+      "operation": "recursive schema and truth-vector check",
+      "profile_id": "TP-PREDICATE-DSL",
+      "purpose": "Verify PredicateExpression syntax and truth vectors",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-DEONTIC-SEMANTICS",
+      "input_contract": "core canon",
+      "operation": "deontic mapping check",
+      "profile_id": "TP-DEONTIC-SEMANTICS",
+      "purpose": "Verify deontic operations and conflict mapping",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-RUNTIME-SCHEMA",
+      "input_contract": "runtime templates and schemas",
+      "operation": "JSON Schema positive and negative validation",
+      "profile_id": "TP-RUNTIME-SCHEMA",
+      "purpose": "Verify draft and final runtime records remain distinct",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    },
+    {
+      "applicable_object_kinds": [
+        "NORM",
+        "OBJECT",
+        "ALIAS",
+        "GATE",
+        "GRAPH",
+        "PACKAGE",
+        "RUNTIME"
+      ],
+      "expected_result": "PASS",
+      "failure_signal": "REPAIR-TEST-PROFILE-TP-HASH-RECONSTRUCTION",
+      "input_contract": "catalog and hash reconstruction specification",
+      "operation": "canonical serialization and SHA-256 check",
+      "profile_id": "TP-HASH-RECONSTRUCTION",
+      "purpose": "Verify individual and aggregate semantic hashes are reproducible",
+      "repair_route": "Repair the source contract, registry entry, or fixture and rerun the profile."
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "cycle_id": "BOIS-RELEASE-2.23-20260724-001",
+  "field_effectiveness": "NOT_CLAIMED",
+  "phases": [
+    {
+      "evidence": "User requested a repaired Common Core archive; two v2.22 archives, self-test data, dialogue export and theory documents were captured.",
+      "name": "INPUT_CAPTURED",
+      "phase_id": "C00"
+    },
+    {
+      "evidence": "Task bounded to BOIS history, theory, practice, canonical PDFs and passive machine-readable projections.",
+      "name": "PHENOMENON_BOUNDED",
+      "phase_id": "C01"
+    },
+    {
+      "evidence": "D=Common Core maintenance release; V=self-consistency, truthfulness, human authority; S=AI + human + file memory.",
+      "name": "GOAL_AND_DVS_CONFIRMED",
+      "phase_id": "C02"
+    },
+    {
+      "evidence": "Separated normative v2.22 canon, derived projections, dialogue evidence, self-test findings and empirical unknowns.",
+      "name": "EPISTEMIC_INVENTORY",
+      "phase_id": "C03"
+    },
+    {
+      "evidence": "Task classified as artifact repair and release, not field validation or public publication.",
+      "name": "QUESTION_OR_TASK_QUALIFIED",
+      "phase_id": "C04"
+    },
+    {
+      "evidence": "Maintenance version 2.23; normative PDFs unchanged; repair schemas, references, checks, runtime and provenance; no executable code.",
+      "name": "ROUTE_FROZEN",
+      "phase_id": "C05"
+    },
+    {
+      "evidence": "Repairs and projections generated; validation logic executed outside the archive.",
+      "name": "COGNITIVE_TRANSFORMATION",
+      "phase_id": "C06"
+    },
+    {
+      "evidence": "Every check and registry test receives evidence and static status; QA-E remains not claimed.",
+      "name": "EVIDENCE_AND_STATUS_ASSIGNED",
+      "phase_id": "C07"
+    },
+    {
+      "evidence": "Single ZIP with PDF/JSON/TSV only, manifest, checksums, runtime profile and receipts.",
+      "name": "RESULT_CONCRETIZED",
+      "phase_id": "C08"
+    },
+    {
+      "evidence": "Open external-effect limits preserved; recovery and version lineage included.",
+      "name": "CLOSURE_CANDIDATE",
+      "phase_id": "C09"
+    },
+    {
+      "evidence": "Independent validator invocation I2 completed: PASS; receipt assurance/VALIDATION_RECEIPT.json.",
+      "name": "QUALITY_CONFIRMED",
+      "phase_id": "C10"
+    },
+    {
+      "evidence": "Release directory and passive-data surfaces materialized; final ZIP identity is recorded externally after packaging to avoid self-hash recursion. Field effects remain future experience.",
+      "name": "EFFECT_OR_NEW_PHENOMENON",
+      "phase_id": "C11"
+    }
+  ],
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "status": "C11_RECORDED"
+}

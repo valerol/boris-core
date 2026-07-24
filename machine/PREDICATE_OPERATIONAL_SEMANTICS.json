@@ -1,0 +1,297 @@
+{
+  "artifact_version": "2.22",
+  "gate_mapping": {
+    "ERROR": "REPAIR",
+    "FALSE": "HOLD_OR_STOP_BY_BOUNDARY",
+    "TRUE": "CONTINUE",
+    "UNKNOWN": "HOLD"
+  },
+  "operators": {
+    "all": {
+      "inputs": [
+        "args array"
+      ],
+      "result": "Uses short_circuit.all."
+    },
+    "all_equal": {
+      "inputs": [
+        "paths array minItems 2"
+      ],
+      "result": "TRUE when all resolved values are typed-equal; missing UNKNOWN."
+    },
+    "all_references_resolve": {
+      "inputs": [
+        "path"
+      ],
+      "result": "TRUE only when a nonempty array contains references that all resolve."
+    },
+    "always": {
+      "inputs": [],
+      "result": "TRUE"
+    },
+    "any": {
+      "inputs": [
+        "args array"
+      ],
+      "result": "Uses short_circuit.any."
+    },
+    "enum_member": {
+      "inputs": [
+        "path",
+        "values array"
+      ],
+      "result": "TRUE when resolved scalar is a member using typed equality."
+    },
+    "equals": {
+      "inputs": [
+        "left_path",
+        "right_path"
+      ],
+      "result": "Typed equality; missing path UNKNOWN."
+    },
+    "equals_path": {
+      "inputs": [
+        "left_path",
+        "right_path"
+      ],
+      "result": "Same as equals; retained for relational readability."
+    },
+    "exists": {
+      "inputs": [
+        "path"
+      ],
+      "result": "TRUE when path exists even if value is null; FALSE otherwise"
+    },
+    "fact": {
+      "inputs": [
+        "path",
+        "equals scalar"
+      ],
+      "result": "typed equality; missing path UNKNOWN; type mismatch FALSE"
+    },
+    "in": {
+      "inputs": [
+        "path",
+        "values array"
+      ],
+      "result": "Alias of enum_member; direction is resolved value in values."
+    },
+    "literal": {
+      "inputs": [
+        "value:any scalar"
+      ],
+      "result": "true->TRUE; false->FALSE; null->UNKNOWN; any other scalar->ERROR"
+    },
+    "min_items": {
+      "inputs": [
+        "path",
+        "value nonnegative integer"
+      ],
+      "result": "TRUE when an array has at least value items; type error ERROR"
+    },
+    "neq": {
+      "inputs": [
+        "left_path",
+        "right_path"
+      ],
+      "result": "Negated typed equality; missing path UNKNOWN."
+    },
+    "nonempty": {
+      "inputs": [
+        "path"
+      ],
+      "result": "TRUE for nonempty string, nonempty array, or nonempty object; FALSE for null or empty; ERROR for unsupported type"
+    },
+    "nonempty_scope": {
+      "inputs": [
+        "path"
+      ],
+      "result": "TRUE only for a nonempty scope identifier or a nonempty unique array of scope identifiers; invalid type or empty value is FALSE/ERROR according to scope_model."
+    },
+    "not": {
+      "inputs": [
+        "arg"
+      ],
+      "result": "TRUE/FALSE invert; UNKNOWN and ERROR are preserved."
+    },
+    "reference_resolves": {
+      "inputs": [
+        "path"
+      ],
+      "result": "Uses reference_resolution registries and returns TRUE/FALSE/ERROR."
+    },
+    "same_cycle": {
+      "inputs": [
+        "paths array minItems 2"
+      ],
+      "result": "all_equal plus valid_identifier for every value."
+    },
+    "same_subject": {
+      "inputs": [
+        "left_path",
+        "right_path"
+      ],
+      "result": "equals plus valid_identifier for both values."
+    },
+    "scope_contains": {
+      "inputs": [
+        "left_path",
+        "right_path"
+      ],
+      "result": "Uses scope_model set containment."
+    },
+    "scope_equal": {
+      "inputs": [
+        "left_path",
+        "right_path"
+      ],
+      "result": "Uses scope_model exact set equality."
+    },
+    "scope_matches": {
+      "inputs": [
+        "left_path",
+        "right_path"
+      ],
+      "result": "Deprecated alias of scope_equal."
+    },
+    "unique": {
+      "inputs": [
+        "path",
+        "optional key_path"
+      ],
+      "result": "Uses unique semantics."
+    },
+    "valid_identifier": {
+      "inputs": [
+        "path"
+      ],
+      "result": "TRUE only when a nonempty string matches machine/IDENTIFIER_GRAMMAR.json"
+    }
+  },
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "path_resolution": {
+    "arrays": "integer path segments address array items",
+    "missing_path": "UNKNOWN",
+    "null_is_value": true,
+    "separator": "."
+  },
+  "reference_resolution": {
+    "ambiguous": "ERROR",
+    "missing": "FALSE",
+    "registries_in_order": [
+      "assurance/REFERENCE_INDEX.tsv",
+      "assurance/OBJECT_CATALOG.tsv",
+      "assurance/NORM_CATALOG.tsv",
+      "assurance/TEST_REGISTRY.json",
+      "fixtures/REFERENCE_FIXTURE_REGISTRY.json",
+      "runtime_record_set"
+    ],
+    "success": "A nonempty identifier or formal file selector resolves uniquely in at least one declared registry."
+  },
+  "scope_model": {
+    "representation": "A scope is a nonempty identifier or a nonempty array of unique identifiers.",
+    "scope_contains": "Every member of the right scope is present in the left scope.",
+    "scope_equal": "Normalized scope sets are equal.",
+    "scope_intersects": "The normalized sets have at least one common member.",
+    "unknown_or_invalid": "ERROR"
+  },
+  "semantics_id": "BOIS-PREDICATE-OPERATIONAL-SEMANTICS-1.0",
+  "short_circuit": {
+    "all": "Return FALSE on the first FALSE; otherwise ERROR if any ERROR; otherwise UNKNOWN if any UNKNOWN; otherwise TRUE.",
+    "any": "Return TRUE on the first TRUE; otherwise ERROR if any ERROR; otherwise UNKNOWN if any UNKNOWN; otherwise FALSE."
+  },
+  "test_vectors": [
+    {
+      "context": {
+        "x": "A"
+      },
+      "expected": "TRUE",
+      "expression": {
+        "op": "nonempty",
+        "path": "x"
+      },
+      "id": "OPSEM-001"
+    },
+    {
+      "context": {
+        "x": ""
+      },
+      "expected": "FALSE",
+      "expression": {
+        "op": "nonempty",
+        "path": "x"
+      },
+      "id": "OPSEM-002"
+    },
+    {
+      "context": {},
+      "expected": "FALSE",
+      "expression": {
+        "op": "nonempty",
+        "path": "x"
+      },
+      "id": "OPSEM-003"
+    },
+    {
+      "context": {
+        "x": "not-array"
+      },
+      "expected": "ERROR",
+      "expression": {
+        "op": "min_items",
+        "path": "x",
+        "value": 1
+      },
+      "id": "OPSEM-004"
+    },
+    {
+      "context": {
+        "a": [
+          "core",
+          "C10"
+        ],
+        "b": [
+          "C10"
+        ]
+      },
+      "expected": "TRUE",
+      "expression": {
+        "left_path": "a",
+        "op": "scope_contains",
+        "right_path": "b"
+      },
+      "id": "OPSEM-005"
+    },
+    {
+      "context": {
+        "x": [
+          {
+            "id": "A"
+          },
+          {
+            "id": "A"
+          }
+        ]
+      },
+      "expected": "FALSE",
+      "expression": {
+        "key_path": "id",
+        "op": "unique",
+        "path": "x"
+      },
+      "id": "OPSEM-006"
+    }
+  ],
+  "truth_values": [
+    "TRUE",
+    "FALSE",
+    "UNKNOWN",
+    "ERROR"
+  ],
+  "type_error_result": "ERROR",
+  "unique": {
+    "missing_key": "ERROR",
+    "objects": "An object array requires key_path; keys compare by canonical scalar value.",
+    "scalars": "Items compare by type and canonical JSON value."
+  }
+}

@@ -1,0 +1,10 @@
+version	status	immediate_parent	content_ancestor	archive_sha256	branching	note
+2.15	ACTIVE_CHAT_SOURCE				PROHIBITED	Used source assembly; unchanged.
+2.16	HISTORICAL_CANDIDATE	2.15	2.15		PROHIBITED	Historical candidate.
+2.17	REJECTED_AS_RELEASE	2.16	2.16	02a5782dc42f3125d6e342893f7861aaf06b51a17b3c2ff3c6f38fe98168c128	PROHIBITED	External label did not match internal content.
+2.18	HOLD_INTERNAL_SEMANTIC_REPAIR	2.17	2.16	471983dff7fb756e35a77a8b92d7a574b95784753d9eb7f91deabae75d2d3f0d	PROHIBITED	Preserved historical candidate.
+2.19	HOLD_INTERNAL_SEMANTIC_REPAIR	2.18	2.18	79e820e2a887294d77119253f3ae3866a9fa54958e7adb517885368468c4254d	PROHIBITED	Preserved historical candidate.
+2.20	HOLD_INTERNAL_SEMANTIC_REPAIR	2.19	2.19	52daebbbc782b1b17af06c4b3967cf85d85f60876f0334a6ee9c588881b6991b	PROHIBITED	Source candidate for v2.22; immutable.
+2.21	HOLD_INTERNAL_SEMANTIC_REPAIR	2.20	2.20	EXTERNAL_AFTER_PACKAGING	PROHIBITED	Current passive candidate.
+2.22	CANDIDATE	2.21			PROHIBITED	
+2.23	CURRENT_RELEASE	2.22	2.22	EXTERNAL_AFTER_PACKAGING	PROHIBITED	Sequential successor of 2.22. Release identifiers use vMAJOR.MINOR; each noninitial release has one immediate parent; release branches and merges are prohibited.

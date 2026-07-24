@@ -1,0 +1,4692 @@
+{
+  "$defs": {
+    "AbstractCategory": {
+      "additionalProperties": false,
+      "properties": {
+        "category_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "definition": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "invariants": {
+          "items": {},
+          "type": "array"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "category_id",
+        "definition",
+        "scope",
+        "owner",
+        "invariants"
+      ],
+      "type": "object"
+    },
+    "AbstractionTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "invariants": {
+          "items": {},
+          "type": "array"
+        },
+        "non_transferable_claims": {
+          "items": {},
+          "type": "array"
+        },
+        "return_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "selected_features": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_level": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "target_level": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "trace_id": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "trace_id",
+        "source_level",
+        "target_level",
+        "selected_features",
+        "invariants",
+        "non_transferable_claims",
+        "return_route"
+      ],
+      "type": "object"
+    },
+    "AcceptanceSelfTestReport": {
+      "additionalProperties": false,
+      "properties": {
+        "current_catalog": {
+          "type": "object"
+        },
+        "mutations": {
+          "type": "object"
+        },
+        "result": {
+          "enum": [
+            "PASS_INTERNAL_STATIC",
+            "HOLD",
+            "FAIL"
+          ]
+        },
+        "runtime_authorization": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "test_id": {
+          "$ref": "#/$defs/Identifier"
+        }
+      },
+      "required": [
+        "test_id",
+        "current_catalog",
+        "mutations",
+        "result",
+        "runtime_authorization"
+      ],
+      "type": "object"
+    },
+    "Action": {
+      "additionalProperties": false,
+      "properties": {
+        "STOP": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "action_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "actual_effect": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authority": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "classes": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "executor": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "expected_effect": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "goal": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "initiator": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "plan": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reversibility": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "substrate": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_id",
+        "classes",
+        "initiator",
+        "goal",
+        "plan",
+        "executor",
+        "authority",
+        "substrate",
+        "expected_effect",
+        "actual_effect",
+        "risk",
+        "reversibility",
+        "STOP"
+      ],
+      "type": "object"
+    },
+    "ActionExecutionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "attempt_count": {
+          "type": "integer"
+        },
+        "authorized_action_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "effect_capture_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "end_time": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "errors": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "execution_record_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "executor_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "observations": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "rollback_or_compensation_status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "start_time": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "EXECUTED",
+            "PARTIAL",
+            "FAILED",
+            "UNKNOWN",
+            "CANCELLED",
+            "NO_ACTION",
+            "COMPENSATED"
+          ]
+        }
+      },
+      "required": [
+        "execution_record_id",
+        "authorized_action_ref",
+        "cycle_id",
+        "executor_ref",
+        "start_time",
+        "end_time",
+        "status",
+        "attempt_count",
+        "observations",
+        "errors",
+        "rollback_or_compensation_status",
+        "effect_capture_ref"
+      ],
+      "type": "object"
+    },
+    "Artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "artifact_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "carriers": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "content_or_description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "custodian": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "lineage": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "physical_or_logical_identity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "representations": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "state": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "artifact_id",
+        "lineage",
+        "physical_or_logical_identity",
+        "content_or_description",
+        "carriers",
+        "representations",
+        "provenance",
+        "owner",
+        "custodian",
+        "state",
+        "access"
+      ],
+      "type": "object"
+    },
+    "AttentionAllocation": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/State"
+        },
+        {
+          "properties": {
+            "state_kind": {
+              "const": "ATTENTION_ALLOCATION"
+            }
+          },
+          "required": [
+            "state_kind"
+          ]
+        }
+      ]
+    },
+    "Authority": {
+      "additionalProperties": false,
+      "properties": {
+        "authority_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "limit": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "permitted_actions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "revocation_method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk_level": {
+          "$ref": "#/$defs/RiskLevel"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "subject_or_role": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "term_or_condition": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "authority_id",
+        "source",
+        "subject_or_role",
+        "scope",
+        "limit",
+        "permitted_actions",
+        "risk_level",
+        "term_or_condition",
+        "revocation_method",
+        "status"
+      ],
+      "type": "object"
+    },
+    "AuthorityDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "authority_decision_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "authority_source_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "authorized_subject_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "decision": {
+          "enum": [
+            "AUTHORIZED_IN_SCOPE",
+            "DENIED",
+            "UNRESOLVED",
+            "REVOKED"
+          ],
+          "type": "string"
+        },
+        "permitted_operations": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "proposal_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "revocation_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "validity_conditions": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "authority_decision_id",
+        "proposal_ref",
+        "authority_source_ref",
+        "authorized_subject_ref",
+        "scope",
+        "permitted_operations",
+        "validity_conditions",
+        "decision",
+        "revocation_route"
+      ],
+      "type": "object"
+    },
+    "AuthorizedExternalAction": {
+      "additionalProperties": false,
+      "properties": {
+        "action_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authority_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "cycle_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "execution_plan": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "independent_review_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "proposal_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "action_id",
+        "proposal_id",
+        "cycle_id",
+        "authority_ref",
+        "independent_review_ref",
+        "scope",
+        "execution_plan",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "BoundedResult": {
+      "additionalProperties": false,
+      "properties": {
+        "applicability": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "boundary_status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "excluded_claims": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "owner": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "result_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_result_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "unknowns": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "result_id",
+        "source_result_ref",
+        "scope",
+        "boundary_status",
+        "applicability",
+        "unknowns",
+        "excluded_claims",
+        "evidence_refs",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "Branch": {
+      "additionalProperties": false,
+      "properties": {
+        "assumptions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "branch_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "descendants": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "goal": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "inputs": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "local_closure": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "parent_cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "resources": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "branch_id",
+        "parent_cycle_id",
+        "goal",
+        "assumptions",
+        "inputs",
+        "dependencies",
+        "resources",
+        "risk",
+        "status",
+        "local_closure",
+        "descendants"
+      ],
+      "type": "object"
+    },
+    "CalculatingElement": {
+      "additionalProperties": false,
+      "properties": {
+        "capacity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "element_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "limits": {
+          "items": {},
+          "type": "array"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "substrate_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "supported_operations": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "element_id",
+        "substrate_id",
+        "supported_operations",
+        "capacity",
+        "limits",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "Carrier": {
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "carrier_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "custodian": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "durability": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "location": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "loss_risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "mutability": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "reading_method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "substrate_type": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "carrier_id",
+        "substrate_type",
+        "location",
+        "owner",
+        "custodian",
+        "access",
+        "mutability",
+        "durability",
+        "reading_method",
+        "dependencies",
+        "loss_risk"
+      ],
+      "type": "object"
+    },
+    "Closure": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "closure_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "final_package": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "levels": {
+          "$ref": "#/$defs/ClosureLevels"
+        },
+        "positions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "quality_confirmation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "residual_risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "unknowns": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "closure_id",
+        "cycle_id",
+        "levels",
+        "final_package",
+        "unknowns",
+        "residual_risk",
+        "positions",
+        "dependencies",
+        "candidate",
+        "quality_confirmation",
+        "scope"
+      ],
+      "type": "object"
+    },
+    "ClosureCandidate": {
+      "additionalProperties": false,
+      "properties": {
+        "closure_candidate_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "debt_refs": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "external_action_required": {
+          "type": "boolean"
+        },
+        "next_transition": {
+          "$ref": "#/$defs/StateReference"
+        },
+        "physiology_change_required": {
+          "type": "boolean"
+        },
+        "producer_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "recovery_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "residual_risk_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "responsibility_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "result_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "unknowns": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "closure_candidate_id",
+        "cycle_id",
+        "result_ref",
+        "scope",
+        "unknowns",
+        "residual_risk_ref",
+        "debt_refs",
+        "provenance",
+        "responsibility_ref",
+        "recovery_route",
+        "next_transition",
+        "physiology_change_required",
+        "status",
+        "producer_ref",
+        "external_action_required"
+      ],
+      "type": "object"
+    },
+    "ClosureLevels": {
+      "type": "object"
+    },
+    "CognitiveProtocolRun": {
+      "additionalProperties": false,
+      "properties": {
+        "cycle_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "evidence": {
+          "items": {},
+          "type": "array"
+        },
+        "inputs": {
+          "items": {},
+          "type": "array"
+        },
+        "microphase": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "outputs": {
+          "items": {},
+          "type": "array"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "protocol_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "run_id": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "run_id",
+        "cycle_id",
+        "protocol_id",
+        "microphase",
+        "inputs",
+        "outputs",
+        "owner",
+        "evidence"
+      ],
+      "type": "object"
+    },
+    "Composition": {
+      "additionalProperties": false,
+      "properties": {
+        "HOLD/STOP": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authority_mode": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "composition_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "interfaces": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "memory": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "object_channels": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "physiologies_and_versions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "recovery": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "termination": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "composition_id",
+        "physiologies_and_versions",
+        "scope",
+        "interfaces",
+        "authority_mode",
+        "object_channels",
+        "risk",
+        "memory",
+        "HOLD/STOP",
+        "recovery",
+        "termination"
+      ],
+      "type": "object"
+    },
+    "Context Package": {
+      "additionalProperties": false,
+      "properties": {
+        "authorities": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "context_package_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "current_context": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "difference_map": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "launch_status": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "readiness": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "resources": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "snapshot": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "triggers": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "context_package_id",
+        "revision",
+        "snapshot",
+        "triggers",
+        "current_context",
+        "difference_map",
+        "authorities",
+        "risk",
+        "resources",
+        "readiness",
+        "launch_status"
+      ],
+      "type": "object"
+    },
+    "Contradiction": {
+      "additionalProperties": false,
+      "properties": {
+        "common_scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "conflict_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "divergent_assumptions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "exact_party_revisions": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "incompatibility_type": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "influence": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "resolution_routes": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "conflict_id",
+        "exact_party_revisions",
+        "incompatibility_type",
+        "common_scope",
+        "divergent_assumptions",
+        "influence",
+        "resolution_routes",
+        "status"
+      ],
+      "type": "object"
+    },
+    "CostEstimate": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "minLength": 1,
+          "type": "string"
+        }
+      ]
+    },
+    "Cycle": {
+      "additionalProperties": false,
+      "properties": {
+        "HOLD/STOP": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "branches": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "closure": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "completion_criterion": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "goal": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "parent": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "phenomenon": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "quality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risks": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "state": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "type": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "cycle_id",
+        "parent",
+        "type",
+        "phenomenon",
+        "scope",
+        "goal",
+        "completion_criterion",
+        "branches",
+        "state",
+        "risks",
+        "HOLD/STOP",
+        "closure",
+        "quality"
+      ],
+      "type": "object"
+    },
+    "Defect": {
+      "additionalProperties": false,
+      "properties": {
+        "HOLD/STOP": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "causes": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "defect_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "description": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "detection": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "object_or_revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "repair_plan": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "severity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "defect_id",
+        "object_or_revision",
+        "description",
+        "scope",
+        "severity",
+        "detection",
+        "causes",
+        "dependencies",
+        "HOLD/STOP",
+        "repair_plan",
+        "status"
+      ],
+      "type": "object"
+    },
+    "Deletion": {
+      "additionalProperties": false,
+      "properties": {
+        "authority": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "carriers": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "deletion_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "evidence": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "goal": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "object_or_scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "residual": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "retention_requirement": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status_by_carrier": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "deletion_id",
+        "object_or_scope",
+        "goal",
+        "authority",
+        "retention_requirement",
+        "carriers",
+        "method",
+        "evidence",
+        "residual",
+        "status_by_carrier"
+      ],
+      "type": "object"
+    },
+    "Destruction Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "carrier_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "chain_of_custody": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "destruction_evidence_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "evidence_profile": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "executor": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "materials": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "result": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "retention_term": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time_or_place": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "verifier": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "destruction_evidence_id",
+        "carrier_id",
+        "evidence_profile",
+        "executor",
+        "chain_of_custody",
+        "time_or_place",
+        "materials",
+        "verifier",
+        "result",
+        "retention_term"
+      ],
+      "type": "object"
+    },
+    "EffectCapture": {
+      "additionalProperties": false,
+      "properties": {
+        "captured_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "effect_capture_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "effect_capture_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "execution_record_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "state_update_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        }
+      },
+      "required": [
+        "effect_capture_id",
+        "cycle_id",
+        "execution_record_ref",
+        "effect_capture_ref",
+        "evidence_refs",
+        "state_update_ref",
+        "captured_at",
+        "owner_ref"
+      ],
+      "type": "object"
+    },
+    "EpistemicAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "S_level": {
+          "$ref": "#/$defs/SLevel"
+        },
+        "assessment_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "counterevidence_refs": {
+          "items": {},
+          "type": "array"
+        },
+        "evidence_refs": {
+          "items": {},
+          "type": "array"
+        },
+        "owner": {
+          "enum": [
+            "O010"
+          ]
+        },
+        "phase": {
+          "enum": [
+            "C03",
+            "C07"
+          ]
+        },
+        "review_conditions": {
+          "items": {},
+          "type": "array"
+        },
+        "source_refs": {
+          "items": {},
+          "type": "array"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "unknown_id": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "assessment_id",
+        "unknown_id",
+        "owner",
+        "phase",
+        "source_refs",
+        "evidence_refs",
+        "counterevidence_refs",
+        "S_level",
+        "status",
+        "review_conditions"
+      ],
+      "type": "object"
+    },
+    "Event": {
+      "additionalProperties": false,
+      "properties": {
+        "cause": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "effect": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "event_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "evidence": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "participants": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "place_or_substrate": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "state_before_or_after": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "type": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "event_id",
+        "type",
+        "time",
+        "place_or_substrate",
+        "participants",
+        "state_before_or_after",
+        "cause",
+        "effect",
+        "evidence",
+        "dependencies"
+      ],
+      "type": "object"
+    },
+    "Evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "completeness": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "distortions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "evidence_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "independence": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "observed_object": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "resolution": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "supported_or_refuted_objects": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "evidence_id",
+        "source",
+        "observed_object",
+        "method",
+        "time",
+        "scope",
+        "resolution",
+        "completeness",
+        "distortions",
+        "independence",
+        "supported_or_refuted_objects"
+      ],
+      "type": "object"
+    },
+    "EvidenceReferenceList": {
+      "items": {
+        "$ref": "#/$defs/ObjectReference"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "Experience": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/ExperienceRecord"
+        }
+      ]
+    },
+    "ExperienceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "cycle_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "evidence_refs": {
+          "items": {},
+          "type": "array"
+        },
+        "experience_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "freshness": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "observations": {
+          "items": {},
+          "type": "array"
+        },
+        "operation_or_action_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "experience_id",
+        "operation_or_action_ref",
+        "cycle_id",
+        "observations",
+        "evidence_refs",
+        "scope",
+        "freshness",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "Explanation": {
+      "additionalProperties": false,
+      "properties": {
+        "S": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "alternatives": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "counterdata": {
+          "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "discriminating_consequences": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "explained_object": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "explanation_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "mechanism_or_conditions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "relation_type": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "explanation_id",
+        "explained_object",
+        "relation_type",
+        "mechanism_or_conditions",
+        "discriminating_consequences",
+        "alternatives",
+        "counterdata",
+        "scope",
+        "S"
+      ],
+      "type": "object"
+    },
+    "ExternalActionProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "action_type": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authority_required": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "cycle_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "proposal_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "review_required": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "target": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "proposal_id",
+        "cycle_id",
+        "action_type",
+        "target",
+        "scope",
+        "risk",
+        "authority_required",
+        "review_required",
+        "owner_ref"
+      ],
+      "type": "object"
+    },
+    "Fact": {
+      "additionalProperties": false,
+      "properties": {
+        "S": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "counterevidence": {
+          "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "establishment_criterion": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "exact_formulation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "fact_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "phenomenon": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "review_conditions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "fact_id",
+        "exact_formulation",
+        "phenomenon",
+        "scope",
+        "time",
+        "establishment_criterion",
+        "evidence",
+        "counterevidence",
+        "S",
+        "status",
+        "review_conditions"
+      ],
+      "type": "object"
+    },
+    "Freshness Profile": {
+      "additionalProperties": false,
+      "properties": {
+        "allowable_risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "artifact_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "aspect": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "change_rate": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "events": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "freshness_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "method_or_accuracy": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "next_review_time": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "observation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "task": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "freshness_id",
+        "artifact_id",
+        "aspect",
+        "observation",
+        "method_or_accuracy",
+        "time",
+        "events",
+        "change_rate",
+        "task",
+        "allowable_risk",
+        "next_review_time"
+      ],
+      "type": "object"
+    },
+    "Hypothesis": {
+      "additionalProperties": false,
+      "properties": {
+        "S": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "alternatives": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "assumptions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "consequences": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "falsification_criteria": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "formulation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "grounds": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "hypothesis_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "protocols": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "formulation",
+        "scope",
+        "assumptions",
+        "grounds",
+        "alternatives",
+        "consequences",
+        "falsification_criteria",
+        "protocols",
+        "S",
+        "status"
+      ],
+      "type": "object"
+    },
+    "Identifier": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
+      "type": "string"
+    },
+    "IndependenceLevel": {
+      "enum": [
+        "IND0",
+        "IND1",
+        "IND2",
+        "IND3",
+        "IND4",
+        "IND_ANY"
+      ]
+    },
+    "IndependentReview": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Evidence"
+        },
+        {
+          "properties": {
+            "independence": {
+              "enum": [
+                "IND2",
+                "IND3",
+                "IND4"
+              ]
+            }
+          },
+          "required": [
+            "independence"
+          ]
+        }
+      ]
+    },
+    "Inference": {
+      "additionalProperties": false,
+      "properties": {
+        "S": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "alternatives": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "assumptions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "inference_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "operation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "premises_and_revisions": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sensitivity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "support": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "trace": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "validity": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "inference_id",
+        "premises_and_revisions",
+        "operation",
+        "assumptions",
+        "scope",
+        "trace",
+        "alternatives",
+        "sensitivity",
+        "validity",
+        "support",
+        "S"
+      ],
+      "type": "object"
+    },
+    "Input Container": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "channel": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "composition": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "constraints": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "identified_phenomena": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "initiator": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "input_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "sensitivity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_artifact": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "input_id",
+        "source_artifact",
+        "channel",
+        "time",
+        "initiator",
+        "composition",
+        "availability",
+        "identified_phenomena",
+        "constraints",
+        "sensitivity"
+      ],
+      "type": "object"
+    },
+    "Instruction": {
+      "additionalProperties": false,
+      "properties": {
+        "STOP": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authority": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "errors": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "freshness": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "instruction_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "preconditions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "resources": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "rollback_or_compensation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "safe_points": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "steps": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "instruction_id",
+        "provenance",
+        "scope",
+        "preconditions",
+        "authority",
+        "resources",
+        "steps",
+        "safe_points",
+        "errors",
+        "STOP",
+        "rollback_or_compensation",
+        "freshness"
+      ],
+      "type": "object"
+    },
+    "InterfaceMachine": {
+      "additionalProperties": false,
+      "properties": {
+        "abstract_categories": {
+          "items": {},
+          "type": "array"
+        },
+        "abstraction_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "agency": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authorized_change_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "calculating_elements": {
+          "items": {},
+          "type": "array"
+        },
+        "classification_state": {
+          "enum": [
+            "INTERFACE_SYSTEM",
+            "INTERFACE_MACHINE_CANDIDATE",
+            "INTERFACE_MACHINE_VERIFIED"
+          ]
+        },
+        "closure_rule": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "concretization_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "connected_systems": {
+          "items": {},
+          "type": "array"
+        },
+        "declared_substrate": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "feedback_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "input_interface": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "interface_machine_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "loop_test_evidence": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "machine_profile_ref": {
+          "enum": [
+            "PhilosophicalMachine"
+          ]
+        },
+        "memory": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "output_interface": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "phase_contract": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk_model": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "state": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "transition_rules": {
+          "items": {},
+          "type": "array"
+        },
+        "value_interface": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "interface_machine_id",
+        "classification_state",
+        "machine_profile_ref",
+        "connected_systems",
+        "declared_substrate",
+        "input_interface",
+        "abstraction_route",
+        "abstract_categories",
+        "transition_rules",
+        "calculating_elements",
+        "concretization_route",
+        "output_interface",
+        "feedback_route",
+        "state",
+        "memory",
+        "agency",
+        "value_interface",
+        "risk_model",
+        "closure_rule",
+        "phase_contract",
+        "authorized_change_route",
+        "loop_test_evidence"
+      ],
+      "type": "object"
+    },
+    "LevelProfile": {
+      "type": "object"
+    },
+    "MachinePhase": {
+      "additionalProperties": false,
+      "properties": {
+        "allowed_transitions": {
+          "items": {},
+          "type": "array"
+        },
+        "entry_trigger": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "exit_trigger": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "machine_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "phase_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "required_evidence": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "phase_id",
+        "machine_id",
+        "entry_trigger",
+        "exit_trigger",
+        "owner",
+        "required_evidence",
+        "allowed_transitions"
+      ],
+      "type": "object"
+    },
+    "Memory": {
+      "additionalProperties": false,
+      "properties": {
+        "activation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "class": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "content_or_reference": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "deletion": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "freshness": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "memory_item_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sensitivity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "supersession": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "term": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "memory_item_id",
+        "class",
+        "content_or_reference",
+        "provenance",
+        "scope",
+        "sensitivity",
+        "term",
+        "activation",
+        "freshness",
+        "supersession",
+        "deletion"
+      ],
+      "type": "object"
+    },
+    "Model": {
+      "additionalProperties": false,
+      "properties": {
+        "S": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "alternatives": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "assumptions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "mechanisms": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "model_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "objects": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "parameters": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "predictions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "purpose": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "relations": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "tests": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "model_id",
+        "purpose",
+        "objects",
+        "relations",
+        "mechanisms",
+        "assumptions",
+        "parameters",
+        "predictions",
+        "tests",
+        "alternatives",
+        "scope",
+        "S"
+      ],
+      "type": "object"
+    },
+    "NextStep": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Transition"
+        },
+        {
+          "properties": {
+            "candidate_status": {
+              "const": "PROPOSED"
+            }
+          },
+          "required": [
+            "candidate_status"
+          ]
+        }
+      ]
+    },
+    "NonEmptyString": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "ObjectReference": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
+      "type": "string"
+    },
+    "ObjectReferenceList": {
+      "items": {
+        "$ref": "#/$defs/ObjectReference"
+      },
+      "type": "array"
+    },
+    "ObservedEffect": {
+      "additionalProperties": false,
+      "properties": {
+        "action_execution_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "effect_evidence_refs": {
+          "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "effect_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "effect_status": {
+          "enum": [
+            "RECORDED",
+            "CLASSIFIED",
+            "NO_EFFECT_CONFIRMED",
+            "EFFECT_UNKNOWN_RECORDED",
+            "COMPENSATED"
+          ]
+        },
+        "next_state_or_terminal_condition": {
+          "$ref": "#/$defs/StateReference"
+        },
+        "observations": {
+          "items": {},
+          "type": "array"
+        },
+        "owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "state_update_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        }
+      },
+      "required": [
+        "effect_id",
+        "action_execution_ref",
+        "cycle_id",
+        "effect_status",
+        "observations",
+        "effect_evidence_refs",
+        "provenance",
+        "state_update_ref",
+        "next_state_or_terminal_condition",
+        "owner_ref"
+      ],
+      "type": "object"
+    },
+    "Oper": {
+      "additionalProperties": false,
+      "properties": {
+        "after_state": {
+          "$ref": "#/$defs/StateReference"
+        },
+        "agency_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "before_state": {
+          "$ref": "#/$defs/StateReference"
+        },
+        "cost": {
+          "$ref": "#/$defs/CostEstimate"
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "machine_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "memory_write_refs": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "micro_closure": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "oper_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "residue": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "transition_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "trigger": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "value_or_risk_gate": {
+          "$ref": "#/$defs/ObjectReference"
+        }
+      },
+      "required": [
+        "oper_id",
+        "machine_ref",
+        "before_state",
+        "trigger",
+        "evidence_refs",
+        "agency_ref",
+        "value_or_risk_gate",
+        "transition_ref",
+        "after_state",
+        "memory_write_refs",
+        "cost",
+        "micro_closure",
+        "residue"
+      ],
+      "type": "object"
+    },
+    "Operature": {
+      "additionalProperties": false,
+      "properties": {
+        "dependency_edges": {
+          "items": {},
+          "type": "array"
+        },
+        "entry_state": {
+          "$ref": "#/$defs/StateReference"
+        },
+        "exit_state": {
+          "$ref": "#/$defs/StateReference"
+        },
+        "invariants": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "machine_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "oper_refs": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "operature_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "ordering_kind": {
+          "enum": [
+            "LINEAR",
+            "PARTIAL_ORDER",
+            "CYCLIC"
+          ]
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "test_refs": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "operature_id",
+        "machine_ref",
+        "oper_refs",
+        "ordering_kind",
+        "dependency_edges",
+        "entry_state",
+        "exit_state",
+        "scope",
+        "invariants",
+        "test_refs"
+      ],
+      "type": "object"
+    },
+    "Operome": {
+      "additionalProperties": false,
+      "properties": {
+        "alternative_models": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "confidence": {
+          "$ref": "#/$defs/SLevel"
+        },
+        "exceptions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "gaps": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "object_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "observation_window": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "oper_refs": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "operome_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "stability": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "operome_id",
+        "object_ref",
+        "observation_window",
+        "oper_refs",
+        "stability",
+        "exceptions",
+        "gaps",
+        "confidence",
+        "alternative_models"
+      ],
+      "type": "object"
+    },
+    "Phenomenon": {
+      "additionalProperties": false,
+      "properties": {
+        "boundary": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "class": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "formulation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "identification_source": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "phenomenon_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "related_inputs": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "risks": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "unknowns": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "phenomenon_id",
+        "class",
+        "formulation",
+        "boundary",
+        "scope",
+        "time",
+        "identification_source",
+        "related_inputs",
+        "unknowns",
+        "risks",
+        "status"
+      ],
+      "type": "object"
+    },
+    "PhilosophicalMachine": {
+      "additionalProperties": false,
+      "properties": {
+        "abstract_categories": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "abstraction_route": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "agency": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "authorized_change_route": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "calculating_elements": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "closure_rule": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "concretization_route": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "declared_substrate": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "feedback_route": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "input_interface": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "machine_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "memory": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "output_interface": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "phase_contract": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "risk_model": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "state": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "transition_rules": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "value_interface": {
+          "$ref": "#/$defs/ObjectReference"
+        }
+      },
+      "required": [
+        "machine_id",
+        "declared_substrate",
+        "input_interface",
+        "abstraction_route",
+        "abstract_categories",
+        "transition_rules",
+        "calculating_elements",
+        "concretization_route",
+        "output_interface",
+        "feedback_route",
+        "state",
+        "memory",
+        "agency",
+        "value_interface",
+        "risk_model",
+        "closure_rule",
+        "phase_contract",
+        "authorized_change_route"
+      ],
+      "type": "object"
+    },
+    "PhilosophicalTrajectory": {
+      "additionalProperties": false,
+      "properties": {
+        "input_category": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "output_category": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "trajectory_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "transitions": {
+          "items": {},
+          "type": "array"
+        }
+      },
+      "required": [
+        "trajectory_id",
+        "input_category",
+        "transitions",
+        "output_category",
+        "scope",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "Physiology": {
+      "additionalProperties": false,
+      "properties": {
+        "canon": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "compatibility": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "generation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "interfaces": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "norms": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "organs": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "physiology_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "release_status": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "schemas": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "tests": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "version": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "physiology_id",
+        "name",
+        "version",
+        "generation",
+        "canon",
+        "organs",
+        "norms",
+        "schemas",
+        "interfaces",
+        "lifecycle",
+        "compatibility",
+        "tests",
+        "release_status"
+      ],
+      "type": "object"
+    },
+    "PhysiologyRevisionCandidate": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Revision"
+        },
+        {
+          "properties": {
+            "activation_status": {
+              "const": "CANDIDATE"
+            }
+          },
+          "required": [
+            "activation_status"
+          ]
+        }
+      ]
+    },
+    "Position": {
+      "additionalProperties": false,
+      "properties": {
+        "exact_formulation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "party": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "position_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "related_decisions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "position_id",
+        "party",
+        "exact_formulation",
+        "scope",
+        "time",
+        "provenance",
+        "status",
+        "related_decisions",
+        "revision"
+      ],
+      "type": "object"
+    },
+    "PredicateExpression": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "always"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "literal"
+            },
+            "value": {
+              "$ref": "#/$defs/PredicateScalar"
+            }
+          },
+          "required": [
+            "op",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "equals": {
+              "$ref": "#/$defs/PredicateScalar"
+            },
+            "op": {
+              "const": "fact"
+            },
+            "path": {
+              "$ref": "#/$defs/NonEmptyString"
+            }
+          },
+          "required": [
+            "op",
+            "path",
+            "equals"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "exists",
+                "nonempty",
+                "valid_identifier",
+                "reference_resolves",
+                "nonempty_scope",
+                "unique"
+              ]
+            },
+            "path": {
+              "$ref": "#/$defs/NonEmptyString"
+            }
+          },
+          "required": [
+            "op",
+            "path"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "min_items"
+            },
+            "path": {
+              "$ref": "#/$defs/NonEmptyString"
+            },
+            "value": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "op",
+            "path",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "in",
+                "enum_member"
+              ]
+            },
+            "path": {
+              "$ref": "#/$defs/NonEmptyString"
+            },
+            "values": {
+              "items": {
+                "$ref": "#/$defs/PredicateScalar"
+              },
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "op",
+            "path",
+            "values"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "args": {
+              "items": {
+                "$ref": "#/$defs/PredicateExpression"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "op": {
+              "enum": [
+                "all",
+                "any"
+              ]
+            }
+          },
+          "required": [
+            "op",
+            "args"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "arg": {
+              "$ref": "#/$defs/PredicateExpression"
+            },
+            "op": {
+              "const": "not"
+            }
+          },
+          "required": [
+            "op",
+            "arg"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "left_path": {
+              "$ref": "#/$defs/NonEmptyString"
+            },
+            "op": {
+              "enum": [
+                "equals",
+                "neq",
+                "scope_matches"
+              ]
+            },
+            "right_path": {
+              "$ref": "#/$defs/NonEmptyString"
+            }
+          },
+          "required": [
+            "op",
+            "left_path",
+            "right_path"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "gte"
+            },
+            "path": {
+              "$ref": "#/$defs/NonEmptyString"
+            },
+            "value": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "op",
+            "path",
+            "value"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "PredicateScalar": {
+      "type": [
+        "string",
+        "number",
+        "boolean",
+        "null"
+      ]
+    },
+    "Protocol": {
+      "additionalProperties": false,
+      "properties": {
+        "HOLD/STOP": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "completion": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "cost": {
+          "$ref": "#/$defs/CostEstimate"
+        },
+        "discrimination_criteria": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "evidence": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "goal": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "inputs": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "operations": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "protocol_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "purpose": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "related_questions_or_hypotheses": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "substrate": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "protocol_id",
+        "goal",
+        "related_questions_or_hypotheses",
+        "inputs",
+        "operations",
+        "substrate",
+        "discrimination_criteria",
+        "evidence",
+        "cost",
+        "risk",
+        "HOLD/STOP",
+        "completion"
+      ],
+      "type": "object"
+    },
+    "QualityDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "closure_candidate_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "conflict_of_interest": {
+          "type": "boolean"
+        },
+        "decision": {
+          "enum": [
+            "PASS",
+            "HOLD",
+            "REJECTED"
+          ]
+        },
+        "evidence_freshness": {
+          "enum": [
+            "CURRENT",
+            "STALE",
+            "UNKNOWN"
+          ]
+        },
+        "evidence_refs": {
+          "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "independence_level": {
+          "$ref": "#/$defs/IndependenceLevel"
+        },
+        "quality_decision_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "reviewer_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "quality_decision_id",
+        "closure_candidate_id",
+        "decision",
+        "reviewer_ref",
+        "independence_level",
+        "scope",
+        "evidence_refs",
+        "evidence_freshness",
+        "conflict_of_interest"
+      ],
+      "type": "object"
+    },
+    "Question": {
+      "additionalProperties": false,
+      "properties": {
+        "answer_classes": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "cost": {
+          "$ref": "#/$defs/CostEstimate"
+        },
+        "discriminating_power": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "question_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "research_route": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "significance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "unknown": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "question_id",
+        "unknown",
+        "scope",
+        "provenance",
+        "significance",
+        "answer_classes",
+        "discriminating_power",
+        "cost",
+        "risk",
+        "research_route"
+      ],
+      "type": "object"
+    },
+    "Relational Alignment": {
+      "additionalProperties": false,
+      "properties": {
+        "aligned_part": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "alignment_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "comparison_scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "differences": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "position_references": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "required_protocol": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "alignment_id",
+        "position_references",
+        "comparison_scope",
+        "status",
+        "aligned_part",
+        "differences",
+        "required_protocol",
+        "revision"
+      ],
+      "type": "object"
+    },
+    "Representation": {
+      "additionalProperties": false,
+      "properties": {
+        "acquisition_method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "ambiguities": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "artifact_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "availability": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "completeness": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "correspondence": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "format": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "losses": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "representation_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "revision": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "representation_id",
+        "artifact_id",
+        "format",
+        "revision",
+        "acquisition_method",
+        "completeness",
+        "losses",
+        "ambiguities",
+        "availability",
+        "correspondence"
+      ],
+      "type": "object"
+    },
+    "ResearchProtocol": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Protocol"
+        },
+        {
+          "properties": {
+            "purpose": {
+              "const": "RESEARCH"
+            }
+          },
+          "required": [
+            "purpose"
+          ]
+        }
+      ]
+    },
+    "ResearchSubstrateOperation": {
+      "additionalProperties": false,
+      "properties": {
+        "affected_objects": {
+          "items": {},
+          "type": "array"
+        },
+        "authority": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authority_requirement": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "consequentiality": {
+          "enum": [
+            "NEGLIGIBLE",
+            "REVERSIBLE",
+            "MATERIAL",
+            "HIGH_RISK"
+          ]
+        },
+        "cycle_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "effect_class": {
+          "enum": [
+            "COGNITIVE_ONLY",
+            "SIMULATED",
+            "SANDBOXED",
+            "OBSERVATIONAL",
+            "SUBSTRATE_INTERNAL",
+            "EXTERNAL_CONSEQUENTIAL"
+          ]
+        },
+        "external_effect": {
+          "enum": [
+            "NONE",
+            "POSSIBLE",
+            "CONFIRMED"
+          ]
+        },
+        "method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "observation_method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "operation_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "result_boundary": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "result_ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reversibility": {
+          "enum": [
+            "FULL",
+            "PARTIAL",
+            "NONE",
+            "UNKNOWN"
+          ]
+        },
+        "risk_class": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "rollback_path": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "substrate_id": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation_id",
+        "cycle_id",
+        "substrate_id",
+        "scope",
+        "method",
+        "authority",
+        "result_ref",
+        "owner",
+        "effect_class",
+        "external_effect",
+        "consequentiality",
+        "reversibility",
+        "affected_objects",
+        "authority_requirement",
+        "risk_class",
+        "rollback_path",
+        "observation_method",
+        "result_boundary"
+      ],
+      "type": "object"
+    },
+    "ResidualRiskDecision": {
+      "additionalProperties": false,
+      "properties": {
+        "affected_objects": {
+          "$ref": "#/$defs/ObjectReferenceList"
+        },
+        "closure_candidate_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "decision": {
+          "enum": [
+            "ACCEPTED_BY_AUTHORIZED_OWNER",
+            "LIMITED",
+            "REJECTED",
+            "UNRESOLVED",
+            "NOT_APPLICABLE"
+          ],
+          "type": "string"
+        },
+        "proposal_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "protected_losses": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "residual_risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "review_condition": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk_class": {
+          "$ref": "#/$defs/RiskLevel"
+        },
+        "risk_decision_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "risk_owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "rollback_or_compensation": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "risk_decision_id",
+        "risk_class",
+        "affected_objects",
+        "protected_losses",
+        "residual_risk",
+        "risk_owner_ref",
+        "decision",
+        "review_condition",
+        "rollback_or_compensation",
+        "proposal_ref",
+        "closure_candidate_ref"
+      ],
+      "type": "object"
+    },
+    "Responsibility": {
+      "additionalProperties": false,
+      "properties": {
+        "duties": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "object": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "responsibility_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "supporting_roles": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "term": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "trigger": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "type": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "responsibility_id",
+        "type",
+        "object",
+        "scope",
+        "owner",
+        "supporting_roles",
+        "duties",
+        "trigger",
+        "term",
+        "status"
+      ],
+      "type": "object"
+    },
+    "Revision": {
+      "additionalProperties": false,
+      "properties": {
+        "activation_status": {
+          "enum": [
+            "CANDIDATE",
+            "REVIEWED",
+            "ACCEPTED",
+            "SUPERSEDED",
+            "REJECTED"
+          ]
+        },
+        "approvals": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "author_or_executor": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "base_revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "cause": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "changed_fields": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "object_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "quality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "revision_id": {
+          "$ref": "#/$defs/Identifier"
+        }
+      },
+      "required": [
+        "revision_id",
+        "object_id",
+        "base_revision",
+        "changed_fields",
+        "cause",
+        "author_or_executor",
+        "approvals",
+        "quality",
+        "activation_status"
+      ],
+      "type": "object"
+    },
+    "Risk": {
+      "additionalProperties": false,
+      "properties": {
+        "consequence_bearers": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "distribution": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "measures": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "owner": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "probability_or_uncertainty": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "residual": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reversibility": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "scenario": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "severity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "vulnerability": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "risk_id",
+        "source",
+        "consequence_bearers",
+        "scenario",
+        "severity",
+        "probability_or_uncertainty",
+        "reversibility",
+        "distribution",
+        "vulnerability",
+        "measures",
+        "residual",
+        "owner"
+      ],
+      "type": "object"
+    },
+    "RiskLevel": {
+      "enum": [
+        "P0",
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7"
+      ]
+    },
+    "RuleAcceptanceMatrix": {
+      "additionalProperties": false,
+      "properties": {
+        "acceptance_set_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "active_accepted_count": {
+          "type": "integer"
+        },
+        "catalog_count": {
+          "type": "integer"
+        },
+        "preserved_non_active_count": {
+          "type": "integer"
+        },
+        "registry_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "rows": {
+          "items": {},
+          "type": "array"
+        },
+        "runtime_authorization": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "registry_id",
+        "catalog_count",
+        "active_accepted_count",
+        "preserved_non_active_count",
+        "acceptance_set_sha256",
+        "runtime_authorization",
+        "rows"
+      ],
+      "type": "object"
+    },
+    "RuleAcceptanceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "acceptance_row_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "canonical_acceptance_status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "card_status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "external_action_permission": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "fingerprint": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "layer": {
+          "enum": [
+            "BASE_CORE",
+            "PERSONAL_LAYER"
+          ]
+        },
+        "load_recognition_status": {
+          "enum": [
+            "ACCEPTED_FOR_INTERPRETATION",
+            "PRESERVED_NON_ACTIVE",
+            "HOLD",
+            "REPAIR"
+          ]
+        },
+        "norm_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "operator_acceptance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "route_applicability_default": {
+          "enum": [
+            "EVALUATE_PER_ROUTE",
+            "NOT_ACTIVE"
+          ]
+        },
+        "runtime_authorization": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "norm_id",
+        "layer",
+        "card_status",
+        "canonical_acceptance_status",
+        "load_recognition_status",
+        "route_applicability_default",
+        "operator_acceptance",
+        "runtime_authorization",
+        "external_action_permission",
+        "fingerprint",
+        "acceptance_row_sha256"
+      ],
+      "type": "object"
+    },
+    "SLevel": {
+      "enum": [
+        "S0",
+        "S1",
+        "S2",
+        "S3",
+        "S4"
+      ]
+    },
+    "Snapshot": {
+      "additionalProperties": false,
+      "properties": {
+        "availability": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "constraints": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "coverage": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "exact_revisions": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "historical_status": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "integrity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "snapshot_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "type": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "verification_source": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "type",
+        "coverage",
+        "exact_revisions",
+        "time",
+        "integrity",
+        "availability",
+        "constraints",
+        "historical_status",
+        "verification_source"
+      ],
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "author_or_creator": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "constraints": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "independence": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "place": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "related_artifacts": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "source_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "type": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "type",
+        "author_or_creator",
+        "time",
+        "place",
+        "version",
+        "provenance",
+        "access",
+        "independence",
+        "constraints",
+        "related_artifacts"
+      ],
+      "type": "object"
+    },
+    "State": {
+      "additionalProperties": false,
+      "properties": {
+        "active_cycles": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "actual_object": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "blocks": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "freshness": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "instant_or_interval": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "level_profile": {
+          "$ref": "#/$defs/LevelProfile"
+        },
+        "representations": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "resources": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "state_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "state_kind": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "state_id",
+        "actual_object",
+        "instant_or_interval",
+        "level_profile",
+        "active_cycles",
+        "blocks",
+        "resources",
+        "representations",
+        "freshness",
+        "revision"
+      ],
+      "type": "object"
+    },
+    "StateReference": {
+      "enum": [
+        "C00",
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "CLOSED"
+      ],
+      "type": "string"
+    },
+    "StringOrList": {
+      "oneOf": [
+        {
+          "minLength": 1,
+          "type": "string"
+        },
+        {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        }
+      ]
+    },
+    "Substrate": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/SubstrateDeclaration"
+        }
+      ]
+    },
+    "SubstrateDeclaration": {
+      "additionalProperties": false,
+      "properties": {
+        "archive_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "capabilities": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "declaration_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "declared_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "fallbacks": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "limitations": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "memory_constraints": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "package_id": {
+          "const": "BOIS_COMMON_CORE_TEMNIK_V2_22"
+        },
+        "record_status": {
+          "enum": [
+            "DRAFT",
+            "FINAL"
+          ]
+        },
+        "security_constraints": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "substrate_kind": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "tool_constraints": {
+          "$ref": "#/$defs/StringOrList"
+        }
+      },
+      "required": [
+        "declaration_id",
+        "record_status",
+        "package_id",
+        "archive_sha256",
+        "owner_ref",
+        "substrate_kind",
+        "capabilities",
+        "limitations",
+        "security_constraints",
+        "memory_constraints",
+        "tool_constraints",
+        "fallbacks",
+        "declared_at"
+      ],
+      "type": "object"
+    },
+    "Transformation": {
+      "additionalProperties": false,
+      "properties": {
+        "alternatives": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "ambiguities": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "executor": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "input_revisions": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "method": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "output": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reliability": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "transformation_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "verification": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "transformation_id",
+        "input_revisions",
+        "output",
+        "method",
+        "executor",
+        "scope",
+        "ambiguities",
+        "alternatives",
+        "verification",
+        "reliability",
+        "dependencies"
+      ],
+      "type": "object"
+    },
+    "Transition": {
+      "additionalProperties": false,
+      "properties": {
+        "D/V/S": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "actual_effect": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "authority": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "candidate_status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "dependencies": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "executor": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "input_revisions": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "invariants": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "operation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "outputs": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "transition_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "type": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "transition_id",
+        "type",
+        "input_revisions",
+        "operation",
+        "executor",
+        "authority",
+        "D/V/S",
+        "invariants",
+        "outputs",
+        "actual_effect",
+        "dependencies",
+        "status"
+      ],
+      "type": "object"
+    },
+    "Trigger": {
+      "additionalProperties": false,
+      "properties": {
+        "confirmation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "conflict_status": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "content": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "influence": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "joint_sufficiency": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "necessity": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "roles": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "source": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "time": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "trigger_id": {
+          "$ref": "#/$defs/Identifier"
+        }
+      },
+      "required": [
+        "trigger_id",
+        "content",
+        "source",
+        "time",
+        "roles",
+        "necessity",
+        "joint_sufficiency",
+        "confirmation",
+        "conflict_status",
+        "influence",
+        "status"
+      ],
+      "type": "object"
+    },
+    "Unknown": {
+      "additionalProperties": false,
+      "properties": {
+        "affected_goals": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "assessment_refs": {
+          "items": {},
+          "type": "array"
+        },
+        "bounded_at_phase": {
+          "enum": [
+            "C01"
+          ]
+        },
+        "class": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "cost": {
+          "$ref": "#/$defs/CostEstimate"
+        },
+        "created_at_phase": {
+          "enum": [
+            "C01"
+          ]
+        },
+        "detectability": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "formulation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner": {
+          "enum": [
+            "O001"
+          ]
+        },
+        "review_conditions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "routes": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "significance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "unknown_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "value_status": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "unknown_id",
+        "class",
+        "formulation",
+        "affected_goals",
+        "significance",
+        "detectability",
+        "routes",
+        "cost",
+        "risk",
+        "status",
+        "review_conditions",
+        "owner",
+        "created_at_phase",
+        "bounded_at_phase",
+        "assessment_refs"
+      ],
+      "type": "object"
+    },
+    "ValuableUnknown": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/Unknown"
+        },
+        {
+          "properties": {
+            "value_status": {
+              "const": "VALUABLE"
+            }
+          },
+          "required": [
+            "value_status"
+          ]
+        }
+      ]
+    },
+    "Working Hypothesis Role": {
+      "additionalProperties": false,
+      "properties": {
+        "alternatives": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "branch_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "exact_revision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "hypothesis_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "operator_decision": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "route_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "term": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "termination_conditions": {
+          "$ref": "#/$defs/StringOrList"
+        },
+        "working_link_id": {
+          "$ref": "#/$defs/Identifier"
+        }
+      },
+      "required": [
+        "working_link_id",
+        "hypothesis_id",
+        "route_id",
+        "cycle_id",
+        "branch_id",
+        "exact_revision",
+        "operator_decision",
+        "term",
+        "alternatives",
+        "risk",
+        "termination_conditions"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://bois.invalid/schema/core/v2.22",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/AbstractCategory"
+    },
+    {
+      "$ref": "#/$defs/AbstractionTrace"
+    },
+    {
+      "$ref": "#/$defs/AcceptanceSelfTestReport"
+    },
+    {
+      "$ref": "#/$defs/Action"
+    },
+    {
+      "$ref": "#/$defs/ActionExecutionRecord"
+    },
+    {
+      "$ref": "#/$defs/Artifact"
+    },
+    {
+      "$ref": "#/$defs/Authority"
+    },
+    {
+      "$ref": "#/$defs/AuthorityDecision"
+    },
+    {
+      "$ref": "#/$defs/AuthorizedExternalAction"
+    },
+    {
+      "$ref": "#/$defs/BoundedResult"
+    },
+    {
+      "$ref": "#/$defs/Branch"
+    },
+    {
+      "$ref": "#/$defs/CalculatingElement"
+    },
+    {
+      "$ref": "#/$defs/Carrier"
+    },
+    {
+      "$ref": "#/$defs/Closure"
+    },
+    {
+      "$ref": "#/$defs/ClosureCandidate"
+    },
+    {
+      "$ref": "#/$defs/CognitiveProtocolRun"
+    },
+    {
+      "$ref": "#/$defs/Composition"
+    },
+    {
+      "$ref": "#/$defs/Context%20Package"
+    },
+    {
+      "$ref": "#/$defs/Contradiction"
+    },
+    {
+      "$ref": "#/$defs/Cycle"
+    },
+    {
+      "$ref": "#/$defs/Defect"
+    },
+    {
+      "$ref": "#/$defs/Deletion"
+    },
+    {
+      "$ref": "#/$defs/Destruction%20Evidence"
+    },
+    {
+      "$ref": "#/$defs/EffectCapture"
+    },
+    {
+      "$ref": "#/$defs/EpistemicAssessment"
+    },
+    {
+      "$ref": "#/$defs/Event"
+    },
+    {
+      "$ref": "#/$defs/Evidence"
+    },
+    {
+      "$ref": "#/$defs/ExperienceRecord"
+    },
+    {
+      "$ref": "#/$defs/Explanation"
+    },
+    {
+      "$ref": "#/$defs/ExternalActionProposal"
+    },
+    {
+      "$ref": "#/$defs/Fact"
+    },
+    {
+      "$ref": "#/$defs/Freshness%20Profile"
+    },
+    {
+      "$ref": "#/$defs/Hypothesis"
+    },
+    {
+      "$ref": "#/$defs/Inference"
+    },
+    {
+      "$ref": "#/$defs/Input%20Container"
+    },
+    {
+      "$ref": "#/$defs/Instruction"
+    },
+    {
+      "$ref": "#/$defs/InterfaceMachine"
+    },
+    {
+      "$ref": "#/$defs/MachinePhase"
+    },
+    {
+      "$ref": "#/$defs/Memory"
+    },
+    {
+      "$ref": "#/$defs/Model"
+    },
+    {
+      "$ref": "#/$defs/ObservedEffect"
+    },
+    {
+      "$ref": "#/$defs/Oper"
+    },
+    {
+      "$ref": "#/$defs/Operature"
+    },
+    {
+      "$ref": "#/$defs/Operome"
+    },
+    {
+      "$ref": "#/$defs/Phenomenon"
+    },
+    {
+      "$ref": "#/$defs/PhilosophicalMachine"
+    },
+    {
+      "$ref": "#/$defs/PhilosophicalTrajectory"
+    },
+    {
+      "$ref": "#/$defs/Physiology"
+    },
+    {
+      "$ref": "#/$defs/Position"
+    },
+    {
+      "$ref": "#/$defs/Protocol"
+    },
+    {
+      "$ref": "#/$defs/QualityDecision"
+    },
+    {
+      "$ref": "#/$defs/Question"
+    },
+    {
+      "$ref": "#/$defs/Relational%20Alignment"
+    },
+    {
+      "$ref": "#/$defs/Representation"
+    },
+    {
+      "$ref": "#/$defs/ResearchSubstrateOperation"
+    },
+    {
+      "$ref": "#/$defs/ResidualRiskDecision"
+    },
+    {
+      "$ref": "#/$defs/Responsibility"
+    },
+    {
+      "$ref": "#/$defs/Revision"
+    },
+    {
+      "$ref": "#/$defs/Risk"
+    },
+    {
+      "$ref": "#/$defs/RuleAcceptanceMatrix"
+    },
+    {
+      "$ref": "#/$defs/RuleAcceptanceRecord"
+    },
+    {
+      "$ref": "#/$defs/Snapshot"
+    },
+    {
+      "$ref": "#/$defs/Source"
+    },
+    {
+      "$ref": "#/$defs/State"
+    },
+    {
+      "$ref": "#/$defs/SubstrateDeclaration"
+    },
+    {
+      "$ref": "#/$defs/Transformation"
+    },
+    {
+      "$ref": "#/$defs/Transition"
+    },
+    {
+      "$ref": "#/$defs/Trigger"
+    },
+    {
+      "$ref": "#/$defs/Unknown"
+    },
+    {
+      "$ref": "#/$defs/Working%20Hypothesis%20Role"
+    }
+  ],
+  "title": "BOIS Common Core Object Schema v2.22"
+}

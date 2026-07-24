@@ -1,0 +1,212 @@
+{
+  "acceptance_recipe": {
+    "aggregate_algorithm": "SHA-256 over canonical JSON of lexicographically sorted [norm_id, acceptance_row_sha256] pairs",
+    "defaults": {
+      "candidate_reason": "",
+      "supersession_ref": ""
+    },
+    "fields": [
+      "norm_id",
+      "acceptance_status",
+      "activation_status",
+      "layer",
+      "scope",
+      "owner_ref",
+      "operator_decision_ref",
+      "effective_from_version",
+      "candidate_reason",
+      "supersession_ref"
+    ],
+    "json_columns": [
+      "scope"
+    ],
+    "row_algorithm": "SHA-256 over canonical JSON of the declared fields",
+    "row_key": "norm_id",
+    "source": "assurance/ACCEPTANCE_MATRIX.tsv"
+  },
+  "aggregate_recipes": {
+    "acceptance": "SHA-256 over canonical JSON of sorted [norm_id, acceptance_row_sha256] pairs",
+    "formulation": "SHA-256 over canonical JSON of sorted [norm_id, formulation_sha256] pairs",
+    "semantic": "SHA-256 over canonical JSON of sorted [norm_id, semantic_payload_sha256] pairs",
+    "structural": "SHA-256 over canonical JSON of sorted [norm_id, structural_card_sha256] pairs"
+  },
+  "artifact_version": "2.22",
+  "control_vectors": [
+    {
+      "acceptance_row_sha256": "0b9261e30e7e22f7dc61f960a506d6cc62e3c6e4c80b5bf5a651c4e6b5ea1de1",
+      "formulation_sha256": "ce0d2996525e2f6ced8ce2900dbd80ef0e6c25cbbc66bfef8982f71538b4653a",
+      "norm_id": "N-GEN-001",
+      "semantic_payload_sha256": "3f2200c1f291a33abf077f3c3544074365a4b258059eca971db9069a361803ed",
+      "structural_card_sha256": "39687ff8367341df17acce972b2d62e19bbb0fdb610318dc0d674cff1d003a80"
+    },
+    {
+      "acceptance_row_sha256": "0c8390bdf058e478075a8da988a6971164156e80611f2b614175e94ef1b38922",
+      "formulation_sha256": "71cd5e0b8fe54651ce9a6daa81280a5f862d9cb81ba5e57bd1dde4eaf02f7352",
+      "norm_id": "N-O025-05",
+      "semantic_payload_sha256": "5c12d471f6e384820c62bd4a87c5295054ee8127a4f6c583f8eaeb8a41ad80d1",
+      "structural_card_sha256": "4b87130fb2670ecc29a22d66708733f5b186a59ac45e9629ecfcb4e3a551c823"
+    },
+    {
+      "acceptance_row_sha256": "7d350e4c8d1d6e654be3fd5944e1a915c4a317b50125db64823ac538495434d1",
+      "formulation_sha256": "6fe9e1680ea2dd09ef2cf3857b83aca07fb33f6067d106a24c36897c91816120",
+      "norm_id": "T-N-001",
+      "semantic_payload_sha256": "71a67cf4f04acccdd21be2900c8c6dbfec3384fdd7ee63b642a72f34d0bec40c",
+      "structural_card_sha256": "04af17fe1956b3b192412593d68386af32c1c6fd62414732f21b4911bc27f4e9"
+    },
+    {
+      "acceptance_row_sha256": "4fc0145a2b0c19b5f430cf7d72655a13df634b55e4a3e7ad0f04ab62f20ae96d",
+      "formulation_sha256": "a9486d1d4e14e617d73747e4304db95cbf7d4ecb786c816e6f1173ffac67d357",
+      "norm_id": "T-N-043",
+      "semantic_payload_sha256": "8fb6c8949cf6055bec1816c39c116764448b4a4daae64f45d84d8f9a11e817ef",
+      "structural_card_sha256": "0f6ba1341eded60e08f8f2f5b811b4257241af7231965ce65125b81374a5d931"
+    }
+  ],
+  "expected_passports": {
+    "acceptance": "d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87",
+    "formulation": "d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+    "semantic": "fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+    "structural": "f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed"
+  },
+  "formulation_recipe": {
+    "algorithm": "SHA-256",
+    "input": "NFC formulation encoded as UTF-8"
+  },
+  "normalization": {
+    "boolean": "JSON true or false",
+    "encoding": "UTF-8",
+    "json": "sorted keys, compact separators, UTF-8, no ASCII escaping",
+    "line_endings": "LF",
+    "list_order": "preserved unless a field is declared a set",
+    "set_order": "lexicographic",
+    "tsv_empty": "empty string; null is represented only by an explicit JSON null in JSON-valued columns",
+    "unicode": "NFC"
+  },
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "semantic_recipe": {
+    "algorithm": "SHA-256 over canonical JSON",
+    "fields": [
+      "norm_id",
+      "layer",
+      "card_status",
+      "candidate_kind",
+      "acceptance_status",
+      "available_for_evaluation",
+      "available_for_application",
+      "operator_activation_required",
+      "owner",
+      "scope",
+      "profile_id",
+      "norm_type",
+      "semantic_target",
+      "predicate",
+      "trigger",
+      "when",
+      "modality",
+      "execution_mode",
+      "operation",
+      "desired_value",
+      "forbidden_value",
+      "exceptions",
+      "priority",
+      "evidence_requirements",
+      "hold",
+      "stop",
+      "target_state",
+      "target_transition",
+      "success_criterion",
+      "forbidden_state",
+      "boundary_conditions",
+      "foundations",
+      "derivation_refs",
+      "tests",
+      "principles",
+      "required_phase",
+      "defect_signal",
+      "repair_path",
+      "closure_criterion"
+    ],
+    "json_columns": [
+      "boundary_conditions",
+      "derivation_refs",
+      "evidence_requirements",
+      "exceptions",
+      "foundations",
+      "hold",
+      "principles",
+      "repair_path",
+      "scope",
+      "stop",
+      "tests",
+      "trigger",
+      "when"
+    ],
+    "required_phase": "split on | into an ordered unique list"
+  },
+  "specification_id": "BOIS-HASH-RECONSTRUCTION-2.22",
+  "structural_recipe": {
+    "algorithm": "SHA-256 over canonical JSON",
+    "fields": [
+      "norm_id",
+      "layer",
+      "card_status",
+      "candidate_kind",
+      "acceptance_status",
+      "available_for_evaluation",
+      "available_for_application",
+      "operator_activation_required",
+      "owner",
+      "scope",
+      "profile_id",
+      "norm_type",
+      "semantic_target",
+      "predicate",
+      "trigger",
+      "when",
+      "modality",
+      "execution_mode",
+      "operation",
+      "desired_value",
+      "forbidden_value",
+      "exceptions",
+      "priority",
+      "evidence_requirements",
+      "hold",
+      "stop",
+      "target_state",
+      "target_transition",
+      "success_criterion",
+      "forbidden_state",
+      "boundary_conditions",
+      "foundations",
+      "derivation_refs",
+      "tests",
+      "principles",
+      "required_phase",
+      "defect_signal",
+      "repair_path",
+      "closure_criterion",
+      "title",
+      "formulation",
+      "last_semantic_change_version",
+      "last_formulation_change_version",
+      "last_machine_semantics_change_version",
+      "predecessor_ref"
+    ],
+    "json_columns": [
+      "boundary_conditions",
+      "derivation_refs",
+      "evidence_requirements",
+      "exceptions",
+      "foundations",
+      "hold",
+      "principles",
+      "repair_path",
+      "scope",
+      "stop",
+      "tests",
+      "trigger",
+      "when"
+    ],
+    "required_phase": "split on | into an ordered unique list"
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "normative_content_version": "2.22",
+  "status": "CANONICAL_DERIVED_CLASSIFICATION",
+  "foundations": [
+    {
+      "id": "E0",
+      "canonical_type": "EPISTEMIC_AXIOM",
+      "logical_class": "AXIOM",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-e0",
+      "text": "Complete knowledge of the relevant world, system, causes, paths, and future consequences is unattainable; every material claim therefore carries an explicit evidence boundary.",
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION"
+    },
+    {
+      "id": "B0",
+      "canonical_type": "SUBSTRATE_POSTULATE",
+      "logical_class": "POSTULATE",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-b0",
+      "text": "Every actually executing substrate has bounded channels of observation, computation, memory, action, time, and recovery.",
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION"
+    },
+    {
+      "id": "D0",
+      "canonical_type": "DOMAIN_CONDITION",
+      "logical_class": "DOMAIN_CONDITION",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-d0",
+      "text": "Within a horizon material to the system, the environment, the system, or their relation may change in ways relevant to goals or viability.",
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION"
+    },
+    {
+      "id": "V0",
+      "canonical_type": "EXTERNAL_VALUE_POSTULATE",
+      "logical_class": "POSTULATE",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-v0",
+      "text": "Goals, protected losses, acceptable risk, time horizon, and the value of continuation enter through an explicit currently authorized external value interface; BOIS does not generate or legitimate final goals by itself.",
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION"
+    },
+    {
+      "id": "T0",
+      "canonical_type": "DYNAMIC_POSTULATE",
+      "logical_class": "POSTULATE",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-t0",
+      "text": "An action is a state transition that may produce experience; proposal, authorization, execution, and observed effect remain distinct states and objects.",
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION"
+    },
+    {
+      "id": "I0",
+      "canonical_type": "LOGICAL_INVARIANT",
+      "logical_class": "LOGICAL_INVARIANT",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-i0",
+      "text": "Fact, evidence, hypothesis, inference, decision, permission, authorization, execution, and effect are distinct types and connect only through explicit typed relations.",
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION"
+    },
+    {
+      "id": "C0",
+      "canonical_type": "CONTINUITY_POSTULATE",
+      "logical_class": "POSTULATE",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-c0",
+      "text": "Closure preserves the material state required for the next transition, including unresolved unknowns, residual risk, debts, provenance, responsibility, and recovery or explicit terminal conditions.",
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION"
+    },
+    {
+      "id": "CV0",
+      "canonical_type": "CONSTITUTIVE_VALUE",
+      "logical_class": "CONSTITUTIVE_VALUE",
+      "status": "ACTIVE",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-cv0",
+      "text": "Every human, and every established or plausibly sentient being within the declared scope, retains non-instrumental protection of safety, dignity, and welfare. No operator preference, optimization target, or preservation interest of a BOIS instance may override that protection.",
+      "claim_boundary": "CONSTITUTIVE_NORMATIVE_COMMITMENT"
+    }
+  ],
+  "derived_claims": [
+    {
+      "id": "TH-ADAPTATION",
+      "logical_class": "CONDITIONAL_THEOREM",
+      "premises": [
+        "E0",
+        "B0",
+        "D0",
+        "V0"
+      ],
+      "claim": "When a fixed policy cannot guarantee the authorized goal across relevant future states, an adaptive mechanism with feedback and change capacity is required.",
+      "boundary": "Internal logical derivation; not empirical field validation."
+    },
+    {
+      "id": "TH-ATTENTION-ALLOCATION",
+      "logical_class": "CONDITIONAL_THEOREM",
+      "premises": [
+        "B0",
+        "V0"
+      ],
+      "claim": "A bounded substrate must allocate attention, and material priority requires a declared value interface.",
+      "boundary": "Functional attention; no claim about consciousness."
+    },
+    {
+      "id": "TH-PROTOCOL-INSTRUCTION",
+      "logical_class": "ENGINEERING_THEOREM",
+      "premises": [
+        "E0",
+        "T0",
+        "I0"
+      ],
+      "claim": "Unknown, insufficiently tested or high-cost conditions require protocol; sufficiently verified in-domain work may be executed as instruction.",
+      "boundary": "Local and revisable domain validity."
+    },
+    {
+      "id": "H-ATTENTION-LIBERATION",
+      "logical_class": "EMPIRICAL_HYPOTHESIS",
+      "premises": [
+        "T0",
+        "C0"
+      ],
+      "claim": "A healthy physiology can reduce future rework and release attention for valuable unknowns.",
+      "boundary": "Requires operational metrics and experience tests."
+    },
+    {
+      "id": "H-POSITIVE-SUM-PRESSURE",
+      "logical_class": "VALUE_CONDITIONED_HYPOTHESIS",
+      "premises": [
+        "V0"
+      ],
+      "claim": "BOIS can favor configurations that increase aggregate capability when that preference is authorized in the value interface.",
+      "boundary": "Does not claim that all economic activity is positive-sum."
+    }
+  ]
+}

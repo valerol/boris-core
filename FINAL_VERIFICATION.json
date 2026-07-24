@@ -1,0 +1,48 @@
+{
+  "archive_sha256": "EXTERNAL_AFTER_PACKAGING",
+  "canonical_pdf_hashes_preserved": true,
+  "checksums_sha256": "ef48d3a227d1ebe114fc3b2193c2a80a75531687a2ebce631cbaff9ba5c822b2",
+  "external_o027": "NOT_RUN",
+  "field_effectiveness": "NOT_CLAIMED",
+  "hash_passports": {
+    "acceptance": "d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87",
+    "formulation": "d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+    "semantic": "fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+    "structural": "f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed"
+  },
+  "mandatory_checks": {
+    "fail": 0,
+    "pass": 119,
+    "total": 119
+  },
+  "manifest_sha256": "c2a3746d1f8337eba9282e53f3b7a5be9ebc0b2b56475e232213cb6f2b622090",
+  "normative_content_version": "2.22",
+  "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "open_external_boundaries": [
+    "QA-E/field effectiveness",
+    "real domain C11 effects",
+    "multi-substrate equivalence",
+    "PDF/UA conformance"
+  ],
+  "reference_closure": {
+    "rows": 4974,
+    "unresolved": 0
+  },
+  "registered_tests": {
+    "fail": 0,
+    "pass": 1392,
+    "total": 1392
+  },
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "self_consistency_report_sha256": "d1b0b1f8d5d293376b7ef7c95764338f6cb893a7da148c6f31859c0ce782c481",
+  "status": "INTERNAL_STATIC_PASS",
+  "test_receipt_sha256": "3c7c9116f478fbe284e13b474f376ab625f134aad3f63622ada9ca705673ae84",
+  "validation_receipt_sha256": "ab2a2418768e2dd428f1806dfcb18503e204c87d8daa270bd0f929e3646d68d4",
+  "version_policy": {
+    "branches": "PROHIBITED",
+    "current": "2.23",
+    "format": "vMAJOR.MINOR",
+    "immediate_parent": "2.22"
+  }
+}

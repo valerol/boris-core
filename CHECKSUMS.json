@@ -1,0 +1,281 @@
+{
+  "algorithm": "SHA-256",
+  "count": 68,
+  "entries": {
+    "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf": {
+      "sha256": "3dd83f15a1fdcdc6d201c0b9ca94f552a3f4087fd979511ed19e69fca436528f",
+      "size_bytes": 49972
+    },
+    "01_BOIS_Base_Core_v2.22_EN.pdf": {
+      "sha256": "70f1cc6fd34f9c478c3dd23826e21ae83d69832d7445d14cd0ec50ba1f317d45",
+      "size_bytes": 1532315
+    },
+    "02_Temnik_Personal_Layer_v2.22_EN.pdf": {
+      "sha256": "27d83d600015cd58487fd9f0010cb6bd4c102590f717bad10b28131aecb5ad8e",
+      "size_bytes": 235586
+    },
+    "03_Publication_Candidates_v2.22_EN.pdf": {
+      "sha256": "97a03a4b832f03634ff9b69f6615bd5ccb79ddc4e4370d946a434e19a628931e",
+      "size_bytes": 58154
+    },
+    "04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf": {
+      "sha256": "b08f04a92b2d0d7662a9223bf746cddc2ae00da3026220381b5be68a0f41d771",
+      "size_bytes": 52565
+    },
+    "05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf": {
+      "sha256": "34162ebc88f7823cf6a2fa16418363abfe6fc90130dc4f9336c822ece5ec710f",
+      "size_bytes": 67372
+    },
+    "MANIFEST.json": {
+      "sha256": "c2a3746d1f8337eba9282e53f3b7a5be9ebc0b2b56475e232213cb6f2b622090",
+      "size_bytes": 19876
+    },
+    "assurance/ACCEPTANCE_MATRIX.tsv": {
+      "sha256": "0e08e43efadd00da5e09c30c31756d6fb3b65ad32af84e5bcb63283f2b63f940",
+      "size_bytes": 69048
+    },
+    "assurance/BEHAVIOR_PROFILES.json": {
+      "sha256": "38b2b5f999c1a8ebe16e6bbc1bfb70fb22f98f176f58cac7c0e2e2eac0520ca7",
+      "size_bytes": 4643
+    },
+    "assurance/BOOT_LOAD_ORDER.tsv": {
+      "sha256": "3567f21db0ae4c9e343f32dd559a945a5e60a1185ede33653cb5649d052bdb2f",
+      "size_bytes": 10088
+    },
+    "assurance/BUILD_DEPENDENCY_DAG.tsv": {
+      "sha256": "8e7ca9b17f135588140f318a7f2134655083abedd4676e54b053267fff1180fc",
+      "size_bytes": 9157
+    },
+    "assurance/CYCLE_CROSSWALK.json": {
+      "sha256": "7206ae12f81595bafa38004b5df2cdadbff8b11bef1d4f9555862451f9960550",
+      "size_bytes": 16268
+    },
+    "assurance/HASH_RECONSTRUCTION_SPEC.json": {
+      "sha256": "2e130bf04dda5ac5fe142032182bcb7ca9cb2d927dad6abd448192c7981537ae",
+      "size_bytes": 6726
+    },
+    "assurance/JUSTIFICATION_GRAPH.json": {
+      "sha256": "31023aacb65ee7b9f55392e73d1fa4793d163a31374b9f4a8efc115a379d33dd",
+      "size_bytes": 2061502
+    },
+    "assurance/NORM_CATALOG.tsv": {
+      "sha256": "bd421006d5c1b40eb2733a3deac11872e6b60cfd39b9802f7d1033d51669e5c8",
+      "size_bytes": 602101
+    },
+    "assurance/NORM_PHASE_APPLICABILITY.tsv": {
+      "sha256": "8e3eee29129dc7dafc548dc9683522b671da81836880be58aced7d9fb318a2bb",
+      "size_bytes": 361720
+    },
+    "assurance/OBJECT_CATALOG.tsv": {
+      "sha256": "70af5cf3d735287d664a2d9c171e18e16aef4ab0eb27056c83994bd4b3930731",
+      "size_bytes": 104368
+    },
+    "assurance/PDF_LOCATION_MAP.tsv": {
+      "sha256": "189c816986f1208e081dcf183d1e53e313d646b09afb1ff9048e7aba4b8d74a2",
+      "size_bytes": 45198
+    },
+    "assurance/REFERENCE_CONTRACT.json": {
+      "sha256": "60462725f5edaef3fd0c52a49850b910be30e27cf3e4e547b4aef665b41577bb",
+      "size_bytes": 559
+    },
+    "assurance/REFERENCE_INDEX.tsv": {
+      "sha256": "aba1553e9954f013d4ea1f226354def2e898c8284d4fc774890d9333da1f0898",
+      "size_bytes": 730833
+    },
+    "assurance/SELF_CONSISTENCY_REPORT.json": {
+      "sha256": "d1b0b1f8d5d293376b7ef7c95764338f6cb893a7da148c6f31859c0ce782c481",
+      "size_bytes": 5773
+    },
+    "assurance/STATIC_TEST_SUMMARY.json": {
+      "sha256": "f552836560fb067232424e3f52cf9b3fd33ca1d2d7dbc66c4ccd38d73fda013a",
+      "size_bytes": 1717
+    },
+    "assurance/TEST_BINDINGS.tsv": {
+      "sha256": "d4a076c7158b662108c0b5d54bd88f57c97750a38110c34f85d25dde27925349",
+      "size_bytes": 383945
+    },
+    "assurance/TEST_EXECUTION_RECEIPT.tsv": {
+      "sha256": "3c7c9116f478fbe284e13b474f376ab625f134aad3f63622ada9ca705673ae84",
+      "size_bytes": 273000
+    },
+    "assurance/TEST_PROFILES.json": {
+      "sha256": "fe1fa811de47117feb08302687864b3a32a18cc68b4b00c54a51885cf6ed9be6",
+      "size_bytes": 8289
+    },
+    "assurance/TEST_REGISTRY.json": {
+      "sha256": "c028e32f7210f34f6262e331604933aa2a7aa84f6ec787b433565b57eedb7553",
+      "size_bytes": 695146
+    },
+    "assurance/TEST_VECTORS.json": {
+      "sha256": "888d20acc213406a10aabd5f84ea122dd3f77c5781fe8ac5e474557f15048266",
+      "size_bytes": 42047
+    },
+    "assurance/VALIDATION_RECEIPT.json": {
+      "sha256": "ab2a2418768e2dd428f1806dfcb18503e204c87d8daa270bd0f929e3646d68d4",
+      "size_bytes": 37308
+    },
+    "assurance/VALIDATION_SPEC.json": {
+      "sha256": "69dc2af2d78e719fcd2485a25e983e2dd75c04db3faa7b80f0d770b5197bc658",
+      "size_bytes": 43513
+    },
+    "fixtures/ALIAS_FIXTURES.json": {
+      "sha256": "1ba1b7f2bd323433d31a5fdd2dfe93302b921c211713055c4645345c0425bff9",
+      "size_bytes": 8277
+    },
+    "fixtures/GATE_FIXTURES.json": {
+      "sha256": "d31f4f1e1c449f71a43e668d9446c8674487b374943de870d4ac28f31ec018c8",
+      "size_bytes": 19424
+    },
+    "fixtures/REFERENCE_FIXTURE_REGISTRY.json": {
+      "sha256": "4defb038dc2dd67d77c5c84a7651fafcd001319017d90c56479e15b0ad16a19d",
+      "size_bytes": 1657
+    },
+    "fixtures/RUNTIME_CHAIN_FIXTURES.json": {
+      "sha256": "d8785f9bfe8ded66d14fab7d4cd42d7291d7fe375960819c502c8ebbef7933b4",
+      "size_bytes": 772
+    },
+    "fixtures/SCENARIOS.json": {
+      "sha256": "ee2769a390d5491ba6bab41cc3069d144972b214addac3cef4f4de41fc68c92b",
+      "size_bytes": 5893
+    },
+    "machine/CORE_CANON.json": {
+      "sha256": "8a649cf8be9ef8ab8ad97a73b89ecbacbe78d09a15b7ed36c37eb89a41d1be3c",
+      "size_bytes": 51113
+    },
+    "machine/DEONTIC_SEMANTICS_CANON.json": {
+      "sha256": "560e20d6e5449aedd429926fa64b0c464434c6f5e4ad41eba35b43070b259ec8",
+      "size_bytes": 1422
+    },
+    "machine/FOUNDATION_CLASSIFICATION.json": {
+      "sha256": "14116f4041227b8a00b8a3c067e352681dc2a9ef5c08efd62554ec1bf6cc9475",
+      "size_bytes": 6418
+    },
+    "machine/FOUNDATION_DEPENDENCY_GRAPH.json": {
+      "sha256": "9a46bf0a52bc55865571167e278a13f46861b5805ad27b4904403906743b0779",
+      "size_bytes": 4785
+    },
+    "machine/IDENTIFIER_GRAMMAR.json": {
+      "sha256": "b387a701fcc7113f66305d05bc132aabf9d215f865dbe8fa3fd91228112a9295",
+      "size_bytes": 539
+    },
+    "machine/OBJECT_MODEL_CANON.json": {
+      "sha256": "a9577bc358b42292113311a1bbc4577e179d800a1730a469a402503ce2a240d6",
+      "size_bytes": 159471
+    },
+    "machine/PREDICATE_OPERATIONAL_SEMANTICS.json": {
+      "sha256": "3d088122d472c9c24412bf31e344131723529068a67630fead7ae9cd5f23afab",
+      "size_bytes": 7187
+    },
+    "machine/RELATION_TYPES.json": {
+      "sha256": "fc2079ed671652a1da5124b4c8b347c413c033f19080a99807bd1ea9ccd68b61",
+      "size_bytes": 1893
+    },
+    "migration/MIGRATION_FINDINGS_v2.21_to_v2.22.tsv": {
+      "sha256": "17b52718feb36d840f28aca380c8b351cced449b8c3a8625469b7fc9ad91ffbc",
+      "size_bytes": 2046
+    },
+    "migration/MIGRATION_v2.20_to_v2.22.tsv": {
+      "sha256": "cc22c0ae631f54667b00c18e6d66cdc891a966239494587004b10ddee52d2878",
+      "size_bytes": 6271
+    },
+    "migration/MIGRATION_v2.21_to_v2.22.tsv": {
+      "sha256": "d0ed2a170032bd6cc8d98976f7e217a405e34e225570ae5ce9825a9a04a54805",
+      "size_bytes": 44256
+    },
+    "migration/MIGRATION_v2.22_to_v2.23.tsv": {
+      "sha256": "c3177139fbb03c92ffb0fc6390004d58339f3a57d144ca84094ca9cb7b1f4142",
+      "size_bytes": 2315
+    },
+    "migration/VERSION_LINEAGE.tsv": {
+      "sha256": "e5e3e041520b61c4259681153f434b8c0ea87fa4f2e390e401a4e1e1b0cc6f9e",
+      "size_bytes": 1215
+    },
+    "provenance/DEVELOPMENT_HISTORY.tsv": {
+      "sha256": "1a7309024b3aa00db93c6f0f1318328fa6b7580866112daa0705c06b5d454fbd",
+      "size_bytes": 4908
+    },
+    "provenance/SOURCE_BOUNDARY.json": {
+      "sha256": "e318c08109b1f0359de912b4f9462cb5be924ae91ece96e52401c8f0fefe99e2",
+      "size_bytes": 1597
+    },
+    "provenance/THEORY_PRACTICE_MAP.json": {
+      "sha256": "3844080c204f87c1e40574d62d0fe0e7ccfd25dfbb8beac224ce248fa3bc8611",
+      "size_bytes": 1943
+    },
+    "repair/DECISION_LOG_v2.22.tsv": {
+      "sha256": "b2b52d576808da531f6cc404beb2eadc4f2e233839ce3510a73dddcb2aeac05c",
+      "size_bytes": 480
+    },
+    "repair/DECISION_LOG_v2.23.tsv": {
+      "sha256": "0410a8367e7d16a352880fdb49c28de20fbe1fb480ad009eba385553bcb4e01d",
+      "size_bytes": 1399
+    },
+    "repair/FINDINGS_v2.20.tsv": {
+      "sha256": "37100c2e7627ae5de3f7c658983aaaa09b47c2dc9f9457b6bcbbe1a280ebf5d3",
+      "size_bytes": 7649
+    },
+    "repair/FINDINGS_v2.21.tsv": {
+      "sha256": "fc506403e67fbc97d5243bad7a4f5c494607b91cfa9f4251556e95992e9987a0",
+      "size_bytes": 2349
+    },
+    "repair/FINDINGS_v2.22.tsv": {
+      "sha256": "8c7fff468721305cfffb8ed535deffaaf7b5aca4fe036996b3d17bbfac9e4746",
+      "size_bytes": 3916
+    },
+    "repair/REPAIR_PLAN_v2.22.tsv": {
+      "sha256": "97f36ca201026dc31d4c4ac2ce916bda0b444ea4c9153474504d893d5eb49571",
+      "size_bytes": 14383
+    },
+    "repair/REPAIR_PLAN_v2.23.tsv": {
+      "sha256": "a1d0a838afb97f0dbce599ea9f82c5ec8e64f0b0858c9061bb512e56b0f05ccf",
+      "size_bytes": 3660
+    },
+    "runtime/OPERATOR_ACCEPTANCE.json": {
+      "sha256": "3aff183bd340159c62aa328db1e1604c348145eab0c241f40dcfa2c9d1f64216",
+      "size_bytes": 634
+    },
+    "runtime/RELEASE_CYCLE_C00_C11.json": {
+      "sha256": "0ce7d127502753d61a4d738864e53f275b214f1cff96d90f134b4ddf10673fd7",
+      "size_bytes": 2660
+    },
+    "runtime/RUNTIME_ATTESTATION.json": {
+      "sha256": "87400851ec4de1ff5e6e835824405f62d439d2fcc396a70a89fb5a33e1b93825",
+      "size_bytes": 680
+    },
+    "runtime/RUNTIME_TEMPLATES.json": {
+      "sha256": "216967b4c59f6f9d8349965c7a92e1aba5019c0ea9b55c66bfabde7b5d11cd0a",
+      "size_bytes": 1828
+    },
+    "runtime/SPECIFICATION_CHECK_RECEIPT.json": {
+      "sha256": "6539bde155fcf2e6fa311df06115d1d22001bfb547267eb16ef72b61a8c10dc1",
+      "size_bytes": 396
+    },
+    "runtime/SUBSTRATE_PROFILE_AI_HUMAN_MEMORY.json": {
+      "sha256": "94921435d4d9d8e37ce18258ee7eece854838f31ecbeafb14e929de5a031ab0b",
+      "size_bytes": 3910
+    },
+    "schema/CORE_SCHEMA.json": {
+      "sha256": "f822aa92dd6d57a33782daf1c866578d8e1d1af2b39e02424cfc121b46487c56",
+      "size_bytes": 104034
+    },
+    "schema/GATE_CONTEXT_SCHEMAS.json": {
+      "sha256": "b56c5b126073c9b527a8425245313565fe7f8d2e0542fc366b6e8cd302dfd18f",
+      "size_bytes": 128060
+    },
+    "schema/RELEASE_ENVELOPE_SCHEMA.json": {
+      "sha256": "d43c40840fed7b497cc05b3371cdff2536a30650ddd004fda4dfd485c157ac21",
+      "size_bytes": 678
+    },
+    "schema/RUNTIME_SCHEMAS.json": {
+      "sha256": "37c4612fd9d081666ae6aa32f2098ce2e62fbd42511520a3c163000494cefb83",
+      "size_bytes": 119436
+    },
+    "schema/VALIDATION_RECEIPT_SCHEMA.json": {
+      "sha256": "a581f2ef373481e397c1e71c35d9896981df4b0ecca7214371a55c9028a5f222",
+      "size_bytes": 149529
+    }
+  },
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "scope": "Every archive file except CHECKSUMS.json and FINAL_VERIFICATION.json; FINAL_VERIFICATION hashes CHECKSUMS.json."
+}

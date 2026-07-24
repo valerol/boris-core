@@ -1,0 +1,33 @@
+{
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "normative_source": "machine/CORE_CANON.json#deontic_semantics",
+  "status": "CANONICAL_DERIVED_PROJECTION",
+  "operations": {
+    "HOLD": "Suspend only the dependent scope while preserving return state, unknowns, owner, and review trigger.",
+    "PERMIT": "When applicable and TRUE, the transition is eligible; permission does not create authority or acceptance.",
+    "PROHIBIT": "When applicable and TRUE, the forbidden state or transition is blocked. UNKNOWN at a material boundary produces HOLD.",
+    "REPAIR": "Create a new revision, invalidate affected descendants, retest dependencies, and begin a new cycle.",
+    "REQUIRE": "When applicable and TRUE, the target state or transition must be reached. FALSE is a defect; UNKNOWN produces HOLD.",
+    "STOP": "Block ordinary continuation and route to REPAIR or explicit safe terminal closure."
+  },
+  "modality_map": {
+    "MAY": "PERMIT",
+    "MUST": "REQUIRE",
+    "MUST_NOT": "PROHIBIT"
+  },
+  "conflict_order": [
+    "STOP",
+    "PROHIBIT",
+    "REQUIRE",
+    "HOLD",
+    "PERMIT",
+    "REPAIR"
+  ],
+  "invariants": [
+    "Permission does not create authority.",
+    "Authority does not raise epistemic status.",
+    "Unknown at a material REQUIRE or PROHIBIT boundary yields HOLD.",
+    "Fundamental safety, dignity, authority or integrity violation yields STOP."
+  ]
+}

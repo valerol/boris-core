@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:bois:release-envelope:2.23",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "release_package_id",
+    "release_version",
+    "normative_package_id",
+    "normative_content_version",
+    "status"
+  ],
+  "properties": {
+    "release_package_id": {
+      "const": "BOIS_COMMON_CORE_TEMNIK_V2_23"
+    },
+    "release_version": {
+      "const": "2.23"
+    },
+    "normative_package_id": {
+      "const": "BOIS_COMMON_CORE_TEMNIK_V2_22"
+    },
+    "normative_content_version": {
+      "const": "2.22"
+    },
+    "status": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

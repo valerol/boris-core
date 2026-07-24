@@ -1,0 +1,21 @@
+{
+  "attestation_id": "RA-223-001",
+  "limitations": [
+    "Context capacity",
+    "Tool availability",
+    "File materialization",
+    "No guarantee of persistent memory across sessions",
+    "No field-effect observation beyond available evidence"
+  ],
+  "profile_id": "BOIS-RUNTIME-AI-HUMAN-MEMORY-1.0",
+  "qa_e": "NOT_CLAIMED",
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "status": "PASS_INTERNAL_STATIC",
+  "substrate_components": [
+    "AI reasoning element",
+    "authorized human operator",
+    "versioned file/context memory"
+  ],
+  "test_summary_ref": "assurance/STATIC_TEST_SUMMARY.json",
+  "validation_receipt_ref": "assurance/VALIDATION_RECEIPT.json"
+}

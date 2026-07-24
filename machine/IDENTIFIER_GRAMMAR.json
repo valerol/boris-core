@@ -1,0 +1,20 @@
+{
+  "artifact_version": "2.22",
+  "description": "Identifiers begin with an ASCII letter and continue with ASCII alphanumerics separated by -, _, ., or : delimiters. Empty segments are prohibited.",
+  "examples_invalid": [
+    "",
+    "-BAD",
+    "A 1",
+    "A//B",
+    "A#B"
+  ],
+  "examples_valid": [
+    "N-GEN-001",
+    "CYCLE-1",
+    "assurance:TEST-001",
+    "T_N_043"
+  ],
+  "grammar_id": "BOIS-IDENTIFIER-GRAMMAR-1.0",
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$"
+}

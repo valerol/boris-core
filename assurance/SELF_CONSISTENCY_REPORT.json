@@ -1,0 +1,200 @@
+{
+  "generated_at": "2026-07-23T23:30:00.000Z",
+  "hash_reconstruction": {
+    "errors": [],
+    "passports": {
+      "acceptance": "d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87",
+      "formulation": "d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+      "semantic": "fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+      "structural": "f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed"
+    },
+    "row_checks": 1448
+  },
+  "normative_content_version": "2.22",
+  "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "norms": {
+    "active": 361,
+    "candidate_inactive": 1,
+    "total": 362
+  },
+  "open_external_boundaries": [
+    "Field effectiveness and real C11 consequences require use in an actual domain.",
+    "Independent external O027/QA-E is not claimed.",
+    "Cross-substrate equivalence is not claimed.",
+    "PDF/UA conformance is not claimed."
+  ],
+  "pdf": {
+    "canonical_hashes_preserved": true,
+    "details": {
+      "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf": {
+        "embedded": true,
+        "min_font_pt": 9.2,
+        "pages": 3,
+        "render_pass": true,
+        "rot": 0,
+        "sha256": "3dd83f15a1fdcdc6d201c0b9ca94f552a3f4087fd979511ed19e69fca436528f",
+        "size": "595.304 x 841.89 pts",
+        "text_chars": 6194
+      },
+      "01_BOIS_Base_Core_v2.22_EN.pdf": {
+        "embedded": true,
+        "min_font_pt": 9.333333333333334,
+        "pages": 165,
+        "render_pass": true,
+        "rot": 0,
+        "sha256": "70f1cc6fd34f9c478c3dd23826e21ae83d69832d7445d14cd0ec50ba1f317d45",
+        "size": "595.276 x 841.89 pts",
+        "text_chars": 366391
+      },
+      "02_Temnik_Personal_Layer_v2.22_EN.pdf": {
+        "embedded": true,
+        "min_font_pt": 9.333333333333334,
+        "pages": 22,
+        "render_pass": true,
+        "rot": 0,
+        "sha256": "27d83d600015cd58487fd9f0010cb6bd4c102590f717bad10b28131aecb5ad8e",
+        "size": "595.276 x 841.89 pts",
+        "text_chars": 47890
+      },
+      "03_Publication_Candidates_v2.22_EN.pdf": {
+        "embedded": true,
+        "min_font_pt": 9.333333333333334,
+        "pages": 3,
+        "render_pass": true,
+        "rot": 0,
+        "sha256": "97a03a4b832f03634ff9b69f6615bd5ccb79ddc4e4370d946a434e19a628931e",
+        "size": "595.276 x 841.89 pts",
+        "text_chars": 4156
+      },
+      "04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf": {
+        "embedded": true,
+        "min_font_pt": 9.2,
+        "pages": 4,
+        "render_pass": true,
+        "rot": 0,
+        "sha256": "b08f04a92b2d0d7662a9223bf746cddc2ae00da3026220381b5be68a0f41d771",
+        "size": "595.304 x 841.89 pts",
+        "text_chars": 6558
+      },
+      "05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf": {
+        "embedded": true,
+        "min_font_pt": 9.2,
+        "pages": 5,
+        "render_pass": true,
+        "rot": 0,
+        "sha256": "34162ebc88f7823cf6a2fa16418363abfe6fc90130dc4f9336c822ece5ec710f",
+        "size": "595.304 x 841.89 pts",
+        "text_chars": 9445
+      }
+    },
+    "files": 6,
+    "formulation_missing": []
+  },
+  "references": {
+    "rows": 4974,
+    "unresolved": 0
+  },
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "report_id": "BOIS-SELF-CONSISTENCY-REPORT-2.23",
+  "runtime": {
+    "external_action_authority": "NOT_GRANTED",
+    "field_effectiveness": "NOT_CLAIMED",
+    "profile": "PASS_INTERNAL_STATIC"
+  },
+  "schemas": {
+    "alias_fixtures": 8,
+    "deontic_vectors": 5,
+    "errors": [],
+    "files": 5,
+    "gate_vectors": 16,
+    "predicate_vectors": 6
+  },
+  "scope": "Canonical PDFs plus passive JSON/TSV projections for AI + authorized human + declared memory substrate.",
+  "static_tests": {
+    "boundary": "STATIC_DECLARATIVE_AND_FIXTURE_BASED; FIELD_EFFECTIVENESS_NOT_CLAIMED",
+    "executed_at": "2026-07-24T03:23:02.587Z",
+    "execution_id": "BOIS-STATIC-TEST-2.23",
+    "fail": 0,
+    "mutation_detection_prior_evidence": "8/8 from supplied self-test; not substituted for current checks",
+    "normative_content_version": "2.22",
+    "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+    "pass": 1392,
+    "profiles": {
+      "TP-ALIAS-RESOLUTION": {
+        "fail": 0,
+        "pass": 16,
+        "total": 16
+      },
+      "TP-DEONTIC-SEMANTICS": {
+        "fail": 0,
+        "pass": 1,
+        "total": 1
+      },
+      "TP-GATE-PREDICATE": {
+        "fail": 0,
+        "pass": 16,
+        "total": 16
+      },
+      "TP-HASH-RECONSTRUCTION": {
+        "fail": 0,
+        "pass": 1,
+        "total": 1
+      },
+      "TP-JUSTIFICATION-TRACE": {
+        "fail": 0,
+        "pass": 9,
+        "total": 9
+      },
+      "TP-NORM-NEGATIVE-BOUNDARY": {
+        "fail": 0,
+        "pass": 362,
+        "total": 362
+      },
+      "TP-NORM-POSITIVE-STATE": {
+        "fail": 0,
+        "pass": 364,
+        "total": 364
+      },
+      "TP-OBJECT-BEHAVIOR": {
+        "fail": 0,
+        "pass": 70,
+        "total": 70
+      },
+      "TP-OBJECT-STRUCTURE": {
+        "fail": 0,
+        "pass": 69,
+        "total": 69
+      },
+      "TP-PACKAGE-INTEGRITY": {
+        "fail": 0,
+        "pass": 112,
+        "total": 112
+      },
+      "TP-PREDICATE-DSL": {
+        "fail": 0,
+        "pass": 2,
+        "total": 2
+      },
+      "TP-PRIMARY-FORMULATION-POSITIVITY": {
+        "fail": 0,
+        "pass": 369,
+        "total": 369
+      },
+      "TP-RUNTIME-SCHEMA": {
+        "fail": 0,
+        "pass": 1,
+        "total": 1
+      }
+    },
+    "registered": 1392,
+    "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+    "release_version": "2.23"
+  },
+  "status": "PASS",
+  "validation_checks": {
+    "fail": 0,
+    "pass": 119,
+    "total": 119
+  }
+}

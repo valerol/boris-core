@@ -1,0 +1,97 @@
+{
+  "artifact_version": "2.22",
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "relation_types": {
+    "APPLIES_TO": {
+      "target_kind": "OBJECT"
+    },
+    "AUTHORIZES": {
+      "target_kind": "OBJECT"
+    },
+    "BOUNDS": {
+      "target_kind": "OBJECT"
+    },
+    "COMPOSED_OF": {
+      "target_kind": "OBJECT"
+    },
+    "CONSUMES": {
+      "target_kind": "OBJECT"
+    },
+    "CREATES": {
+      "target_kind": "OBJECT"
+    },
+    "DECLARES_FOR": {
+      "target_kind": "OBJECT"
+    },
+    "DERIVED_FROM": {
+      "target_kind": "OBJECT"
+    },
+    "EVIDENCES": {
+      "target_kind": "OBJECT"
+    },
+    "EXECUTES": {
+      "target_kind": "OBJECT"
+    },
+    "HAS_AGENCY": {
+      "target_kind": "OBJECT"
+    },
+    "HAS_CLOSURE_RULE": {
+      "target_kind": "OBJECT"
+    },
+    "HAS_MEMORY": {
+      "target_kind": "OBJECT"
+    },
+    "HAS_RISK_MODEL": {
+      "target_kind": "OBJECT"
+    },
+    "HAS_SUBSTRATE_DECLARATION": {
+      "target_kind": "OBJECT"
+    },
+    "HAS_VALUE_INTERFACE": {
+      "target_kind": "OBJECT"
+    },
+    "IMPLEMENTS_PHASE": {
+      "target_kind": "PHASE"
+    },
+    "IMPLEMENTS_SURFACE": {
+      "target_kind": "SURFACE"
+    },
+    "INVENTORIES": {
+      "target_kind": "OBJECT"
+    },
+    "LIMITS": {
+      "target_kind": "OBJECT"
+    },
+    "OBSERVES": {
+      "target_kind": "OBJECT"
+    },
+    "OWNED_BY": {
+      "target_kind": "OBJECT"
+    },
+    "PART_OF": {
+      "target_kind": "OBJECT"
+    },
+    "PRODUCES": {
+      "target_kind": "OBJECT"
+    },
+    "RECORDED_IN": {
+      "target_kind": "OBJECT"
+    },
+    "RECORDS": {
+      "target_kind": "OBJECT"
+    },
+    "REVIEWS": {
+      "target_kind": "OBJECT"
+    },
+    "SOURCED_FROM": {
+      "target_kind": "OBJECT"
+    },
+    "UPDATES": {
+      "target_kind": "OBJECT"
+    },
+    "USES_EVIDENCE": {
+      "target_kind": "OBJECT"
+    }
+  },
+  "syntax": "RELATION_TYPE:TargetObjectOrPhase"
+}

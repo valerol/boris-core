@@ -1,0 +1,59 @@
+{
+  "artifact_version": "2.22",
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "relational_chain_ref": "schema/RUNTIME_SCHEMAS.json#/relational_validation",
+  "templates": {
+    "OperatorAcceptance": {
+      "accepted_components": [],
+      "accepted_scope": [],
+      "archive_sha256": null,
+      "artifact_version": "2.22",
+      "decision": "DEFER",
+      "decision_time": null,
+      "operator_id": null,
+      "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+      "record_id": "ACCEPTANCE-DRAFT-1",
+      "record_status": "DRAFT"
+    },
+    "RuntimeAttestation": {
+      "activation_status": "NOT_ACCEPTED",
+      "archive_sha256": null,
+      "artifact_version": "2.22",
+      "limitations": [],
+      "loaded_component_hashes": {},
+      "operator_acceptance_ref": null,
+      "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+      "record_id": "RUNTIME-DRAFT-1",
+      "record_status": "DRAFT",
+      "spec_check_status": "NOT_RUN",
+      "specification_check_ref": null,
+      "substrate_declaration_ref": null
+    },
+    "SpecificationCheckReceipt": {
+      "archive_sha256": null,
+      "artifact_version": "2.22",
+      "check_status": "NOT_RUN",
+      "checks": [],
+      "completed_at": null,
+      "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+      "record_id": "SPEC-CHECK-DRAFT-1",
+      "record_status": "DRAFT"
+    },
+    "SubstrateDeclaration": {
+      "archive_sha256": null,
+      "artifact_version": "2.22",
+      "capabilities": [],
+      "declaration_id": "SUBSTRATE-DRAFT-1",
+      "declared_at": null,
+      "fallbacks": [],
+      "limitations": [],
+      "memory_constraints": [],
+      "owner_ref": null,
+      "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+      "record_status": "DRAFT",
+      "security_constraints": [],
+      "substrate_kind": null,
+      "tool_constraints": []
+    }
+  }
+}

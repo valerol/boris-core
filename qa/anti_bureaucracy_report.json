@@ -1,7 +1,0 @@
-{
-  "version": "v0.17",
-  "status": "PASS",
-  "new_organs_added": 0,
-  "overloaded_organ_detected": false,
-  "reason": "Existing organs own the repairs: ORG-FORMAT for surface, ORG-VERIFY for verification, T-ORG-20 for preflight, ORG-ARTIFACT/ORG-COMPLETION for products and transitions."
-}

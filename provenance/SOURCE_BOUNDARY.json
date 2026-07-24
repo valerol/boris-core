@@ -1,0 +1,37 @@
+{
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "status": "CANONICAL_PROVENANCE_BOUNDARY",
+  "included_sources": [
+    "Current chat instructions",
+    "Supplied 61-conversation export: BOIS history/theory/practice portions only",
+    "v2.22 BOIS boot and assurance archives",
+    "Supplied BOIS/SIMA/BORIS and SOCRATES PDFs",
+    "Supplied development-logic and physiology documents"
+  ],
+  "excluded": [
+    "Unrelated conversations and personal material",
+    "Other chats not present in the supplied export",
+    "Private chain-of-thought",
+    "Claims of field effectiveness not supported by experience data"
+  ],
+  "selection_method": "Keyword ranking followed by exact message-level curation; every retained milestone has conversation_id and message_id.",
+  "source_artifacts": [
+    {
+      "role": "V2_22_BOOT_SOURCE",
+      "filename": "v2.22_Common_Core_BOIS_Temnik_BOOT_PACKAGE(2).zip",
+      "sha256": "6e8295f15f3cb59bed34e42e720cccb0b30b3555889fb4734898d88ff41a7a7c"
+    },
+    {
+      "role": "V2_22_ASSURANCE_SOURCE",
+      "filename": "v2.22_Common_Core_BOIS_Temnik_ASSURANCE_COMPANION(1).zip",
+      "sha256": "88a0e6c57cb1cce89e15fda033253088c2f82d80a575846aef2a575706ca5a11"
+    },
+    {
+      "role": "DIALOGUE_EXPORT",
+      "filename": "Архив всех чатов на момент окончания разработки первого уровня игры(1)(3).zip",
+      "sha256": "a6ef13b702085d11bbe3ac89c2be7a9cfe596f9f607820ca76b46dd7fd932a83"
+    }
+  ],
+  "other_chat_import": "PROHIBITED_AND_NOT_USED",
+  "field_effectiveness": "NOT_CLAIMED"
+}

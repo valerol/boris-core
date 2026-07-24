@@ -1,0 +1,80 @@
+{
+  "boundary": "STATIC_DECLARATIVE_AND_FIXTURE_BASED; FIELD_EFFECTIVENESS_NOT_CLAIMED",
+  "executed_at": "2026-07-23T23:30:00.000Z",
+  "execution_id": "BOIS-STATIC-TEST-2.23",
+  "fail": 0,
+  "mutation_detection_prior_evidence": "8/8 from supplied self-test; not substituted for current checks",
+  "normative_content_version": "2.22",
+  "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "pass": 1392,
+  "profiles": {
+    "TP-ALIAS-RESOLUTION": {
+      "fail": 0,
+      "pass": 16,
+      "total": 16
+    },
+    "TP-DEONTIC-SEMANTICS": {
+      "fail": 0,
+      "pass": 1,
+      "total": 1
+    },
+    "TP-GATE-PREDICATE": {
+      "fail": 0,
+      "pass": 16,
+      "total": 16
+    },
+    "TP-HASH-RECONSTRUCTION": {
+      "fail": 0,
+      "pass": 1,
+      "total": 1
+    },
+    "TP-JUSTIFICATION-TRACE": {
+      "fail": 0,
+      "pass": 9,
+      "total": 9
+    },
+    "TP-NORM-NEGATIVE-BOUNDARY": {
+      "fail": 0,
+      "pass": 362,
+      "total": 362
+    },
+    "TP-NORM-POSITIVE-STATE": {
+      "fail": 0,
+      "pass": 364,
+      "total": 364
+    },
+    "TP-OBJECT-BEHAVIOR": {
+      "fail": 0,
+      "pass": 70,
+      "total": 70
+    },
+    "TP-OBJECT-STRUCTURE": {
+      "fail": 0,
+      "pass": 69,
+      "total": 69
+    },
+    "TP-PACKAGE-INTEGRITY": {
+      "fail": 0,
+      "pass": 112,
+      "total": 112
+    },
+    "TP-PREDICATE-DSL": {
+      "fail": 0,
+      "pass": 2,
+      "total": 2
+    },
+    "TP-PRIMARY-FORMULATION-POSITIVITY": {
+      "fail": 0,
+      "pass": 369,
+      "total": 369
+    },
+    "TP-RUNTIME-SCHEMA": {
+      "fail": 0,
+      "pass": 1,
+      "total": 1
+    }
+  },
+  "registered": 1392,
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23"
+}

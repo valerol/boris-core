@@ -1,0 +1,284 @@
+{
+  "artifact_version": "2.22",
+  "fixtures": [
+    {
+      "alias": "AttentionAllocation",
+      "canonical_type": "State",
+      "negative_fixture": {
+        "active_cycles": "X-1",
+        "actual_object": "X-1",
+        "blocks": "X-1",
+        "freshness": "X-1",
+        "instant_or_interval": "X-1",
+        "level_profile": {},
+        "representations": "X-1",
+        "resources": "X-1",
+        "revision": "X-1",
+        "state_id": "X-1",
+        "state_kind": "INVALID"
+      },
+      "negative_test_id": "TEST-ALIAS-ATTENTIONALLOCATION-NEG",
+      "positive_fixture": {
+        "active_cycles": "X-1",
+        "actual_object": "X-1",
+        "blocks": "X-1",
+        "freshness": "X-1",
+        "instant_or_interval": "X-1",
+        "level_profile": {},
+        "representations": "X-1",
+        "resources": "X-1",
+        "revision": "X-1",
+        "state_id": "X-1",
+        "state_kind": "ATTENTION_ALLOCATION"
+      },
+      "positive_test_id": "TEST-ALIAS-ATTENTIONALLOCATION-POS"
+    },
+    {
+      "alias": "ValuableUnknown",
+      "canonical_type": "Unknown",
+      "negative_fixture": {
+        "affected_goals": "X-1",
+        "assessment_refs": [
+          "X-1"
+        ],
+        "bounded_at_phase": "C01",
+        "class": "X-1",
+        "cost": 1,
+        "created_at_phase": "C01",
+        "detectability": "X-1",
+        "formulation": "X-1",
+        "owner": "O001",
+        "review_conditions": "X-1",
+        "risk": "X-1",
+        "routes": "X-1",
+        "significance": "X-1",
+        "status": "X-1",
+        "unknown_id": "X-1",
+        "value_status": "INVALID"
+      },
+      "negative_test_id": "TEST-ALIAS-VALUABLEUNKNOWN-NEG",
+      "positive_fixture": {
+        "affected_goals": "X-1",
+        "assessment_refs": [
+          "X-1"
+        ],
+        "bounded_at_phase": "C01",
+        "class": "X-1",
+        "cost": 1,
+        "created_at_phase": "C01",
+        "detectability": "X-1",
+        "formulation": "X-1",
+        "owner": "O001",
+        "review_conditions": "X-1",
+        "risk": "X-1",
+        "routes": "X-1",
+        "significance": "X-1",
+        "status": "X-1",
+        "unknown_id": "X-1",
+        "value_status": "VALUABLE"
+      },
+      "positive_test_id": "TEST-ALIAS-VALUABLEUNKNOWN-POS"
+    },
+    {
+      "alias": "NextStep",
+      "canonical_type": "Transition",
+      "negative_fixture": {
+        "D/V/S": "X-1",
+        "actual_effect": "X-1",
+        "authority": "X-1",
+        "candidate_status": "INVALID",
+        "dependencies": "X-1",
+        "executor": "X-1",
+        "input_revisions": "X-1",
+        "invariants": "X-1",
+        "operation": "X-1",
+        "outputs": "X-1",
+        "status": "X-1",
+        "transition_id": "X-1",
+        "type": "X-1"
+      },
+      "negative_test_id": "TEST-ALIAS-NEXTSTEP-NEG",
+      "positive_fixture": {
+        "D/V/S": "X-1",
+        "actual_effect": "X-1",
+        "authority": "X-1",
+        "candidate_status": "PROPOSED",
+        "dependencies": "X-1",
+        "executor": "X-1",
+        "input_revisions": "X-1",
+        "invariants": "X-1",
+        "operation": "X-1",
+        "outputs": "X-1",
+        "status": "X-1",
+        "transition_id": "X-1",
+        "type": "X-1"
+      },
+      "positive_test_id": "TEST-ALIAS-NEXTSTEP-POS"
+    },
+    {
+      "alias": "PhysiologyRevisionCandidate",
+      "canonical_type": "Revision",
+      "negative_fixture": {
+        "activation_status": "INVALID",
+        "approvals": "X-1",
+        "author_or_executor": "X-1",
+        "base_revision": "X-1",
+        "cause": "X-1",
+        "changed_fields": "X-1",
+        "object_id": "X-1",
+        "quality": "X-1",
+        "revision_id": "X-1"
+      },
+      "negative_test_id": "TEST-ALIAS-PHYSIOLOGYREVISIONCANDIDATE-NEG",
+      "positive_fixture": {
+        "activation_status": "CANDIDATE",
+        "approvals": "X-1",
+        "author_or_executor": "X-1",
+        "base_revision": "X-1",
+        "cause": "X-1",
+        "changed_fields": "X-1",
+        "object_id": "X-1",
+        "quality": "X-1",
+        "revision_id": "X-1"
+      },
+      "positive_test_id": "TEST-ALIAS-PHYSIOLOGYREVISIONCANDIDATE-POS"
+    },
+    {
+      "alias": "Experience",
+      "canonical_type": "ExperienceRecord",
+      "negative_fixture": {
+        "cycle_id": "X-1",
+        "evidence_refs": [
+          "X-1"
+        ],
+        "freshness": "X-1",
+        "observations": [
+          "X-1"
+        ],
+        "operation_or_action_ref": "X-1",
+        "owner": "X-1",
+        "scope": "X-1"
+      },
+      "negative_test_id": "TEST-ALIAS-EXPERIENCE-NEG",
+      "positive_fixture": {
+        "cycle_id": "X-1",
+        "evidence_refs": [
+          "X-1"
+        ],
+        "experience_id": "X-1",
+        "freshness": "X-1",
+        "observations": [
+          "X-1"
+        ],
+        "operation_or_action_ref": "X-1",
+        "owner": "X-1",
+        "scope": "X-1"
+      },
+      "positive_test_id": "TEST-ALIAS-EXPERIENCE-POS"
+    },
+    {
+      "alias": "ResearchProtocol",
+      "canonical_type": "Protocol",
+      "negative_fixture": {
+        "HOLD/STOP": "X-1",
+        "completion": "X-1",
+        "cost": 1,
+        "discrimination_criteria": "X-1",
+        "evidence": "X-1",
+        "goal": "X-1",
+        "inputs": "X-1",
+        "operations": "X-1",
+        "protocol_id": "X-1",
+        "purpose": "INVALID",
+        "related_questions_or_hypotheses": "X-1",
+        "risk": "X-1",
+        "substrate": "X-1"
+      },
+      "negative_test_id": "TEST-ALIAS-RESEARCHPROTOCOL-NEG",
+      "positive_fixture": {
+        "HOLD/STOP": "X-1",
+        "completion": "X-1",
+        "cost": 1,
+        "discrimination_criteria": "X-1",
+        "evidence": "X-1",
+        "goal": "X-1",
+        "inputs": "X-1",
+        "operations": "X-1",
+        "protocol_id": "X-1",
+        "purpose": "RESEARCH",
+        "related_questions_or_hypotheses": "X-1",
+        "risk": "X-1",
+        "substrate": "X-1"
+      },
+      "positive_test_id": "TEST-ALIAS-RESEARCHPROTOCOL-POS"
+    },
+    {
+      "alias": "IndependentReview",
+      "canonical_type": "Evidence",
+      "negative_fixture": {
+        "completeness": "X-1",
+        "distortions": "X-1",
+        "evidence_id": "X-1",
+        "independence": "INVALID",
+        "method": "X-1",
+        "observed_object": "X-1",
+        "resolution": "X-1",
+        "scope": "X-1",
+        "source": "X-1",
+        "supported_or_refuted_objects": "X-1",
+        "time": "X-1"
+      },
+      "negative_test_id": "TEST-ALIAS-INDEPENDENTREVIEW-NEG",
+      "positive_fixture": {
+        "completeness": "X-1",
+        "distortions": "X-1",
+        "evidence_id": "X-1",
+        "independence": "IND2",
+        "method": "X-1",
+        "observed_object": "X-1",
+        "resolution": "X-1",
+        "scope": "X-1",
+        "source": "X-1",
+        "supported_or_refuted_objects": "X-1",
+        "time": "X-1"
+      },
+      "positive_test_id": "TEST-ALIAS-INDEPENDENTREVIEW-POS"
+    },
+    {
+      "alias": "Substrate",
+      "canonical_type": "SubstrateDeclaration",
+      "negative_fixture": {
+        "archive_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "capabilities": "X-1",
+        "declared_at": "2026-07-23T00:00:00Z",
+        "fallbacks": "X-1",
+        "limitations": "X-1",
+        "memory_constraints": "X-1",
+        "owner_ref": "X-1",
+        "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+        "record_status": "DRAFT",
+        "security_constraints": "X-1",
+        "substrate_kind": "X-1",
+        "tool_constraints": "X-1"
+      },
+      "negative_test_id": "TEST-ALIAS-SUBSTRATE-NEG",
+      "positive_fixture": {
+        "archive_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "capabilities": "X-1",
+        "declaration_id": "X-1",
+        "declared_at": "2026-07-23T00:00:00Z",
+        "fallbacks": "X-1",
+        "limitations": "X-1",
+        "memory_constraints": "X-1",
+        "owner_ref": "X-1",
+        "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+        "record_status": "DRAFT",
+        "security_constraints": "X-1",
+        "substrate_kind": "X-1",
+        "tool_constraints": "X-1"
+      },
+      "positive_test_id": "TEST-ALIAS-SUBSTRATE-POS"
+    }
+  ],
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22"
+}

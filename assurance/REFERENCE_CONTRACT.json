@@ -1,0 +1,19 @@
+{
+  "closure_rule": "Every indexed reference resolves uniquely to an existing passive-data target.",
+  "contract_id": "BOIS-REFERENCE-CONTRACT-2.23",
+  "normative_content_version": "2.22",
+  "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "reference_index_ref": "assurance/REFERENCE_INDEX.tsv",
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "selector_types": [
+    "FILE",
+    "JSON_POINTER",
+    "TSV_PRIMARY_KEY",
+    "PDF_SECTION",
+    "NODE_ID",
+    "TEST_ID",
+    "MIGRATION_ID",
+    "CHECK_ID"
+  ]
+}

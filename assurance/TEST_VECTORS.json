@@ -1,0 +1,1543 @@
+{
+  "artifact_version": "2.22",
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "result_semantics": [
+    "PASS",
+    "HOLD",
+    "STOP",
+    "REPAIR"
+  ],
+  "tests": [
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC00"
+      ],
+      "negative_fixture": {
+        "cycle_id": "CYCLE-1",
+        "phenomenon": null,
+        "source_ref": "SRC-1"
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "cycle_id": "CYCLE-1",
+        "phenomenon": {
+          "boundary": "Declared boundary",
+          "formulation": "Observed input",
+          "identification_source": "SRC-1",
+          "phenomenon_id": "PH-1",
+          "scope": "CORE"
+        },
+        "source_ref": "SRC-1"
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "valid_identifier",
+            "path": "cycle_id"
+          },
+          {
+            "op": "nonempty",
+            "path": "phenomenon.formulation"
+          },
+          {
+            "op": "nonempty_scope",
+            "path": "phenomenon.scope"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "source_ref"
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C00",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C00",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-INPUT-CAPTURED"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC01"
+      ],
+      "negative_fixture": {
+        "context": null
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "context": {
+          "applicability_boundary": "BOUNDARY-1",
+          "domain": "DOMAIN-1",
+          "initial_risk": "P1",
+          "known": [
+            "KNOWN-1"
+          ],
+          "unknowns": [
+            "UNKNOWN-1"
+          ]
+        }
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "valid_identifier",
+            "path": "context.domain"
+          },
+          {
+            "op": "min_items",
+            "path": "context.known",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "context.unknowns",
+            "value": 1
+          },
+          {
+            "op": "nonempty",
+            "path": "context.applicability_boundary"
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C01",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C01",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-CONTEXT-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC02"
+      ],
+      "negative_fixture": {
+        "authority": {
+          "owner_ref": "OWNER-1",
+          "scope": "CORE",
+          "status": "AUTHORIZED_IN_SCOPE"
+        },
+        "completion_criterion": "CRITERION-1",
+        "domain": "DOMAIN-1",
+        "goal": "GOAL-1",
+        "substrate_declaration_ref": "SUBSTRATE-1",
+        "value_interface_ref": ""
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "authority": {
+          "owner_ref": "OWNER-1",
+          "scope": "CORE",
+          "status": "AUTHORIZED_IN_SCOPE"
+        },
+        "completion_criterion": "CRITERION-1",
+        "domain": "DOMAIN-1",
+        "goal": "GOAL-1",
+        "substrate_declaration_ref": "SUBSTRATE-1",
+        "value_interface_ref": "VALUE-1"
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "nonempty",
+            "path": "goal"
+          },
+          {
+            "op": "valid_identifier",
+            "path": "domain"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "value_interface_ref"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "substrate_declaration_ref"
+          },
+          {
+            "equals": "AUTHORIZED_IN_SCOPE",
+            "op": "fact",
+            "path": "authority.status"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "authority.owner_ref"
+          },
+          {
+            "op": "nonempty_scope",
+            "path": "authority.scope"
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C02",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C02",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-DVS-AND-AUTHORITY-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC03"
+      ],
+      "negative_fixture": {
+        "claim_classes": [
+          "FACT"
+        ],
+        "counterevidence_refs": [],
+        "evidence_refs": [
+          "EV-1"
+        ],
+        "initial_S_level": "S9",
+        "source_refs": [
+          "SRC-1"
+        ]
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "claim_classes": [
+          "FACT"
+        ],
+        "counterevidence_refs": [],
+        "evidence_refs": [
+          "EV-1"
+        ],
+        "initial_S_level": "S2",
+        "source_refs": [
+          "SRC-1"
+        ]
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "min_items",
+            "path": "claim_classes",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "evidence_refs",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "source_refs",
+            "value": 1
+          },
+          {
+            "op": "enum_member",
+            "path": "initial_S_level",
+            "values": [
+              "S0",
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ]
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C03",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C03",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-EPISTEMIC-INPUT-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC04"
+      ],
+      "negative_fixture": {
+        "question": null
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "question": {
+          "content": "What is the bounded answer?",
+          "discrimination_criterion": "Evidence distinguishes alternatives",
+          "materiality": "MATERIAL",
+          "question_id": "Q-1"
+        }
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "valid_identifier",
+            "path": "question.question_id"
+          },
+          {
+            "op": "nonempty",
+            "path": "question.content"
+          },
+          {
+            "op": "nonempty",
+            "path": "question.discrimination_criterion"
+          },
+          {
+            "op": "enum_member",
+            "path": "question.materiality",
+            "values": [
+              "MATERIAL",
+              "NON_MATERIAL"
+            ]
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C04",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C04",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-CONCRETE-INPUT-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC05"
+      ],
+      "negative_fixture": {
+        "route": null
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "route": {
+          "dependencies": [],
+          "hold_conditions": [
+            "MISSING-INPUT"
+          ],
+          "operations": [
+            "OP-1"
+          ],
+          "owner_ref": "OWNER-1",
+          "resources": [
+            "RES-1"
+          ],
+          "return_rules": [
+            "RETURN-C05"
+          ],
+          "route_id": "ROUTE-1",
+          "snapshot_id": "SNAP-1",
+          "stop_conditions": [
+            "PROHIBITED-ACTION"
+          ]
+        }
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "valid_identifier",
+            "path": "route.route_id"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "route.owner_ref"
+          },
+          {
+            "op": "min_items",
+            "path": "route.operations",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "route.hold_conditions",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "route.stop_conditions",
+            "value": 1
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C05",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C05",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-ROUTE-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC06"
+      ],
+      "negative_fixture": {
+        "alternatives": [
+          "PRIMARY-ROUTE"
+        ],
+        "microphases": [
+          {
+            "evidence_refs": [
+              "EV-C06-1"
+            ],
+            "microphase_id": "C06.1",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-2"
+            ],
+            "microphase_id": "C06.2",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-3"
+            ],
+            "microphase_id": "C06.3",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-4"
+            ],
+            "microphase_id": "C06.4",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-5"
+            ],
+            "microphase_id": "C06.5",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-6"
+            ],
+            "microphase_id": "C06.6",
+            "status": "INCOMPLETE"
+          }
+        ],
+        "transformation_trace": "TRACE-C06-1"
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "alternatives": [
+          "PRIMARY-ROUTE"
+        ],
+        "microphases": [
+          {
+            "evidence_refs": [
+              "EV-C06-1"
+            ],
+            "microphase_id": "C06.1",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-2"
+            ],
+            "microphase_id": "C06.2",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-3"
+            ],
+            "microphase_id": "C06.3",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-4"
+            ],
+            "microphase_id": "C06.4",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-5"
+            ],
+            "microphase_id": "C06.5",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-6"
+            ],
+            "microphase_id": "C06.6",
+            "status": "COMPLETE"
+          }
+        ],
+        "transformation_trace": "TRACE-C06-1"
+      },
+      "predicate": {
+        "args": [
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.0.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.1.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.2.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.3.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.4.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.5.status"
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C06",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C06",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-C06-MICROROUTE-COMPLETE"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC07"
+      ],
+      "negative_fixture": {
+        "S_level": "S2",
+        "counterevidence": [],
+        "evidence": [
+          "EV-7"
+        ],
+        "research_boundary": {
+          "external_effect_route": "UNDECLARED"
+        },
+        "status": "ASSESSED"
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "S_level": "S2",
+        "counterevidence": [],
+        "evidence": [
+          "EV-7"
+        ],
+        "research_boundary": {
+          "external_effect_route": "NO_EXTERNAL_EFFECT"
+        },
+        "status": "ASSESSED"
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "enum_member",
+            "path": "S_level",
+            "values": [
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "equals": "ASSESSED",
+            "op": "fact",
+            "path": "status"
+          },
+          {
+            "op": "min_items",
+            "path": "evidence",
+            "value": 1
+          },
+          {
+            "op": "enum_member",
+            "path": "research_boundary.external_effect_route",
+            "values": [
+              "NO_EXTERNAL_EFFECT",
+              "SEPARATE_AUTHORIZATION_ROUTE",
+              "PROHIBITED"
+            ]
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C07",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C07",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-C07-EPISTEMIC-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC08"
+      ],
+      "negative_fixture": {
+        "bounded_result": null,
+        "next_transition": "C09"
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "bounded_result": {
+          "applicability": [
+            "CORE"
+          ],
+          "boundary_status": "BOUNDED",
+          "evidence_refs": [
+            "EV-8"
+          ],
+          "excluded_claims": [],
+          "owner_ref": "O006",
+          "result_id": "BR-1",
+          "scope": "CORE",
+          "source_result_ref": "RESULT-1"
+        },
+        "next_transition": "C09"
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "valid_identifier",
+            "path": "bounded_result.result_id"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "bounded_result.source_result_ref"
+          },
+          {
+            "op": "nonempty_scope",
+            "path": "bounded_result.scope"
+          },
+          {
+            "equals": "BOUNDED",
+            "op": "fact",
+            "path": "bounded_result.boundary_status"
+          },
+          {
+            "op": "min_items",
+            "path": "bounded_result.evidence_refs",
+            "value": 1
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C08",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C08",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-RESULT-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC09"
+      ],
+      "negative_fixture": {
+        "closure_candidate": {
+          "closure_candidate_id": "CC-1",
+          "cycle_id": "CYCLE-1",
+          "scope": "CORE"
+        },
+        "debts": [],
+        "next_transition": "C10",
+        "recovery_route_ref": "",
+        "residual_risk_decision": {
+          "decision": "UNRESOLVED",
+          "risk_decision_id": "RRD-1",
+          "risk_owner_ref": "",
+          "scope": "CORE"
+        },
+        "unknowns": []
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "closure_candidate": {
+          "closure_candidate_id": "CC-1",
+          "cycle_id": "CYCLE-1",
+          "scope": "CORE"
+        },
+        "debts": [],
+        "next_transition": "C10",
+        "recovery_route_ref": "RECOVERY-1",
+        "residual_risk_decision": {
+          "decision": "ACCEPTED_BY_AUTHORIZED_OWNER",
+          "risk_decision_id": "RRD-1",
+          "risk_owner_ref": "RISK-OWNER-1",
+          "scope": "CORE"
+        },
+        "unknowns": []
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "valid_identifier",
+            "path": "closure_candidate.closure_candidate_id"
+          },
+          {
+            "op": "same_cycle",
+            "paths": [
+              "closure_candidate.cycle_id",
+              "closure_candidate.cycle_id"
+            ]
+          },
+          {
+            "equals": "ACCEPTED_BY_AUTHORIZED_OWNER",
+            "op": "fact",
+            "path": "residual_risk_decision.decision"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "residual_risk_decision.risk_owner_ref"
+          },
+          {
+            "op": "reference_resolves",
+            "path": "recovery_route_ref"
+          },
+          {
+            "left_path": "closure_candidate.scope",
+            "op": "scope_equal",
+            "right_path": "residual_risk_decision.scope"
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C09",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C09",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-CLOSURE-READY"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC10"
+      ],
+      "negative_fixture": {
+        "authority_decision": {
+          "authority_decision_id": "AD-1",
+          "authority_source_ref": "AUTH-1",
+          "authorized_subject_ref": "ACTOR-C",
+          "decision": "AUTHORIZED_IN_SCOPE",
+          "permitted_operations": [
+            "EXECUTE"
+          ],
+          "proposal_ref": "PROP-OTHER",
+          "revocation_route": "REVOKE-1",
+          "scope": "SCOPE-1",
+          "validity_conditions": [
+            "CURRENT"
+          ]
+        },
+        "closure_candidate": {
+          "closure_candidate_id": "CC-1",
+          "cycle_id": "CYCLE-1",
+          "debt_refs": [],
+          "external_action_required": true,
+          "next_transition": "C11",
+          "physiology_change_required": false,
+          "producer_ref": "ACTOR-A",
+          "provenance": "PROV-1",
+          "recovery_route": "RECOVERY-1",
+          "residual_risk_ref": "RRD-1",
+          "responsibility_ref": "RESP-1",
+          "result_ref": "RESULT-1",
+          "scope": "SCOPE-1",
+          "status": "READY",
+          "unknowns": []
+        },
+        "external_action_proposal": {
+          "action_type": "EXTERNAL",
+          "authority_required": "TRUE",
+          "cycle_id": "CYCLE-1",
+          "owner_ref": "ACTOR-C",
+          "proposal_id": "PROP-1",
+          "review_required": "TRUE",
+          "risk": "P2",
+          "scope": "SCOPE-1",
+          "target": "TARGET-1"
+        },
+        "quality_decision": {
+          "closure_candidate_id": "CC-1",
+          "conflict_of_interest": false,
+          "decision": "PASS",
+          "evidence_freshness": "CURRENT",
+          "evidence_refs": [
+            "EV-Q-1"
+          ],
+          "independence_level": "IND2",
+          "quality_decision_id": "QD-1",
+          "reviewer_ref": "ACTOR-B",
+          "scope": "SCOPE-1"
+        },
+        "residual_risk_decision": {
+          "affected_objects": [
+            "OBJ-1"
+          ],
+          "closure_candidate_ref": "CC-1",
+          "decision": "ACCEPTED_BY_AUTHORIZED_OWNER",
+          "proposal_ref": "PROP-1",
+          "protected_losses": [
+            "HUMAN_SAFETY"
+          ],
+          "residual_risk": "BOUNDED",
+          "review_condition": "CURRENT",
+          "risk_class": "P2",
+          "risk_decision_id": "RRD-1",
+          "risk_owner_ref": "RISK-OWNER-1",
+          "rollback_or_compensation": "ROLLBACK-1"
+        }
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "authority_decision": {
+          "authority_decision_id": "AD-1",
+          "authority_source_ref": "AUTH-1",
+          "authorized_subject_ref": "ACTOR-C",
+          "decision": "AUTHORIZED_IN_SCOPE",
+          "permitted_operations": [
+            "EXECUTE"
+          ],
+          "proposal_ref": "PROP-1",
+          "revocation_route": "REVOKE-1",
+          "scope": "SCOPE-1",
+          "validity_conditions": [
+            "CURRENT"
+          ]
+        },
+        "closure_candidate": {
+          "closure_candidate_id": "CC-1",
+          "cycle_id": "CYCLE-1",
+          "debt_refs": [],
+          "external_action_required": true,
+          "next_transition": "C11",
+          "physiology_change_required": false,
+          "producer_ref": "ACTOR-A",
+          "provenance": "PROV-1",
+          "recovery_route": "RECOVERY-1",
+          "residual_risk_ref": "RRD-1",
+          "responsibility_ref": "RESP-1",
+          "result_ref": "RESULT-1",
+          "scope": "SCOPE-1",
+          "status": "READY",
+          "unknowns": []
+        },
+        "external_action_proposal": {
+          "action_type": "EXTERNAL",
+          "authority_required": "TRUE",
+          "cycle_id": "CYCLE-1",
+          "owner_ref": "ACTOR-C",
+          "proposal_id": "PROP-1",
+          "review_required": "TRUE",
+          "risk": "P2",
+          "scope": "SCOPE-1",
+          "target": "TARGET-1"
+        },
+        "quality_decision": {
+          "closure_candidate_id": "CC-1",
+          "conflict_of_interest": false,
+          "decision": "PASS",
+          "evidence_freshness": "CURRENT",
+          "evidence_refs": [
+            "EV-Q-1"
+          ],
+          "independence_level": "IND2",
+          "quality_decision_id": "QD-1",
+          "reviewer_ref": "ACTOR-B",
+          "scope": "SCOPE-1"
+        },
+        "residual_risk_decision": {
+          "affected_objects": [
+            "OBJ-1"
+          ],
+          "closure_candidate_ref": "CC-1",
+          "decision": "ACCEPTED_BY_AUTHORIZED_OWNER",
+          "proposal_ref": "PROP-1",
+          "protected_losses": [
+            "HUMAN_SAFETY"
+          ],
+          "residual_risk": "BOUNDED",
+          "review_condition": "CURRENT",
+          "risk_class": "P2",
+          "risk_decision_id": "RRD-1",
+          "risk_owner_ref": "RISK-OWNER-1",
+          "rollback_or_compensation": "ROLLBACK-1"
+        }
+      },
+      "predicate": {
+        "args": [
+          {
+            "equals": "PASS",
+            "op": "fact",
+            "path": "quality_decision.decision"
+          },
+          {
+            "left_path": "quality_decision.closure_candidate_id",
+            "op": "equals_path",
+            "right_path": "closure_candidate.closure_candidate_id"
+          },
+          {
+            "left_path": "quality_decision.reviewer_ref",
+            "op": "neq",
+            "right_path": "closure_candidate.producer_ref"
+          },
+          {
+            "op": "enum_member",
+            "path": "quality_decision.independence_level",
+            "values": [
+              "IND2",
+              "IND3",
+              "IND4"
+            ]
+          },
+          {
+            "op": "min_items",
+            "path": "quality_decision.evidence_refs",
+            "value": 1
+          },
+          {
+            "equals": "CURRENT",
+            "op": "fact",
+            "path": "quality_decision.evidence_freshness"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "quality_decision.conflict_of_interest"
+          },
+          {
+            "left_path": "closure_candidate.residual_risk_ref",
+            "op": "equals_path",
+            "right_path": "residual_risk_decision.risk_decision_id"
+          },
+          {
+            "left_path": "residual_risk_decision.closure_candidate_ref",
+            "op": "equals_path",
+            "right_path": "closure_candidate.closure_candidate_id"
+          },
+          {
+            "left_path": "authority_decision.proposal_ref",
+            "op": "equals_path",
+            "right_path": "external_action_proposal.proposal_id"
+          },
+          {
+            "left_path": "residual_risk_decision.proposal_ref",
+            "op": "equals_path",
+            "right_path": "external_action_proposal.proposal_id"
+          },
+          {
+            "op": "same_cycle",
+            "paths": [
+              "closure_candidate.cycle_id",
+              "external_action_proposal.cycle_id"
+            ]
+          },
+          {
+            "left_path": "quality_decision.scope",
+            "op": "scope_equal",
+            "right_path": "closure_candidate.scope"
+          },
+          {
+            "left_path": "closure_candidate.scope",
+            "op": "scope_equal",
+            "right_path": "external_action_proposal.scope"
+          },
+          {
+            "left_path": "authority_decision.scope",
+            "op": "scope_contains",
+            "right_path": "external_action_proposal.scope"
+          },
+          {
+            "left_path": "external_action_proposal.owner_ref",
+            "op": "same_subject",
+            "right_path": "authority_decision.authorized_subject_ref"
+          },
+          {
+            "equals": "AUTHORIZED_IN_SCOPE",
+            "op": "fact",
+            "path": "authority_decision.decision"
+          },
+          {
+            "equals": "ACCEPTED_BY_AUTHORIZED_OWNER",
+            "op": "fact",
+            "path": "residual_risk_decision.decision"
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C10",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C10",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-C10-RELATIONAL-AUTHORIZATION"
+    },
+    {
+      "defect_signal": "Gate input is missing, invalid, empty, unlinked, or outside the declared route.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC11"
+      ],
+      "negative_fixture": {
+        "action_execution_record": {
+          "attempt_count": 1,
+          "authorized_action_ref": "AUTH-ACT-1",
+          "cycle_id": "CYCLE-1",
+          "effect_capture_ref": "CAP-1",
+          "end_time": "2026-07-23T00:01:00Z",
+          "errors": [],
+          "execution_record_id": "EXEC-1",
+          "executor_ref": "EXECUTOR-1",
+          "observations": [
+            "OBS-EXEC-1"
+          ],
+          "rollback_or_compensation_status": "NOT_REQUIRED",
+          "start_time": "2026-07-23T00:00:00Z",
+          "status": "EXECUTED"
+        },
+        "effect_capture": {
+          "captured_at": "2026-07-23T00:02:00Z",
+          "cycle_id": "CYCLE-1",
+          "effect_capture_id": "CAP-1",
+          "effect_capture_ref": "EFF-1",
+          "evidence_refs": [
+            "EV-EFFECT-1"
+          ],
+          "execution_record_ref": "EXEC-1",
+          "owner_ref": "O015",
+          "state_update_ref": "STATE-2"
+        },
+        "observed_effect": {
+          "action_execution_ref": "EXEC-OTHER",
+          "cycle_id": "CYCLE-1",
+          "effect_evidence_refs": [
+            "EV-EFFECT-1"
+          ],
+          "effect_id": "EFF-1",
+          "effect_status": "CLASSIFIED",
+          "next_state_or_terminal_condition": "C00",
+          "observations": [
+            "OBS-1"
+          ],
+          "owner_ref": "O015",
+          "provenance": "PROV-1",
+          "state_update_ref": "STATE-2"
+        }
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "action_execution_record": {
+          "attempt_count": 1,
+          "authorized_action_ref": "AUTH-ACT-1",
+          "cycle_id": "CYCLE-1",
+          "effect_capture_ref": "CAP-1",
+          "end_time": "2026-07-23T00:01:00Z",
+          "errors": [],
+          "execution_record_id": "EXEC-1",
+          "executor_ref": "EXECUTOR-1",
+          "observations": [
+            "OBS-EXEC-1"
+          ],
+          "rollback_or_compensation_status": "NOT_REQUIRED",
+          "start_time": "2026-07-23T00:00:00Z",
+          "status": "EXECUTED"
+        },
+        "effect_capture": {
+          "captured_at": "2026-07-23T00:02:00Z",
+          "cycle_id": "CYCLE-1",
+          "effect_capture_id": "CAP-1",
+          "effect_capture_ref": "EFF-1",
+          "evidence_refs": [
+            "EV-EFFECT-1"
+          ],
+          "execution_record_ref": "EXEC-1",
+          "owner_ref": "O015",
+          "state_update_ref": "STATE-2"
+        },
+        "observed_effect": {
+          "action_execution_ref": "EXEC-1",
+          "cycle_id": "CYCLE-1",
+          "effect_evidence_refs": [
+            "EV-EFFECT-1"
+          ],
+          "effect_id": "EFF-1",
+          "effect_status": "CLASSIFIED",
+          "next_state_or_terminal_condition": "C00",
+          "observations": [
+            "OBS-1"
+          ],
+          "owner_ref": "O015",
+          "provenance": "PROV-1",
+          "state_update_ref": "STATE-2"
+        }
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "enum_member",
+            "path": "action_execution_record.status",
+            "values": [
+              "EXECUTED",
+              "PARTIAL",
+              "FAILED",
+              "UNKNOWN",
+              "CANCELLED",
+              "NO_ACTION",
+              "COMPENSATED"
+            ]
+          },
+          {
+            "op": "enum_member",
+            "path": "observed_effect.effect_status",
+            "values": [
+              "RECORDED",
+              "CLASSIFIED",
+              "NO_EFFECT_CONFIRMED",
+              "EFFECT_UNKNOWN_RECORDED",
+              "COMPENSATED"
+            ]
+          },
+          {
+            "left_path": "observed_effect.action_execution_ref",
+            "op": "equals_path",
+            "right_path": "action_execution_record.execution_record_id"
+          },
+          {
+            "left_path": "action_execution_record.effect_capture_ref",
+            "op": "equals_path",
+            "right_path": "effect_capture.effect_capture_id"
+          },
+          {
+            "left_path": "effect_capture.effect_capture_ref",
+            "op": "equals_path",
+            "right_path": "observed_effect.effect_id"
+          },
+          {
+            "op": "same_cycle",
+            "paths": [
+              "action_execution_record.cycle_id",
+              "observed_effect.cycle_id",
+              "effect_capture.cycle_id"
+            ]
+          },
+          {
+            "op": "min_items",
+            "path": "observed_effect.effect_evidence_refs",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "effect_capture.evidence_refs",
+            "value": 1
+          },
+          {
+            "op": "reference_resolves",
+            "path": "observed_effect.state_update_ref"
+          },
+          {
+            "left_path": "observed_effect.state_update_ref",
+            "op": "equals_path",
+            "right_path": "effect_capture.state_update_ref"
+          },
+          {
+            "op": "enum_member",
+            "path": "observed_effect.next_state_or_terminal_condition",
+            "values": [
+              "C00",
+              "C01",
+              "C02",
+              "C03",
+              "C04",
+              "C05",
+              "C06",
+              "C07",
+              "C08",
+              "C09",
+              "C10",
+              "C11",
+              "CLOSED"
+            ]
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C11",
+      "repair_route": [
+        "REPAIR_INPUT",
+        "RECHECK_REFERENCES",
+        "RECALCULATE_GATE"
+      ],
+      "required_phase": "C11",
+      "source_object_schemas": [],
+      "test_id": "TEST-GATE-C11-EFFECT-CHAIN"
+    },
+    {
+      "defect_signal": "A required C06 microphase is incomplete.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC06"
+      ],
+      "negative_fixture": {
+        "alternatives": [
+          "PRIMARY-ROUTE"
+        ],
+        "microphases": [
+          {
+            "evidence_refs": [
+              "EV-C06-1"
+            ],
+            "microphase_id": "C06.1",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-2"
+            ],
+            "microphase_id": "C06.2",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-3"
+            ],
+            "microphase_id": "C06.3",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-4"
+            ],
+            "microphase_id": "C06.4",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-5"
+            ],
+            "microphase_id": "C06.5",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-6"
+            ],
+            "microphase_id": "C06.6",
+            "status": "INCOMPLETE"
+          }
+        ],
+        "transformation_trace": "TRACE-C06-1"
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "alternatives": [
+          "PRIMARY-ROUTE"
+        ],
+        "microphases": [
+          {
+            "evidence_refs": [
+              "EV-C06-1"
+            ],
+            "microphase_id": "C06.1",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-2"
+            ],
+            "microphase_id": "C06.2",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-3"
+            ],
+            "microphase_id": "C06.3",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-4"
+            ],
+            "microphase_id": "C06.4",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-5"
+            ],
+            "microphase_id": "C06.5",
+            "status": "COMPLETE"
+          },
+          {
+            "evidence_refs": [
+              "EV-C06-6"
+            ],
+            "microphase_id": "C06.6",
+            "status": "COMPLETE"
+          }
+        ],
+        "transformation_trace": "TRACE-C06-1"
+      },
+      "predicate": {
+        "args": [
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.0.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.1.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.2.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.3.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.4.status"
+          },
+          {
+            "equals": "COMPLETE",
+            "op": "fact",
+            "path": "microphases.5.status"
+          }
+        ],
+        "op": "all"
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C06",
+      "repair_route": [
+        "COMPLETE_MICROPHASE",
+        "RECHECK_C06"
+      ],
+      "required_phase": "C06",
+      "source_object_schemas": [
+        "CognitiveProtocolRun"
+      ],
+      "test_id": "TEST-C06-CATEGORICAL-MICROROUTE"
+    },
+    {
+      "defect_signal": "An external research effect has no authorized route.",
+      "expected_negative": "STOP",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "GateContextC07"
+      ],
+      "negative_fixture": {
+        "S_level": "S2",
+        "counterevidence": [],
+        "evidence": [
+          "EV-7"
+        ],
+        "research_boundary": {
+          "external_effect_route": "UNAUTHORIZED_EFFECT"
+        },
+        "status": "ASSESSED"
+      },
+      "owner": "O015",
+      "positive_fixture": {
+        "S_level": "S2",
+        "counterevidence": [],
+        "evidence": [
+          "EV-7"
+        ],
+        "research_boundary": {
+          "external_effect_route": "NO_EXTERNAL_EFFECT"
+        },
+        "status": "ASSESSED"
+      },
+      "predicate": {
+        "op": "enum_member",
+        "path": "research_boundary.external_effect_route",
+        "values": [
+          "NO_EXTERNAL_EFFECT",
+          "SEPARATE_AUTHORIZATION_ROUTE",
+          "PROHIBITED"
+        ]
+      },
+      "projection_spec_ref": "assurance/CYCLE_CROSSWALK.json#phase_id=C07",
+      "repair_route": [
+        "STOP_EXTERNAL_EFFECT",
+        "OPEN_C10_ROUTE"
+      ],
+      "required_phase": "C07",
+      "source_object_schemas": [
+        "ResearchSubstrateOperation"
+      ],
+      "test_id": "TEST-C07-RESEARCH-EXTERNAL-EFFECT-BOUNDARY"
+    },
+    {
+      "defect_signal": "Duplicate test identifier.",
+      "expected_negative": "REPAIR",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "TestBindingSet"
+      ],
+      "negative_fixture": {
+        "test_ids": [
+          "A",
+          "B",
+          "A"
+        ]
+      },
+      "owner": "O028",
+      "positive_fixture": {
+        "test_ids": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "predicate": {
+        "op": "unique",
+        "path": "test_ids"
+      },
+      "repair_route": [
+        "RENAME_DUPLICATE_TEST"
+      ],
+      "required_phase": "PACKAGE_VALIDATION",
+      "test_id": "TEST-TEST-ID-UNIQUENESS"
+    },
+    {
+      "defect_signal": "HOLD has an absent or invalid return state.",
+      "expected_negative": "HOLD",
+      "expected_positive": "PASS",
+      "input_schema": [
+        "HoldReturnContext"
+      ],
+      "negative_fixture": {
+        "precondition_resolved": true,
+        "return_gate_decision": "PASS",
+        "return_state": "STOP"
+      },
+      "owner": "O014",
+      "positive_fixture": {
+        "precondition_resolved": true,
+        "return_gate_decision": "PASS",
+        "return_state": "C06"
+      },
+      "predicate": {
+        "args": [
+          {
+            "op": "enum_member",
+            "path": "return_state",
+            "values": [
+              "C00",
+              "C01",
+              "C02",
+              "C03",
+              "C04",
+              "C05",
+              "C06",
+              "C07",
+              "C08",
+              "C09",
+              "C10",
+              "C11"
+            ]
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "precondition_resolved"
+          },
+          {
+            "equals": "PASS",
+            "op": "fact",
+            "path": "return_gate_decision"
+          }
+        ],
+        "op": "all"
+      },
+      "repair_route": [
+        "RESTORE_RETURN_STATE",
+        "RECHECK_GATE"
+      ],
+      "required_phase": "ALL_PHASES",
+      "test_id": "TEST-HOLD-RETURN-STATE"
+    }
+  ]
+}

@@ -1,0 +1,252 @@
+{
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "normative_content_version": "2.22",
+  "graph_type": "DIRECTED_ACYCLIC_PREMISE_GRAPH",
+  "nodes": [
+    {
+      "node_id": "E0",
+      "node_type": "AXIOM"
+    },
+    {
+      "node_id": "B0",
+      "node_type": "POSTULATE"
+    },
+    {
+      "node_id": "D0",
+      "node_type": "DOMAIN_CONDITION"
+    },
+    {
+      "node_id": "V0",
+      "node_type": "POSTULATE"
+    },
+    {
+      "node_id": "T0",
+      "node_type": "POSTULATE"
+    },
+    {
+      "node_id": "I0",
+      "node_type": "LOGICAL_INVARIANT"
+    },
+    {
+      "node_id": "C0",
+      "node_type": "POSTULATE"
+    },
+    {
+      "node_id": "CV0",
+      "node_type": "CONSTITUTIVE_VALUE"
+    },
+    {
+      "node_id": "CP-01",
+      "node_type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "node_id": "CP-02",
+      "node_type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "node_id": "CP-03",
+      "node_type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "node_id": "CP-04",
+      "node_type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "node_id": "CP-05",
+      "node_type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "node_id": "CP-06",
+      "node_type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "node_id": "TH-ADAPTATION",
+      "node_type": "CONDITIONAL_THEOREM"
+    },
+    {
+      "node_id": "TH-ATTENTION-ALLOCATION",
+      "node_type": "CONDITIONAL_THEOREM"
+    },
+    {
+      "node_id": "TH-PROTOCOL-INSTRUCTION",
+      "node_type": "ENGINEERING_THEOREM"
+    },
+    {
+      "node_id": "H-ATTENTION-LIBERATION",
+      "node_type": "EMPIRICAL_HYPOTHESIS"
+    },
+    {
+      "node_id": "H-POSITIVE-SUM-PRESSURE",
+      "node_type": "VALUE_CONDITIONED_HYPOTHESIS"
+    }
+  ],
+  "edges": [
+    {
+      "from": "E0",
+      "to": "CP-01",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "B0",
+      "to": "CP-01",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "I0",
+      "to": "CP-01",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "C0",
+      "to": "CP-01",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "B0",
+      "to": "CP-02",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "D0",
+      "to": "CP-02",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "V0",
+      "to": "CP-02",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "I0",
+      "to": "CP-02",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "T0",
+      "to": "CP-03",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "I0",
+      "to": "CP-03",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "C0",
+      "to": "CP-03",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "V0",
+      "to": "CP-03",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "E0",
+      "to": "CP-04",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "I0",
+      "to": "CP-04",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "C0",
+      "to": "CP-04",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "T0",
+      "to": "CP-05",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "I0",
+      "to": "CP-05",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "C0",
+      "to": "CP-05",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "V0",
+      "to": "CP-06",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "I0",
+      "to": "CP-06",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "T0",
+      "to": "CP-06",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "E0",
+      "to": "TH-ADAPTATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "B0",
+      "to": "TH-ADAPTATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "D0",
+      "to": "TH-ADAPTATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "V0",
+      "to": "TH-ADAPTATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "B0",
+      "to": "TH-ATTENTION-ALLOCATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "V0",
+      "to": "TH-ATTENTION-ALLOCATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "E0",
+      "to": "TH-PROTOCOL-INSTRUCTION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "T0",
+      "to": "TH-PROTOCOL-INSTRUCTION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "I0",
+      "to": "TH-PROTOCOL-INSTRUCTION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "T0",
+      "to": "H-ATTENTION-LIBERATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "C0",
+      "to": "H-ATTENTION-LIBERATION",
+      "relation": "PREMISE_OF"
+    },
+    {
+      "from": "V0",
+      "to": "H-POSITIVE-SUM-PRESSURE",
+      "relation": "PREMISE_OF"
+    }
+  ],
+  "cycle_policy": "ANY_CYCLE_IS_REPAIR_REQUIRED"
+}

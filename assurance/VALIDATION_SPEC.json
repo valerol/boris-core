@@ -1,0 +1,1040 @@
+{
+  "execution_location": "OUTSIDE_ARCHIVE_VALIDATOR; RESULTS_INSIDE_ARCHIVE",
+  "inside_archive_status": "PASSIVE_SPECIFICATION",
+  "mandatory_checks": [
+    {
+      "check_id": "ACCEPTANCE_HASH_RECONSTRUCTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check ACCEPTANCE_HASH_RECONSTRUCTION."
+    },
+    {
+      "check_id": "ALIAS_FIXTURES",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check ALIAS_FIXTURES."
+    },
+    {
+      "check_id": "ARCHIVE_INTEGRITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check ARCHIVE_INTEGRITY."
+    },
+    {
+      "check_id": "ARCHIVE_PATH_SAFETY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check ARCHIVE_PATH_SAFETY."
+    },
+    {
+      "check_id": "BOOTSTRAP_COMPANION_IDENTITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check BOOTSTRAP_COMPANION_IDENTITY."
+    },
+    {
+      "check_id": "BOOTSTRAP_SOURCE_PRECEDENCE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check BOOTSTRAP_SOURCE_PRECEDENCE."
+    },
+    {
+      "check_id": "BOOT_ORDER_COMPLETE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check BOOT_ORDER_COMPLETE."
+    },
+    {
+      "check_id": "BRANCHING_SEMANTICS",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Release lineage uses sequential vMAJOR.MINOR identifiers, exactly one immediate parent for each noninitial release, and prohibits release branches and merges."
+    },
+    {
+      "check_id": "BUILD_DAG_ACYCLIC",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check BUILD_DAG_ACYCLIC."
+    },
+    {
+      "check_id": "C00_C11_NORMATIVE_COVERAGE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check C00_C11_NORMATIVE_COVERAGE."
+    },
+    {
+      "check_id": "C00_C11_RELEASE_TRACE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Release cycle records every phase C00-C11."
+    },
+    {
+      "check_id": "C00_INPUT_COVERAGE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check C00_INPUT_COVERAGE."
+    },
+    {
+      "check_id": "C01_BOUNDARY_COVERAGE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check C01_BOUNDARY_COVERAGE."
+    },
+    {
+      "check_id": "CANDIDATE_NONACTIVATION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "T-N-043 remains candidate and not active."
+    },
+    {
+      "check_id": "CHECK-F-219-001",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-001"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-001."
+    },
+    {
+      "check_id": "CHECK-F-219-002",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-002"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-002."
+    },
+    {
+      "check_id": "CHECK-F-219-003",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-003"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-003."
+    },
+    {
+      "check_id": "CHECK-F-219-004",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-004"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-004."
+    },
+    {
+      "check_id": "CHECK-F-219-005",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-005"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-005."
+    },
+    {
+      "check_id": "CHECK-F-219-006",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-006"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-006."
+    },
+    {
+      "check_id": "CHECK-F-219-007",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-007"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-007."
+    },
+    {
+      "check_id": "CHECK-F-219-008",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-008"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-008."
+    },
+    {
+      "check_id": "CHECK-F-219-009",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-009"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-009."
+    },
+    {
+      "check_id": "CHECK-F-219-010",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-010"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-010."
+    },
+    {
+      "check_id": "CHECK-F-219-011",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-011"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-011."
+    },
+    {
+      "check_id": "CHECK-F-219-012",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-012"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-012."
+    },
+    {
+      "check_id": "CHECK-F-219-013",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-013"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-013."
+    },
+    {
+      "check_id": "CHECK-F-219-014",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-014"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-014."
+    },
+    {
+      "check_id": "CHECK-F-219-015",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-015"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-015."
+    },
+    {
+      "check_id": "CHECK-F-219-016",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-016"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-016."
+    },
+    {
+      "check_id": "CHECK-F-219-017",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-017"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-017."
+    },
+    {
+      "check_id": "CHECK-F-219-018",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-018"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-018."
+    },
+    {
+      "check_id": "CHECK-F-219-019",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-219-019"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-219-019."
+    },
+    {
+      "check_id": "CHECK-F-220-001",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-001"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-001."
+    },
+    {
+      "check_id": "CHECK-F-220-002",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-002"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-002."
+    },
+    {
+      "check_id": "CHECK-F-220-003",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-003"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-003."
+    },
+    {
+      "check_id": "CHECK-F-220-004",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-004"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-004."
+    },
+    {
+      "check_id": "CHECK-F-220-005",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-005"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-005."
+    },
+    {
+      "check_id": "CHECK-F-220-006",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-006"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-006."
+    },
+    {
+      "check_id": "CHECK-F-220-007",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-007"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-007."
+    },
+    {
+      "check_id": "CHECK-F-220-008",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-008"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-008."
+    },
+    {
+      "check_id": "CHECK-F-220-009",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-009"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-009."
+    },
+    {
+      "check_id": "CHECK-F-220-010",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-010"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-010."
+    },
+    {
+      "check_id": "CHECK-F-220-011",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-011"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-011."
+    },
+    {
+      "check_id": "CHECK-F-220-012",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-012"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-012."
+    },
+    {
+      "check_id": "CHECK-F-220-013",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-013"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-013."
+    },
+    {
+      "check_id": "CHECK-F-220-014",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-014"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-014."
+    },
+    {
+      "check_id": "CHECK-F-220-015",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-015"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-015."
+    },
+    {
+      "check_id": "CHECK-F-220-016",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-016"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-016."
+    },
+    {
+      "check_id": "CHECK-F-220-017",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-017"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-017."
+    },
+    {
+      "check_id": "CHECK-F-220-018",
+      "evidence_refs": [
+        "repair/REPAIR_PLAN_v2.22.tsv#finding_id=F-220-018"
+      ],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CHECK-F-220-018."
+    },
+    {
+      "check_id": "CURRENT_REPAIR_FIELD_TRACE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CURRENT_REPAIR_FIELD_TRACE."
+    },
+    {
+      "check_id": "CV0_PROTECTIVE_APPLICABILITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check CV0_PROTECTIVE_APPLICABILITY."
+    },
+    {
+      "check_id": "DECLARATIVE_EXECUTION_TERMINOLOGY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check DECLARATIVE_EXECUTION_TERMINOLOGY."
+    },
+    {
+      "check_id": "ENGLISH_ONLY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check ENGLISH_ONLY."
+    },
+    {
+      "check_id": "FORMULATION_HASH_RECONSTRUCTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check FORMULATION_HASH_RECONSTRUCTION."
+    },
+    {
+      "check_id": "FOUNDATION_DEPENDENCY_ACYCLIC",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Foundation and derived-claim premise graph is acyclic."
+    },
+    {
+      "check_id": "FULL_STATIC_TEST_EXECUTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "All 1,392 registry tests have an execution receipt."
+    },
+    {
+      "check_id": "GATE_C00_C09_NULL_REJECTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check GATE_C00_C09_NULL_REJECTION."
+    },
+    {
+      "check_id": "GATE_C06_COMPLETION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check GATE_C06_COMPLETION."
+    },
+    {
+      "check_id": "GATE_C07_BOUNDARY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check GATE_C07_BOUNDARY."
+    },
+    {
+      "check_id": "GATE_C10_RELATIONAL",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check GATE_C10_RELATIONAL."
+    },
+    {
+      "check_id": "GATE_C11_EFFECT_CHAIN",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check GATE_C11_EFFECT_CHAIN."
+    },
+    {
+      "check_id": "GATE_CONTEXT_SCHEMA_CONFORMANCE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check GATE_CONTEXT_SCHEMA_CONFORMANCE."
+    },
+    {
+      "check_id": "GLOBAL_HOLD_STOP_COVERAGE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check GLOBAL_HOLD_STOP_COVERAGE."
+    },
+    {
+      "check_id": "HASHED_FILE_REPRODUCTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check HASHED_FILE_REPRODUCTION."
+    },
+    {
+      "check_id": "INHERITED_REPAIR_REFERENCES",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check INHERITED_REPAIR_REFERENCES."
+    },
+    {
+      "check_id": "JUSTIFICATION_GRAPH_CLOSURE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check JUSTIFICATION_GRAPH_CLOSURE."
+    },
+    {
+      "check_id": "JUSTIFICATION_PDF_REFERENCE_MATCH",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check JUSTIFICATION_PDF_REFERENCE_MATCH."
+    },
+    {
+      "check_id": "LAYER_PRECEDENCE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check LAYER_PRECEDENCE."
+    },
+    {
+      "check_id": "LEXICON_INTERFACEMACHINE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check LEXICON_INTERFACEMACHINE."
+    },
+    {
+      "check_id": "LEXICON_OPER",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check LEXICON_OPER."
+    },
+    {
+      "check_id": "LEXICON_OPERATURE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check LEXICON_OPERATURE."
+    },
+    {
+      "check_id": "LEXICON_OPEROME",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check LEXICON_OPEROME."
+    },
+    {
+      "check_id": "MANIFEST_BOOT_ORDER_EQUIVALENCE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check MANIFEST_BOOT_ORDER_EQUIVALENCE."
+    },
+    {
+      "check_id": "NORMATIVE_PDF_HASH_PRESERVATION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Three normative PDFs retain v2.22 byte hashes."
+    },
+    {
+      "check_id": "NORM_HASH_RECONSTRUCTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check NORM_HASH_RECONSTRUCTION."
+    },
+    {
+      "check_id": "NO_EXECUTABLE_CONTENT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check NO_EXECUTABLE_CONTENT."
+    },
+    {
+      "check_id": "NO_OTHER_CHAT_IMPORT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Provenance boundary excludes other chats."
+    },
+    {
+      "check_id": "N_GEN_031_FULL_CYCLE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check N_GEN_031_FULL_CYCLE."
+    },
+    {
+      "check_id": "OBJECT_RELATION_UNIQUENESS",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check OBJECT_RELATION_UNIQUENESS."
+    },
+    {
+      "check_id": "OBJECT_SCHEMA_CATALOG_ALIGNMENT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check OBJECT_SCHEMA_CATALOG_ALIGNMENT."
+    },
+    {
+      "check_id": "OPER_OBJECTS_PRESENT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check OPER_OBJECTS_PRESENT."
+    },
+    {
+      "check_id": "OPER_TERMS_PRESENT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check OPER_TERMS_PRESENT."
+    },
+    {
+      "check_id": "PACKAGE_IDENTITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PACKAGE_IDENTITY."
+    },
+    {
+      "check_id": "PACKAGE_WIDE_REFERENCE_CLOSURE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PACKAGE_WIDE_REFERENCE_CLOSURE."
+    },
+    {
+      "check_id": "PASSIVE_FILE_TYPES_ONLY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Archive contains only PDF, JSON and TSV files."
+    },
+    {
+      "check_id": "PDF_CANONICAL_REFERENCE_EXACT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_CANONICAL_REFERENCE_EXACT."
+    },
+    {
+      "check_id": "PDF_CARD_COUNT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_CARD_COUNT."
+    },
+    {
+      "check_id": "PDF_CATALOG_EQUIVALENCE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_CATALOG_EQUIVALENCE."
+    },
+    {
+      "check_id": "PDF_EMBEDDED_FONTS",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_EMBEDDED_FONTS."
+    },
+    {
+      "check_id": "PDF_FORMULATION_EQUIVALENCE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_FORMULATION_EQUIVALENCE."
+    },
+    {
+      "check_id": "PDF_GEOMETRY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_GEOMETRY."
+    },
+    {
+      "check_id": "PDF_MIN_FONT_9",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_MIN_FONT_9."
+    },
+    {
+      "check_id": "PDF_MIN_FONT_9PT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_MIN_FONT_9PT."
+    },
+    {
+      "check_id": "PDF_NAMED_DESTINATIONS",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PDF_NAMED_DESTINATIONS."
+    },
+    {
+      "check_id": "PDF_RELEASE_SURFACES",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "All six declared canonical/supporting PDF surfaces exist."
+    },
+    {
+      "check_id": "PDF_RENDER_SANITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Generated PDF surfaces render without extraction or geometry failure."
+    },
+    {
+      "check_id": "PREDICATE_OPERATIONAL_SEMANTICS",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PREDICATE_OPERATIONAL_SEMANTICS."
+    },
+    {
+      "check_id": "PREDICATE_SCHEMA_CONFORMANCE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check PREDICATE_SCHEMA_CONFORMANCE."
+    },
+    {
+      "check_id": "PROVENANCE_BOUNDARY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Development history is bounded to supplied BOIS evidence and carries message-level provenance."
+    },
+    {
+      "check_id": "RECOVERY_CONTRACT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Runtime profile includes explicit recovery entry and outcomes."
+    },
+    {
+      "check_id": "REFERENCE_INDEX_ROWS",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Every declared reference-index row resolves exactly once."
+    },
+    {
+      "check_id": "RUNTIME_PROFILE_COMPLETE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "AI + human + memory substrate profile declares roles, channels, limits, stops and recovery."
+    },
+    {
+      "check_id": "RUNTIME_RECORD_CHAIN_SPEC",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check RUNTIME_RECORD_CHAIN_SPEC."
+    },
+    {
+      "check_id": "RUNTIME_SCHEMA_DRAFT_FINAL",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check RUNTIME_SCHEMA_DRAFT_FINAL."
+    },
+    {
+      "check_id": "SCHEMA_META_VALIDITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "All JSON Schemas are structurally valid Draft 2020-12 schemas."
+    },
+    {
+      "check_id": "SEMANTIC_HASH_RECONSTRUCTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check SEMANTIC_HASH_RECONSTRUCTION."
+    },
+    {
+      "check_id": "SINGLE_ARCHIVE_TRANSPORT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Release uses one passive-data archive."
+    },
+    {
+      "check_id": "SINGLE_PDF_REFERENCE_ONLY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check SINGLE_PDF_REFERENCE_ONLY."
+    },
+    {
+      "check_id": "STRUCTURAL_HASH_RECONSTRUCTION",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check STRUCTURAL_HASH_RECONSTRUCTION."
+    },
+    {
+      "check_id": "TEST_BINDING_CLOSURE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Every test binding points to a registered test."
+    },
+    {
+      "check_id": "TEST_REGISTRY_VECTOR_COVERAGE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check TEST_REGISTRY_VECTOR_COVERAGE."
+    },
+    {
+      "check_id": "TRANSPORT_SPLIT_DECLARED",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check TRANSPORT_SPLIT_DECLARED."
+    },
+    {
+      "check_id": "T_N_043_CANDIDATE_INACTIVE",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Regression or conformance check T_N_043_CANDIDATE_INACTIVE."
+    },
+    {
+      "check_id": "VALIDATION_CONTRACT_IDENTITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Validation specification and receipt schema use the same required check identifiers."
+    },
+    {
+      "check_id": "VERSION_AXES_EXPLICIT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "Release version 2.23 and unchanged normative content version 2.22 are distinct and explicit."
+    },
+    {
+      "check_id": "VERSION_IDENTITY",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "All current release-package identifiers name 2.23 and use the one-point version format."
+    },
+    {
+      "check_id": "VERSION_IDENTITY_CONSISTENT",
+      "evidence_refs": [],
+      "failure_result": "FAIL_OR_HOLD_BY_BOUNDARY",
+      "method": "STATIC_DECLARATIVE_VALIDATION",
+      "pass_condition": "Declared contract satisfied with traceable evidence.",
+      "purpose": "The package contains no patch-style current release identifier and the linear lineage names 2.23 as the sole successor of 2.22."
+    }
+  ],
+  "normative_content_version": "2.22",
+  "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "receipt_schema_ref": "schema/VALIDATION_RECEIPT_SCHEMA.json",
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "repair_lifecycle": "Failure creates a finding, repair, regression test and new immutable release revision.",
+  "result_rule": "PASS requires every mandatory check PASS; field effectiveness is a separate axis.",
+  "specification_id": "BOIS-VALIDATION-SPEC-2.23"
+}

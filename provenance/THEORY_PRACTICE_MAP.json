@@ -1,0 +1,98 @@
+{
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "status": "CANONICAL_DERIVED_MAP",
+  "classes": [
+    "AXIOM",
+    "POSTULATE",
+    "DOMAIN_CONDITION",
+    "CONSTITUTIVE_VALUE",
+    "LOGICAL_INVARIANT",
+    "CONDITIONAL_THEOREM",
+    "ENGINEERING_NORM",
+    "EMPIRICAL_HYPOTHESIS"
+  ],
+  "map": [
+    {
+      "source": "E0",
+      "class": "AXIOM",
+      "practice": [
+        "Evidence boundaries",
+        "S0-S4",
+        "Protocol for unknowns"
+      ]
+    },
+    {
+      "source": "B0",
+      "class": "POSTULATE",
+      "practice": [
+        "Attention budget",
+        "Substrate declaration",
+        "Fallback and recovery"
+      ]
+    },
+    {
+      "source": "D0",
+      "class": "DOMAIN_CONDITION",
+      "practice": [
+        "D/V/S",
+        "Transfer protocol",
+        "Out-of-domain HOLD"
+      ]
+    },
+    {
+      "source": "V0",
+      "class": "POSTULATE",
+      "practice": [
+        "Human authority",
+        "Protected losses",
+        "Residual-risk acceptance"
+      ]
+    },
+    {
+      "source": "T0",
+      "class": "POSTULATE",
+      "practice": [
+        "Action/effect separation",
+        "C11",
+        "Experience logging"
+      ]
+    },
+    {
+      "source": "I0",
+      "class": "LOGICAL_INVARIANT",
+      "practice": [
+        "Typed objects",
+        "No status collapse",
+        "Explicit relations"
+      ]
+    },
+    {
+      "source": "C0",
+      "class": "POSTULATE",
+      "practice": [
+        "Debts",
+        "Unknowns",
+        "Recovery package",
+        "Next input"
+      ]
+    },
+    {
+      "source": "TH-ADAPTATION",
+      "class": "CONDITIONAL_THEOREM",
+      "practice": [
+        "Feedback",
+        "Revision",
+        "Protocol/instruction split"
+      ]
+    },
+    {
+      "source": "H-ATTENTION-LIBERATION",
+      "class": "EMPIRICAL_HYPOTHESIS",
+      "practice": [
+        "Attention ledger",
+        "Rework metrics",
+        "Experience tests"
+      ]
+    }
+  ]
+}

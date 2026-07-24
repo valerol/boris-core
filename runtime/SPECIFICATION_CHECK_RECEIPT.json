@@ -1,0 +1,10 @@
+{
+  "completed_at": "2026-07-23T23:30:00.000Z",
+  "final_receipt_ref": "assurance/VALIDATION_RECEIPT.json",
+  "receipt_id": "SCR-223-001",
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "required_check_count": 119,
+  "spec_ref": "assurance/VALIDATION_SPEC.json",
+  "status": "PASS_INTERNAL_STATIC",
+  "trace_hash": "6bf59c8b88449283954216b761d80614fa419cefd34cb18adb80c4f5d3d3b5b6"
+}

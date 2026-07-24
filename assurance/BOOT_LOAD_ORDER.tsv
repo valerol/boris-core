@@ -1,0 +1,68 @@
+load_position	component_id	path	purpose	preconditions	failure_result
+1	LOAD-001	00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf	Human-readable release or runtime/provenance PDF	Host/platform safety constraints apply	STOP-PACKAGE-INCOMPLETE
+2	LOAD-002	01_BOIS_Base_Core_v2.22_EN.pdf	Canonical normative PDF	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+3	LOAD-003	02_Temnik_Personal_Layer_v2.22_EN.pdf	Canonical normative PDF	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+4	LOAD-004	03_Publication_Candidates_v2.22_EN.pdf	Canonical normative PDF	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+5	LOAD-005	04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf	Human-readable release or runtime/provenance PDF	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+6	LOAD-006	05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf	Human-readable release or runtime/provenance PDF	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+7	LOAD-007	machine/CORE_CANON.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+8	LOAD-008	machine/IDENTIFIER_GRAMMAR.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+9	LOAD-009	machine/OBJECT_MODEL_CANON.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+10	LOAD-010	machine/RELATION_TYPES.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+11	LOAD-011	machine/PREDICATE_OPERATIONAL_SEMANTICS.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+12	LOAD-012	machine/FOUNDATION_CLASSIFICATION.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+13	LOAD-013	machine/FOUNDATION_DEPENDENCY_GRAPH.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+14	LOAD-014	machine/DEONTIC_SEMANTICS_CANON.json	Derived machine projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+15	LOAD-015	schema/CORE_SCHEMA.json	Validation schema	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+16	LOAD-016	schema/GATE_CONTEXT_SCHEMAS.json	Validation schema	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+17	LOAD-017	schema/RUNTIME_SCHEMAS.json	Validation schema	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+18	LOAD-018	schema/RELEASE_ENVELOPE_SCHEMA.json	Validation schema	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+19	LOAD-019	schema/VALIDATION_RECEIPT_SCHEMA.json	Validation schema	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+20	LOAD-020	assurance/ACCEPTANCE_MATRIX.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+21	LOAD-021	assurance/BEHAVIOR_PROFILES.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+22	LOAD-022	assurance/BOOT_LOAD_ORDER.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+23	LOAD-023	assurance/BUILD_DEPENDENCY_DAG.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+24	LOAD-024	assurance/CYCLE_CROSSWALK.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+25	LOAD-025	assurance/HASH_RECONSTRUCTION_SPEC.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+26	LOAD-026	assurance/JUSTIFICATION_GRAPH.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+27	LOAD-027	assurance/NORM_CATALOG.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+28	LOAD-028	assurance/NORM_PHASE_APPLICABILITY.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+29	LOAD-029	assurance/OBJECT_CATALOG.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+30	LOAD-030	assurance/PDF_LOCATION_MAP.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+31	LOAD-031	assurance/REFERENCE_CONTRACT.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+32	LOAD-032	assurance/REFERENCE_INDEX.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+33	LOAD-033	assurance/SELF_CONSISTENCY_REPORT.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+34	LOAD-034	assurance/STATIC_TEST_SUMMARY.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+35	LOAD-035	assurance/TEST_BINDINGS.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+36	LOAD-036	assurance/TEST_EXECUTION_RECEIPT.tsv	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+37	LOAD-037	assurance/TEST_PROFILES.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+38	LOAD-038	assurance/TEST_REGISTRY.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+39	LOAD-039	assurance/TEST_VECTORS.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+40	LOAD-040	assurance/VALIDATION_RECEIPT.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+41	LOAD-041	assurance/VALIDATION_SPEC.json	Assurance and test projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+42	LOAD-042	fixtures/ALIAS_FIXTURES.json	Declarative test fixture	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+43	LOAD-043	fixtures/GATE_FIXTURES.json	Declarative test fixture	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+44	LOAD-044	fixtures/REFERENCE_FIXTURE_REGISTRY.json	Declarative test fixture	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+45	LOAD-045	fixtures/RUNTIME_CHAIN_FIXTURES.json	Declarative test fixture	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+46	LOAD-046	fixtures/SCENARIOS.json	Declarative test fixture	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+47	LOAD-047	migration/MIGRATION_FINDINGS_v2.21_to_v2.22.tsv	Version migration trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+48	LOAD-048	migration/MIGRATION_v2.20_to_v2.22.tsv	Version migration trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+49	LOAD-049	migration/MIGRATION_v2.21_to_v2.22.tsv	Version migration trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+50	LOAD-050	migration/MIGRATION_v2.22_to_v2.23.tsv	Version migration trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+51	LOAD-051	migration/VERSION_LINEAGE.tsv	Version migration trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+52	LOAD-052	provenance/DEVELOPMENT_HISTORY.tsv	Development provenance projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+53	LOAD-053	provenance/SOURCE_BOUNDARY.json	Development provenance projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+54	LOAD-054	provenance/THEORY_PRACTICE_MAP.json	Development provenance projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+55	LOAD-055	repair/DECISION_LOG_v2.23.tsv	Repair trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+56	LOAD-056	repair/DECISION_LOG_v2.22.tsv	Repair trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+57	LOAD-057	repair/FINDINGS_v2.20.tsv	Repair trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+58	LOAD-058	repair/FINDINGS_v2.21.tsv	Repair trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+59	LOAD-059	repair/FINDINGS_v2.22.tsv	Repair trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+60	LOAD-060	repair/REPAIR_PLAN_v2.23.tsv	Repair trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+61	LOAD-061	repair/REPAIR_PLAN_v2.22.tsv	Repair trace	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+62	LOAD-062	runtime/OPERATOR_ACCEPTANCE.json	Runtime profile and state projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+63	LOAD-063	runtime/RELEASE_CYCLE_C00_C11.json	Runtime profile and state projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+64	LOAD-064	runtime/RUNTIME_ATTESTATION.json	Runtime profile and state projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+65	LOAD-065	runtime/RUNTIME_TEMPLATES.json	Runtime profile and state projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+66	LOAD-066	runtime/SPECIFICATION_CHECK_RECEIPT.json	Runtime profile and state projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE
+67	LOAD-067	runtime/SUBSTRATE_PROFILE_AI_HUMAN_MEMORY.json	Runtime profile and state projection	All earlier required rows loaded or explicitly held	STOP-PACKAGE-INCOMPLETE

@@ -1,0 +1,4 @@
+decision_id	decision	status	scope	rationale
+DEC-222-001	Use linear v2.22 successor; do not modify v2.21.	APPROVED	RELEASE_LINEAGE	Operator approved the v2.22 repair plan.
+DEC-222-002	Use one release with a boot ZIP and assurance companion ZIP.	IMPLEMENTED_PENDING_TRANSPORT_VALIDATION	TRANSPORT	The standalone Base PDF passed review while the full v2.21 ZIP was blocked.
+DEC-222-003	Keep T-N-043 candidate and inactive.	PRESERVED	PUBLICATION_CANDIDATE	Explicit operator decision.

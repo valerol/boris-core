@@ -1,0 +1,187 @@
+{
+  "artifact_version": "2.22",
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "profiles": [
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/0",
+      "foundations": [
+        "E0",
+        "B0",
+        "D0",
+        "V0",
+        "T0",
+        "I0",
+        "C0"
+      ],
+      "principles": [
+        "CP-01",
+        "CP-02",
+        "CP-03"
+      ],
+      "profile_id": "GENERAL_INVARIANT",
+      "purpose": "Cross-machine invariant integrity",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/1",
+      "foundations": [
+        "V0",
+        "I0",
+        "T0",
+        "C0"
+      ],
+      "principles": [
+        "CP-02",
+        "CP-03",
+        "CP-04"
+      ],
+      "profile_id": "AUTHORITY",
+      "purpose": "Agency, delegation, authority, and responsibility",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/2",
+      "foundations": [
+        "E0",
+        "I0",
+        "C0"
+      ],
+      "principles": [
+        "CP-01",
+        "CP-04"
+      ],
+      "profile_id": "EVIDENCE",
+      "purpose": "Evidence, provenance, alternatives, and epistemic status",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/3",
+      "foundations": [
+        "CV0",
+        "V0",
+        "T0",
+        "I0"
+      ],
+      "principles": [
+        "CP-02",
+        "CP-03",
+        "CP-05"
+      ],
+      "profile_id": "SAFETY",
+      "purpose": "Safety, protected losses, reversibility, and STOP",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/4",
+      "foundations": [
+        "B0",
+        "I0",
+        "C0"
+      ],
+      "principles": [
+        "CP-01",
+        "CP-03",
+        "CP-06"
+      ],
+      "profile_id": "RELEASE",
+      "purpose": "Version, release, hash, migration, and recovery integrity",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/5",
+      "foundations": [
+        "E0",
+        "I0"
+      ],
+      "principles": [
+        "CP-01",
+        "CP-04"
+      ],
+      "profile_id": "SURFACE",
+      "purpose": "Human-readable and machine-readable meaning preservation",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/6",
+      "foundations": [
+        "T0",
+        "I0",
+        "C0"
+      ],
+      "principles": [
+        "CP-03",
+        "CP-06"
+      ],
+      "profile_id": "STATE_CLOSURE",
+      "purpose": "State preservation, debt, closure, and next input",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/7",
+      "foundations": [
+        "T0",
+        "I0",
+        "C0"
+      ],
+      "principles": [
+        "CP-03"
+      ],
+      "profile_id": "TRANSITION",
+      "purpose": "Typed transition validity and invariant preservation",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    },
+    {
+      "canonical_ref": "assurance/BEHAVIOR_PROFILES.json#/profiles/8",
+      "foundations": [
+        "B0",
+        "V0",
+        "I0",
+        "C0"
+      ],
+      "principles": [
+        "CP-01",
+        "CP-02",
+        "CP-06"
+      ],
+      "profile_id": "GOVERNANCE",
+      "purpose": "Layer, ownership, rule lifecycle, and conflict governance",
+      "scope": [
+        "core",
+        "applicable_layers"
+      ],
+      "typical_operation": "typed REQUIRE, PROHIBIT, or PERMIT according to the norm card"
+    }
+  ]
+}

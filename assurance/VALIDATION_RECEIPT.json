@@ -1,0 +1,975 @@
+{
+  "checks": {
+    "ACCEPTANCE_HASH_RECONSTRUCTION": {
+      "evidence": [
+        "row_checks=1448",
+        "formulation=d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+        "semantic=fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+        "structural=f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed",
+        "acceptance=d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87"
+      ],
+      "result": "PASS",
+      "trace_sha256": "96688be4cc61a75d47e06756b1342bc330c42a194e13f52333e1f48add0f35b6"
+    },
+    "ALIAS_FIXTURES": {
+      "evidence": [
+        "AttentionAllocation:pos=0,neg=1",
+        "ValuableUnknown:pos=0,neg=1",
+        "NextStep:pos=0,neg=1",
+        "PhysiologyRevisionCandidate:pos=0,neg=2",
+        "Experience:pos=0,neg=1",
+        "ResearchProtocol:pos=0,neg=1",
+        "IndependentReview:pos=0,neg=1",
+        "Substrate:pos=0,neg=1"
+      ],
+      "result": "PASS",
+      "trace_sha256": "48939772740639c1606427abc39a61c0bb1fddfa51aef95122d84958f80b786b"
+    },
+    "ARCHIVE_INTEGRITY": {
+      "evidence": [
+        "files=70",
+        "extensions=.json,.pdf,.tsv"
+      ],
+      "result": "PASS",
+      "trace_sha256": "c0b3e838fdd5784a6dbb481330d50b9d657babd0bc8f7eaed7d7a29968bb8bc2"
+    },
+    "ARCHIVE_PATH_SAFETY": {
+      "evidence": [
+        "files=70",
+        "extensions=.json,.pdf,.tsv"
+      ],
+      "result": "PASS",
+      "trace_sha256": "e93face49b617f0db5b509f40b7226b24814e83c1666acc329efa3604caa75c9"
+    },
+    "BOOTSTRAP_COMPANION_IDENTITY": {
+      "evidence": [
+        "V2_22_BOOT_SOURCE:6e8295f15f3cb59bed34e42e720cccb0b30b3555889fb4734898d88ff41a7a7c",
+        "V2_22_ASSURANCE_SOURCE:88a0e6c57cb1cce89e15fda033253088c2f82d80a575846aef2a575706ca5a11",
+        "DIALOGUE_EXPORT:a6ef13b702085d11bbe3ac89c2be7a9cfe596f9f607820ca76b46dd7fd932a83"
+      ],
+      "result": "PASS",
+      "trace_sha256": "b41271b3b4a6f8ab0fc3e61eb3ce0212e8a7e3c31955134dfebc010b73937efe"
+    },
+    "BOOTSTRAP_SOURCE_PRECEDENCE": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf",
+        "MANIFEST.json"
+      ],
+      "result": "PASS",
+      "trace_sha256": "bf9caafb0c140ba0b869f69f23571e5d697f04fbbfec6b2aa185ae2f7a2850c8"
+    },
+    "BOOT_ORDER_COMPLETE": {
+      "evidence": [
+        "boot=67",
+        "manifest_order=67"
+      ],
+      "result": "PASS",
+      "trace_sha256": "bd60871019cccc79f6d390a9f675ba2688de4a3488dad9eb3b72ff787feacfc1"
+    },
+    "BRANCHING_SEMANTICS": {
+      "evidence": [
+        "versions=9",
+        "format=vMAJOR.MINOR",
+        "branches=PROHIBITED",
+        "single_immediate_parent=true",
+        "current=2.23",
+        "parent=2.22"
+      ],
+      "result": "PASS",
+      "trace_sha256": "4f1a51b91c05b204de235fcdd550597e7a71eced4d1e8f85347d9b1b49b3129f"
+    },
+    "BUILD_DAG_ACYCLIC": {
+      "evidence": [
+        "rows=67",
+        "acyclic=true"
+      ],
+      "result": "PASS",
+      "trace_sha256": "80556b6a00bd023c11b36a48194c962b43fcad9979e90b71080742eb6bec50a5"
+    },
+    "C00_C11_NORMATIVE_COVERAGE": {
+      "evidence": [
+        "phases=ALL_PHASES,C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,EXTERNAL_ACTION,PACKAGE_BUILD,PACKAGE_LOAD,PUBLICATION,RECOVERY"
+      ],
+      "result": "PASS",
+      "trace_sha256": "c59cc326f05b6d57893041f8f88a8b10ae008754c521f8067d99d77f7fed4274"
+    },
+    "C00_C11_RELEASE_TRACE": {
+      "evidence": [
+        "phases=12",
+        "status=C11_RECORDED"
+      ],
+      "result": "PASS",
+      "trace_sha256": "c911fed044b0d7c35ec7bc3db4d7fb59eefcbe0ebecd4fac59c35db808de4398"
+    },
+    "C00_INPUT_COVERAGE": {
+      "evidence": [
+        "phases=ALL_PHASES,C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,EXTERNAL_ACTION,PACKAGE_BUILD,PACKAGE_LOAD,PUBLICATION,RECOVERY"
+      ],
+      "result": "PASS",
+      "trace_sha256": "66157400dfb64807ee6311124430cdd8d80a96ba40416492ff80ae312f820401"
+    },
+    "C01_BOUNDARY_COVERAGE": {
+      "evidence": [
+        "phases=ALL_PHASES,C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,EXTERNAL_ACTION,PACKAGE_BUILD,PACKAGE_LOAD,PUBLICATION,RECOVERY"
+      ],
+      "result": "PASS",
+      "trace_sha256": "d661e9a6cbec2407dbcd29f4b7eb76d8335aa8f1dfaa110498b6b0c3f597d243"
+    },
+    "CANDIDATE_NONACTIVATION": {
+      "evidence": [
+        "{\"norm_id\":\"T-N-043\",\"acceptance_status\":\"RECOGNIZED_NOT_ACTIVATED\",\"activation_status\":\"CANDIDATE\",\"layer\":\"PUBLICATION_CANDIDATE\",\"scope\":\"[\\\"publication_candidate\\\"]\",\"owner_ref\":\"PUBLICATION-POLICY-CANDIDATE-OWNER\",\"operator_decision_ref\":\"operator:T-N-043-candidate-decision\",\"effective_from_version\":\"2.20\",\"candidate_reason\":\"Explicit operator decision keeps this publication rule inactive.\",\"supersession_ref\":\"\",\"acceptance_row_sha256\":\"4fc0145a2b0c19b5f430cf7d72655a13df634b55e4a3e7ad0f04ab62f20ae96d\"}"
+      ],
+      "result": "PASS",
+      "trace_sha256": "f67f2cd6a472606461b300c1c7ed71599c60e617202ea06d3ac95f86485457da"
+    },
+    "CHECK-F-219-001": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "17b72a4b8874d1239f5a0cc90be8c52b4769d8493a74dfc2876ce1bf23f62fed"
+    },
+    "CHECK-F-219-002": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "c42251bf1a34c9f6fbeb4a69698b0a9e488e31d75316b12b3899a55f3f0d0a4b"
+    },
+    "CHECK-F-219-003": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "d4645384d421bee283a4d29e0c661a93c2c71e9bfda1fdfe75507561fd6bb2cb"
+    },
+    "CHECK-F-219-004": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "c5c51e051f43b3c32543e5e1b313b5ab159ad7939abe65215fe045d448e50f83"
+    },
+    "CHECK-F-219-005": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "5d669fb4857e10c3769af1d88e43f791c68b1e07597a8a5e02b40d69be51e7c6"
+    },
+    "CHECK-F-219-006": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "bf6a3acef52f317b120044b4609eb217efc49e278fa7c03a97b04d1ca988a3f7"
+    },
+    "CHECK-F-219-007": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "8bda3e7cdbcc572d7fc62a21bdc9c4177532b8e96302b7aded64888960ed357e"
+    },
+    "CHECK-F-219-008": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "8cfea1cdcc1822578d40cc187a2b310f1f3b004a773c54374bf92ab0ebc0f392"
+    },
+    "CHECK-F-219-009": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "08410eb3e6097908d60bcc1c527156a1b8547aaf33a97042f822e1477154017b"
+    },
+    "CHECK-F-219-010": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "1a2a1c9b0af51056724dd38d7b9c43437a02cec905c9ea7c46f725f146a47d6f"
+    },
+    "CHECK-F-219-011": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "76ef0f2ab05a76f646c5db53063f743e497b0d0a0c6109f89e63f566eb96fbb0"
+    },
+    "CHECK-F-219-012": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "4db6a7aa17b2664bc8ace3645524c0e93bd785b22360540cb94c9574da5473d4"
+    },
+    "CHECK-F-219-013": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "3df1d289c86fe7d4438ec1b6e9c088a37010c99e73442276d454732b2604d180"
+    },
+    "CHECK-F-219-014": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "48587cd3daef5a2671085390bc99c55445ec87ed85cee12567bebb70bf131614"
+    },
+    "CHECK-F-219-015": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "b68ace6077e8d5e7b6f933768cd423aeda68645f86886fb6f691e5702d68cbbe"
+    },
+    "CHECK-F-219-016": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "e0920923126e6e912629be9a64d9aca9667733d29db94752e5216ca8b87daa9c"
+    },
+    "CHECK-F-219-017": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "f87130f1744e20011e0a6a307f5b507775e1de121a0ef08bd6b074e4669543d8"
+    },
+    "CHECK-F-219-018": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "ff604a03e46f1da308bf467fd4360f86f6b9821c3366c164f45d73bb3f2859cb"
+    },
+    "CHECK-F-219-019": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "263b08cc304ae25e30c8d13b5fb5c5f7da5ebc1388aa7e94a39a9a84ecdfd5d5"
+    },
+    "CHECK-F-220-001": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "b5413d53c11055819730f66c0e0b73300e03519f14b8e3b0d03a7c2775173c71"
+    },
+    "CHECK-F-220-002": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "09478d7c3861876b5c9ca062194ba464efd9d7019652c75e66c9bcf0f106abb5"
+    },
+    "CHECK-F-220-003": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "43780367d7b33c0ba9c9e2d65fa20d71bf5122eb0e2eb425277688ce7bf9747b"
+    },
+    "CHECK-F-220-004": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "fe2ab55f8e7513e2f3168bf8352d8f3817f3b8cc59335f985e79bcf866c78350"
+    },
+    "CHECK-F-220-005": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "dda9abe6a827ebef740a63a695747c0070d197bba57e1ecec944bd3d8cd77033"
+    },
+    "CHECK-F-220-006": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "d4238c1f6ae2e196a13a79a90d000217998940a206cfb484502586e676479fcd"
+    },
+    "CHECK-F-220-007": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "4771b4144a296765ba70d3f034e85f266c9aaad191e18a21ddd212362d1ecf0e"
+    },
+    "CHECK-F-220-008": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "11fe6928827356fe80ef246ad32867891b3ee9925fb71f4624216484b834bd85"
+    },
+    "CHECK-F-220-009": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "df3826bd61219564a24411039b160a869fd0d7bae13ea532d7b9f8a997c0a115"
+    },
+    "CHECK-F-220-010": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "b18881fd50e2b1f740ae1122867909b77701dc7c5d410f25dce7bb6da1f31ed5"
+    },
+    "CHECK-F-220-011": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "de86739b74dbc5f86953247b48e43cbed93381b302087e8d4c2dd365115d8bc9"
+    },
+    "CHECK-F-220-012": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "573f06ebbc25112c8a467f1c4e39f9f98a733464fb241334dfbc1c5e2315a579"
+    },
+    "CHECK-F-220-013": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "63923de0dbccd8052dc52f5cb7f170a08cc3df5b2690d3239a4e4ea351fc5909"
+    },
+    "CHECK-F-220-014": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "4cbe5283cdb799463797f0659be3f3a8c2c78242c5dcbccd51496973e01e1d7f"
+    },
+    "CHECK-F-220-015": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "8c953304647f06352ed8487952bb1215670d99f81a2d475262d5079223f55471"
+    },
+    "CHECK-F-220-016": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "75d6df22dfdaee54d8481f485a65927fbdb03ecd7b0f70685b73767c5cec4238"
+    },
+    "CHECK-F-220-017": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "d3b8e12a0fa71431a44d1b35251e69c2e2e5cf89528dd1c389e363c5702c6182"
+    },
+    "CHECK-F-220-018": {
+      "evidence": [
+        "Covered by complete static tests (1392/1392), reference closure (4974/4974), and hash reconstruction (1448/1448)."
+      ],
+      "result": "PASS",
+      "trace_sha256": "ef21a1bd56c430a950938db926b0818664cf2544cd290cb17f253192073ae786"
+    },
+    "CURRENT_REPAIR_FIELD_TRACE": {
+      "evidence": [
+        "repair/REPAIR_PLAN_v2.23.tsv"
+      ],
+      "result": "PASS",
+      "trace_sha256": "bd32c9df496ca7a60a044c329ef4ae98d79c6fe9477a68f9631fe380b1226cd5"
+    },
+    "CV0_PROTECTIVE_APPLICABILITY": {
+      "evidence": [
+        "norms=362"
+      ],
+      "result": "PASS",
+      "trace_sha256": "71bb67c35fdbf7533516e9856c5a930ebacb578b8b148c674a5d9da7cd43276c"
+    },
+    "DECLARATIVE_EXECUTION_TERMINOLOGY": {
+      "evidence": [
+        "All execution claims are labeled PASS_STATIC or internal static; QA-E is NOT_CLAIMED."
+      ],
+      "result": "PASS",
+      "trace_sha256": "c1caa5dfd93e303d4fafe60bf21d76ada7479561fdd14002659dae90cf45fdae"
+    },
+    "ENGLISH_ONLY": {
+      "evidence": [
+        "Canonical normative formulations remain English; bilingual release surfaces are explicitly derived."
+      ],
+      "result": "PASS",
+      "trace_sha256": "60a15cc232f3d19d565b733706edd5539d16e2627831e3b999c110b297a2e7cc"
+    },
+    "FORMULATION_HASH_RECONSTRUCTION": {
+      "evidence": [
+        "row_checks=1448",
+        "formulation=d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+        "semantic=fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+        "structural=f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed",
+        "acceptance=d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87"
+      ],
+      "result": "PASS",
+      "trace_sha256": "97f7077afa76ebd363d4dbfd2d81894165d34143328b15cae778e39a73d5d24b"
+    },
+    "FOUNDATION_DEPENDENCY_ACYCLIC": {
+      "evidence": [
+        "nodes=19",
+        "edges=33",
+        "acyclic=true"
+      ],
+      "result": "PASS",
+      "trace_sha256": "0eba207a91b9d209bf652dbeab785892e6b6f9084a37c2fd1531d438b3508476"
+    },
+    "FULL_STATIC_TEST_EXECUTION": {
+      "evidence": [
+        "registered=1392",
+        "pass=1392",
+        "fail=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "f31dbb86ae0c635e2954a2b5027aeffc81aa6c967666c05fbcf968615a84991b"
+    },
+    "GATE_C00_C09_NULL_REJECTION": {
+      "evidence": [
+        "gate_vectors=16",
+        "operator_vectors=6"
+      ],
+      "result": "PASS",
+      "trace_sha256": "097ae5d3fc9609cb09ee08f629b8aff1e9b91c0bec8507872847e562846a726a"
+    },
+    "GATE_C06_COMPLETION": {
+      "evidence": [
+        "gate_vectors=16",
+        "operator_vectors=6"
+      ],
+      "result": "PASS",
+      "trace_sha256": "59f72613e27eb243be623da723f1dc9a1ad3415bd172bdf18dc8e5a5ba31aa2c"
+    },
+    "GATE_C07_BOUNDARY": {
+      "evidence": [
+        "gate_vectors=16",
+        "operator_vectors=6"
+      ],
+      "result": "PASS",
+      "trace_sha256": "e929df012307fd1d5738e8b271bf8cc9a10beae74ca569bbd84782398a698cdc"
+    },
+    "GATE_C10_RELATIONAL": {
+      "evidence": [
+        "gate_vectors=16",
+        "operator_vectors=6"
+      ],
+      "result": "PASS",
+      "trace_sha256": "6052aea132a18708b7042c01d986aba0edd8ca42e16e83906c02d9b60cd3fd29"
+    },
+    "GATE_C11_EFFECT_CHAIN": {
+      "evidence": [
+        "gate_vectors=16",
+        "operator_vectors=6"
+      ],
+      "result": "PASS",
+      "trace_sha256": "0f52b42b632320bf33e6c3925f0776ff73388d64dd10c11cee0fad97d53f7407"
+    },
+    "GATE_CONTEXT_SCHEMA_CONFORMANCE": {
+      "evidence": [
+        "schema_files=5",
+        "errors=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "db863b5190c7588eb0813512e757b365f8663b7c1194429a0204f13deccedff4"
+    },
+    "GLOBAL_HOLD_STOP_COVERAGE": {
+      "evidence": [
+        "norms=362"
+      ],
+      "result": "PASS",
+      "trace_sha256": "585b72f9075b0cb27ddb42df51aa63cceda51d92c5b3d46420c75014cb878c9a"
+    },
+    "HASHED_FILE_REPRODUCTION": {
+      "evidence": [
+        "components=65",
+        "matched=65"
+      ],
+      "result": "PASS",
+      "trace_sha256": "9a7b80a6ac047ad9e465ed10211cc7981b48d4735cb9ffc06405f2f560429853"
+    },
+    "INHERITED_REPAIR_REFERENCES": {
+      "evidence": [
+        "historical_rows=37"
+      ],
+      "result": "PASS",
+      "trace_sha256": "b2d71fa3ff91ac751b3efc7ed36d63086a84887e6b78726f38bb2938a535ce6c"
+    },
+    "JUSTIFICATION_GRAPH_CLOSURE": {
+      "evidence": [
+        "nodes=403",
+        "edges=3276",
+        "bad_edges=0",
+        "bad_canonical_refs=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "0c29b4013a85f6b96d2ea32f3a51f8b7e66f658a1c9a826836ff59abda22a2c3"
+    },
+    "JUSTIFICATION_PDF_REFERENCE_MATCH": {
+      "evidence": [
+        "nodes=403",
+        "edges=3276",
+        "bad_edges=0",
+        "bad_canonical_refs=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "f76f0f038f7acc9469d172f5a768e2a67d1d820421e8c06e84e8079f7c21a6e1"
+    },
+    "LAYER_PRECEDENCE": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf",
+        "MANIFEST.json"
+      ],
+      "result": "PASS",
+      "trace_sha256": "a504f73525a1a38b17e5a7c73a18bf43a30895aa046bb088f0fea24c863f43e5"
+    },
+    "LEXICON_INTERFACEMACHINE": {
+      "evidence": [
+        "term=interfacemachine"
+      ],
+      "result": "PASS",
+      "trace_sha256": "325c0efea965cac81491cc9168ef8506602ecd0e847ad0306a47d904d9904024"
+    },
+    "LEXICON_OPER": {
+      "evidence": [
+        "term=oper"
+      ],
+      "result": "PASS",
+      "trace_sha256": "9d23f7ff910d321eb6b8dff2506a2106ee6bd3871b68373e3ff1c21ba48c9bc8"
+    },
+    "LEXICON_OPERATURE": {
+      "evidence": [
+        "term=operature"
+      ],
+      "result": "PASS",
+      "trace_sha256": "a9f55559a787be4706daf423b67a4f227495c425c6f3cc0dd77261599c3cdef1"
+    },
+    "LEXICON_OPEROME": {
+      "evidence": [
+        "term=operome"
+      ],
+      "result": "PASS",
+      "trace_sha256": "612c93202180490de18ebf223ded8d63923d68065b5b725dffaec49d84524b58"
+    },
+    "MANIFEST_BOOT_ORDER_EQUIVALENCE": {
+      "evidence": [
+        "boot=67",
+        "manifest_order=67"
+      ],
+      "result": "PASS",
+      "trace_sha256": "96d318dd05c79b79cdc9333ca240417bc7b67aadf09d2b9b8137306198722b47"
+    },
+    "NORMATIVE_PDF_HASH_PRESERVATION": {
+      "evidence": [
+        "canonical normative PDF SHA-256 values match v2.22"
+      ],
+      "result": "PASS",
+      "trace_sha256": "b4fe65896a3c51c4b40932477f9dece5de17d166ad7705f65d88f2a0594875c6"
+    },
+    "NORM_HASH_RECONSTRUCTION": {
+      "evidence": [
+        "row_checks=1448",
+        "formulation=d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+        "semantic=fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+        "structural=f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed",
+        "acceptance=d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87"
+      ],
+      "result": "PASS",
+      "trace_sha256": "fea5f21d12c4ea446e03b806cd8c3938920d5890175b90a33d836d8150dff851"
+    },
+    "NO_EXECUTABLE_CONTENT": {
+      "evidence": [
+        "files=70",
+        "extensions=.json,.pdf,.tsv"
+      ],
+      "result": "PASS",
+      "trace_sha256": "5d64f0a64bc6b5744d770a33ac21b3769ea02e044446f2a3e25ea04f63bba72a"
+    },
+    "NO_OTHER_CHAT_IMPORT": {
+      "evidence": [
+        "provenance/SOURCE_BOUNDARY.json",
+        "provenance/DEVELOPMENT_HISTORY.tsv"
+      ],
+      "result": "PASS",
+      "trace_sha256": "e003af9c460aab0167b5a13c0624a4ecfd4faeebbf0918d5bbbc3240c376bf0f"
+    },
+    "N_GEN_031_FULL_CYCLE": {
+      "evidence": [
+        "phases=ALL_PHASES,C00,C01,C02,C03,C04,C05,C06,C07,C08,C09,C10,C11,EXTERNAL_ACTION,PACKAGE_BUILD,PACKAGE_LOAD,PUBLICATION,RECOVERY"
+      ],
+      "result": "PASS",
+      "trace_sha256": "8cb8cdb9b3d8ed72a1e211fd5bd1d9f98e2ff1dccee45b822dc3c550d08e5442"
+    },
+    "OBJECT_RELATION_UNIQUENESS": {
+      "evidence": [
+        "rows=78",
+        "unique=78"
+      ],
+      "result": "PASS",
+      "trace_sha256": "9d0e2ef952d7bfc7ecd0c175b9ea3e277caa5b4a48be1e697a6f6f6afd88e7e2"
+    },
+    "OBJECT_SCHEMA_CATALOG_ALIGNMENT": {
+      "evidence": [
+        "rows=78",
+        "unique=78"
+      ],
+      "result": "PASS",
+      "trace_sha256": "1489dd96c72d6cbde1a2ffb402144ddd4fde71aa0a5a1e1b767495c9af5c4773"
+    },
+    "OPER_OBJECTS_PRESENT": {
+      "evidence": [
+        "term=oper"
+      ],
+      "result": "PASS",
+      "trace_sha256": "6238d649ff60b3979d7bd617fad0ed9fa999207a463ac8cf955325b861f65b29"
+    },
+    "OPER_TERMS_PRESENT": {
+      "evidence": [
+        "term=oper"
+      ],
+      "result": "PASS",
+      "trace_sha256": "e5c9c06152f08901f182621d360181a805f253cc877b08e80991b1f9c7a9bd76"
+    },
+    "PACKAGE_IDENTITY": {
+      "evidence": [
+        "BOIS_COMMON_CORE_TEMNIK_V2_23@2.23",
+        "BOIS_COMMON_CORE_TEMNIK_V2_22@2.22"
+      ],
+      "result": "PASS",
+      "trace_sha256": "afc2f39323ea23a766b7b5390e8ab15bcb4e42fc1efdf78ab6cf065948ae5909"
+    },
+    "PACKAGE_WIDE_REFERENCE_CLOSURE": {
+      "evidence": [
+        "rows=4974",
+        "unresolved=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "fbb883f81d07fe21b480d613a28a3d6af2bcf1d318462de025e494d80633dd57"
+    },
+    "PASSIVE_FILE_TYPES_ONLY": {
+      "evidence": [
+        "files=70",
+        "extensions=.json,.pdf,.tsv"
+      ],
+      "result": "PASS",
+      "trace_sha256": "1fe3e68256ea01ba9c6aa4c956d46fc1d63723c54c9f2e5e620e02c977dfc23d"
+    },
+    "PDF_CANONICAL_REFERENCE_EXACT": {
+      "evidence": [
+        "matched=362",
+        "missing=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "e9d49a2a5bc98e6515a85adf192f6538b5a7d6619e0e944e77241b83f5425e76"
+    },
+    "PDF_CARD_COUNT": {
+      "evidence": [
+        "map=362",
+        "catalog=362"
+      ],
+      "result": "PASS",
+      "trace_sha256": "e3db332d3956add3c9d7344b929e572505d69e5485a667b3132695682d6160a9"
+    },
+    "PDF_CATALOG_EQUIVALENCE": {
+      "evidence": [
+        "map=362",
+        "catalog=362"
+      ],
+      "result": "PASS",
+      "trace_sha256": "b7f1328589a1d970cf20a64f1cbbe3f2a2549f0fca0ed0bfac0849d1ef2e7239"
+    },
+    "PDF_EMBEDDED_FONTS": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf:embedded=true",
+        "01_BOIS_Base_Core_v2.22_EN.pdf:embedded=true",
+        "02_Temnik_Personal_Layer_v2.22_EN.pdf:embedded=true",
+        "03_Publication_Candidates_v2.22_EN.pdf:embedded=true",
+        "04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf:embedded=true",
+        "05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf:embedded=true"
+      ],
+      "result": "PASS",
+      "trace_sha256": "7fe3f9025f7ff23cae529e100af1f3fa838ace4f34ae082993530035ad333b92"
+    },
+    "PDF_FORMULATION_EQUIVALENCE": {
+      "evidence": [
+        "matched=362",
+        "missing=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "a14fa930bbd2ca5ebe13f9fb9b6e7ea3fd1434a337c855cf0f4d32d1367c95b8"
+    },
+    "PDF_GEOMETRY": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf:595.304 x 841.89 pts;rot=0",
+        "01_BOIS_Base_Core_v2.22_EN.pdf:595.276 x 841.89 pts;rot=0",
+        "02_Temnik_Personal_Layer_v2.22_EN.pdf:595.276 x 841.89 pts;rot=0",
+        "03_Publication_Candidates_v2.22_EN.pdf:595.276 x 841.89 pts;rot=0",
+        "04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf:595.304 x 841.89 pts;rot=0",
+        "05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf:595.304 x 841.89 pts;rot=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "f739b6ac85989edf9c6de973b38a37484dfb42c07f4b89cae787207c66beeffa"
+    },
+    "PDF_MIN_FONT_9": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf:min=9.20pt",
+        "01_BOIS_Base_Core_v2.22_EN.pdf:min=9.33pt",
+        "02_Temnik_Personal_Layer_v2.22_EN.pdf:min=9.33pt",
+        "03_Publication_Candidates_v2.22_EN.pdf:min=9.33pt",
+        "04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf:min=9.20pt",
+        "05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf:min=9.20pt"
+      ],
+      "result": "PASS",
+      "trace_sha256": "b2874873ec6ddedd6cb3e1b9927bc8e6252799d201e8483d669a7745a1602204"
+    },
+    "PDF_MIN_FONT_9PT": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf:min=9.20pt",
+        "01_BOIS_Base_Core_v2.22_EN.pdf:min=9.33pt",
+        "02_Temnik_Personal_Layer_v2.22_EN.pdf:min=9.33pt",
+        "03_Publication_Candidates_v2.22_EN.pdf:min=9.33pt",
+        "04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf:min=9.20pt",
+        "05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf:min=9.20pt"
+      ],
+      "result": "PASS",
+      "trace_sha256": "1c33e242ce2081d714d98dc19e9b2869103bfbe41dd167f3bbfaf689dbac153f"
+    },
+    "PDF_NAMED_DESTINATIONS": {
+      "evidence": [
+        "01_BOIS_Base_Core_v2.22_EN.pdf:349",
+        "02_Temnik_Personal_Layer_v2.22_EN.pdf:40",
+        "03_Publication_Candidates_v2.22_EN.pdf:1"
+      ],
+      "result": "PASS",
+      "trace_sha256": "4ce12669b3fba4e9ab79e277818b426373d4214c3f2f9ef43eee989788ad61ef"
+    },
+    "PDF_RELEASE_SURFACES": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf",
+        "MANIFEST.json"
+      ],
+      "result": "PASS",
+      "trace_sha256": "f175c0006afc830d31988272546d950f1a32c532756b057969476e0fdfa54937"
+    },
+    "PDF_RENDER_SANITY": {
+      "evidence": [
+        "pdfs=6",
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf:pages=3:text=6194",
+        "01_BOIS_Base_Core_v2.22_EN.pdf:pages=165:text=366391",
+        "02_Temnik_Personal_Layer_v2.22_EN.pdf:pages=22:text=47890",
+        "03_Publication_Candidates_v2.22_EN.pdf:pages=3:text=4156",
+        "04_BOIS_Runtime_Profile_AI_Human_Memory_v1.0_EN_RU.pdf:pages=4:text=6558",
+        "05_BOIS_Development_Provenance_and_Theory_v2.23_EN_RU.pdf:pages=5:text=9445"
+      ],
+      "result": "PASS",
+      "trace_sha256": "b29a32e48edf281e7164c3779691961735021aeda182520a979dbc44a318821e"
+    },
+    "PREDICATE_OPERATIONAL_SEMANTICS": {
+      "evidence": [
+        "gate_vectors=16",
+        "operator_vectors=6"
+      ],
+      "result": "PASS",
+      "trace_sha256": "93f9736c414d9c00096726dc33fa82c8aee8e2206e28994216d54f9e9bb2a2db"
+    },
+    "PREDICATE_SCHEMA_CONFORMANCE": {
+      "evidence": [
+        "schema_files=5",
+        "errors=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "ae5b54bf50b403c016743de00fa5988ed05bc6b7f422fbbedcdf09eea2a8c848"
+    },
+    "PROVENANCE_BOUNDARY": {
+      "evidence": [
+        "provenance/SOURCE_BOUNDARY.json",
+        "provenance/DEVELOPMENT_HISTORY.tsv"
+      ],
+      "result": "PASS",
+      "trace_sha256": "1a378efd52c491a66cce39e4ddc90f630edb79978cc055c806ab3b082b0a0fde"
+    },
+    "RECOVERY_CONTRACT": {
+      "evidence": [
+        "runtime/SUBSTRATE_PROFILE_AI_HUMAN_MEMORY.json"
+      ],
+      "result": "PASS",
+      "trace_sha256": "5505955763aae99872c7afa0de9330046d8806d3da7de8e7ef02ceb8a148e3f2"
+    },
+    "REFERENCE_INDEX_ROWS": {
+      "evidence": [
+        "rows=4974",
+        "unresolved=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "10195c5e0edd5a99f0a570678dcc8484ed4deb0737ae456db9f79f92c412a558"
+    },
+    "RUNTIME_PROFILE_COMPLETE": {
+      "evidence": [
+        "runtime/SUBSTRATE_PROFILE_AI_HUMAN_MEMORY.json"
+      ],
+      "result": "PASS",
+      "trace_sha256": "eb1119f81123d06b47bc251acaee57ccbda34af0cde61047ef7ad745c30cf3e9"
+    },
+    "RUNTIME_RECORD_CHAIN_SPEC": {
+      "evidence": [
+        "SubstrateDeclaration:errors=0",
+        "OperatorAcceptance:errors=0",
+        "SpecificationCheckReceipt:errors=0",
+        "RuntimeAttestation:errors=0",
+        "chain=true"
+      ],
+      "result": "PASS",
+      "trace_sha256": "6de6067c9a2428c0b7132d7382776618fe4cf547295d93b3073d6ede3f91e003"
+    },
+    "RUNTIME_SCHEMA_DRAFT_FINAL": {
+      "evidence": [
+        "SubstrateDeclaration:errors=0",
+        "OperatorAcceptance:errors=0",
+        "SpecificationCheckReceipt:errors=0",
+        "RuntimeAttestation:errors=0",
+        "chain=true"
+      ],
+      "result": "PASS",
+      "trace_sha256": "987906c2f4e518516469f7fae3805c0c0c2ebf825570ea9ad3e780f01786561e"
+    },
+    "SCHEMA_META_VALIDITY": {
+      "evidence": [
+        "schema_files=5",
+        "errors=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "d8fa3f7c298eac96679c47a543e56e7509bfa13b8ca909ead3ff216ac3d721a5"
+    },
+    "SEMANTIC_HASH_RECONSTRUCTION": {
+      "evidence": [
+        "row_checks=1448",
+        "formulation=d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+        "semantic=fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+        "structural=f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed",
+        "acceptance=d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87"
+      ],
+      "result": "PASS",
+      "trace_sha256": "d2068d0a38dd511e5c389fb2f7125c698ec193bf5c3f32fe84afa02e1d6237fc"
+    },
+    "SINGLE_ARCHIVE_TRANSPORT": {
+      "evidence": [
+        "SINGLE_PASSIVE_DATA_ZIP"
+      ],
+      "result": "PASS",
+      "trace_sha256": "8077e2a158a146d9e42ed6c4bce4b22dcab6b428f2867709091e30d3c3b535c6"
+    },
+    "SINGLE_PDF_REFERENCE_ONLY": {
+      "evidence": [
+        "00_BOIS_Common_Core_Release_Passport_v2.23_EN_RU.pdf",
+        "MANIFEST.json"
+      ],
+      "result": "PASS",
+      "trace_sha256": "81ef7d0d41bb86a515f0678f9bae79518f23c9858e588059d240c0e499cfd195"
+    },
+    "STRUCTURAL_HASH_RECONSTRUCTION": {
+      "evidence": [
+        "row_checks=1448",
+        "formulation=d2dc7b6877d906c837eb53d826faff84ce2dcba692115fcf00691f090807ae8c",
+        "semantic=fa1e41dbe1061ba03cf7ad6c1e61898c23a6265d5e44cf799ebb184e13afdeef",
+        "structural=f67f70e5fd23ddb5acf5510ab717591cf95b383b26160508502d2ed716a3c9ed",
+        "acceptance=d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87"
+      ],
+      "result": "PASS",
+      "trace_sha256": "7e9fefc13f93942e4d8e6573722582b0138165e367f504133f7ad1866b03955a"
+    },
+    "TEST_BINDING_CLOSURE": {
+      "evidence": [
+        "bindings=1396",
+        "closed=1396"
+      ],
+      "result": "PASS",
+      "trace_sha256": "32942e2277b21035cc7738c0725259e06ad9d60bf82759bda0cfd164a60b8190"
+    },
+    "TEST_REGISTRY_VECTOR_COVERAGE": {
+      "evidence": [
+        "registered=1392",
+        "pass=1392",
+        "fail=0"
+      ],
+      "result": "PASS",
+      "trace_sha256": "a4d677b189dc151c5bc7f9bbf444a1518fc359572564372b665f6112b7e8f750"
+    },
+    "TRANSPORT_SPLIT_DECLARED": {
+      "evidence": [
+        "V2_22_BOOT_SOURCE:6e8295f15f3cb59bed34e42e720cccb0b30b3555889fb4734898d88ff41a7a7c",
+        "V2_22_ASSURANCE_SOURCE:88a0e6c57cb1cce89e15fda033253088c2f82d80a575846aef2a575706ca5a11",
+        "DIALOGUE_EXPORT:a6ef13b702085d11bbe3ac89c2be7a9cfe596f9f607820ca76b46dd7fd932a83"
+      ],
+      "result": "PASS",
+      "trace_sha256": "21351823053a73515e9d9e50d13ab83f0bf9cebc15d46f079700dd4f61f0663b"
+    },
+    "T_N_043_CANDIDATE_INACTIVE": {
+      "evidence": [
+        "{\"norm_id\":\"T-N-043\",\"acceptance_status\":\"RECOGNIZED_NOT_ACTIVATED\",\"activation_status\":\"CANDIDATE\",\"layer\":\"PUBLICATION_CANDIDATE\",\"scope\":\"[\\\"publication_candidate\\\"]\",\"owner_ref\":\"PUBLICATION-POLICY-CANDIDATE-OWNER\",\"operator_decision_ref\":\"operator:T-N-043-candidate-decision\",\"effective_from_version\":\"2.20\",\"candidate_reason\":\"Explicit operator decision keeps this publication rule inactive.\",\"supersession_ref\":\"\",\"acceptance_row_sha256\":\"4fc0145a2b0c19b5f430cf7d72655a13df634b55e4a3e7ad0f04ab62f20ae96d\"}"
+      ],
+      "result": "PASS",
+      "trace_sha256": "94c2c36a200eaa55f93e1898697a5c9c182593ee38afcfd08cd4ceaba66cfd25"
+    },
+    "VALIDATION_CONTRACT_IDENTITY": {
+      "evidence": [
+        "spec=119",
+        "receipt_schema=119"
+      ],
+      "result": "PASS",
+      "trace_sha256": "297650e3d795a4c81c05d3848bd5dff4c287de6b3538083fbf11d33047e41e12"
+    },
+    "VERSION_AXES_EXPLICIT": {
+      "evidence": [
+        "BOIS_COMMON_CORE_TEMNIK_V2_23@2.23",
+        "BOIS_COMMON_CORE_TEMNIK_V2_22@2.22"
+      ],
+      "result": "PASS",
+      "trace_sha256": "5c9550af6813cb5b00252c67f4c8767c90d11d382c5041628d9bc6e159c3b8e2"
+    },
+    "VERSION_IDENTITY": {
+      "evidence": [
+        "BOIS_COMMON_CORE_TEMNIK_V2_23@2.23",
+        "BOIS_COMMON_CORE_TEMNIK_V2_22@2.22"
+      ],
+      "result": "PASS",
+      "trace_sha256": "a0c8c6502c47ea7d9b503e6c98aff1ec068146ac1959671cd629497d6c4a767c"
+    },
+    "VERSION_IDENTITY_CONSISTENT": {
+      "evidence": [
+        "BOIS_COMMON_CORE_TEMNIK_V2_23@2.23",
+        "BOIS_COMMON_CORE_TEMNIK_V2_22@2.22"
+      ],
+      "result": "PASS",
+      "trace_sha256": "3d9de8fe09faf584f3e3a1c9d99c2ea90c135e17d8a590d60e6620a994cc49d4"
+    }
+  },
+  "completed_at": "2026-07-23T23:30:00.000Z",
+  "field_effectiveness": "NOT_CLAIMED",
+  "normative_content_version": "2.22",
+  "normative_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "overall_status": "PASS",
+  "receipt_id": "BOIS-VALIDATION-RECEIPT-2.23-I2",
+  "release_package_id": "BOIS_COMMON_CORE_TEMNIK_V2_23",
+  "release_version": "2.23",
+  "result_hash": "28406c0ce6298baaa13defad47723421ea3e176b58bc5b6bc40bbc8495efd44d",
+  "started_at": "2026-07-23T23:29:00.000Z",
+  "trace_hash": "6bf59c8b88449283954216b761d80614fa419cefd34cb18adb80c4f5d3d3b5b6",
+  "validator": {
+    "implementation": "External Node.js passive-data validator",
+    "independence_level": "I2",
+    "language": "Node.js"
+  }
+}

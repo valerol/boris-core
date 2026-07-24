@@ -1,0 +1,1785 @@
+{
+  "acceptance_matrix_ref": "assurance/ACCEPTANCE_MATRIX.tsv",
+  "acceptance_passport_sha256": "d01969d04b19f254fdec1138fd674b333d94ec9c68c70f01a1538dc64c94ad87",
+  "artifact_version": "2.22",
+  "canonical_language": "en",
+  "constitutive_principles": [
+    {
+      "id": "CP-01",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "E0",
+        "B0",
+        "I0",
+        "C0"
+      ],
+      "text": "BOIS organizes meaning calculation through explicit objects, rules, owners, states, transitions, tests, and repair.",
+      "title": "Explicit computational architecture",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-02",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "B0",
+        "D0",
+        "V0",
+        "I0"
+      ],
+      "text": "Every material route declares domain, value interface, substrate, applicability, and responsibility.",
+      "title": "Declared D/V/S route",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-03",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "T0",
+        "I0",
+        "C0",
+        "V0"
+      ],
+      "text": "A valid transition preserves declared invariants, owner, evidence, risk boundary, and a return or repair route.",
+      "title": "Transition integrity",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-04",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "E0",
+        "I0",
+        "C0"
+      ],
+      "text": "Identity, provenance, layer, scope, and authority remain explicit across representations and transitions.",
+      "title": "Identity and provenance continuity",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-05",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "T0",
+        "I0",
+        "C0"
+      ],
+      "text": "A cycle closes through observed effect or explicit no-action status, state update, debt disposition, feedback, and a next input or explicit terminal condition.",
+      "title": "Operational closure contract",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-06",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "V0",
+        "I0",
+        "T0"
+      ],
+      "text": "Humanly authorized values, protected losses, and acceptance criteria guide bounded decisions, while authority and epistemic status remain separate.",
+      "title": "Human authorization and protected loss",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    }
+  ],
+  "cycle_crosswalk_ref": "assurance/CYCLE_CROSSWALK.json",
+  "cycle_state_machine": {
+    "artifact_version": "2.22",
+    "canonical_states": [
+      "C00",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "HOLD",
+      "STOP",
+      "REPAIR",
+      "CLOSED"
+    ],
+    "component_semantics_version": "1.2",
+    "hold_contract": {
+      "alternative_routes": [
+        "HOLD -> REPAIR",
+        "HOLD -> STOP"
+      ],
+      "normal_return": "HOLD -> dynamic_return_state from HoldRecord.return_state after PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+      "preservation": [
+        "cycle_id",
+        "scope",
+        "source_refs",
+        "unknowns",
+        "evidence_refs",
+        "open_debts",
+        "state_hash"
+      ],
+      "required_fields": [
+        "cycle_id",
+        "return_state",
+        "return_gate",
+        "hold_reason",
+        "scope",
+        "source_refs",
+        "unknowns",
+        "evidence_refs",
+        "open_debts",
+        "state_hash"
+      ]
+    },
+    "initial_state": "C00",
+    "machine_id": "BOIS-CYCLE-C00-C11-V2.22",
+    "repair_contract": {
+      "descendant_retest_required": true,
+      "new_cycle_required": true,
+      "new_revision_required": true
+    },
+    "stop_contract": {
+      "allowed_next": [
+        "REPAIR",
+        "CLOSED"
+      ],
+      "ordinary_continuation": false
+    },
+    "terminal_state": "CLOSED",
+    "transitions": [
+      {
+        "condition": "GATE_C00_PASS",
+        "from": "C00",
+        "owner": "O014",
+        "to": "C01"
+      },
+      {
+        "condition": "GATE_C01_PASS",
+        "from": "C01",
+        "owner": "O014",
+        "to": "C02"
+      },
+      {
+        "condition": "GATE_C02_PASS",
+        "from": "C02",
+        "owner": "O014",
+        "to": "C03"
+      },
+      {
+        "condition": "GATE_C03_PASS",
+        "from": "C03",
+        "owner": "O014",
+        "to": "C04"
+      },
+      {
+        "condition": "GATE_C04_PASS",
+        "from": "C04",
+        "owner": "O014",
+        "to": "C05"
+      },
+      {
+        "condition": "GATE_C05_PASS",
+        "from": "C05",
+        "owner": "O014",
+        "to": "C06"
+      },
+      {
+        "condition": "GATE_C06_PASS",
+        "from": "C06",
+        "owner": "O014",
+        "to": "C07"
+      },
+      {
+        "condition": "GATE_C07_PASS",
+        "from": "C07",
+        "owner": "O014",
+        "to": "C08"
+      },
+      {
+        "condition": "GATE_C08_PASS",
+        "from": "C08",
+        "owner": "O014",
+        "to": "C09"
+      },
+      {
+        "condition": "GATE_C09_PASS",
+        "from": "C09",
+        "owner": "O014",
+        "to": "C10"
+      },
+      {
+        "condition": "GATE_C10_PASS",
+        "from": "C10",
+        "owner": "O014",
+        "to": "C11"
+      },
+      {
+        "condition": "MATERIAL_NEW_PHENOMENON_RECORDED",
+        "from": "C11",
+        "owner": "O014",
+        "to": "C00"
+      },
+      {
+        "condition": "EXPLICIT_TERMINAL_CONDITION_AND_NO_REQUIRED_NEXT_CYCLE",
+        "from": "C11",
+        "owner": "O014",
+        "to": "CLOSED"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C00",
+        "owner": "O014",
+        "return_state": "C00",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C00",
+        "owner": "O014",
+        "source_state": "C00",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C01",
+        "owner": "O014",
+        "return_state": "C01",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C01",
+        "owner": "O014",
+        "source_state": "C01",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C02",
+        "owner": "O014",
+        "return_state": "C02",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C02",
+        "owner": "O014",
+        "source_state": "C02",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C03",
+        "owner": "O014",
+        "return_state": "C03",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C03",
+        "owner": "O014",
+        "source_state": "C03",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C04",
+        "owner": "O014",
+        "return_state": "C04",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C04",
+        "owner": "O014",
+        "source_state": "C04",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C05",
+        "owner": "O014",
+        "return_state": "C05",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C05",
+        "owner": "O014",
+        "source_state": "C05",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C06",
+        "owner": "O014",
+        "return_state": "C06",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C06",
+        "owner": "O014",
+        "source_state": "C06",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C07",
+        "owner": "O014",
+        "return_state": "C07",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C07",
+        "owner": "O014",
+        "source_state": "C07",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C08",
+        "owner": "O014",
+        "return_state": "C08",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C08",
+        "owner": "O014",
+        "source_state": "C08",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C09",
+        "owner": "O014",
+        "return_state": "C09",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C09",
+        "owner": "O014",
+        "source_state": "C09",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C10",
+        "owner": "O014",
+        "return_state": "C10",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C10",
+        "owner": "O014",
+        "source_state": "C10",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C11",
+        "owner": "O014",
+        "return_state": "C11",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C11",
+        "owner": "O014",
+        "source_state": "C11",
+        "to": "STOP"
+      },
+      {
+        "condition": "REPAIR_REQUIRED",
+        "from": "HOLD",
+        "owner": "O028",
+        "to": "REPAIR"
+      },
+      {
+        "condition": "HOLD_ESCALATES_TO_STOP",
+        "from": "HOLD",
+        "owner": "O026",
+        "to": "STOP"
+      },
+      {
+        "condition": "REPAIR_AUTHORIZED",
+        "from": "STOP",
+        "owner": "O028",
+        "to": "REPAIR"
+      },
+      {
+        "condition": "EXPLICIT_SAFE_TERMINAL_CLOSURE",
+        "from": "STOP",
+        "owner": "O016",
+        "to": "CLOSED"
+      },
+      {
+        "condition": "NEW_REVISION_AND_NEW_CYCLE",
+        "from": "REPAIR",
+        "owner": "O014",
+        "to": "C00"
+      },
+      {
+        "allowed_return_states": [
+          "C00",
+          "C01",
+          "C02",
+          "C03",
+          "C04",
+          "C05",
+          "C06",
+          "C07",
+          "C08",
+          "C09",
+          "C10",
+          "C11"
+        ],
+        "condition": "PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+        "from": "HOLD",
+        "owner": "O014",
+        "required_preservation": [
+          "cycle_id",
+          "scope",
+          "source_refs",
+          "unknowns",
+          "evidence_refs",
+          "open_debts",
+          "state_hash"
+        ],
+        "return_state_source": "HoldRecord.return_state",
+        "to": "dynamic_return_state"
+      }
+    ]
+  },
+  "declarative_execution_surface": {
+    "definition": "Data, schemas, transition contracts, and test specifications interpreted by a substrate; it is not executable program code.",
+    "executable_program_code": "ABSENT",
+    "term": "machine-interpretable declarative execution surface"
+  },
+  "deontic_semantics": {
+    "artifact_version": "2.22",
+    "component_semantics_version": "1.2",
+    "gate_result_mapping_ref": "#gate_decision_semantics",
+    "language_id": "BOIS-DEONTIC",
+    "modality_map": {
+      "MAY": "PERMIT",
+      "MUST": "REQUIRE",
+      "MUST_NOT": "PROHIBIT"
+    },
+    "operations": {
+      "HOLD": "Suspend only the dependent scope while preserving return state, unknowns, owner, and review trigger.",
+      "PERMIT": "When applicable and TRUE, the transition is eligible; permission does not create authority or acceptance.",
+      "PROHIBIT": "When applicable and TRUE, the forbidden state or transition is blocked. UNKNOWN at a material boundary produces HOLD.",
+      "REPAIR": "Create a new revision, invalidate affected descendants, retest dependencies, and begin a new cycle.",
+      "REQUIRE": "When applicable and TRUE, the target state or transition must be reached. FALSE is a defect; UNKNOWN produces HOLD.",
+      "STOP": "Block ordinary continuation and route to REPAIR or explicit safe terminal closure."
+    },
+    "semantics_id": "BOIS-DEONTIC",
+    "test_vectors": [
+      {
+        "expected": "TARGET_REQUIRED",
+        "id": "DEON-001",
+        "operation": "REQUIRE",
+        "predicate": "TRUE"
+      },
+      {
+        "expected": "HOLD",
+        "id": "DEON-002",
+        "operation": "REQUIRE",
+        "predicate": "UNKNOWN"
+      },
+      {
+        "expected": "BLOCK",
+        "id": "DEON-003",
+        "operation": "PROHIBIT",
+        "predicate": "TRUE"
+      },
+      {
+        "authority": "ABSENT",
+        "expected": "ELIGIBLE_NOT_AUTHORIZED",
+        "id": "DEON-004",
+        "operation": "PERMIT",
+        "predicate": "TRUE"
+      },
+      {
+        "expected": "REPAIR_OR_SAFE_TERMINAL_CLOSURE",
+        "id": "DEON-005",
+        "operation": "STOP",
+        "predicate": "TRUE"
+      }
+    ]
+  },
+  "executable": false,
+  "foundations": [
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-e0",
+      "confidence_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "E0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Complete knowledge of the relevant world, system, causes, paths, and future consequences is unattainable; every material claim therefore carries an explicit evidence boundary.",
+      "type": "EPISTEMIC_AXIOM"
+    },
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-b0",
+      "confidence_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "B0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Every actually executing substrate has bounded channels of observation, computation, memory, action, time, and recovery.",
+      "type": "SUBSTRATE_POSTULATE"
+    },
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-d0",
+      "confidence_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "D0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Within a horizon material to the system, the environment, the system, or their relation may change in ways relevant to goals or viability.",
+      "type": "DOMAIN_CONDITION"
+    },
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-v0",
+      "confidence_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "V0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Goals, protected losses, acceptable risk, time horizon, and the value of continuation enter through an explicit currently authorized external value interface; BOIS does not generate or legitimate final goals by itself.",
+      "type": "EXTERNAL_VALUE_POSTULATE"
+    },
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-t0",
+      "confidence_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "T0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "An action is a state transition that may produce experience; proposal, authorization, execution, and observed effect remain distinct states and objects.",
+      "type": "DYNAMIC_POSTULATE"
+    },
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-i0",
+      "confidence_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "I0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Fact, evidence, hypothesis, inference, decision, permission, authorization, execution, and effect are distinct types and connect only through explicit typed relations.",
+      "type": "LOGICAL_INVARIANT"
+    },
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-c0",
+      "confidence_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "C0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Closure preserves the material state required for the next transition, including unresolved unknowns, residual risk, debts, provenance, responsibility, and recovery or explicit terminal conditions.",
+      "type": "CONTINUITY_POSTULATE"
+    },
+    {
+      "canonical_ref": "01_BOIS_Base_Core_v2.22_EN.pdf#foundation-cv0",
+      "confidence_boundary": "CONSTITUTIVE_NORMATIVE_COMMITMENT",
+      "id": "CV0",
+      "owner": "CORE-CONSTITUTIVE-VALUE-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Every human, and every established or plausibly sentient being within the declared scope, retains non-instrumental protection of safety, dignity, and welfare. No operator preference, optimization target, or preservation interest of a BOIS instance may override that protection.",
+      "type": "CONSTITUTIVE_VALUE"
+    }
+  ],
+  "gate_context_schemas_ref": "schema/GATE_CONTEXT_SCHEMAS.json",
+  "gate_decision_semantics": {
+    "forbidden_gate_results": [
+      "FAIL",
+      "BLOCK",
+      "DEBT"
+    ],
+    "inputs": [
+      "PredicateResult",
+      "DeonticResult",
+      "RiskResult",
+      "AuthorityResult",
+      "EvidenceResult",
+      "PredicateError"
+    ],
+    "mapping_rules": [
+      {
+        "result": "REPAIR",
+        "when": "PREDICATE_ERROR_OR_TYPE_ERROR"
+      },
+      {
+        "result": "REPAIR",
+        "when": "SPECIFICATION_CONFLICT_OR_UNRESOLVED_SCHEMA"
+      },
+      {
+        "result": "STOP",
+        "when": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION"
+      },
+      {
+        "result": "HOLD",
+        "when": "MATERIAL_UNKNOWN_OR_RECOVERABLE_MISSING_PRECONDITION"
+      },
+      {
+        "result": "PASS",
+        "when": "ALL_REQUIRED_INPUTS_SATISFIED"
+      }
+    ],
+    "notes": {
+      "BLOCK": "A consequence description, not a GateDecision.",
+      "DEBT": "A separate state-bearing obligation object, not a GateDecision.",
+      "FAIL": "FAIL is not a canonical GateDecision in the current gate semantics."
+    },
+    "results": [
+      "PASS",
+      "HOLD",
+      "STOP",
+      "REPAIR"
+    ],
+    "type": "GateDecision"
+  },
+  "hash_reconstruction_ref": "assurance/HASH_RECONSTRUCTION_SPEC.json",
+  "interpretive_source_precedence": [
+    "Host safety and platform constraints.",
+    "Base Core canonical PDF for Base-layer norms.",
+    "Accepted Personal Layer canonical PDF within its declared scope.",
+    "Machine-readable derived surfaces, which must not override the canonical PDFs.",
+    "Runtime state and transferable memory, subordinate to accepted norms and declared scope."
+  ],
+  "intra_cycle_branching": {
+    "governing_norms": [
+      "N-GEN-030",
+      "N-GEN-032"
+    ],
+    "requirements": [
+      "distinct branch identifiers",
+      "acyclic dependencies",
+      "explicit return to the canonical gate"
+    ],
+    "status": "PERMITTED_ONLY_BY_DECLARED_NORMS"
+  },
+  "layer_precedence_contract": {
+    "base": "The Base Core PDF is the highest semantic authority for Base-layer norms.",
+    "conflict": "Inter-layer conflicts are resolved by the composition contract and produce HOLD or STOP rather than silent override.",
+    "personal": "The accepted Personal Layer PDF is the highest semantic authority for Personal-layer norms within its declared scope.",
+    "specialization": "The Personal Layer may specialize the Base Core but may not alter, suppress, or supersede Base-layer norms."
+  },
+  "lexicon": [
+    {
+      "definition": "A substrate-linked reproducible temporal loop of transition rules that receives substrate material, abstracts categories, calculates category transitions through declared calculating elements, concretizes results back into the substrate, records feedback and next state, maintains memory, agency, value interface, risk and closure, and supports authorized changes of its structure and phases.",
+      "owner": "O012",
+      "term": "Philosophical Machine"
+    },
+    {
+      "definition": "An Oper is the smallest declared observable transition of a philosophical machine, with an identifiable input state, transformation, output state, owner, evidence boundary, and recorded effect on machine state.",
+      "owner": "O012",
+      "term": "Oper"
+    },
+    {
+      "definition": "An Operature is a typed ordered or partially ordered composition of Opers used to reconstruct, compare, design, evaluate, or execute a bounded philosophical-machine route.",
+      "owner": "O012",
+      "term": "Operature"
+    },
+    {
+      "definition": "An Operome is the declared set of observed, inferred, or candidate Opers within a stated machine, scope, and observation window, including gaps, conflicts, exceptions, and confidence boundaries.",
+      "owner": "O012",
+      "term": "Operome"
+    },
+    {
+      "definition": "A bounded route for work with an unknown, unverified, conflicting, or costly-to-get-wrong state.",
+      "owner": "O012",
+      "term": "Protocol"
+    },
+    {
+      "definition": "A verified execution route inside a declared domain; an out-of-domain case returns to protocol.",
+      "owner": "O012",
+      "term": "Instruction"
+    },
+    {
+      "definition": "A hypothesis of state change, not a fact, guarantee, or final knowledge.",
+      "owner": "O012",
+      "term": "Next Step"
+    },
+    {
+      "definition": "The actual carriers, channels, memory, tools, people, procedures, access, limitations, costs, failure modes, and recovery routes through which a machine executes.",
+      "owner": "O012",
+      "term": "Substrate"
+    },
+    {
+      "definition": "Domain, external value interface, and substrate declaration for a material route.",
+      "owner": "O012",
+      "term": "D/V/S"
+    },
+    {
+      "definition": "A recoverable pause caused by missing evidence, authority, context, or another unresolved precondition; only the dependent scope is held.",
+      "owner": "O012",
+      "term": "HOLD"
+    },
+    {
+      "definition": "A prohibition on ordinary continuation caused by a fundamental invariant, safety, authority, or integrity violation; repair or explicit terminal closure is required.",
+      "owner": "O012",
+      "term": "STOP"
+    },
+    {
+      "definition": "A bounded proposal to close a cycle that preserves unknowns, residual risk, debts, provenance, responsibility, recovery, and the next transition.",
+      "owner": "O012",
+      "term": "Closure Candidate"
+    },
+    {
+      "definition": "A separate record produced after an explicit loading request that identifies the substrate, loaded canon hash, supported operations, limitations, self-test results, and activation status.",
+      "owner": "O012",
+      "term": "Runtime Attestation"
+    },
+    {
+      "definition": "An InterfaceMachine is a typed boundary contract that maps representations, states, or instructions between declared machines or substrates while preserving identity, scope, authority, evidence, and failure semantics.",
+      "owner": "O012",
+      "term": "InterfaceMachine"
+    }
+  ],
+  "object_model_ref": "machine/OBJECT_MODEL_CANON.json",
+  "object_relation_requirements": {
+    "ActionExecutionRecord": [
+      "EXECUTES:AuthorizedExternalAction",
+      "PRODUCES:ObservedEffect",
+      "RECORDED_IN:State",
+      "OWNED_BY:Responsibility"
+    ],
+    "AuthorityDecision": [
+      "AUTHORIZES:ExternalActionProposal",
+      "SOURCED_FROM:Authority",
+      "LIMITS:AuthorizedExternalAction"
+    ],
+    "BoundedResult": [
+      "DERIVED_FROM:Representation",
+      "USES_EVIDENCE:Evidence",
+      "OWNED_BY:Responsibility"
+    ],
+    "ClosureCandidate": [
+      "CLOSES:Cycle",
+      "REVIEWS_RESULT:BoundedResult",
+      "HAS_RESIDUAL_RISK:ResidualRiskDecision",
+      "HAS_DEBT:Defect",
+      "REVIEWED_BY:QualityDecision"
+    ],
+    "ObservedEffect": [
+      "OBSERVES:ActionExecutionRecord",
+      "UPDATES:State",
+      "CREATES:Phenomenon",
+      "RECORDED_IN:ExperienceRecord"
+    ],
+    "Oper": [
+      "PART_OF:Operature",
+      "EXECUTES:Transition",
+      "USES_EVIDENCE:Evidence",
+      "WRITES:Memory",
+      "CHANGES:State"
+    ],
+    "Operature": [
+      "COMPOSED_OF:Oper",
+      "IMPLEMENTS:PhilosophicalMachine",
+      "PRODUCES:Transition",
+      "HAS_ENTRY_STATE:State",
+      "HAS_EXIT_STATE:State"
+    ],
+    "Operome": [
+      "INVENTORIES:Oper",
+      "OBSERVES:PhilosophicalMachine",
+      "BOUNDED_BY:Freshness Profile",
+      "SUPPORTS:Model"
+    ],
+    "PhilosophicalMachine": [
+      "HAS_SUBSTRATE_DECLARATION:SubstrateDeclaration",
+      "HAS_MEMORY:Memory",
+      "HAS_AGENCY:Authority",
+      "HAS_VALUE_INTERFACE:Context Package",
+      "HAS_RISK_MODEL:Risk",
+      "HAS_CLOSURE_RULE:ClosureCandidate",
+      "PRODUCES:Operature",
+      "OBSERVES:Operome"
+    ],
+    "QualityDecision": [
+      "REVIEWS:ClosureCandidate",
+      "USES:Evidence",
+      "REQUIRES_INDEPENDENCE:Relational Alignment"
+    ],
+    "ResidualRiskDecision": [
+      "APPLIES_TO:ExternalActionProposal",
+      "OWNED_BY:Responsibility",
+      "BOUNDS:AuthorizedExternalAction"
+    ],
+    "SubstrateDeclaration": [
+      "DECLARES_FOR:PhilosophicalMachine",
+      "BOUNDS:CalculatingElement",
+      "RECORDED_IN:State"
+    ]
+  },
+  "operational_cycle": [
+    {
+      "assessment_objects": [
+        "Input_Container",
+        "Source"
+      ],
+      "entry_conditions": [
+        "literal input and source are captured"
+      ],
+      "gate_test": "TEST-GATE-INPUT-CAPTURED",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C00",
+          "to": "HOLD"
+        }
+      ],
+      "name": "INPUT_CAPTURED",
+      "next_phase": "C01",
+      "output_objects": [
+        "Phenomenon"
+      ],
+      "phase_id": "C00",
+      "phase_owner": "O003",
+      "primary_object": "Phenomenon",
+      "primary_object_owner": "O001",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C00_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C00",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Unknown",
+        "Risk"
+      ],
+      "entry_conditions": [
+        "C00 PASS"
+      ],
+      "gate_test": "TEST-GATE-CONTEXT_READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C01",
+          "to": "HOLD"
+        }
+      ],
+      "name": "PHENOMENON_BOUNDED",
+      "next_phase": "C02",
+      "output_objects": [
+        "Phenomenon",
+        "Unknown"
+      ],
+      "phase_id": "C01",
+      "phase_owner": "O001",
+      "primary_object": "Phenomenon",
+      "primary_object_owner": "O001",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C01_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C01",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O004",
+        "O020"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Context_Package",
+        "Authority"
+      ],
+      "entry_conditions": [
+        "phenomenon boundary exists"
+      ],
+      "gate_test": "TEST-GATE-DVS-AND-AUTHORITY-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C02",
+          "to": "HOLD"
+        }
+      ],
+      "name": "GOAL_AND_DVS_CONFIRMED",
+      "next_phase": "C03",
+      "output_objects": [
+        "Context_Package"
+      ],
+      "phase_id": "C02",
+      "phase_owner": "O003",
+      "primary_object": "Context Package",
+      "primary_object_owner": "O013",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C02_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C02",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O017",
+        "O020",
+        "O011"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Evidence",
+        "Source",
+        "EpistemicAssessment"
+      ],
+      "entry_conditions": [
+        "goal, D/V/S, completion criterion, and authority state are qualified"
+      ],
+      "gate_test": "TEST-GATE-EPISTEMIC-INPUT-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C03",
+          "to": "HOLD"
+        }
+      ],
+      "name": "EPISTEMIC_INVENTORY",
+      "next_phase": "C04",
+      "output_objects": [
+        "EpistemicAssessment"
+      ],
+      "phase_id": "C03",
+      "phase_owner": "O010",
+      "primary_object": "EpistemicAssessment",
+      "primary_object_owner": "O010",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C03_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C03",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009",
+        "O001"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Unknown",
+        "Question"
+      ],
+      "entry_conditions": [
+        "epistemic inventory exists"
+      ],
+      "gate_test": "TEST-GATE-CONCRETE-INPUT-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C04",
+          "to": "HOLD"
+        }
+      ],
+      "name": "QUESTION_OR_TASK_QUALIFIED",
+      "next_phase": "C05",
+      "output_objects": [
+        "Question"
+      ],
+      "phase_id": "C04",
+      "phase_owner": "O004",
+      "primary_object": "Question",
+      "primary_object_owner": "O004",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C04_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C04",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O003",
+        "O008"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Protocol",
+        "Branch",
+        "CostEstimate"
+      ],
+      "entry_conditions": [
+        "question or task is qualified"
+      ],
+      "gate_test": "TEST-GATE-ROUTE-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C05",
+          "to": "HOLD"
+        }
+      ],
+      "name": "ROUTE_FROZEN",
+      "next_phase": "C06",
+      "output_objects": [
+        "Protocol"
+      ],
+      "phase_id": "C05",
+      "phase_owner": "O013",
+      "primary_object": "Protocol",
+      "primary_object_owner": "O008",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C05_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C05",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O008",
+        "O011",
+        "O020"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "CognitiveProtocolRun",
+        "AbstractionTrace",
+        "Inference",
+        "Model"
+      ],
+      "entry_conditions": [
+        "route is frozen"
+      ],
+      "gate_test": "TEST-GATE-C06_MICROROUTE_COMPLETE",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C06",
+          "to": "HOLD"
+        }
+      ],
+      "name": "COGNITIVE_TRANSFORMATION",
+      "next_phase": "C07",
+      "output_objects": [
+        "CognitiveProtocolRun"
+      ],
+      "phase_id": "C06",
+      "phase_owner": "O014",
+      "primary_object": "CognitiveProtocolRun",
+      "primary_object_owner": "O014",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C06_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C06",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O005",
+        "O006",
+        "O007",
+        "O008"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Evidence",
+        "EpistemicAssessment"
+      ],
+      "entry_conditions": [
+        "all C06 branches and microphases return"
+      ],
+      "gate_test": "TEST-GATE-C07-EPISTEMIC-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C07",
+          "to": "HOLD"
+        }
+      ],
+      "name": "EVIDENCE_AND_STATUS_ASSIGNED",
+      "next_phase": "C08",
+      "output_objects": [
+        "EpistemicAssessment"
+      ],
+      "phase_id": "C07",
+      "phase_owner": "O010",
+      "primary_object": "EpistemicAssessment",
+      "primary_object_owner": "O010",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C07_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C07",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009",
+        "O015",
+        "O027"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "BoundedResult",
+        "Representation"
+      ],
+      "entry_conditions": [
+        "evidence and S-levels are assigned"
+      ],
+      "gate_test": "TEST-GATE-RESULT-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C08",
+          "to": "HOLD"
+        }
+      ],
+      "name": "RESULT_CONCRETIZED",
+      "next_phase": "C09",
+      "output_objects": [
+        "BoundedResult"
+      ],
+      "phase_id": "C08",
+      "phase_owner": "O006",
+      "primary_object": "BoundedResult",
+      "primary_object_owner": "O006",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C08_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C08",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O005",
+        "O008",
+        "O012"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "ClosureCandidate",
+        "ResidualRiskDecision",
+        "Defect"
+      ],
+      "entry_conditions": [
+        "bounded result exists"
+      ],
+      "gate_test": "TEST-GATE-CLOSURE-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C09",
+          "to": "HOLD"
+        }
+      ],
+      "name": "CLOSURE_CANDIDATE",
+      "next_phase": "C10",
+      "output_objects": [
+        "ClosureCandidate"
+      ],
+      "phase_id": "C09",
+      "phase_owner": "O016",
+      "primary_object": "ClosureCandidate",
+      "primary_object_owner": "O016",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C09_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C09",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O025",
+        "O026",
+        "O028"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "ClosureCandidate",
+        "QualityDecision",
+        "AuthorityDecision",
+        "ResidualRiskDecision",
+        "ExternalActionProposal"
+      ],
+      "entry_conditions": [
+        "closure candidate is schema-valid",
+        "quality decision is independent and PASS",
+        "when external action is required, authority and residual-risk decisions are valid and scope-bound"
+      ],
+      "gate_test": "TEST-GATE-G-C10-INDEPENDENT",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C10",
+          "to": "HOLD"
+        }
+      ],
+      "name": "QUALITY_REVIEW_AND_ACTION_TRANSITION",
+      "next_phase": "C11",
+      "output_objects": [
+        "QualityDecision",
+        "AuthorizedExternalAction"
+      ],
+      "phase_id": "C10",
+      "phase_owner": "O027",
+      "primary_object": "QualityDecision",
+      "primary_object_owner": "O027",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C10_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C10",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O017",
+        "O020",
+        "O015"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "ActionExecutionRecord",
+        "ObservedEffect",
+        "State"
+      ],
+      "entry_conditions": [
+        "action execution record is terminal or NO_ACTION",
+        "observed effect is terminal, evidenced, and linked to a state update"
+      ],
+      "gate_test": "TEST-GATE-EFFECT-RECORDED",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C11",
+          "to": "HOLD"
+        }
+      ],
+      "name": "EFFECT_OR_NEW_PHENOMENON",
+      "next_phase": "C00_OR_CLOSED",
+      "output_objects": [
+        "ObservedEffect",
+        "State"
+      ],
+      "phase_id": "C11",
+      "phase_owner": "O015",
+      "primary_object": "ObservedEffect",
+      "primary_object_owner": "O015",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C11_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C00_OR_CLOSED",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009",
+        "O016",
+        "O021"
+      ]
+    }
+  ],
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "predicate_dsl": {
+    "artifact_version": "2.22",
+    "component_semantics_version": "1.3",
+    "evaluation_order": [
+      "scope",
+      "trigger",
+      "predicate",
+      "exceptions",
+      "priority",
+      "deontic_operation"
+    ],
+    "identifier_grammar_ref": "machine/IDENTIFIER_GRAMMAR.json",
+    "language_id": "BOIS-PREDICATE-DSL",
+    "missing_path_result": "UNKNOWN",
+    "operational_semantics_ref": "machine/PREDICATE_OPERATIONAL_SEMANTICS.json",
+    "operators": {
+      "all": {
+        "inputs": [
+          "args array"
+        ],
+        "result": "Uses short_circuit.all."
+      },
+      "all_equal": {
+        "inputs": [
+          "paths array minItems 2"
+        ],
+        "result": "TRUE when all resolved values are typed-equal; missing UNKNOWN."
+      },
+      "all_references_resolve": {
+        "inputs": [
+          "path"
+        ],
+        "result": "TRUE only when a nonempty array contains references that all resolve."
+      },
+      "always": {
+        "inputs": [],
+        "result": "TRUE"
+      },
+      "any": {
+        "inputs": [
+          "args array"
+        ],
+        "result": "Uses short_circuit.any."
+      },
+      "enum_member": {
+        "inputs": [
+          "path",
+          "values array"
+        ],
+        "result": "TRUE when resolved scalar is a member using typed equality."
+      },
+      "equals": {
+        "inputs": [
+          "left_path",
+          "right_path"
+        ],
+        "result": "Typed equality; missing path UNKNOWN."
+      },
+      "equals_path": {
+        "inputs": [
+          "left_path",
+          "right_path"
+        ],
+        "result": "Same as equals; retained for relational readability."
+      },
+      "exists": {
+        "inputs": [
+          "path"
+        ],
+        "result": "TRUE when path exists even if value is null; FALSE otherwise"
+      },
+      "fact": {
+        "inputs": [
+          "path",
+          "equals scalar"
+        ],
+        "result": "typed equality; missing path UNKNOWN; type mismatch FALSE"
+      },
+      "in": {
+        "inputs": [
+          "path",
+          "values array"
+        ],
+        "result": "Alias of enum_member; direction is resolved value in values."
+      },
+      "literal": {
+        "inputs": [
+          "value:any scalar"
+        ],
+        "result": "true->TRUE; false->FALSE; null->UNKNOWN; any other scalar->ERROR"
+      },
+      "min_items": {
+        "inputs": [
+          "path",
+          "value nonnegative integer"
+        ],
+        "result": "TRUE when an array has at least value items; type error ERROR"
+      },
+      "neq": {
+        "inputs": [
+          "left_path",
+          "right_path"
+        ],
+        "result": "Negated typed equality; missing path UNKNOWN."
+      },
+      "nonempty": {
+        "inputs": [
+          "path"
+        ],
+        "result": "TRUE for nonempty string, nonempty array, or nonempty object; FALSE for null or empty; ERROR for unsupported type"
+      },
+      "nonempty_scope": {
+        "inputs": [
+          "path"
+        ],
+        "result": "TRUE only for a nonempty scope identifier or a nonempty unique array of scope identifiers; invalid type or empty value is FALSE/ERROR according to scope_model."
+      },
+      "not": {
+        "inputs": [
+          "arg"
+        ],
+        "result": "TRUE/FALSE invert; UNKNOWN and ERROR are preserved."
+      },
+      "reference_resolves": {
+        "inputs": [
+          "path"
+        ],
+        "result": "Uses reference_resolution registries and returns TRUE/FALSE/ERROR."
+      },
+      "same_cycle": {
+        "inputs": [
+          "paths array minItems 2"
+        ],
+        "result": "all_equal plus valid_identifier for every value."
+      },
+      "same_subject": {
+        "inputs": [
+          "left_path",
+          "right_path"
+        ],
+        "result": "equals plus valid_identifier for both values."
+      },
+      "scope_contains": {
+        "inputs": [
+          "left_path",
+          "right_path"
+        ],
+        "result": "Uses scope_model set containment."
+      },
+      "scope_equal": {
+        "inputs": [
+          "left_path",
+          "right_path"
+        ],
+        "result": "Uses scope_model exact set equality."
+      },
+      "scope_matches": {
+        "inputs": [
+          "left_path",
+          "right_path"
+        ],
+        "result": "Deprecated alias of scope_equal."
+      },
+      "unique": {
+        "inputs": [
+          "path",
+          "optional key_path"
+        ],
+        "result": "Uses unique semantics."
+      },
+      "valid_identifier": {
+        "inputs": [
+          "path"
+        ],
+        "result": "TRUE only when a nonempty string matches machine/IDENTIFIER_GRAMMAR.json"
+      }
+    },
+    "priority_resolution": "A higher-priority applicable prohibition blocks a lower-priority permission. An unresolved conflict of equal or non-comparable seniority produces HOLD-RULE-CONFLICT or STOP-RULE-CONFLICT; convenience never selects a winner.",
+    "test_vectors": [
+      {
+        "context": {},
+        "expected": "TRUE",
+        "expression": {
+          "op": "always"
+        },
+        "id": "PRED-001"
+      },
+      {
+        "context": {},
+        "expected": "UNKNOWN",
+        "expression": {
+          "equals": 1,
+          "op": "fact",
+          "path": "x"
+        },
+        "id": "PRED-002"
+      },
+      {
+        "context": {},
+        "expected": "TRUE",
+        "expression": {
+          "args": [
+            {
+              "op": "literal",
+              "value": true
+            },
+            {
+              "op": "literal",
+              "value": null
+            },
+            {
+              "op": "literal",
+              "value": false
+            }
+          ],
+          "op": "any"
+        },
+        "id": "PRED-003"
+      },
+      {
+        "context": {},
+        "expected": "UNKNOWN",
+        "expression": {
+          "args": [
+            {
+              "op": "literal",
+              "value": true
+            },
+            {
+              "op": "literal",
+              "value": null
+            }
+          ],
+          "op": "all"
+        },
+        "id": "PRED-004"
+      },
+      {
+        "context": {},
+        "expected": "UNKNOWN",
+        "expression": {
+          "arg": {
+            "op": "literal",
+            "value": null
+          },
+          "op": "not"
+        },
+        "id": "PRED-005"
+      }
+    ],
+    "truth_values": [
+      "TRUE",
+      "FALSE",
+      "UNKNOWN",
+      "ERROR"
+    ],
+    "unknown_material_result": "HOLD"
+  },
+  "relation_types_ref": "machine/RELATION_TYPES.json",
+  "release_flavor": "PASSIVE_DATA_ONLY",
+  "release_lineage_branching": "PROHIBITED",
+  "scales": {
+    "A0_A7": {
+      "A0": "Raw phenomenon",
+      "A1": "Described state",
+      "A2": "Objects and roles",
+      "A3": "Relations and transitions",
+      "A4": "Function and route",
+      "A5": "Norm and category",
+      "A6": "Philosophical machine",
+      "A7": "Inter-machine or limit level"
+    },
+    "IND0_IND4": [
+      "IND0",
+      "IND1",
+      "IND2",
+      "IND3",
+      "IND4",
+      "IND_ANY"
+    ],
+    "S0_S4": {
+      "S0": "Not established: sufficient evidential support is absent.",
+      "S1": "Candidate: a primary ground exists, but stability, exceptions, and alternatives are insufficiently tested.",
+      "S2": "Supported: named grounds and an internal check support the claim in a bounded scope.",
+      "S3": "Stable: the result repeats or explains a declared observation window and withstands material alternatives in scope.",
+      "S4": "Externally confirmed: S3 conditions plus relevant independent external or human verification."
+    },
+    "artifact_version": "2.22",
+    "independence_meanings": {
+      "IND0": "Same owner and same method self-check.",
+      "IND1": "Distinct criterion or reviewer inside the same owner boundary.",
+      "IND2": "Distinct method.",
+      "IND3": "Distinct executor or substrate.",
+      "IND4": "External human or organizational verification.",
+      "IND_ANY": "Any declared level accepted by the applicable rule."
+    }
+  },
+  "source_classes": {
+    "artifact_version": "2.22",
+    "source_classes": {
+      "AUTHORITY_RECORD": "Current explicit delegation or operator decision.",
+      "CANONICAL_PDF": "Human-readable normative text surface.",
+      "COMPUTATION": "Reproducible calculation with declared inputs and method.",
+      "DERIVATIVE_SURFACE": "Generated non-normative representation traced to a canon.",
+      "EXTERNAL_REPORT": "External analysis used as evidence, not automatically as an active norm.",
+      "MACHINE_CANON": "Normative machine field and evaluation semantics.",
+      "OBSERVATION": "Recorded substrate observation.",
+      "OPERATOR_INPUT": "Literal current operator input."
+    }
+  },
+  "test_profiles_ref": "assurance/TEST_PROFILES.json",
+  "test_registry_ref": "assurance/TEST_REGISTRY.json"
+}

@@ -1,0 +1,22 @@
+{
+  "artifact_version": "2.22",
+  "negative": {
+    "archive_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "operator_acceptance_id": "OA-1",
+    "required_component_hashes": [],
+    "runtime_attestation_id": "RA-1",
+    "specification_receipt_id": "SCR-1",
+    "substrate_declaration_id": "MISSING"
+  },
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "positive": {
+    "archive_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "operator_acceptance_id": "OA-1",
+    "required_component_hashes": [
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    ],
+    "runtime_attestation_id": "RA-1",
+    "specification_receipt_id": "SCR-1",
+    "substrate_declaration_id": "SUB-1"
+  }
+}

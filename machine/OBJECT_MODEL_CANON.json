@@ -1,0 +1,7112 @@
+{
+  "aliases": [
+    {
+      "alias": "AttentionAllocation",
+      "canonical_type": "State",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/State"
+          },
+          {
+            "properties": {
+              "state_kind": {
+                "const": "ATTENTION_ALLOCATION"
+              }
+            },
+            "required": [
+              "state_kind"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "alias": "ValuableUnknown",
+      "canonical_type": "Unknown",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/Unknown"
+          },
+          {
+            "properties": {
+              "value_status": {
+                "const": "VALUABLE"
+              }
+            },
+            "required": [
+              "value_status"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "alias": "NextStep",
+      "canonical_type": "Transition",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/Transition"
+          },
+          {
+            "properties": {
+              "candidate_status": {
+                "const": "PROPOSED"
+              }
+            },
+            "required": [
+              "candidate_status"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "alias": "PhysiologyRevisionCandidate",
+      "canonical_type": "Revision",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/Revision"
+          },
+          {
+            "properties": {
+              "activation_status": {
+                "const": "CANDIDATE"
+              }
+            },
+            "required": [
+              "activation_status"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "alias": "Experience",
+      "canonical_type": "ExperienceRecord",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/ExperienceRecord"
+          }
+        ]
+      }
+    },
+    {
+      "alias": "ResearchProtocol",
+      "canonical_type": "Protocol",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/Protocol"
+          },
+          {
+            "properties": {
+              "purpose": {
+                "const": "RESEARCH"
+              }
+            },
+            "required": [
+              "purpose"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "alias": "IndependentReview",
+      "canonical_type": "Evidence",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/Evidence"
+          },
+          {
+            "properties": {
+              "independence": {
+                "enum": [
+                  "IND2",
+                  "IND3",
+                  "IND4"
+                ]
+              }
+            },
+            "required": [
+              "independence"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "alias": "Substrate",
+      "canonical_type": "SubstrateDeclaration",
+      "constraint": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/SubstrateDeclaration"
+          }
+        ]
+      }
+    }
+  ],
+  "artifact_version": "2.22",
+  "objects": [
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "DEFINED",
+        "IN_USE",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O005",
+          "to": "DEFINED"
+        },
+        {
+          "from": "DEFINED",
+          "owner": "O005",
+          "to": "IN_USE"
+        },
+        {
+          "from": "IN_USE",
+          "owner": "O005",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "category_id": [
+          "string"
+        ],
+        "definition": [
+          "string"
+        ],
+        "invariants": [
+          "array"
+        ],
+        "owner": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "AbstractCategory",
+      "owner": "O005",
+      "relations": [
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "category_id",
+        "definition",
+        "scope",
+        "owner",
+        "invariants"
+      ],
+      "special_contract": {},
+      "transition_owner": "O005",
+      "type_kind": "CATEGORY",
+      "validation_tests": [
+        "TEST-OBJECT-ABSTRACTCATEGORY-STRUCTURE",
+        "TEST-OBJECT-ABSTRACTCATEGORY-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "UP_COMPLETE",
+        "TRANSFORMED",
+        "DOWN_COMPLETE",
+        "HOLD"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O005",
+          "to": "UP_COMPLETE"
+        },
+        {
+          "from": "UP_COMPLETE",
+          "owner": "O005",
+          "to": "TRANSFORMED"
+        },
+        {
+          "from": "TRANSFORMED",
+          "owner": "O005",
+          "to": "DOWN_COMPLETE"
+        },
+        {
+          "from": "UP_COMPLETE",
+          "owner": "O005",
+          "to": "HOLD"
+        },
+        {
+          "from": "TRANSFORMED",
+          "owner": "O005",
+          "to": "HOLD"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "invariants": [
+          "array"
+        ],
+        "non_transferable_claims": [
+          "array"
+        ],
+        "return_route": [
+          "string"
+        ],
+        "selected_features": [
+          "string"
+        ],
+        "source_level": [
+          "string"
+        ],
+        "target_level": [
+          "string"
+        ],
+        "trace_id": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "AbstractionTrace",
+      "owner": "O005",
+      "relations": [
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "trace_id",
+        "source_level",
+        "target_level",
+        "selected_features",
+        "invariants",
+        "non_transferable_claims",
+        "return_route"
+      ],
+      "special_contract": {},
+      "transition_owner": "O005",
+      "type_kind": "TRACE",
+      "validation_tests": [
+        "TEST-OBJECT-ABSTRACTIONTRACE-STRUCTURE",
+        "TEST-OBJECT-ABSTRACTIONTRACE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "NOT_RUN",
+        "RUNNING",
+        "PASS_INTERNAL_STATIC",
+        "HOLD",
+        "FAIL",
+        "REPAIR_REQUIRED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "NOT_RUN",
+          "owner": "O027",
+          "to": "RUNNING"
+        },
+        {
+          "from": "RUNNING",
+          "owner": "O027",
+          "to": "PASS_INTERNAL_STATIC"
+        },
+        {
+          "from": "RUNNING",
+          "owner": "O027",
+          "to": "HOLD"
+        },
+        {
+          "from": "RUNNING",
+          "owner": "O027",
+          "to": "FAIL"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O027",
+          "to": "REPAIR_REQUIRED"
+        },
+        {
+          "from": "FAIL",
+          "owner": "O027",
+          "to": "REPAIR_REQUIRED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "current_catalog": [
+          "object"
+        ],
+        "mutations": [
+          "object"
+        ],
+        "result": [
+          "PASS_INTERNAL_STATIC",
+          "HOLD",
+          "FAIL"
+        ],
+        "runtime_authorization": [
+          "string"
+        ],
+        "test_id": [
+          "#/$defs/Identifier"
+        ]
+      },
+      "initial_state": "NOT_RUN",
+      "object_type": "AcceptanceSelfTestReport",
+      "owner": "O027",
+      "relations": [],
+      "required_fields": [
+        "test_id",
+        "current_catalog",
+        "mutations",
+        "result",
+        "runtime_authorization"
+      ],
+      "special_contract": {},
+      "transition_owner": "O027",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-ACCEPTANCESELFTESTREPORT-STRUCTURE",
+        "TEST-OBJECT-ACCEPTANCESELFTESTREPORT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O015",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O015",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O015",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O015",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O015",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O015",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "STOP": [
+          "string"
+        ],
+        "action_id": [
+          "#/$defs/Identifier"
+        ],
+        "actual_effect": [
+          "string"
+        ],
+        "authority": [
+          "string"
+        ],
+        "classes": [
+          "#/$defs/StringOrList"
+        ],
+        "executor": [
+          "#/$defs/Identifier"
+        ],
+        "expected_effect": [
+          "string"
+        ],
+        "goal": [
+          "string"
+        ],
+        "initiator": [
+          "#/$defs/Identifier"
+        ],
+        "plan": [
+          "string"
+        ],
+        "reversibility": [
+          "string"
+        ],
+        "risk": [
+          "string"
+        ],
+        "substrate": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Action",
+      "owner": "O015",
+      "relations": [],
+      "required_fields": [
+        "action_id",
+        "classes",
+        "initiator",
+        "goal",
+        "plan",
+        "executor",
+        "authority",
+        "substrate",
+        "expected_effect",
+        "actual_effect",
+        "risk",
+        "reversibility",
+        "STOP"
+      ],
+      "special_contract": {},
+      "transition_owner": "O015",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-ACTION-STRUCTURE",
+        "TEST-OBJECT-ACTION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "PLANNED",
+        "EXECUTING",
+        "EXECUTED",
+        "PARTIAL",
+        "FAILED",
+        "UNKNOWN",
+        "NO_ACTION",
+        "COMPENSATED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "PLANNED",
+          "owner": "O015",
+          "to": "EXECUTING"
+        },
+        {
+          "from": "PLANNED",
+          "owner": "O015",
+          "to": "NO_ACTION"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "EXECUTED"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "PARTIAL"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "FAILED"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "UNKNOWN"
+        },
+        {
+          "from": "PARTIAL",
+          "owner": "O015",
+          "to": "COMPENSATED"
+        },
+        {
+          "from": "FAILED",
+          "owner": "O015",
+          "to": "COMPENSATED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "attempt_count": [
+          "integer"
+        ],
+        "authorized_action_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "effect_capture_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "end_time": [
+          "string"
+        ],
+        "errors": [
+          "#/$defs/StringOrList"
+        ],
+        "execution_record_id": [
+          "#/$defs/Identifier"
+        ],
+        "executor_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "observations": [
+          "#/$defs/StringOrList"
+        ],
+        "rollback_or_compensation_status": [
+          "string"
+        ],
+        "start_time": [
+          "string"
+        ],
+        "status": [
+          "EXECUTED",
+          "PARTIAL",
+          "FAILED",
+          "UNKNOWN",
+          "CANCELLED",
+          "NO_ACTION",
+          "COMPENSATED"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "ActionExecutionRecord",
+      "owner": "O015",
+      "relations": [
+        "CONSUMES:AuthorizedExternalAction",
+        "EXECUTES:AuthorizedExternalAction",
+        "IMPLEMENTS_PHASE:C10",
+        "IMPLEMENTS_PHASE:C11",
+        "OBSERVES:Event",
+        "OWNED_BY:Responsibility",
+        "PART_OF:PhilosophicalMachine",
+        "PRODUCES:ObservedEffect",
+        "RECORDED_IN:State",
+        "RECORDS:State"
+      ],
+      "required_fields": [
+        "execution_record_id",
+        "authorized_action_ref",
+        "cycle_id",
+        "executor_ref",
+        "start_time",
+        "end_time",
+        "status",
+        "attempt_count",
+        "observations",
+        "errors",
+        "rollback_or_compensation_status",
+        "effect_capture_ref"
+      ],
+      "special_contract": {},
+      "transition_owner": "O015",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-ACTIONEXECUTIONRECORD-STRUCTURE",
+        "TEST-OBJECT-ACTIONEXECUTIONRECORD-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "access": [
+          "#/$defs/StringOrList"
+        ],
+        "artifact_id": [
+          "#/$defs/Identifier"
+        ],
+        "carriers": [
+          "#/$defs/StringOrList"
+        ],
+        "content_or_description": [
+          "string"
+        ],
+        "custodian": [
+          "string"
+        ],
+        "lineage": [
+          "string"
+        ],
+        "owner": [
+          "#/$defs/Identifier"
+        ],
+        "physical_or_logical_identity": [
+          "string"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "representations": [
+          "#/$defs/StringOrList"
+        ],
+        "state": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Artifact",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "artifact_id",
+        "lineage",
+        "physical_or_logical_identity",
+        "content_or_description",
+        "carriers",
+        "representations",
+        "provenance",
+        "owner",
+        "custodian",
+        "state",
+        "access"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-ARTIFACT-STRUCTURE",
+        "TEST-OBJECT-ARTIFACT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "ACTIVE",
+        "SUSPENDED",
+        "REVOKED",
+        "EXPIRED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O017",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O017",
+          "to": "SUSPENDED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O017",
+          "to": "REVOKED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O017",
+          "to": "EXPIRED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "authority_id": [
+          "#/$defs/Identifier"
+        ],
+        "limit": [
+          "string"
+        ],
+        "permitted_actions": [
+          "#/$defs/StringOrList"
+        ],
+        "revocation_method": [
+          "string"
+        ],
+        "risk_level": [
+          "#/$defs/RiskLevel"
+        ],
+        "scope": [
+          "string"
+        ],
+        "source": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "subject_or_role": [
+          "string"
+        ],
+        "term_or_condition": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Authority",
+      "owner": "O017",
+      "relations": [],
+      "required_fields": [
+        "authority_id",
+        "source",
+        "subject_or_role",
+        "scope",
+        "limit",
+        "permitted_actions",
+        "risk_level",
+        "term_or_condition",
+        "revocation_method",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O017",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-AUTHORITY-STRUCTURE",
+        "TEST-OBJECT-AUTHORITY-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "AUTHORIZED_IN_SCOPE",
+        "DENIED",
+        "UNRESOLVED",
+        "REVOKED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O017",
+          "to": "AUTHORIZED"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O017",
+          "to": "LIMITED"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O017",
+          "to": "DENIED"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O017",
+          "to": "NOT_APPLICABLE"
+        },
+        {
+          "from": "AUTHORIZED",
+          "owner": "O017",
+          "to": "REVOKED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "authority_decision_id": [
+          "#/$defs/Identifier"
+        ],
+        "authority_source_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "authorized_subject_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "decision": [
+          "AUTHORIZED_IN_SCOPE",
+          "DENIED",
+          "UNRESOLVED",
+          "REVOKED"
+        ],
+        "permitted_operations": [
+          "#/$defs/StringOrList"
+        ],
+        "proposal_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "revocation_route": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "validity_conditions": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "AuthorityDecision",
+      "owner": "O017",
+      "relations": [
+        "AUTHORIZES:ExternalActionProposal",
+        "IMPLEMENTS_PHASE:C10",
+        "LIMITS:AuthorizedExternalAction",
+        "PART_OF:PhilosophicalMachine",
+        "SOURCED_FROM:Authority"
+      ],
+      "required_fields": [
+        "authority_decision_id",
+        "proposal_ref",
+        "authority_source_ref",
+        "authorized_subject_ref",
+        "scope",
+        "permitted_operations",
+        "validity_conditions",
+        "decision",
+        "revocation_route"
+      ],
+      "special_contract": {},
+      "transition_owner": "O017",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-AUTHORITYDECISION-STRUCTURE",
+        "TEST-OBJECT-AUTHORITYDECISION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "AUTHORIZED",
+          "owner": "O015",
+          "to": "EXECUTING"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "EXECUTED"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "PARTIAL"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "UNKNOWN"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "FAILED"
+        },
+        {
+          "from": "PARTIAL",
+          "owner": "O015",
+          "to": "COMPENSATED"
+        },
+        {
+          "from": "FAILED",
+          "owner": "O015",
+          "to": "COMPENSATED"
+        }
+      ],
+      "base_profile_id": "ACTION_OBJECT",
+      "field_types": {
+        "action_id": [
+          "string"
+        ],
+        "authority_ref": [
+          "string"
+        ],
+        "cycle_id": [
+          "string"
+        ],
+        "execution_plan": [
+          "string"
+        ],
+        "independent_review_ref": [
+          "string"
+        ],
+        "owner": [
+          "string"
+        ],
+        "proposal_id": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "AuthorizedExternalAction",
+      "owner": "O015",
+      "relations": [
+        "CONSUMES:AuthorityDecision",
+        "CONSUMES:QualityDecision",
+        "CONSUMES:ResidualRiskDecision",
+        "IMPLEMENTS_PHASE:C10",
+        "PRODUCES:ActionExecutionRecord"
+      ],
+      "required_fields": [
+        "action_id",
+        "proposal_id",
+        "cycle_id",
+        "authority_ref",
+        "independent_review_ref",
+        "scope",
+        "execution_plan",
+        "owner"
+      ],
+      "special_contract": {},
+      "transition_owner": "O015",
+      "type_kind": "ACTION",
+      "validation_tests": [
+        "TEST-OBJECT-AUTHORIZEDEXTERNALACTION-STRUCTURE",
+        "TEST-OBJECT-AUTHORIZEDEXTERNALACTION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "applicability": [
+          "#/$defs/StringOrList"
+        ],
+        "boundary_status": [
+          "string"
+        ],
+        "evidence_refs": [
+          "#/$defs/EvidenceReferenceList"
+        ],
+        "excluded_claims": [
+          "#/$defs/StringOrList"
+        ],
+        "owner": [
+          "#/$defs/Identifier"
+        ],
+        "result_id": [
+          "#/$defs/Identifier"
+        ],
+        "scope": [
+          "string"
+        ],
+        "source_result_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "unknowns": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "BoundedResult",
+      "owner": "O006",
+      "relations": [
+        "DERIVED_FROM:Representation",
+        "IMPLEMENTS_PHASE:C08",
+        "OWNED_BY:Responsibility",
+        "USES_EVIDENCE:Evidence"
+      ],
+      "required_fields": [
+        "result_id",
+        "source_result_ref",
+        "scope",
+        "boundary_status",
+        "applicability",
+        "unknowns",
+        "excluded_claims",
+        "evidence_refs",
+        "owner"
+      ],
+      "special_contract": {
+        "boundary_status": "BOUNDED",
+        "owner_required": true
+      },
+      "transition_owner": "O006",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-BOUNDEDRESULT-STRUCTURE",
+        "TEST-OBJECT-BOUNDEDRESULT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O013",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "branch_id": [
+          "#/$defs/Identifier"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "descendants": [
+          "#/$defs/StringOrList"
+        ],
+        "goal": [
+          "string"
+        ],
+        "inputs": [
+          "#/$defs/StringOrList"
+        ],
+        "local_closure": [
+          "string"
+        ],
+        "parent_cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "resources": [
+          "#/$defs/StringOrList"
+        ],
+        "risk": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Branch",
+      "owner": "O013",
+      "relations": [],
+      "required_fields": [
+        "branch_id",
+        "parent_cycle_id",
+        "goal",
+        "assumptions",
+        "inputs",
+        "dependencies",
+        "resources",
+        "risk",
+        "status",
+        "local_closure",
+        "descendants"
+      ],
+      "special_contract": {},
+      "transition_owner": "O013",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-BRANCH-STRUCTURE",
+        "TEST-OBJECT-BRANCH-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "AVAILABLE",
+        "LIMITED",
+        "UNAVAILABLE",
+        "DEGRADED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O002",
+          "to": "AVAILABLE"
+        },
+        {
+          "from": "AVAILABLE",
+          "owner": "O002",
+          "to": "LIMITED"
+        },
+        {
+          "from": "AVAILABLE",
+          "owner": "O002",
+          "to": "DEGRADED"
+        },
+        {
+          "from": "LIMITED",
+          "owner": "O002",
+          "to": "UNAVAILABLE"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "capacity": [
+          "string"
+        ],
+        "element_id": [
+          "string"
+        ],
+        "limits": [
+          "array"
+        ],
+        "owner": [
+          "string"
+        ],
+        "substrate_id": [
+          "string"
+        ],
+        "supported_operations": [
+          "array"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "CalculatingElement",
+      "owner": "O002",
+      "relations": [
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "element_id",
+        "substrate_id",
+        "supported_operations",
+        "capacity",
+        "limits",
+        "owner"
+      ],
+      "special_contract": {},
+      "transition_owner": "O002",
+      "type_kind": "COMPONENT",
+      "validation_tests": [
+        "TEST-OBJECT-CALCULATINGELEMENT-STRUCTURE",
+        "TEST-OBJECT-CALCULATINGELEMENT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "access": [
+          "#/$defs/StringOrList"
+        ],
+        "carrier_id": [
+          "#/$defs/Identifier"
+        ],
+        "custodian": [
+          "string"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "durability": [
+          "string"
+        ],
+        "location": [
+          "string"
+        ],
+        "loss_risk": [
+          "string"
+        ],
+        "mutability": [
+          "string"
+        ],
+        "owner": [
+          "#/$defs/Identifier"
+        ],
+        "reading_method": [
+          "string"
+        ],
+        "substrate_type": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Carrier",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "carrier_id",
+        "substrate_type",
+        "location",
+        "owner",
+        "custodian",
+        "access",
+        "mutability",
+        "durability",
+        "reading_method",
+        "dependencies",
+        "loss_risk"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-CARRIER-STRUCTURE",
+        "TEST-OBJECT-CARRIER-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "QUALITY_CONFIRMED",
+        "REJECTED",
+        "EFFECT_REGISTERED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O016",
+          "to": "QUALITY_CONFIRMED"
+        },
+        {
+          "from": "CANDIDATE",
+          "owner": "O016",
+          "to": "REJECTED"
+        },
+        {
+          "from": "QUALITY_CONFIRMED",
+          "owner": "O016",
+          "to": "EFFECT_REGISTERED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "candidate": [
+          "string"
+        ],
+        "closure_id": [
+          "#/$defs/Identifier"
+        ],
+        "cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "final_package": [
+          "string"
+        ],
+        "levels": [
+          "#/$defs/ClosureLevels"
+        ],
+        "positions": [
+          "#/$defs/StringOrList"
+        ],
+        "quality_confirmation": [
+          "string"
+        ],
+        "residual_risk": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "unknowns": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Closure",
+      "owner": "O016",
+      "relations": [
+        "IMPLEMENTS_PHASE:C09"
+      ],
+      "required_fields": [
+        "closure_id",
+        "cycle_id",
+        "levels",
+        "final_package",
+        "unknowns",
+        "residual_risk",
+        "positions",
+        "dependencies",
+        "candidate",
+        "quality_confirmation",
+        "scope"
+      ],
+      "special_contract": {},
+      "transition_owner": "O016",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-CLOSURE-STRUCTURE",
+        "TEST-OBJECT-CLOSURE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "COMPLETE",
+        "QUALITY_PENDING",
+        "QUALITY_CONFIRMED",
+        "REJECTED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O016",
+          "to": "COMPLETE"
+        },
+        {
+          "from": "COMPLETE",
+          "owner": "O016",
+          "to": "QUALITY_PENDING"
+        },
+        {
+          "from": "QUALITY_PENDING",
+          "owner": "O027",
+          "to": "QUALITY_CONFIRMED"
+        },
+        {
+          "from": "QUALITY_PENDING",
+          "owner": "O027",
+          "to": "REJECTED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "closure_candidate_id": [
+          "#/$defs/Identifier"
+        ],
+        "cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "debt_refs": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "external_action_required": [
+          "boolean"
+        ],
+        "next_transition": [
+          "#/$defs/StateReference"
+        ],
+        "physiology_change_required": [
+          "boolean"
+        ],
+        "producer_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "recovery_route": [
+          "string"
+        ],
+        "residual_risk_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "responsibility_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "result_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "scope": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "unknowns": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "ClosureCandidate",
+      "owner": "O016",
+      "relations": [
+        "IMPLEMENTS_PHASE:C09",
+        "IMPLEMENTS_PHASE:C10",
+        "PART_OF:PhilosophicalMachine",
+        "PRODUCES:QualityDecision",
+        "RECORDS:Risk",
+        "RECORDS:Unknown",
+        "REVIEWS:QualityDecision"
+      ],
+      "required_fields": [
+        "closure_candidate_id",
+        "cycle_id",
+        "result_ref",
+        "scope",
+        "unknowns",
+        "residual_risk_ref",
+        "debt_refs",
+        "provenance",
+        "responsibility_ref",
+        "recovery_route",
+        "next_transition",
+        "physiology_change_required",
+        "status",
+        "producer_ref",
+        "external_action_required"
+      ],
+      "special_contract": {},
+      "transition_owner": "O016",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-CLOSURECANDIDATE-STRUCTURE",
+        "TEST-OBJECT-CLOSURECANDIDATE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "READY",
+        "ABSTRACTION_UP",
+        "CATEGORY_TRANSFORMATION",
+        "PROPOSAL_AND_EVIDENCE",
+        "CONCRETIZATION_DOWN",
+        "COMPLETE",
+        "HOLD"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "READY",
+          "owner": "O014",
+          "to": "ABSTRACTION_UP"
+        },
+        {
+          "from": "ABSTRACTION_UP",
+          "owner": "O014",
+          "to": "CATEGORY_TRANSFORMATION"
+        },
+        {
+          "from": "CATEGORY_TRANSFORMATION",
+          "owner": "O014",
+          "to": "PROPOSAL_AND_EVIDENCE"
+        },
+        {
+          "from": "PROPOSAL_AND_EVIDENCE",
+          "owner": "O014",
+          "to": "CONCRETIZATION_DOWN"
+        },
+        {
+          "from": "CONCRETIZATION_DOWN",
+          "owner": "O014",
+          "to": "COMPLETE"
+        },
+        {
+          "from": "ABSTRACTION_UP",
+          "owner": "O014",
+          "to": "HOLD"
+        },
+        {
+          "from": "CATEGORY_TRANSFORMATION",
+          "owner": "O014",
+          "to": "HOLD"
+        },
+        {
+          "from": "PROPOSAL_AND_EVIDENCE",
+          "owner": "O014",
+          "to": "HOLD"
+        }
+      ],
+      "base_profile_id": "PROCESS_OBJECT",
+      "field_types": {
+        "cycle_id": [
+          "string"
+        ],
+        "evidence": [
+          "array"
+        ],
+        "inputs": [
+          "array"
+        ],
+        "microphase": [
+          "string"
+        ],
+        "outputs": [
+          "array"
+        ],
+        "owner": [
+          "string"
+        ],
+        "protocol_id": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ]
+      },
+      "initial_state": "READY",
+      "object_type": "CognitiveProtocolRun",
+      "owner": "O014",
+      "relations": [
+        "IMPLEMENTS_PHASE:C06",
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "run_id",
+        "cycle_id",
+        "protocol_id",
+        "microphase",
+        "inputs",
+        "outputs",
+        "owner",
+        "evidence"
+      ],
+      "special_contract": {},
+      "transition_owner": "O014",
+      "type_kind": "PROCESS",
+      "validation_tests": [
+        "TEST-OBJECT-COGNITIVEPROTOCOLRUN-STRUCTURE",
+        "TEST-OBJECT-COGNITIVEPROTOCOLRUN-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "VERIFIED",
+        "READY",
+        "ACTIVE",
+        "HOLD",
+        "TERMINATED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O019",
+          "to": "VERIFIED"
+        },
+        {
+          "from": "VERIFIED",
+          "owner": "O019",
+          "to": "READY"
+        },
+        {
+          "from": "READY",
+          "owner": "O019",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "HOLD"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "TERMINATED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "HOLD/STOP": [
+          "string"
+        ],
+        "authority_mode": [
+          "string"
+        ],
+        "composition_id": [
+          "#/$defs/Identifier"
+        ],
+        "interfaces": [
+          "#/$defs/StringOrList"
+        ],
+        "memory": [
+          "string"
+        ],
+        "object_channels": [
+          "#/$defs/StringOrList"
+        ],
+        "physiologies_and_versions": [
+          "#/$defs/StringOrList"
+        ],
+        "recovery": [
+          "string"
+        ],
+        "risk": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "termination": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Composition",
+      "owner": "O019",
+      "relations": [],
+      "required_fields": [
+        "composition_id",
+        "physiologies_and_versions",
+        "scope",
+        "interfaces",
+        "authority_mode",
+        "object_channels",
+        "risk",
+        "memory",
+        "HOLD/STOP",
+        "recovery",
+        "termination"
+      ],
+      "special_contract": {},
+      "transition_owner": "O019",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-COMPOSITION-STRUCTURE",
+        "TEST-OBJECT-COMPOSITION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O013",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "authorities": [
+          "#/$defs/StringOrList"
+        ],
+        "context_package_id": [
+          "#/$defs/Identifier"
+        ],
+        "current_context": [
+          "string"
+        ],
+        "difference_map": [
+          "string"
+        ],
+        "launch_status": [
+          "#/$defs/StringOrList"
+        ],
+        "readiness": [
+          "#/$defs/StringOrList"
+        ],
+        "resources": [
+          "#/$defs/StringOrList"
+        ],
+        "revision": [
+          "string"
+        ],
+        "risk": [
+          "string"
+        ],
+        "snapshot": [
+          "string"
+        ],
+        "triggers": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Context Package",
+      "owner": "O013",
+      "relations": [
+        "IMPLEMENTS_PHASE:C02",
+        "IMPLEMENTS_PHASE:C05"
+      ],
+      "required_fields": [
+        "context_package_id",
+        "revision",
+        "snapshot",
+        "triggers",
+        "current_context",
+        "difference_map",
+        "authorities",
+        "risk",
+        "resources",
+        "readiness",
+        "launch_status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O013",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-CONTEXT-PACKAGE-STRUCTURE",
+        "TEST-OBJECT-CONTEXT-PACKAGE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O014",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O014",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O014",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O014",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O014",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O014",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "common_scope": [
+          "string"
+        ],
+        "conflict_id": [
+          "#/$defs/Identifier"
+        ],
+        "divergent_assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "exact_party_revisions": [
+          "string"
+        ],
+        "incompatibility_type": [
+          "string"
+        ],
+        "influence": [
+          "string"
+        ],
+        "resolution_routes": [
+          "#/$defs/StringOrList"
+        ],
+        "status": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Contradiction",
+      "owner": "O014",
+      "relations": [],
+      "required_fields": [
+        "conflict_id",
+        "exact_party_revisions",
+        "incompatibility_type",
+        "common_scope",
+        "divergent_assumptions",
+        "influence",
+        "resolution_routes",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O014",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-CONTRADICTION-STRUCTURE",
+        "TEST-OBJECT-CONTRADICTION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "C00",
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11",
+        "HOLD",
+        "STOP",
+        "REPAIR",
+        "CLOSED"
+      ],
+      "allowed_transitions": [
+        {
+          "condition": "GATE_C00_PASS",
+          "from": "C00",
+          "owner": "O014",
+          "to": "C01"
+        },
+        {
+          "condition": "GATE_C01_PASS",
+          "from": "C01",
+          "owner": "O014",
+          "to": "C02"
+        },
+        {
+          "condition": "GATE_C02_PASS",
+          "from": "C02",
+          "owner": "O014",
+          "to": "C03"
+        },
+        {
+          "condition": "GATE_C03_PASS",
+          "from": "C03",
+          "owner": "O014",
+          "to": "C04"
+        },
+        {
+          "condition": "GATE_C04_PASS",
+          "from": "C04",
+          "owner": "O014",
+          "to": "C05"
+        },
+        {
+          "condition": "GATE_C05_PASS",
+          "from": "C05",
+          "owner": "O014",
+          "to": "C06"
+        },
+        {
+          "condition": "GATE_C06_PASS",
+          "from": "C06",
+          "owner": "O014",
+          "to": "C07"
+        },
+        {
+          "condition": "GATE_C07_PASS",
+          "from": "C07",
+          "owner": "O014",
+          "to": "C08"
+        },
+        {
+          "condition": "GATE_C08_PASS",
+          "from": "C08",
+          "owner": "O014",
+          "to": "C09"
+        },
+        {
+          "condition": "GATE_C09_PASS",
+          "from": "C09",
+          "owner": "O014",
+          "to": "C10"
+        },
+        {
+          "condition": "GATE_C10_PASS",
+          "from": "C10",
+          "owner": "O014",
+          "to": "C11"
+        },
+        {
+          "condition": "MATERIAL_NEW_PHENOMENON_RECORDED",
+          "from": "C11",
+          "owner": "O014",
+          "to": "C00"
+        },
+        {
+          "condition": "EXPLICIT_TERMINAL_CONDITION_AND_NO_REQUIRED_NEXT_CYCLE",
+          "from": "C11",
+          "owner": "O014",
+          "to": "CLOSED"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C00",
+          "owner": "O014",
+          "return_state": "C00",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C00",
+          "owner": "O014",
+          "source_state": "C00",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C01",
+          "owner": "O014",
+          "return_state": "C01",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C01",
+          "owner": "O014",
+          "source_state": "C01",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C02",
+          "owner": "O014",
+          "return_state": "C02",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C02",
+          "owner": "O014",
+          "source_state": "C02",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C03",
+          "owner": "O014",
+          "return_state": "C03",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C03",
+          "owner": "O014",
+          "source_state": "C03",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C04",
+          "owner": "O014",
+          "return_state": "C04",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C04",
+          "owner": "O014",
+          "source_state": "C04",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C05",
+          "owner": "O014",
+          "return_state": "C05",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C05",
+          "owner": "O014",
+          "source_state": "C05",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C06",
+          "owner": "O014",
+          "return_state": "C06",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C06",
+          "owner": "O014",
+          "source_state": "C06",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C07",
+          "owner": "O014",
+          "return_state": "C07",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C07",
+          "owner": "O014",
+          "source_state": "C07",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C08",
+          "owner": "O014",
+          "return_state": "C08",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C08",
+          "owner": "O014",
+          "source_state": "C08",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C09",
+          "owner": "O014",
+          "return_state": "C09",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C09",
+          "owner": "O014",
+          "source_state": "C09",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C10",
+          "owner": "O014",
+          "return_state": "C10",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C10",
+          "owner": "O014",
+          "source_state": "C10",
+          "to": "STOP"
+        },
+        {
+          "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+          "from": "C11",
+          "owner": "O014",
+          "return_state": "C11",
+          "to": "HOLD"
+        },
+        {
+          "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+          "from": "C11",
+          "owner": "O014",
+          "source_state": "C11",
+          "to": "STOP"
+        },
+        {
+          "condition": "REPAIR_REQUIRED",
+          "from": "HOLD",
+          "owner": "O028",
+          "to": "REPAIR"
+        },
+        {
+          "condition": "HOLD_ESCALATES_TO_STOP",
+          "from": "HOLD",
+          "owner": "O026",
+          "to": "STOP"
+        },
+        {
+          "condition": "REPAIR_AUTHORIZED",
+          "from": "STOP",
+          "owner": "O028",
+          "to": "REPAIR"
+        },
+        {
+          "condition": "EXPLICIT_SAFE_TERMINAL_CLOSURE",
+          "from": "STOP",
+          "owner": "O016",
+          "to": "CLOSED"
+        },
+        {
+          "condition": "NEW_REVISION_AND_NEW_CYCLE",
+          "from": "REPAIR",
+          "owner": "O014",
+          "to": "C00"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "HOLD/STOP": [
+          "string"
+        ],
+        "branches": [
+          "#/$defs/StringOrList"
+        ],
+        "closure": [
+          "string"
+        ],
+        "completion_criterion": [
+          "string"
+        ],
+        "cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "goal": [
+          "string"
+        ],
+        "parent": [
+          "string"
+        ],
+        "phenomenon": [
+          "string"
+        ],
+        "quality": [
+          "string"
+        ],
+        "risks": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "state": [
+          "string"
+        ],
+        "type": [
+          "string"
+        ]
+      },
+      "initial_state": "C00",
+      "object_type": "Cycle",
+      "owner": "O014",
+      "relations": [
+        "IMPLEMENTS_PHASE:C00",
+        "IMPLEMENTS_PHASE:C01",
+        "IMPLEMENTS_PHASE:C02",
+        "IMPLEMENTS_PHASE:C03",
+        "IMPLEMENTS_PHASE:C04",
+        "IMPLEMENTS_PHASE:C05",
+        "IMPLEMENTS_PHASE:C06",
+        "IMPLEMENTS_PHASE:C07",
+        "IMPLEMENTS_PHASE:C08",
+        "IMPLEMENTS_PHASE:C09",
+        "IMPLEMENTS_PHASE:C10",
+        "IMPLEMENTS_PHASE:C11",
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "cycle_id",
+        "parent",
+        "type",
+        "phenomenon",
+        "scope",
+        "goal",
+        "completion_criterion",
+        "branches",
+        "state",
+        "risks",
+        "HOLD/STOP",
+        "closure",
+        "quality"
+      ],
+      "special_contract": {
+        "hold_preserves_return_state": true,
+        "state_machine_ref": "machine/CYCLE_STATE_MACHINE.json",
+        "stop_requires_repair_or_terminal_closure": true
+      },
+      "transition_owner": "O014",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-CYCLE-STRUCTURE",
+        "TEST-OBJECT-CYCLE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "OPEN",
+        "ANALYZED",
+        "REPAIR_CANDIDATE",
+        "RETESTED",
+        "CLOSED",
+        "IRREPARABLE"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "OPEN",
+          "owner": "O028",
+          "to": "ANALYZED"
+        },
+        {
+          "from": "ANALYZED",
+          "owner": "O028",
+          "to": "REPAIR_CANDIDATE"
+        },
+        {
+          "from": "REPAIR_CANDIDATE",
+          "owner": "O028",
+          "to": "RETESTED"
+        },
+        {
+          "from": "RETESTED",
+          "owner": "O028",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ANALYZED",
+          "owner": "O028",
+          "to": "IRREPARABLE"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "HOLD/STOP": [
+          "string"
+        ],
+        "causes": [
+          "#/$defs/StringOrList"
+        ],
+        "defect_id": [
+          "#/$defs/Identifier"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "description": [
+          "string"
+        ],
+        "detection": [
+          "string"
+        ],
+        "object_or_revision": [
+          "string"
+        ],
+        "repair_plan": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "severity": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ]
+      },
+      "initial_state": "OPEN",
+      "object_type": "Defect",
+      "owner": "O028",
+      "relations": [],
+      "required_fields": [
+        "defect_id",
+        "object_or_revision",
+        "description",
+        "scope",
+        "severity",
+        "detection",
+        "causes",
+        "dependencies",
+        "HOLD/STOP",
+        "repair_plan",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O028",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-DEFECT-STRUCTURE",
+        "TEST-OBJECT-DEFECT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O022",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O022",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O022",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "authority": [
+          "string"
+        ],
+        "carriers": [
+          "#/$defs/StringOrList"
+        ],
+        "deletion_id": [
+          "#/$defs/Identifier"
+        ],
+        "evidence": [
+          "#/$defs/StringOrList"
+        ],
+        "goal": [
+          "string"
+        ],
+        "method": [
+          "string"
+        ],
+        "object_or_scope": [
+          "string"
+        ],
+        "residual": [
+          "string"
+        ],
+        "retention_requirement": [
+          "string"
+        ],
+        "status_by_carrier": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Deletion",
+      "owner": "O022",
+      "relations": [],
+      "required_fields": [
+        "deletion_id",
+        "object_or_scope",
+        "goal",
+        "authority",
+        "retention_requirement",
+        "carriers",
+        "method",
+        "evidence",
+        "residual",
+        "status_by_carrier"
+      ],
+      "special_contract": {},
+      "transition_owner": "O022",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-DELETION-STRUCTURE",
+        "TEST-OBJECT-DELETION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O010",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O010",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O010",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O010",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O010",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O010",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "carrier_id": [
+          "#/$defs/Identifier"
+        ],
+        "chain_of_custody": [
+          "string"
+        ],
+        "destruction_evidence_id": [
+          "#/$defs/Identifier"
+        ],
+        "evidence_profile": [
+          "#/$defs/StringOrList"
+        ],
+        "executor": [
+          "#/$defs/Identifier"
+        ],
+        "materials": [
+          "#/$defs/StringOrList"
+        ],
+        "result": [
+          "string"
+        ],
+        "retention_term": [
+          "string"
+        ],
+        "time_or_place": [
+          "string"
+        ],
+        "verifier": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Destruction Evidence",
+      "owner": "O010",
+      "relations": [],
+      "required_fields": [
+        "destruction_evidence_id",
+        "carrier_id",
+        "evidence_profile",
+        "executor",
+        "chain_of_custody",
+        "time_or_place",
+        "materials",
+        "verifier",
+        "result",
+        "retention_term"
+      ],
+      "special_contract": {},
+      "transition_owner": "O010",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-DESTRUCTION-EVIDENCE-STRUCTURE",
+        "TEST-OBJECT-DESTRUCTION-EVIDENCE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [],
+      "base_profile_id": "EFFECT_RECORD_OBJECT",
+      "field_types": {
+        "captured_at": [
+          "string"
+        ],
+        "cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "effect_capture_id": [
+          "#/$defs/Identifier"
+        ],
+        "effect_capture_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "evidence_refs": [
+          "#/$defs/EvidenceReferenceList"
+        ],
+        "execution_record_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "owner_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "state_update_ref": [
+          "#/$defs/ObjectReference"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "EffectCapture",
+      "owner": "O015",
+      "relations": [
+        "CONSUMES:ActionExecutionRecord",
+        "EVIDENCES:ObservedEffect",
+        "IMPLEMENTS_PHASE:C11",
+        "UPDATES:State"
+      ],
+      "required_fields": [
+        "effect_capture_id",
+        "cycle_id",
+        "execution_record_ref",
+        "effect_capture_ref",
+        "evidence_refs",
+        "state_update_ref",
+        "captured_at",
+        "owner_ref"
+      ],
+      "special_contract": {
+        "execution_effect_cycle_identity_required": true
+      },
+      "transition_owner": "O015",
+      "type_kind": "EFFECT_RECORD",
+      "validation_tests": [
+        "TEST-OBJECT-EFFECTCAPTURE-STRUCTURE",
+        "TEST-OBJECT-EFFECTCAPTURE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O010",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O010",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O010",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O010",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O010",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O010",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "S_level": [
+          "#/$defs/SLevel"
+        ],
+        "assessment_id": [
+          "string"
+        ],
+        "counterevidence_refs": [
+          "array"
+        ],
+        "evidence_refs": [
+          "array"
+        ],
+        "owner": [
+          "O010"
+        ],
+        "phase": [
+          "C03",
+          "C07"
+        ],
+        "review_conditions": [
+          "array"
+        ],
+        "source_refs": [
+          "array"
+        ],
+        "status": [
+          "string"
+        ],
+        "unknown_id": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "EpistemicAssessment",
+      "owner": "O010",
+      "relations": [
+        "IMPLEMENTS_PHASE:C03",
+        "IMPLEMENTS_PHASE:C07"
+      ],
+      "required_fields": [
+        "assessment_id",
+        "unknown_id",
+        "owner",
+        "phase",
+        "source_refs",
+        "evidence_refs",
+        "counterevidence_refs",
+        "S_level",
+        "status",
+        "review_conditions"
+      ],
+      "special_contract": {},
+      "transition_owner": "O010",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-EPISTEMICASSESSMENT-STRUCTURE",
+        "TEST-OBJECT-EPISTEMICASSESSMENT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O015",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O015",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O015",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O015",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O015",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O015",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "cause": [
+          "string"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "effect": [
+          "string"
+        ],
+        "event_id": [
+          "#/$defs/Identifier"
+        ],
+        "evidence": [
+          "#/$defs/StringOrList"
+        ],
+        "participants": [
+          "#/$defs/StringOrList"
+        ],
+        "place_or_substrate": [
+          "string"
+        ],
+        "state_before_or_after": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ],
+        "type": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Event",
+      "owner": "O015",
+      "relations": [],
+      "required_fields": [
+        "event_id",
+        "type",
+        "time",
+        "place_or_substrate",
+        "participants",
+        "state_before_or_after",
+        "cause",
+        "effect",
+        "evidence",
+        "dependencies"
+      ],
+      "special_contract": {},
+      "transition_owner": "O015",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-EVENT-STRUCTURE",
+        "TEST-OBJECT-EVENT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CAPTURED",
+        "PROVENANCE_VERIFIED",
+        "RELEVANCE_ASSESSED",
+        "ACCEPTED",
+        "REJECTED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CAPTURED",
+          "owner": "O010",
+          "to": "PROVENANCE_VERIFIED"
+        },
+        {
+          "from": "PROVENANCE_VERIFIED",
+          "owner": "O010",
+          "to": "RELEVANCE_ASSESSED"
+        },
+        {
+          "from": "RELEVANCE_ASSESSED",
+          "owner": "O010",
+          "to": "ACCEPTED"
+        },
+        {
+          "from": "RELEVANCE_ASSESSED",
+          "owner": "O010",
+          "to": "REJECTED"
+        },
+        {
+          "from": "ACCEPTED",
+          "owner": "O010",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "completeness": [
+          "#/$defs/StringOrList"
+        ],
+        "distortions": [
+          "#/$defs/StringOrList"
+        ],
+        "evidence_id": [
+          "#/$defs/Identifier"
+        ],
+        "independence": [
+          "string"
+        ],
+        "method": [
+          "string"
+        ],
+        "observed_object": [
+          "string"
+        ],
+        "resolution": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "source": [
+          "string"
+        ],
+        "supported_or_refuted_objects": [
+          "#/$defs/StringOrList"
+        ],
+        "time": [
+          "string"
+        ]
+      },
+      "initial_state": "CAPTURED",
+      "object_type": "Evidence",
+      "owner": "O010",
+      "relations": [],
+      "required_fields": [
+        "evidence_id",
+        "source",
+        "observed_object",
+        "method",
+        "time",
+        "scope",
+        "resolution",
+        "completeness",
+        "distortions",
+        "independence",
+        "supported_or_refuted_objects"
+      ],
+      "special_contract": {},
+      "transition_owner": "O010",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-EVIDENCE-STRUCTURE",
+        "TEST-OBJECT-EVIDENCE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CAPTURED",
+        "PROVENANCE_VERIFIED",
+        "BOUNDED",
+        "ASSESSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CAPTURED",
+          "owner": "O009",
+          "to": "PROVENANCE_VERIFIED"
+        },
+        {
+          "from": "PROVENANCE_VERIFIED",
+          "owner": "O009",
+          "to": "BOUNDED"
+        },
+        {
+          "from": "BOUNDED",
+          "owner": "O009",
+          "to": "ASSESSED"
+        },
+        {
+          "from": "ASSESSED",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "EFFECT_RECORD_OBJECT",
+      "field_types": {
+        "cycle_id": [
+          "string"
+        ],
+        "evidence_refs": [
+          "array"
+        ],
+        "experience_id": [
+          "string"
+        ],
+        "freshness": [
+          "string"
+        ],
+        "observations": [
+          "array"
+        ],
+        "operation_or_action_ref": [
+          "string"
+        ],
+        "owner": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "ExperienceRecord",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "experience_id",
+        "operation_or_action_ref",
+        "cycle_id",
+        "observations",
+        "evidence_refs",
+        "scope",
+        "freshness",
+        "owner"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "RECORD",
+      "validation_tests": [
+        "TEST-OBJECT-EXPERIENCERECORD-STRUCTURE",
+        "TEST-OBJECT-EXPERIENCERECORD-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O006",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "S": [
+          "#/$defs/StringOrList"
+        ],
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "counterdata": [
+          "#/$defs/EvidenceReferenceList"
+        ],
+        "discriminating_consequences": [
+          "#/$defs/StringOrList"
+        ],
+        "explained_object": [
+          "string"
+        ],
+        "explanation_id": [
+          "#/$defs/Identifier"
+        ],
+        "mechanism_or_conditions": [
+          "#/$defs/StringOrList"
+        ],
+        "relation_type": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Explanation",
+      "owner": "O006",
+      "relations": [],
+      "required_fields": [
+        "explanation_id",
+        "explained_object",
+        "relation_type",
+        "mechanism_or_conditions",
+        "discriminating_consequences",
+        "alternatives",
+        "counterdata",
+        "scope",
+        "S"
+      ],
+      "special_contract": {},
+      "transition_owner": "O006",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-EXPLANATION-STRUCTURE",
+        "TEST-OBJECT-EXPLANATION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O015",
+          "to": "CONCRETIZED"
+        },
+        {
+          "from": "CONCRETIZED",
+          "owner": "O015",
+          "to": "RISK_ASSESSED"
+        },
+        {
+          "from": "RISK_ASSESSED",
+          "owner": "O015",
+          "to": "REVIEW_PENDING"
+        },
+        {
+          "from": "REVIEW_PENDING",
+          "owner": "O015",
+          "to": "AUTHORITY_PENDING"
+        },
+        {
+          "from": "AUTHORITY_PENDING",
+          "owner": "O015",
+          "to": "READY_FOR_AUTHORIZATION"
+        },
+        {
+          "from": "RISK_ASSESSED",
+          "owner": "O015",
+          "to": "HOLD"
+        }
+      ],
+      "base_profile_id": "ACTION_PROPOSAL_OBJECT",
+      "field_types": {
+        "action_type": [
+          "string"
+        ],
+        "authority_required": [
+          "string"
+        ],
+        "cycle_id": [
+          "string"
+        ],
+        "owner_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "proposal_id": [
+          "string"
+        ],
+        "review_required": [
+          "string"
+        ],
+        "risk": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "target": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "ExternalActionProposal",
+      "owner": "O015",
+      "relations": [
+        "IMPLEMENTS_PHASE:C10"
+      ],
+      "required_fields": [
+        "proposal_id",
+        "cycle_id",
+        "action_type",
+        "target",
+        "scope",
+        "risk",
+        "authority_required",
+        "review_required",
+        "owner_ref"
+      ],
+      "special_contract": {},
+      "transition_owner": "O015",
+      "type_kind": "ACTION_PROPOSAL",
+      "validation_tests": [
+        "TEST-OBJECT-EXTERNALACTIONPROPOSAL-STRUCTURE",
+        "TEST-OBJECT-EXTERNALACTIONPROPOSAL-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "SUPPORTED",
+        "ESTABLISHED",
+        "CONTESTED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O010",
+          "to": "SUPPORTED"
+        },
+        {
+          "from": "SUPPORTED",
+          "owner": "O010",
+          "to": "ESTABLISHED"
+        },
+        {
+          "from": "ESTABLISHED",
+          "owner": "O010",
+          "to": "CONTESTED"
+        },
+        {
+          "from": "ESTABLISHED",
+          "owner": "O010",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "S": [
+          "#/$defs/StringOrList"
+        ],
+        "counterevidence": [
+          "#/$defs/EvidenceReferenceList"
+        ],
+        "establishment_criterion": [
+          "string"
+        ],
+        "evidence": [
+          "#/$defs/StringOrList"
+        ],
+        "exact_formulation": [
+          "string"
+        ],
+        "fact_id": [
+          "#/$defs/Identifier"
+        ],
+        "phenomenon": [
+          "string"
+        ],
+        "review_conditions": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Fact",
+      "owner": "O010",
+      "relations": [],
+      "required_fields": [
+        "fact_id",
+        "exact_formulation",
+        "phenomenon",
+        "scope",
+        "time",
+        "establishment_criterion",
+        "evidence",
+        "counterevidence",
+        "S",
+        "status",
+        "review_conditions"
+      ],
+      "special_contract": {},
+      "transition_owner": "O010",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-FACT-STRUCTURE",
+        "TEST-OBJECT-FACT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "allowable_risk": [
+          "string"
+        ],
+        "artifact_id": [
+          "#/$defs/Identifier"
+        ],
+        "aspect": [
+          "string"
+        ],
+        "change_rate": [
+          "string"
+        ],
+        "events": [
+          "#/$defs/StringOrList"
+        ],
+        "freshness_id": [
+          "#/$defs/Identifier"
+        ],
+        "method_or_accuracy": [
+          "string"
+        ],
+        "next_review_time": [
+          "string"
+        ],
+        "observation": [
+          "string"
+        ],
+        "task": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Freshness Profile",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "freshness_id",
+        "artifact_id",
+        "aspect",
+        "observation",
+        "method_or_accuracy",
+        "time",
+        "events",
+        "change_rate",
+        "task",
+        "allowable_risk",
+        "next_review_time"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-FRESHNESS-PROFILE-STRUCTURE",
+        "TEST-OBJECT-FRESHNESS-PROFILE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O004",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O004",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O004",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "S": [
+          "#/$defs/StringOrList"
+        ],
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "consequences": [
+          "#/$defs/StringOrList"
+        ],
+        "falsification_criteria": [
+          "string"
+        ],
+        "formulation": [
+          "string"
+        ],
+        "grounds": [
+          "#/$defs/StringOrList"
+        ],
+        "hypothesis_id": [
+          "#/$defs/Identifier"
+        ],
+        "protocols": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Hypothesis",
+      "owner": "O004",
+      "relations": [],
+      "required_fields": [
+        "hypothesis_id",
+        "formulation",
+        "scope",
+        "assumptions",
+        "grounds",
+        "alternatives",
+        "consequences",
+        "falsification_criteria",
+        "protocols",
+        "S",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O004",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-HYPOTHESIS-STRUCTURE",
+        "TEST-OBJECT-HYPOTHESIS-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O006",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "S": [
+          "#/$defs/StringOrList"
+        ],
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "inference_id": [
+          "#/$defs/Identifier"
+        ],
+        "operation": [
+          "string"
+        ],
+        "premises_and_revisions": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "sensitivity": [
+          "string"
+        ],
+        "support": [
+          "string"
+        ],
+        "trace": [
+          "string"
+        ],
+        "validity": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Inference",
+      "owner": "O006",
+      "relations": [],
+      "required_fields": [
+        "inference_id",
+        "premises_and_revisions",
+        "operation",
+        "assumptions",
+        "scope",
+        "trace",
+        "alternatives",
+        "sensitivity",
+        "validity",
+        "support",
+        "S"
+      ],
+      "special_contract": {},
+      "transition_owner": "O006",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-INFERENCE-STRUCTURE",
+        "TEST-OBJECT-INFERENCE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "availability": [
+          "string"
+        ],
+        "channel": [
+          "string"
+        ],
+        "composition": [
+          "string"
+        ],
+        "constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "identified_phenomena": [
+          "string"
+        ],
+        "initiator": [
+          "#/$defs/Identifier"
+        ],
+        "input_id": [
+          "#/$defs/Identifier"
+        ],
+        "sensitivity": [
+          "string"
+        ],
+        "source_artifact": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Input Container",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "input_id",
+        "source_artifact",
+        "channel",
+        "time",
+        "initiator",
+        "composition",
+        "availability",
+        "identified_phenomena",
+        "constraints",
+        "sensitivity"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-INPUT-CONTAINER-STRUCTURE",
+        "TEST-OBJECT-INPUT-CONTAINER-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O008",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O008",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O008",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O008",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O008",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O008",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "STOP": [
+          "string"
+        ],
+        "authority": [
+          "string"
+        ],
+        "errors": [
+          "#/$defs/StringOrList"
+        ],
+        "freshness": [
+          "#/$defs/StringOrList"
+        ],
+        "instruction_id": [
+          "#/$defs/Identifier"
+        ],
+        "preconditions": [
+          "#/$defs/StringOrList"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "resources": [
+          "#/$defs/StringOrList"
+        ],
+        "rollback_or_compensation": [
+          "string"
+        ],
+        "safe_points": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "steps": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Instruction",
+      "owner": "O008",
+      "relations": [],
+      "required_fields": [
+        "instruction_id",
+        "provenance",
+        "scope",
+        "preconditions",
+        "authority",
+        "resources",
+        "steps",
+        "safe_points",
+        "errors",
+        "STOP",
+        "rollback_or_compensation",
+        "freshness"
+      ],
+      "special_contract": {},
+      "transition_owner": "O008",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-INSTRUCTION-STRUCTURE",
+        "TEST-OBJECT-INSTRUCTION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "INTERFACE_SYSTEM",
+        "INTERFACE_MACHINE_CANDIDATE",
+        "INTERFACE_MACHINE_VERIFIED",
+        "HOLD",
+        "TERMINATED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "INTERFACE_SYSTEM",
+          "owner": "O024",
+          "to": "INTERFACE_MACHINE_CANDIDATE"
+        },
+        {
+          "from": "INTERFACE_MACHINE_CANDIDATE",
+          "owner": "O024",
+          "to": "INTERFACE_MACHINE_VERIFIED"
+        },
+        {
+          "from": "INTERFACE_MACHINE_CANDIDATE",
+          "owner": "O024",
+          "to": "HOLD"
+        },
+        {
+          "from": "INTERFACE_MACHINE_VERIFIED",
+          "owner": "O024",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O024",
+          "to": "INTERFACE_MACHINE_CANDIDATE"
+        },
+        {
+          "from": "INTERFACE_MACHINE_VERIFIED",
+          "owner": "O024",
+          "to": "TERMINATED"
+        }
+      ],
+      "base_profile_id": "MACHINE_OBJECT",
+      "field_types": {
+        "abstract_categories": [
+          "array"
+        ],
+        "abstraction_route": [
+          "string"
+        ],
+        "agency": [
+          "string"
+        ],
+        "authorized_change_route": [
+          "string"
+        ],
+        "calculating_elements": [
+          "array"
+        ],
+        "classification_state": [
+          "INTERFACE_SYSTEM",
+          "INTERFACE_MACHINE_CANDIDATE",
+          "INTERFACE_MACHINE_VERIFIED"
+        ],
+        "closure_rule": [
+          "string"
+        ],
+        "concretization_route": [
+          "string"
+        ],
+        "connected_systems": [
+          "array"
+        ],
+        "declared_substrate": [
+          "string"
+        ],
+        "feedback_route": [
+          "string"
+        ],
+        "input_interface": [
+          "string"
+        ],
+        "interface_machine_id": [
+          "string"
+        ],
+        "loop_test_evidence": [
+          "string"
+        ],
+        "machine_profile_ref": [
+          "PhilosophicalMachine"
+        ],
+        "memory": [
+          "string"
+        ],
+        "output_interface": [
+          "string"
+        ],
+        "phase_contract": [
+          "string"
+        ],
+        "risk_model": [
+          "string"
+        ],
+        "state": [
+          "string"
+        ],
+        "transition_rules": [
+          "array"
+        ],
+        "value_interface": [
+          "string"
+        ]
+      },
+      "initial_state": "INTERFACE_SYSTEM",
+      "object_type": "InterfaceMachine",
+      "owner": "O024",
+      "relations": [],
+      "required_fields": [
+        "interface_machine_id",
+        "classification_state",
+        "machine_profile_ref",
+        "connected_systems",
+        "declared_substrate",
+        "input_interface",
+        "abstraction_route",
+        "abstract_categories",
+        "transition_rules",
+        "calculating_elements",
+        "concretization_route",
+        "output_interface",
+        "feedback_route",
+        "state",
+        "memory",
+        "agency",
+        "value_interface",
+        "risk_model",
+        "closure_rule",
+        "phase_contract",
+        "authorized_change_route",
+        "loop_test_evidence"
+      ],
+      "special_contract": {
+        "machine_qualification": "CONDITIONAL_ON_FULL_REPRODUCIBLE_LOOP",
+        "mutation_blockers": [
+          "MISSING_ABSTRACTION_ROUTE",
+          "MISSING_CONCRETIZATION_ROUTE",
+          "MISSING_CALCULATING_ELEMENT",
+          "MISSING_FEEDBACK_ROUTE",
+          "LOOP_TEST_NOT_PASSED"
+        ],
+        "qualification_state": "INTERFACE_MACHINE_VERIFIED",
+        "unqualified_state_name": "INTERFACE_SYSTEM"
+      },
+      "transition_owner": "O024",
+      "type_kind": "CONDITIONAL_MACHINE",
+      "validation_tests": [
+        "TEST-OBJECT-INTERFACEMACHINE-STRUCTURE",
+        "TEST-OBJECT-INTERFACEMACHINE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DECLARED",
+        "READY",
+        "ACTIVE",
+        "COMPLETED",
+        "HOLD",
+        "STOPPED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DECLARED",
+          "owner": "O014",
+          "to": "READY"
+        },
+        {
+          "from": "READY",
+          "owner": "O014",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O014",
+          "to": "COMPLETED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O014",
+          "to": "HOLD"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O014",
+          "to": "STOPPED"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O014",
+          "to": "ACTIVE"
+        }
+      ],
+      "base_profile_id": "PHASE_OBJECT",
+      "field_types": {
+        "allowed_transitions": [
+          "array"
+        ],
+        "entry_trigger": [
+          "string"
+        ],
+        "exit_trigger": [
+          "string"
+        ],
+        "machine_id": [
+          "string"
+        ],
+        "owner": [
+          "string"
+        ],
+        "phase_id": [
+          "string"
+        ],
+        "required_evidence": [
+          "array"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "MachinePhase",
+      "owner": "O014",
+      "relations": [
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "phase_id",
+        "machine_id",
+        "entry_trigger",
+        "exit_trigger",
+        "owner",
+        "required_evidence",
+        "allowed_transitions"
+      ],
+      "special_contract": {},
+      "transition_owner": "O014",
+      "type_kind": "PHASE",
+      "validation_tests": [
+        "TEST-OBJECT-MACHINEPHASE-STRUCTURE",
+        "TEST-OBJECT-MACHINEPHASE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "ACCEPTED",
+        "ACTIVE",
+        "STALE",
+        "CORRECTED",
+        "DELETED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O022",
+          "to": "ACCEPTED"
+        },
+        {
+          "from": "ACCEPTED",
+          "owner": "O022",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "STALE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "CORRECTED"
+        },
+        {
+          "from": "CORRECTED",
+          "owner": "O022",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "DELETED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "activation": [
+          "string"
+        ],
+        "class": [
+          "string"
+        ],
+        "content_or_reference": [
+          "string"
+        ],
+        "deletion": [
+          "string"
+        ],
+        "freshness": [
+          "#/$defs/StringOrList"
+        ],
+        "memory_item_id": [
+          "#/$defs/Identifier"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "sensitivity": [
+          "string"
+        ],
+        "supersession": [
+          "string"
+        ],
+        "term": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Memory",
+      "owner": "O022",
+      "relations": [],
+      "required_fields": [
+        "memory_item_id",
+        "class",
+        "content_or_reference",
+        "provenance",
+        "scope",
+        "sensitivity",
+        "term",
+        "activation",
+        "freshness",
+        "supersession",
+        "deletion"
+      ],
+      "special_contract": {},
+      "transition_owner": "O022",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-MEMORY-STRUCTURE",
+        "TEST-OBJECT-MEMORY-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O006",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "S": [
+          "#/$defs/StringOrList"
+        ],
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "mechanisms": [
+          "#/$defs/StringOrList"
+        ],
+        "model_id": [
+          "#/$defs/Identifier"
+        ],
+        "objects": [
+          "#/$defs/StringOrList"
+        ],
+        "parameters": [
+          "#/$defs/StringOrList"
+        ],
+        "predictions": [
+          "#/$defs/StringOrList"
+        ],
+        "purpose": [
+          "string"
+        ],
+        "relations": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "tests": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Model",
+      "owner": "O006",
+      "relations": [],
+      "required_fields": [
+        "model_id",
+        "purpose",
+        "objects",
+        "relations",
+        "mechanisms",
+        "assumptions",
+        "parameters",
+        "predictions",
+        "tests",
+        "alternatives",
+        "scope",
+        "S"
+      ],
+      "special_contract": {},
+      "transition_owner": "O006",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-MODEL-STRUCTURE",
+        "TEST-OBJECT-MODEL-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CAPTURED",
+        "PROVENANCE_VERIFIED",
+        "CLASSIFIED",
+        "RETURNED_TO_C00"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CAPTURED",
+          "owner": "O015",
+          "to": "PROVENANCE_VERIFIED"
+        },
+        {
+          "from": "PROVENANCE_VERIFIED",
+          "owner": "O015",
+          "to": "CLASSIFIED"
+        },
+        {
+          "from": "CLASSIFIED",
+          "owner": "O015",
+          "to": "RETURNED_TO_C00"
+        }
+      ],
+      "base_profile_id": "EFFECT_RECORD_OBJECT",
+      "field_types": {
+        "action_execution_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "effect_evidence_refs": [
+          "#/$defs/EvidenceReferenceList"
+        ],
+        "effect_id": [
+          "#/$defs/Identifier"
+        ],
+        "effect_status": [
+          "RECORDED",
+          "CLASSIFIED",
+          "NO_EFFECT_CONFIRMED",
+          "EFFECT_UNKNOWN_RECORDED",
+          "COMPENSATED"
+        ],
+        "next_state_or_terminal_condition": [
+          "#/$defs/StateReference"
+        ],
+        "observations": [
+          "array"
+        ],
+        "owner_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "state_update_ref": [
+          "#/$defs/ObjectReference"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "ObservedEffect",
+      "owner": "O015",
+      "relations": [
+        "CONSUMES:ActionExecutionRecord",
+        "CREATES:Phenomenon",
+        "IMPLEMENTS_PHASE:C11",
+        "OBSERVES:ActionExecutionRecord",
+        "PART_OF:PhilosophicalMachine",
+        "RECORDED_IN:ExperienceRecord",
+        "RECORDS:ExperienceRecord",
+        "RECORDS:State",
+        "UPDATES:State"
+      ],
+      "required_fields": [
+        "effect_id",
+        "action_execution_ref",
+        "cycle_id",
+        "effect_status",
+        "observations",
+        "effect_evidence_refs",
+        "provenance",
+        "state_update_ref",
+        "next_state_or_terminal_condition",
+        "owner_ref"
+      ],
+      "special_contract": {},
+      "transition_owner": "O015",
+      "type_kind": "EFFECT",
+      "validation_tests": [
+        "TEST-OBJECT-OBSERVEDEFFECT-STRUCTURE",
+        "TEST-OBJECT-OBSERVEDEFFECT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "OBSERVED",
+        "VALIDATED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O007",
+          "to": "OBSERVED"
+        },
+        {
+          "from": "OBSERVED",
+          "owner": "O007",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O007",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "after_state": [
+          "#/$defs/StateReference"
+        ],
+        "agency_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "before_state": [
+          "#/$defs/StateReference"
+        ],
+        "cost": [
+          "#/$defs/CostEstimate"
+        ],
+        "evidence_refs": [
+          "#/$defs/EvidenceReferenceList"
+        ],
+        "machine_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "memory_write_refs": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "micro_closure": [
+          "string"
+        ],
+        "oper_id": [
+          "#/$defs/Identifier"
+        ],
+        "residue": [
+          "#/$defs/StringOrList"
+        ],
+        "transition_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "trigger": [
+          "string"
+        ],
+        "value_or_risk_gate": [
+          "#/$defs/ObjectReference"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Oper",
+      "owner": "O007",
+      "relations": [
+        "EXECUTES:Transition",
+        "IMPLEMENTS_PHASE:C06",
+        "IMPLEMENTS_PHASE:C07",
+        "IMPLEMENTS_PHASE:C11",
+        "PART_OF:Operature",
+        "PART_OF:PhilosophicalMachine",
+        "USES_EVIDENCE:Evidence"
+      ],
+      "required_fields": [
+        "oper_id",
+        "machine_ref",
+        "before_state",
+        "trigger",
+        "evidence_refs",
+        "agency_ref",
+        "value_or_risk_gate",
+        "transition_ref",
+        "after_state",
+        "memory_write_refs",
+        "cost",
+        "micro_closure",
+        "residue"
+      ],
+      "special_contract": {},
+      "transition_owner": "O007",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-OPER-STRUCTURE",
+        "TEST-OBJECT-OPER-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "TYPED",
+        "VALIDATED",
+        "EXECUTED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O007",
+          "to": "TYPED"
+        },
+        {
+          "from": "TYPED",
+          "owner": "O007",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O007",
+          "to": "EXECUTED"
+        },
+        {
+          "from": "EXECUTED",
+          "owner": "O007",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "dependency_edges": [
+          "array"
+        ],
+        "entry_state": [
+          "#/$defs/StateReference"
+        ],
+        "exit_state": [
+          "#/$defs/StateReference"
+        ],
+        "invariants": [
+          "#/$defs/StringOrList"
+        ],
+        "machine_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "oper_refs": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "operature_id": [
+          "#/$defs/Identifier"
+        ],
+        "ordering_kind": [
+          "LINEAR",
+          "PARTIAL_ORDER",
+          "CYCLIC"
+        ],
+        "scope": [
+          "string"
+        ],
+        "test_refs": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Operature",
+      "owner": "O007",
+      "relations": [
+        "COMPOSED_OF:Oper",
+        "CONSUMES:Oper",
+        "IMPLEMENTS_PHASE:C05",
+        "IMPLEMENTS_PHASE:C06",
+        "IMPLEMENTS_PHASE:C07",
+        "PART_OF:PhilosophicalMachine",
+        "PRODUCES:Transition",
+        "RECORDS:AbstractionTrace"
+      ],
+      "required_fields": [
+        "operature_id",
+        "machine_ref",
+        "oper_refs",
+        "ordering_kind",
+        "dependency_edges",
+        "entry_state",
+        "exit_state",
+        "scope",
+        "invariants",
+        "test_refs"
+      ],
+      "special_contract": {},
+      "transition_owner": "O007",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-OPERATURE-STRUCTURE",
+        "TEST-OBJECT-OPERATURE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "OPEN",
+        "CANDIDATE",
+        "SUPPORTED",
+        "REFUTED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "OPEN",
+          "owner": "O007",
+          "to": "CANDIDATE"
+        },
+        {
+          "from": "CANDIDATE",
+          "owner": "O007",
+          "to": "SUPPORTED"
+        },
+        {
+          "from": "CANDIDATE",
+          "owner": "O007",
+          "to": "REFUTED"
+        },
+        {
+          "from": "SUPPORTED",
+          "owner": "O007",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "alternative_models": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "confidence": [
+          "#/$defs/SLevel"
+        ],
+        "exceptions": [
+          "#/$defs/StringOrList"
+        ],
+        "gaps": [
+          "#/$defs/StringOrList"
+        ],
+        "object_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "observation_window": [
+          "string"
+        ],
+        "oper_refs": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "operome_id": [
+          "#/$defs/Identifier"
+        ],
+        "stability": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Operome",
+      "owner": "O007",
+      "relations": [
+        "IMPLEMENTS_PHASE:C03",
+        "IMPLEMENTS_PHASE:C06",
+        "IMPLEMENTS_PHASE:C07",
+        "INVENTORIES:Oper",
+        "OBSERVES:PhilosophicalMachine",
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "operome_id",
+        "object_ref",
+        "observation_window",
+        "oper_refs",
+        "stability",
+        "exceptions",
+        "gaps",
+        "confidence",
+        "alternative_models"
+      ],
+      "special_contract": {},
+      "transition_owner": "O007",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-OPEROME-STRUCTURE",
+        "TEST-OBJECT-OPEROME-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O001",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O001",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O001",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O001",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O001",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O001",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "boundary": [
+          "string"
+        ],
+        "class": [
+          "string"
+        ],
+        "formulation": [
+          "string"
+        ],
+        "identification_source": [
+          "string"
+        ],
+        "phenomenon_id": [
+          "#/$defs/Identifier"
+        ],
+        "related_inputs": [
+          "#/$defs/StringOrList"
+        ],
+        "risks": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ],
+        "unknowns": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Phenomenon",
+      "owner": "O001",
+      "relations": [
+        "IMPLEMENTS_PHASE:C00",
+        "IMPLEMENTS_PHASE:C01"
+      ],
+      "required_fields": [
+        "phenomenon_id",
+        "class",
+        "formulation",
+        "boundary",
+        "scope",
+        "time",
+        "identification_source",
+        "related_inputs",
+        "unknowns",
+        "risks",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O001",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-PHENOMENON-STRUCTURE",
+        "TEST-OBJECT-PHENOMENON-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "STRUCTURED",
+        "LOOP_VERIFIED",
+        "OPERABLE",
+        "PHASE_CHANGE_PENDING",
+        "HOLD",
+        "CLOSED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O007",
+          "to": "STRUCTURED"
+        },
+        {
+          "from": "STRUCTURED",
+          "owner": "O007",
+          "to": "LOOP_VERIFIED"
+        },
+        {
+          "from": "LOOP_VERIFIED",
+          "owner": "O007",
+          "to": "OPERABLE"
+        },
+        {
+          "from": "OPERABLE",
+          "owner": "O007",
+          "to": "PHASE_CHANGE_PENDING"
+        },
+        {
+          "from": "PHASE_CHANGE_PENDING",
+          "owner": "O007",
+          "to": "OPERABLE"
+        },
+        {
+          "from": "OPERABLE",
+          "owner": "O007",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O007",
+          "to": "OPERABLE"
+        },
+        {
+          "from": "OPERABLE",
+          "owner": "O007",
+          "to": "CLOSED"
+        }
+      ],
+      "base_profile_id": "MACHINE_OBJECT",
+      "field_types": {
+        "abstract_categories": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "abstraction_route": [
+          "#/$defs/ObjectReference"
+        ],
+        "agency": [
+          "#/$defs/ObjectReference"
+        ],
+        "authorized_change_route": [
+          "#/$defs/ObjectReference"
+        ],
+        "calculating_elements": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "closure_rule": [
+          "#/$defs/ObjectReference"
+        ],
+        "concretization_route": [
+          "#/$defs/ObjectReference"
+        ],
+        "declared_substrate": [
+          "#/$defs/ObjectReference"
+        ],
+        "feedback_route": [
+          "#/$defs/ObjectReference"
+        ],
+        "input_interface": [
+          "#/$defs/ObjectReference"
+        ],
+        "machine_id": [
+          "string"
+        ],
+        "memory": [
+          "#/$defs/ObjectReference"
+        ],
+        "output_interface": [
+          "#/$defs/ObjectReference"
+        ],
+        "phase_contract": [
+          "#/$defs/ObjectReference"
+        ],
+        "risk_model": [
+          "#/$defs/ObjectReference"
+        ],
+        "state": [
+          "#/$defs/ObjectReference"
+        ],
+        "transition_rules": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "value_interface": [
+          "#/$defs/ObjectReference"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "PhilosophicalMachine",
+      "owner": "O007",
+      "relations": [
+        "CONSUMES:Operature",
+        "CONSUMES:Phenomenon",
+        "HAS_AGENCY:Authority",
+        "HAS_CLOSURE_RULE:ClosureCandidate",
+        "HAS_MEMORY:Memory",
+        "HAS_MEMORY:State",
+        "HAS_RISK_MODEL:Risk",
+        "HAS_SUBSTRATE_DECLARATION:SubstrateDeclaration",
+        "HAS_VALUE_INTERFACE:Context Package",
+        "OBSERVES:ObservedEffect",
+        "OBSERVES:Operome",
+        "PRODUCES:ObservedEffect",
+        "PRODUCES:Operature",
+        "RECORDS:Memory",
+        "RECORDS:Operome",
+        "RECORDS:State"
+      ],
+      "required_fields": [
+        "machine_id",
+        "declared_substrate",
+        "input_interface",
+        "abstraction_route",
+        "abstract_categories",
+        "transition_rules",
+        "calculating_elements",
+        "concretization_route",
+        "output_interface",
+        "feedback_route",
+        "state",
+        "memory",
+        "agency",
+        "value_interface",
+        "risk_model",
+        "closure_rule",
+        "phase_contract",
+        "authorized_change_route"
+      ],
+      "special_contract": {
+        "canonical_definition": "A philosophical machine is a substrate-linked reproducible temporal loop of transition rules that receives substrate material, abstracts categories, calculates category transitions through declared calculating elements, concretizes results back into the substrate, records feedback and next state, maintains memory, agency, value interface, risk and closure, and supports authorized changes of its structure and phases.",
+        "qualification": "FULL_MACHINE_CONTRACT_REQUIRED"
+      },
+      "transition_owner": "O007",
+      "type_kind": "MACHINE",
+      "validation_tests": [
+        "TEST-OBJECT-PHILOSOPHICALMACHINE-STRUCTURE",
+        "TEST-OBJECT-PHILOSOPHICALMACHINE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "TYPED",
+        "EXECUTED",
+        "TERMINATED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O007",
+          "to": "TYPED"
+        },
+        {
+          "from": "TYPED",
+          "owner": "O007",
+          "to": "EXECUTED"
+        },
+        {
+          "from": "EXECUTED",
+          "owner": "O007",
+          "to": "TERMINATED"
+        }
+      ],
+      "base_profile_id": "TRAJECTORY_OBJECT",
+      "field_types": {
+        "input_category": [
+          "string"
+        ],
+        "output_category": [
+          "string"
+        ],
+        "owner": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "trajectory_id": [
+          "string"
+        ],
+        "transitions": [
+          "array"
+        ]
+      },
+      "initial_state": "CANDIDATE",
+      "object_type": "PhilosophicalTrajectory",
+      "owner": "O007",
+      "relations": [],
+      "required_fields": [
+        "trajectory_id",
+        "input_category",
+        "transitions",
+        "output_category",
+        "scope",
+        "owner"
+      ],
+      "special_contract": {},
+      "transition_owner": "O007",
+      "type_kind": "TRAJECTORY",
+      "validation_tests": [
+        "TEST-OBJECT-PHILOSOPHICALTRAJECTORY-STRUCTURE",
+        "TEST-OBJECT-PHILOSOPHICALTRAJECTORY-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "INTERNAL_QA",
+        "RELEASED",
+        "HOLD",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O025",
+          "to": "INTERNAL_QA"
+        },
+        {
+          "from": "INTERNAL_QA",
+          "owner": "O025",
+          "to": "RELEASED"
+        },
+        {
+          "from": "INTERNAL_QA",
+          "owner": "O025",
+          "to": "HOLD"
+        },
+        {
+          "from": "RELEASED",
+          "owner": "O025",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "canon": [
+          "string"
+        ],
+        "compatibility": [
+          "string"
+        ],
+        "generation": [
+          "string"
+        ],
+        "interfaces": [
+          "#/$defs/StringOrList"
+        ],
+        "lifecycle": [
+          "string"
+        ],
+        "name": [
+          "string"
+        ],
+        "norms": [
+          "#/$defs/StringOrList"
+        ],
+        "organs": [
+          "#/$defs/StringOrList"
+        ],
+        "physiology_id": [
+          "#/$defs/Identifier"
+        ],
+        "release_status": [
+          "#/$defs/StringOrList"
+        ],
+        "schemas": [
+          "#/$defs/StringOrList"
+        ],
+        "tests": [
+          "#/$defs/StringOrList"
+        ],
+        "version": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Physiology",
+      "owner": "O025",
+      "relations": [],
+      "required_fields": [
+        "physiology_id",
+        "name",
+        "version",
+        "generation",
+        "canon",
+        "organs",
+        "norms",
+        "schemas",
+        "interfaces",
+        "lifecycle",
+        "compatibility",
+        "tests",
+        "release_status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O025",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-PHYSIOLOGY-STRUCTURE",
+        "TEST-OBJECT-PHYSIOLOGY-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O019",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O019",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O019",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "exact_formulation": [
+          "string"
+        ],
+        "party": [
+          "string"
+        ],
+        "position_id": [
+          "#/$defs/Identifier"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "related_decisions": [
+          "#/$defs/StringOrList"
+        ],
+        "revision": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Position",
+      "owner": "O019",
+      "relations": [],
+      "required_fields": [
+        "position_id",
+        "party",
+        "exact_formulation",
+        "scope",
+        "time",
+        "provenance",
+        "status",
+        "related_decisions",
+        "revision"
+      ],
+      "special_contract": {},
+      "transition_owner": "O019",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-POSITION-STRUCTURE",
+        "TEST-OBJECT-POSITION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O008",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O008",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O008",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O008",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O008",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O008",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "HOLD/STOP": [
+          "string"
+        ],
+        "completion": [
+          "string"
+        ],
+        "cost": [
+          "#/$defs/CostEstimate"
+        ],
+        "discrimination_criteria": [
+          "string"
+        ],
+        "evidence": [
+          "#/$defs/StringOrList"
+        ],
+        "goal": [
+          "string"
+        ],
+        "inputs": [
+          "#/$defs/StringOrList"
+        ],
+        "operations": [
+          "#/$defs/StringOrList"
+        ],
+        "protocol_id": [
+          "#/$defs/Identifier"
+        ],
+        "purpose": [
+          "string"
+        ],
+        "related_questions_or_hypotheses": [
+          "#/$defs/StringOrList"
+        ],
+        "risk": [
+          "string"
+        ],
+        "substrate": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Protocol",
+      "owner": "O008",
+      "relations": [
+        "IMPLEMENTS_PHASE:C05"
+      ],
+      "required_fields": [
+        "protocol_id",
+        "goal",
+        "related_questions_or_hypotheses",
+        "inputs",
+        "operations",
+        "substrate",
+        "discrimination_criteria",
+        "evidence",
+        "cost",
+        "risk",
+        "HOLD/STOP",
+        "completion"
+      ],
+      "special_contract": {},
+      "transition_owner": "O008",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-PROTOCOL-STRUCTURE",
+        "TEST-OBJECT-PROTOCOL-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "PASS",
+        "HOLD",
+        "REJECTED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O027",
+          "to": "PASS"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O027",
+          "to": "HOLD"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O027",
+          "to": "REJECTED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "closure_candidate_id": [
+          "#/$defs/Identifier"
+        ],
+        "conflict_of_interest": [
+          "boolean"
+        ],
+        "decision": [
+          "PASS",
+          "HOLD",
+          "REJECTED"
+        ],
+        "evidence_freshness": [
+          "CURRENT",
+          "STALE",
+          "UNKNOWN"
+        ],
+        "evidence_refs": [
+          "#/$defs/EvidenceReferenceList"
+        ],
+        "independence_level": [
+          "#/$defs/IndependenceLevel"
+        ],
+        "quality_decision_id": [
+          "#/$defs/Identifier"
+        ],
+        "reviewer_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "scope": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "QualityDecision",
+      "owner": "O027",
+      "relations": [
+        "IMPLEMENTS_PHASE:C10",
+        "PART_OF:PhilosophicalMachine",
+        "REVIEWS:ClosureCandidate"
+      ],
+      "required_fields": [
+        "quality_decision_id",
+        "closure_candidate_id",
+        "decision",
+        "reviewer_ref",
+        "independence_level",
+        "scope",
+        "evidence_refs",
+        "evidence_freshness",
+        "conflict_of_interest"
+      ],
+      "special_contract": {},
+      "transition_owner": "O027",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-QUALITYDECISION-STRUCTURE",
+        "TEST-OBJECT-QUALITYDECISION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O004",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O004",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O004",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "answer_classes": [
+          "#/$defs/StringOrList"
+        ],
+        "cost": [
+          "#/$defs/CostEstimate"
+        ],
+        "discriminating_power": [
+          "string"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "question_id": [
+          "#/$defs/Identifier"
+        ],
+        "research_route": [
+          "string"
+        ],
+        "risk": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "significance": [
+          "string"
+        ],
+        "unknown": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Question",
+      "owner": "O004",
+      "relations": [
+        "IMPLEMENTS_PHASE:C04"
+      ],
+      "required_fields": [
+        "question_id",
+        "unknown",
+        "scope",
+        "provenance",
+        "significance",
+        "answer_classes",
+        "discriminating_power",
+        "cost",
+        "risk",
+        "research_route"
+      ],
+      "special_contract": {},
+      "transition_owner": "O004",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-QUESTION-STRUCTURE",
+        "TEST-OBJECT-QUESTION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O019",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O019",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O019",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O019",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "aligned_part": [
+          "string"
+        ],
+        "alignment_id": [
+          "#/$defs/Identifier"
+        ],
+        "comparison_scope": [
+          "string"
+        ],
+        "differences": [
+          "#/$defs/StringOrList"
+        ],
+        "position_references": [
+          "#/$defs/StringOrList"
+        ],
+        "required_protocol": [
+          "string"
+        ],
+        "revision": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Relational Alignment",
+      "owner": "O019",
+      "relations": [],
+      "required_fields": [
+        "alignment_id",
+        "position_references",
+        "comparison_scope",
+        "status",
+        "aligned_part",
+        "differences",
+        "required_protocol",
+        "revision"
+      ],
+      "special_contract": {},
+      "transition_owner": "O019",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-RELATIONAL-ALIGNMENT-STRUCTURE",
+        "TEST-OBJECT-RELATIONAL-ALIGNMENT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "acquisition_method": [
+          "string"
+        ],
+        "ambiguities": [
+          "#/$defs/StringOrList"
+        ],
+        "artifact_id": [
+          "#/$defs/Identifier"
+        ],
+        "availability": [
+          "string"
+        ],
+        "completeness": [
+          "#/$defs/StringOrList"
+        ],
+        "correspondence": [
+          "string"
+        ],
+        "format": [
+          "string"
+        ],
+        "losses": [
+          "#/$defs/StringOrList"
+        ],
+        "representation_id": [
+          "#/$defs/Identifier"
+        ],
+        "revision": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Representation",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "representation_id",
+        "artifact_id",
+        "format",
+        "revision",
+        "acquisition_method",
+        "completeness",
+        "losses",
+        "ambiguities",
+        "availability",
+        "correspondence"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-REPRESENTATION-STRUCTURE",
+        "TEST-OBJECT-REPRESENTATION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "PROPOSED",
+          "owner": "O015",
+          "to": "BOUNDED"
+        },
+        {
+          "from": "BOUNDED",
+          "owner": "O015",
+          "to": "AUTHORIZED_FOR_RESEARCH"
+        },
+        {
+          "from": "AUTHORIZED_FOR_RESEARCH",
+          "owner": "O015",
+          "to": "EXECUTING"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "COMPLETE"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "PARTIAL"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "UNKNOWN"
+        },
+        {
+          "from": "EXECUTING",
+          "owner": "O015",
+          "to": "FAILED"
+        }
+      ],
+      "base_profile_id": "PROCESS_OBJECT",
+      "field_types": {
+        "affected_objects": [
+          "array"
+        ],
+        "authority": [
+          "string"
+        ],
+        "authority_requirement": [
+          "string"
+        ],
+        "consequentiality": [
+          "NEGLIGIBLE",
+          "REVERSIBLE",
+          "MATERIAL",
+          "HIGH_RISK"
+        ],
+        "cycle_id": [
+          "string"
+        ],
+        "effect_class": [
+          "COGNITIVE_ONLY",
+          "SIMULATED",
+          "SANDBOXED",
+          "OBSERVATIONAL",
+          "SUBSTRATE_INTERNAL",
+          "EXTERNAL_CONSEQUENTIAL"
+        ],
+        "external_effect": [
+          "NONE",
+          "POSSIBLE",
+          "CONFIRMED"
+        ],
+        "method": [
+          "string"
+        ],
+        "observation_method": [
+          "string"
+        ],
+        "operation_id": [
+          "string"
+        ],
+        "owner": [
+          "string"
+        ],
+        "result_boundary": [
+          "string"
+        ],
+        "result_ref": [
+          "string"
+        ],
+        "reversibility": [
+          "FULL",
+          "PARTIAL",
+          "NONE",
+          "UNKNOWN"
+        ],
+        "risk_class": [
+          "string"
+        ],
+        "rollback_path": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "substrate_id": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "ResearchSubstrateOperation",
+      "owner": "O015",
+      "relations": [
+        "IMPLEMENTS_PHASE:C06",
+        "IMPLEMENTS_PHASE:C07",
+        "IMPLEMENTS_PHASE:C11"
+      ],
+      "required_fields": [
+        "operation_id",
+        "cycle_id",
+        "substrate_id",
+        "scope",
+        "method",
+        "authority",
+        "result_ref",
+        "owner",
+        "effect_class",
+        "external_effect",
+        "consequentiality",
+        "reversibility",
+        "affected_objects",
+        "authority_requirement",
+        "risk_class",
+        "rollback_path",
+        "observation_method",
+        "result_boundary"
+      ],
+      "special_contract": {
+        "c07_admission_contract": {
+          "admitted_when": "external_effect == NONE OR (effect_class in SIMULATED,SANDBOXED,OBSERVATIONAL and reversibility in FULL,PARTIAL and risk_class stays below external-authorization threshold)",
+          "otherwise": "CREATE ExternalActionProposal AND ROUTE C08-C10"
+        }
+      },
+      "transition_owner": "O015",
+      "type_kind": "PROCESS",
+      "validation_tests": [
+        "TEST-OBJECT-RESEARCHSUBSTRATEOPERATION-STRUCTURE",
+        "TEST-OBJECT-RESEARCHSUBSTRATEOPERATION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "ACCEPTED_BY_AUTHORIZED_OWNER",
+        "LIMITED",
+        "REJECTED",
+        "UNRESOLVED",
+        "NOT_APPLICABLE"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O020",
+          "to": "ACCEPTED"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O020",
+          "to": "LIMITED"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O020",
+          "to": "REJECTED"
+        },
+        {
+          "from": "DRAFT",
+          "owner": "O020",
+          "to": "NOT_APPLICABLE"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "affected_objects": [
+          "#/$defs/ObjectReferenceList"
+        ],
+        "closure_candidate_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "decision": [
+          "ACCEPTED_BY_AUTHORIZED_OWNER",
+          "LIMITED",
+          "REJECTED",
+          "UNRESOLVED",
+          "NOT_APPLICABLE"
+        ],
+        "proposal_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "protected_losses": [
+          "#/$defs/StringOrList"
+        ],
+        "residual_risk": [
+          "string"
+        ],
+        "review_condition": [
+          "string"
+        ],
+        "risk_class": [
+          "#/$defs/RiskLevel"
+        ],
+        "risk_decision_id": [
+          "#/$defs/Identifier"
+        ],
+        "risk_owner_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "rollback_or_compensation": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "ResidualRiskDecision",
+      "owner": "O020",
+      "relations": [
+        "APPLIES_TO:ExternalActionProposal",
+        "BOUNDS:AuthorizedExternalAction",
+        "IMPLEMENTS_PHASE:C10",
+        "OWNED_BY:Responsibility",
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "risk_decision_id",
+        "risk_class",
+        "affected_objects",
+        "protected_losses",
+        "residual_risk",
+        "risk_owner_ref",
+        "decision",
+        "review_condition",
+        "rollback_or_compensation",
+        "proposal_ref",
+        "closure_candidate_ref"
+      ],
+      "special_contract": {},
+      "transition_owner": "O020",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-RESIDUALRISKDECISION-STRUCTURE",
+        "TEST-OBJECT-RESIDUALRISKDECISION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O018",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O018",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O018",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O018",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O018",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O018",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "duties": [
+          "#/$defs/StringOrList"
+        ],
+        "object": [
+          "string"
+        ],
+        "owner": [
+          "#/$defs/Identifier"
+        ],
+        "responsibility_id": [
+          "#/$defs/Identifier"
+        ],
+        "scope": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "supporting_roles": [
+          "#/$defs/StringOrList"
+        ],
+        "term": [
+          "string"
+        ],
+        "trigger": [
+          "string"
+        ],
+        "type": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Responsibility",
+      "owner": "O018",
+      "relations": [],
+      "required_fields": [
+        "responsibility_id",
+        "type",
+        "object",
+        "scope",
+        "owner",
+        "supporting_roles",
+        "duties",
+        "trigger",
+        "term",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O018",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-RESPONSIBILITY-STRUCTURE",
+        "TEST-OBJECT-RESPONSIBILITY-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "REVIEWED",
+        "ACCEPTED",
+        "SUPERSEDED",
+        "REJECTED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O025",
+          "to": "REVIEWED"
+        },
+        {
+          "from": "REVIEWED",
+          "owner": "O025",
+          "to": "ACCEPTED"
+        },
+        {
+          "from": "ACCEPTED",
+          "owner": "O025",
+          "to": "SUPERSEDED"
+        },
+        {
+          "from": "REVIEWED",
+          "owner": "O025",
+          "to": "REJECTED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "activation_status": [
+          "CANDIDATE",
+          "REVIEWED",
+          "ACCEPTED",
+          "SUPERSEDED",
+          "REJECTED"
+        ],
+        "approvals": [
+          "#/$defs/StringOrList"
+        ],
+        "author_or_executor": [
+          "string"
+        ],
+        "base_revision": [
+          "string"
+        ],
+        "cause": [
+          "string"
+        ],
+        "changed_fields": [
+          "#/$defs/StringOrList"
+        ],
+        "object_id": [
+          "#/$defs/Identifier"
+        ],
+        "quality": [
+          "string"
+        ],
+        "revision_id": [
+          "#/$defs/Identifier"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Revision",
+      "owner": "O025",
+      "relations": [],
+      "required_fields": [
+        "revision_id",
+        "object_id",
+        "base_revision",
+        "changed_fields",
+        "cause",
+        "author_or_executor",
+        "approvals",
+        "quality",
+        "activation_status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O025",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-REVISION-STRUCTURE",
+        "TEST-OBJECT-REVISION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O020",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O020",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O020",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O020",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O020",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O020",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "consequence_bearers": [
+          "#/$defs/StringOrList"
+        ],
+        "distribution": [
+          "string"
+        ],
+        "measures": [
+          "#/$defs/StringOrList"
+        ],
+        "owner": [
+          "#/$defs/Identifier"
+        ],
+        "probability_or_uncertainty": [
+          "string"
+        ],
+        "residual": [
+          "string"
+        ],
+        "reversibility": [
+          "string"
+        ],
+        "risk_id": [
+          "#/$defs/Identifier"
+        ],
+        "scenario": [
+          "string"
+        ],
+        "severity": [
+          "string"
+        ],
+        "source": [
+          "string"
+        ],
+        "vulnerability": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Risk",
+      "owner": "O020",
+      "relations": [],
+      "required_fields": [
+        "risk_id",
+        "source",
+        "consequence_bearers",
+        "scenario",
+        "severity",
+        "probability_or_uncertainty",
+        "reversibility",
+        "distribution",
+        "vulnerability",
+        "measures",
+        "residual",
+        "owner"
+      ],
+      "special_contract": {},
+      "transition_owner": "O020",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-RISK-STRUCTURE",
+        "TEST-OBJECT-RISK-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "COMPLETE",
+        "HOLD",
+        "REPAIR",
+        "VERIFIED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O027",
+          "to": "COMPLETE"
+        },
+        {
+          "from": "CANDIDATE",
+          "owner": "O027",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O027",
+          "to": "REPAIR"
+        },
+        {
+          "from": "REPAIR",
+          "owner": "O027",
+          "to": "COMPLETE"
+        },
+        {
+          "from": "COMPLETE",
+          "owner": "O027",
+          "to": "VERIFIED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "acceptance_set_sha256": [
+          "string"
+        ],
+        "active_accepted_count": [
+          "integer"
+        ],
+        "catalog_count": [
+          "integer"
+        ],
+        "preserved_non_active_count": [
+          "integer"
+        ],
+        "registry_id": [
+          "#/$defs/Identifier"
+        ],
+        "rows": [
+          "array"
+        ],
+        "runtime_authorization": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "RuleAcceptanceMatrix",
+      "owner": "O027",
+      "relations": [],
+      "required_fields": [
+        "registry_id",
+        "catalog_count",
+        "active_accepted_count",
+        "preserved_non_active_count",
+        "acceptance_set_sha256",
+        "runtime_authorization",
+        "rows"
+      ],
+      "special_contract": {},
+      "transition_owner": "O027",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-RULEACCEPTANCEMATRIX-STRUCTURE",
+        "TEST-OBJECT-RULEACCEPTANCEMATRIX-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DISCOVERED",
+        "VERIFIED",
+        "ACCEPTED_FOR_INTERPRETATION",
+        "PRESERVED_NON_ACTIVE",
+        "HOLD",
+        "REPAIR"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DISCOVERED",
+          "owner": "O027",
+          "to": "VERIFIED"
+        },
+        {
+          "from": "VERIFIED",
+          "owner": "O027",
+          "to": "ACCEPTED_FOR_INTERPRETATION"
+        },
+        {
+          "from": "VERIFIED",
+          "owner": "O027",
+          "to": "PRESERVED_NON_ACTIVE"
+        },
+        {
+          "from": "VERIFIED",
+          "owner": "O027",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O027",
+          "to": "REPAIR"
+        },
+        {
+          "from": "REPAIR",
+          "owner": "O027",
+          "to": "VERIFIED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "acceptance_row_sha256": [
+          "string"
+        ],
+        "canonical_acceptance_status": [
+          "string"
+        ],
+        "card_status": [
+          "string"
+        ],
+        "external_action_permission": [
+          "string"
+        ],
+        "fingerprint": [
+          "string"
+        ],
+        "layer": [
+          "BASE_CORE",
+          "PERSONAL_LAYER"
+        ],
+        "load_recognition_status": [
+          "ACCEPTED_FOR_INTERPRETATION",
+          "PRESERVED_NON_ACTIVE",
+          "HOLD",
+          "REPAIR"
+        ],
+        "norm_id": [
+          "#/$defs/Identifier"
+        ],
+        "operator_acceptance": [
+          "string"
+        ],
+        "route_applicability_default": [
+          "EVALUATE_PER_ROUTE",
+          "NOT_ACTIVE"
+        ],
+        "runtime_authorization": [
+          "string"
+        ]
+      },
+      "initial_state": "DISCOVERED",
+      "object_type": "RuleAcceptanceRecord",
+      "owner": "O027",
+      "relations": [],
+      "required_fields": [
+        "norm_id",
+        "layer",
+        "card_status",
+        "canonical_acceptance_status",
+        "load_recognition_status",
+        "route_applicability_default",
+        "operator_acceptance",
+        "runtime_authorization",
+        "external_action_permission",
+        "fingerprint",
+        "acceptance_row_sha256"
+      ],
+      "special_contract": {},
+      "transition_owner": "O027",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-RULEACCEPTANCERECORD-STRUCTURE",
+        "TEST-OBJECT-RULEACCEPTANCERECORD-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O022",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O022",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O022",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O022",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "availability": [
+          "string"
+        ],
+        "constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "coverage": [
+          "string"
+        ],
+        "exact_revisions": [
+          "string"
+        ],
+        "historical_status": [
+          "#/$defs/StringOrList"
+        ],
+        "integrity": [
+          "string"
+        ],
+        "snapshot_id": [
+          "#/$defs/Identifier"
+        ],
+        "time": [
+          "string"
+        ],
+        "type": [
+          "string"
+        ],
+        "verification_source": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Snapshot",
+      "owner": "O022",
+      "relations": [],
+      "required_fields": [
+        "snapshot_id",
+        "type",
+        "coverage",
+        "exact_revisions",
+        "time",
+        "integrity",
+        "availability",
+        "constraints",
+        "historical_status",
+        "verification_source"
+      ],
+      "special_contract": {},
+      "transition_owner": "O022",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-SNAPSHOT-STRUCTURE",
+        "TEST-OBJECT-SNAPSHOT-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "access": [
+          "#/$defs/StringOrList"
+        ],
+        "author_or_creator": [
+          "string"
+        ],
+        "constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "independence": [
+          "string"
+        ],
+        "place": [
+          "string"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "related_artifacts": [
+          "#/$defs/StringOrList"
+        ],
+        "source_id": [
+          "#/$defs/Identifier"
+        ],
+        "time": [
+          "string"
+        ],
+        "type": [
+          "string"
+        ],
+        "version": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Source",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "source_id",
+        "type",
+        "author_or_creator",
+        "time",
+        "place",
+        "version",
+        "provenance",
+        "access",
+        "independence",
+        "constraints",
+        "related_artifacts"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-SOURCE-STRUCTURE",
+        "TEST-OBJECT-SOURCE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O021",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O021",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O021",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O021",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O021",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O021",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "active_cycles": [
+          "#/$defs/StringOrList"
+        ],
+        "actual_object": [
+          "string"
+        ],
+        "blocks": [
+          "#/$defs/StringOrList"
+        ],
+        "freshness": [
+          "#/$defs/StringOrList"
+        ],
+        "instant_or_interval": [
+          "string"
+        ],
+        "level_profile": [
+          "#/$defs/LevelProfile"
+        ],
+        "representations": [
+          "#/$defs/StringOrList"
+        ],
+        "resources": [
+          "#/$defs/StringOrList"
+        ],
+        "revision": [
+          "string"
+        ],
+        "state_id": [
+          "#/$defs/Identifier"
+        ],
+        "state_kind": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "State",
+      "owner": "O021",
+      "relations": [],
+      "required_fields": [
+        "state_id",
+        "actual_object",
+        "instant_or_interval",
+        "level_profile",
+        "active_cycles",
+        "blocks",
+        "resources",
+        "representations",
+        "freshness",
+        "revision"
+      ],
+      "special_contract": {},
+      "transition_owner": "O021",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-STATE-STRUCTURE",
+        "TEST-OBJECT-STATE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "archive_sha256": [
+          "string"
+        ],
+        "capabilities": [
+          "#/$defs/StringOrList"
+        ],
+        "declaration_id": [
+          "#/$defs/Identifier"
+        ],
+        "declared_at": [
+          "string"
+        ],
+        "fallbacks": [
+          "#/$defs/StringOrList"
+        ],
+        "limitations": [
+          "#/$defs/StringOrList"
+        ],
+        "memory_constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "owner_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+        "record_status": [
+          "DRAFT",
+          "FINAL"
+        ],
+        "security_constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "substrate_kind": [
+          "string"
+        ],
+        "tool_constraints": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "SubstrateDeclaration",
+      "owner": "O011",
+      "relations": [
+        "BOUNDS:CalculatingElement",
+        "DECLARES_FOR:PhilosophicalMachine",
+        "IMPLEMENTS_PHASE:C02",
+        "IMPLEMENTS_SURFACE:PACKAGE_LOADING",
+        "RECORDED_IN:State"
+      ],
+      "required_fields": [
+        "declaration_id",
+        "record_status",
+        "package_id",
+        "archive_sha256",
+        "owner_ref",
+        "substrate_kind",
+        "capabilities",
+        "limitations",
+        "security_constraints",
+        "memory_constraints",
+        "tool_constraints",
+        "fallbacks",
+        "declared_at"
+      ],
+      "special_contract": {
+        "final_record_requires_archive_sha256": true
+      },
+      "transition_owner": "O011",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-SUBSTRATEDECLARATION-STRUCTURE",
+        "TEST-OBJECT-SUBSTRATEDECLARATION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "ambiguities": [
+          "#/$defs/StringOrList"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "executor": [
+          "#/$defs/Identifier"
+        ],
+        "input_revisions": [
+          "string"
+        ],
+        "method": [
+          "string"
+        ],
+        "output": [
+          "string"
+        ],
+        "reliability": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "transformation_id": [
+          "#/$defs/Identifier"
+        ],
+        "verification": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Transformation",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "transformation_id",
+        "input_revisions",
+        "output",
+        "method",
+        "executor",
+        "scope",
+        "ambiguities",
+        "alternatives",
+        "verification",
+        "reliability",
+        "dependencies"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-TRANSFORMATION-STRUCTURE",
+        "TEST-OBJECT-TRANSFORMATION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O013",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "D/V/S": [
+          "#/$defs/StringOrList"
+        ],
+        "actual_effect": [
+          "string"
+        ],
+        "authority": [
+          "string"
+        ],
+        "candidate_status": [
+          "string"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "executor": [
+          "#/$defs/Identifier"
+        ],
+        "input_revisions": [
+          "string"
+        ],
+        "invariants": [
+          "#/$defs/StringOrList"
+        ],
+        "operation": [
+          "string"
+        ],
+        "outputs": [
+          "#/$defs/StringOrList"
+        ],
+        "status": [
+          "string"
+        ],
+        "transition_id": [
+          "#/$defs/Identifier"
+        ],
+        "type": [
+          "string"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Transition",
+      "owner": "O013",
+      "relations": [],
+      "required_fields": [
+        "transition_id",
+        "type",
+        "input_revisions",
+        "operation",
+        "executor",
+        "authority",
+        "D/V/S",
+        "invariants",
+        "outputs",
+        "actual_effect",
+        "dependencies",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O013",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-TRANSITION-STRUCTURE",
+        "TEST-OBJECT-TRANSITION-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O013",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "confirmation": [
+          "string"
+        ],
+        "conflict_status": [
+          "#/$defs/StringOrList"
+        ],
+        "content": [
+          "string"
+        ],
+        "influence": [
+          "string"
+        ],
+        "joint_sufficiency": [
+          "string"
+        ],
+        "necessity": [
+          "string"
+        ],
+        "roles": [
+          "#/$defs/StringOrList"
+        ],
+        "source": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ],
+        "trigger_id": [
+          "#/$defs/Identifier"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Trigger",
+      "owner": "O013",
+      "relations": [],
+      "required_fields": [
+        "trigger_id",
+        "content",
+        "source",
+        "time",
+        "roles",
+        "necessity",
+        "joint_sufficiency",
+        "confirmation",
+        "conflict_status",
+        "influence",
+        "status"
+      ],
+      "special_contract": {},
+      "transition_owner": "O013",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-TRIGGER-STRUCTURE",
+        "TEST-OBJECT-TRIGGER-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CAPTURED",
+        "BOUNDED",
+        "ASSESSED",
+        "QUALIFIED",
+        "RESOLVED",
+        "PRESERVED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CAPTURED",
+          "owner": "O001",
+          "to": "BOUNDED"
+        },
+        {
+          "from": "BOUNDED",
+          "owner": "O001",
+          "to": "ASSESSED"
+        },
+        {
+          "from": "ASSESSED",
+          "owner": "O001",
+          "to": "QUALIFIED"
+        },
+        {
+          "from": "QUALIFIED",
+          "owner": "O001",
+          "to": "RESOLVED"
+        },
+        {
+          "from": "QUALIFIED",
+          "owner": "O001",
+          "to": "PRESERVED"
+        }
+      ],
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "field_types": {
+        "affected_goals": [
+          "#/$defs/StringOrList"
+        ],
+        "assessment_refs": [
+          "array"
+        ],
+        "bounded_at_phase": [
+          "C01"
+        ],
+        "class": [
+          "string"
+        ],
+        "cost": [
+          "#/$defs/CostEstimate"
+        ],
+        "created_at_phase": [
+          "C01"
+        ],
+        "detectability": [
+          "string"
+        ],
+        "formulation": [
+          "string"
+        ],
+        "owner": [
+          "O001"
+        ],
+        "review_conditions": [
+          "#/$defs/StringOrList"
+        ],
+        "risk": [
+          "string"
+        ],
+        "routes": [
+          "#/$defs/StringOrList"
+        ],
+        "significance": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "unknown_id": [
+          "#/$defs/Identifier"
+        ],
+        "value_status": [
+          "string"
+        ]
+      },
+      "initial_state": "CAPTURED",
+      "object_type": "Unknown",
+      "owner": "O001",
+      "relations": [
+        "IMPLEMENTS_PHASE:C01"
+      ],
+      "required_fields": [
+        "unknown_id",
+        "class",
+        "formulation",
+        "affected_goals",
+        "significance",
+        "detectability",
+        "routes",
+        "cost",
+        "risk",
+        "status",
+        "review_conditions",
+        "owner",
+        "created_at_phase",
+        "bounded_at_phase",
+        "assessment_refs"
+      ],
+      "special_contract": {},
+      "transition_owner": "O001",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-UNKNOWN-STRUCTURE",
+        "TEST-OBJECT-UNKNOWN-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O004",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O004",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O004",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O004",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "field_types": {
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "branch_id": [
+          "#/$defs/Identifier"
+        ],
+        "cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "exact_revision": [
+          "string"
+        ],
+        "hypothesis_id": [
+          "#/$defs/Identifier"
+        ],
+        "operator_decision": [
+          "string"
+        ],
+        "risk": [
+          "string"
+        ],
+        "route_id": [
+          "#/$defs/Identifier"
+        ],
+        "term": [
+          "string"
+        ],
+        "termination_conditions": [
+          "#/$defs/StringOrList"
+        ],
+        "working_link_id": [
+          "#/$defs/Identifier"
+        ]
+      },
+      "initial_state": null,
+      "object_type": "Working Hypothesis Role",
+      "owner": "O004",
+      "relations": [],
+      "required_fields": [
+        "working_link_id",
+        "hypothesis_id",
+        "route_id",
+        "cycle_id",
+        "branch_id",
+        "exact_revision",
+        "operator_decision",
+        "term",
+        "alternatives",
+        "risk",
+        "termination_conditions"
+      ],
+      "special_contract": {},
+      "transition_owner": "O004",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-WORKING-HYPOTHESIS-ROLE-STRUCTURE",
+        "TEST-OBJECT-WORKING-HYPOTHESIS-ROLE-BEHAVIOR"
+      ]
+    }
+  ],
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "relation_types_ref": "machine/RELATION_TYPES.json"
+}

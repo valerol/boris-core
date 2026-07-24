@@ -1,0 +1,38 @@
+finding_id	severity	title	source_version	status	affected_surfaces	repair_summary	closure_condition
+F-219-001	HISTORICAL	Historical v2.19 repair item 001	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-001 PASS
+F-219-002	HISTORICAL	Historical v2.19 repair item 002	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-002 PASS
+F-219-003	HISTORICAL	Historical v2.19 repair item 003	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-003 PASS
+F-219-004	HISTORICAL	Historical v2.19 repair item 004	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-004 PASS
+F-219-005	HISTORICAL	Historical v2.19 repair item 005	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-005 PASS
+F-219-006	HISTORICAL	Historical v2.19 repair item 006	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-006 PASS
+F-219-007	HISTORICAL	Historical v2.19 repair item 007	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-007 PASS
+F-219-008	HISTORICAL	Historical v2.19 repair item 008	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-008 PASS
+F-219-009	HISTORICAL	Historical v2.19 repair item 009	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-009 PASS
+F-219-010	HISTORICAL	Historical v2.19 repair item 010	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-010 PASS
+F-219-011	HISTORICAL	Historical v2.19 repair item 011	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-011 PASS
+F-219-012	HISTORICAL	Historical v2.19 repair item 012	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-012 PASS
+F-219-013	HISTORICAL	Historical v2.19 repair item 013	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-013 PASS
+F-219-014	HISTORICAL	Historical v2.19 repair item 014	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-014 PASS
+F-219-015	HISTORICAL	Historical v2.19 repair item 015	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-015 PASS
+F-219-016	HISTORICAL	Historical v2.19 repair item 016	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-016 PASS
+F-219-017	HISTORICAL	Historical v2.19 repair item 017	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-017 PASS
+F-219-018	HISTORICAL	Historical v2.19 repair item 018	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-018 PASS
+F-219-019	HISTORICAL	Historical v2.19 repair item 019	2.19	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete inherited lineage, migration, validation checks, and reference closure.	CHECK-F-219-019 PASS
+F-220-001	HISTORICAL	Historical v2.20 repair item 001	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-001 PASS
+F-220-002	HISTORICAL	Historical v2.20 repair item 002	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-002 PASS
+F-220-003	HISTORICAL	Historical v2.20 repair item 003	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-003 PASS
+F-220-004	HISTORICAL	Historical v2.20 repair item 004	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-004 PASS
+F-220-005	HISTORICAL	Historical v2.20 repair item 005	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-005 PASS
+F-220-006	HISTORICAL	Historical v2.20 repair item 006	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-006 PASS
+F-220-007	HISTORICAL	Historical v2.20 repair item 007	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-007 PASS
+F-220-008	HISTORICAL	Historical v2.20 repair item 008	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-008 PASS
+F-220-009	HISTORICAL	Historical v2.20 repair item 009	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-009 PASS
+F-220-010	HISTORICAL	Historical v2.20 repair item 010	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-010 PASS
+F-220-011	HISTORICAL	Historical v2.20 repair item 011	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-011 PASS
+F-220-012	HISTORICAL	Historical v2.20 repair item 012	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-012 PASS
+F-220-013	HISTORICAL	Historical v2.20 repair item 013	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-013 PASS
+F-220-014	HISTORICAL	Historical v2.20 repair item 014	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-014 PASS
+F-220-015	HISTORICAL	Historical v2.20 repair item 015	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-015 PASS
+F-220-016	HISTORICAL	Historical v2.20 repair item 016	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-016 PASS
+F-220-017	HISTORICAL	Historical v2.20 repair item 017	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-017 PASS
+F-220-018	HISTORICAL	Historical v2.20 repair item 018	2.20	CLOSED_BY_V2.22	Derived assurance surfaces	Imported to restore complete lineage and reference closure.	CHECK-F-220-018 PASS

@@ -1,0 +1,629 @@
+{
+  "artifact_version": "2.22",
+  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "phases": [
+    {
+      "assessment_objects": [
+        "Input_Container",
+        "Source"
+      ],
+      "entry_conditions": [
+        "literal input and source are captured"
+      ],
+      "gate_test": "TEST-GATE-INPUT-CAPTURED",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C00",
+          "to": "HOLD"
+        }
+      ],
+      "name": "INPUT_CAPTURED",
+      "next_phase": "C01",
+      "output_objects": [
+        "Phenomenon"
+      ],
+      "phase_id": "C00",
+      "phase_owner": "O003",
+      "primary_object": "Phenomenon",
+      "primary_object_owner": "O001",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C00_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C00",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Unknown",
+        "Risk"
+      ],
+      "entry_conditions": [
+        "C00 PASS"
+      ],
+      "gate_test": "TEST-GATE-CONTEXT-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C01",
+          "to": "HOLD"
+        }
+      ],
+      "name": "PHENOMENON_BOUNDED",
+      "next_phase": "C02",
+      "output_objects": [
+        "Phenomenon",
+        "Unknown"
+      ],
+      "phase_id": "C01",
+      "phase_owner": "O001",
+      "primary_object": "Phenomenon",
+      "primary_object_owner": "O001",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C01_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C01",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O004",
+        "O020"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Context_Package",
+        "Authority"
+      ],
+      "entry_conditions": [
+        "phenomenon boundary exists"
+      ],
+      "gate_test": "TEST-GATE-DVS-AND-AUTHORITY-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C02",
+          "to": "HOLD"
+        }
+      ],
+      "name": "GOAL_AND_DVS_CONFIRMED",
+      "next_phase": "C03",
+      "output_objects": [
+        "Context_Package"
+      ],
+      "phase_id": "C02",
+      "phase_owner": "O003",
+      "primary_object": "Context Package",
+      "primary_object_owner": "O013",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C02_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C02",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O017",
+        "O020",
+        "O011"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Evidence",
+        "Source",
+        "EpistemicAssessment"
+      ],
+      "entry_conditions": [
+        "goal, D/V/S, completion criterion, and authority state are qualified"
+      ],
+      "gate_test": "TEST-GATE-EPISTEMIC-INPUT-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C03",
+          "to": "HOLD"
+        }
+      ],
+      "name": "EPISTEMIC_INVENTORY",
+      "next_phase": "C04",
+      "output_objects": [
+        "EpistemicAssessment"
+      ],
+      "phase_id": "C03",
+      "phase_owner": "O010",
+      "primary_object": "EpistemicAssessment",
+      "primary_object_owner": "O010",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C03_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C03",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009",
+        "O001"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Unknown",
+        "Question"
+      ],
+      "entry_conditions": [
+        "epistemic inventory exists"
+      ],
+      "gate_test": "TEST-GATE-CONCRETE-INPUT-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C04",
+          "to": "HOLD"
+        }
+      ],
+      "name": "QUESTION_OR_TASK_QUALIFIED",
+      "next_phase": "C05",
+      "output_objects": [
+        "Question"
+      ],
+      "phase_id": "C04",
+      "phase_owner": "O004",
+      "primary_object": "Question",
+      "primary_object_owner": "O004",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C04_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C04",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O003",
+        "O008"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Protocol",
+        "Branch",
+        "CostEstimate"
+      ],
+      "entry_conditions": [
+        "question or task is qualified"
+      ],
+      "gate_test": "TEST-GATE-ROUTE-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C05",
+          "to": "HOLD"
+        }
+      ],
+      "name": "ROUTE_FROZEN",
+      "next_phase": "C06",
+      "output_objects": [
+        "Protocol"
+      ],
+      "phase_id": "C05",
+      "phase_owner": "O013",
+      "primary_object": "Protocol",
+      "primary_object_owner": "O008",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C05_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C05",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O008",
+        "O011",
+        "O020"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "CognitiveProtocolRun",
+        "AbstractionTrace",
+        "Inference",
+        "Model"
+      ],
+      "entry_conditions": [
+        "route is frozen"
+      ],
+      "gate_test": "TEST-GATE-C06-MICROROUTE-COMPLETE",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C06",
+          "to": "HOLD"
+        }
+      ],
+      "name": "COGNITIVE_TRANSFORMATION",
+      "next_phase": "C07",
+      "output_objects": [
+        "CognitiveProtocolRun"
+      ],
+      "phase_id": "C06",
+      "phase_owner": "O014",
+      "primary_object": "CognitiveProtocolRun",
+      "primary_object_owner": "O014",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C06_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C06",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O005",
+        "O006",
+        "O007",
+        "O008"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "Evidence",
+        "EpistemicAssessment"
+      ],
+      "entry_conditions": [
+        "all C06 branches and microphases return"
+      ],
+      "gate_test": "TEST-GATE-C07-EPISTEMIC-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C07",
+          "to": "HOLD"
+        }
+      ],
+      "name": "EVIDENCE_AND_STATUS_ASSIGNED",
+      "next_phase": "C08",
+      "output_objects": [
+        "EpistemicAssessment"
+      ],
+      "phase_id": "C07",
+      "phase_owner": "O010",
+      "primary_object": "EpistemicAssessment",
+      "primary_object_owner": "O010",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C07_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C07",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009",
+        "O015",
+        "O027"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "BoundedResult",
+        "Representation"
+      ],
+      "entry_conditions": [
+        "evidence and S-levels are assigned"
+      ],
+      "gate_test": "TEST-GATE-RESULT-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C08",
+          "to": "HOLD"
+        }
+      ],
+      "name": "RESULT_CONCRETIZED",
+      "next_phase": "C09",
+      "output_objects": [
+        "BoundedResult"
+      ],
+      "phase_id": "C08",
+      "phase_owner": "O006",
+      "primary_object": "BoundedResult",
+      "primary_object_owner": "O006",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C08_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C08",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O005",
+        "O008",
+        "O012"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "ClosureCandidate",
+        "ResidualRiskDecision",
+        "Defect"
+      ],
+      "entry_conditions": [
+        "bounded result exists"
+      ],
+      "gate_test": "TEST-GATE-CLOSURE-READY",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C09",
+          "to": "HOLD"
+        }
+      ],
+      "name": "CLOSURE_CANDIDATE",
+      "next_phase": "C10",
+      "output_objects": [
+        "ClosureCandidate"
+      ],
+      "phase_id": "C09",
+      "phase_owner": "O016",
+      "primary_object": "ClosureCandidate",
+      "primary_object_owner": "O016",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C09_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C09",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O025",
+        "O026",
+        "O028"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "ClosureCandidate",
+        "QualityDecision",
+        "AuthorityDecision",
+        "ResidualRiskDecision",
+        "ExternalActionProposal"
+      ],
+      "entry_conditions": [
+        "closure candidate is schema-valid",
+        "quality decision is independent and PASS",
+        "when external action is required, authority and residual-risk decisions are valid and scope-bound"
+      ],
+      "gate_test": "TEST-GATE-C10-RELATIONAL-AUTHORIZATION",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C10",
+          "to": "HOLD"
+        }
+      ],
+      "name": "QUALITY_REVIEW_AND_ACTION_TRANSITION",
+      "next_phase": "C11",
+      "output_objects": [
+        "QualityDecision",
+        "AuthorizedExternalAction"
+      ],
+      "phase_id": "C10",
+      "phase_owner": "O027",
+      "primary_object": "QualityDecision",
+      "primary_object_owner": "O027",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C10_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C10",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O017",
+        "O020",
+        "O015"
+      ]
+    },
+    {
+      "assessment_objects": [
+        "ActionExecutionRecord",
+        "ObservedEffect",
+        "State"
+      ],
+      "entry_conditions": [
+        "action execution record is terminal or NO_ACTION",
+        "observed effect is terminal, evidenced, and linked to a state update"
+      ],
+      "gate_test": "TEST-GATE-C11-EFFECT-CHAIN",
+      "hold_routes": [
+        {
+          "condition": "RECOVERABLE_MISSING_PRECONDITION_OR_MATERIAL_UNKNOWN",
+          "return_state": "C11",
+          "to": "HOLD"
+        }
+      ],
+      "name": "EFFECT_OR_NEW_PHENOMENON",
+      "next_phase": "C00_OR_CLOSED",
+      "output_objects": [
+        "ObservedEffect",
+        "State"
+      ],
+      "phase_id": "C11",
+      "phase_owner": "O015",
+      "primary_object": "ObservedEffect",
+      "primary_object_owner": "O015",
+      "recovery_route": {
+        "condition": "REPAIR_COMPLETED_OR_RECOVERY_PACKAGE_ACCEPTED",
+        "to": "C00"
+      },
+      "repair_route": {
+        "condition": "SPECIFICATION_OR_SCHEMA_DEFECT",
+        "to": "REPAIR"
+      },
+      "required_evidence": [
+        "C11_gate_evidence",
+        "current provenance",
+        "material unknowns visible"
+      ],
+      "return_path": "C00_OR_CLOSED",
+      "stop_routes": [
+        {
+          "condition": "PROHIBITION_OR_FUNDAMENTAL_INVARIANT_VIOLATION",
+          "to": "STOP"
+        }
+      ],
+      "supporting_organs": [
+        "O009",
+        "O016",
+        "O021"
+      ]
+    }
+  ]
+}
