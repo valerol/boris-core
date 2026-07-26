@@ -1,6 +1,6 @@
 {
-  "artifact_version": "2.22",
-  "package_id": "BOIS_COMMON_CORE_TEMNIK_V2_22",
+  "artifact_version": "2.31",
+  "package_id": "v2.31_Public_BOIS_Common_Core",
   "relation_types": {
     "APPLIES_TO": {
       "target_kind": "OBJECT"
@@ -93,5 +93,6 @@
       "target_kind": "OBJECT"
     }
   },
+  "schema_ref": "schema/RELATION_SCHEMA.json",
   "syntax": "RELATION_TYPE:TargetObjectOrPhase"
 }

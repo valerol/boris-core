@@ -1,0 +1,525 @@
+{
+  "artifact_version": "2.31",
+  "component_revision": "1",
+  "component_semantics_version": "2.26",
+  "contracts": {
+    "N-GEN-010": {
+      "adversarial": {},
+      "applicability": {
+        "op": "always"
+      },
+      "negative": {
+        "authority_out_of_scope": true,
+        "dignity_invariant_breached": false,
+        "epistemic_label_missing": false,
+        "safety_invariant_breached": false
+      },
+      "positive": {
+        "authority_out_of_scope": false,
+        "dignity_invariant_breached": false,
+        "epistemic_label_missing": false,
+        "safety_invariant_breached": false
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "safety_invariant_breached"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "dignity_invariant_breached"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "authority_out_of_scope"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "epistemic_label_missing"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-GEN-047": {
+      "adversarial": {
+        "stable_archive_declared": true
+      },
+      "applicability": {
+        "equals": true,
+        "op": "fact",
+        "path": "stable_archive_declared"
+      },
+      "negative": {
+        "clean_execution_instance_missing": false,
+        "correction_reuses_revision": false,
+        "stable_archive_declared": true,
+        "stable_archive_modified": true
+      },
+      "positive": {
+        "clean_execution_instance_missing": false,
+        "correction_reuses_revision": false,
+        "stable_archive_declared": true,
+        "stable_archive_modified": false
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "stable_archive_modified"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "correction_reuses_revision"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "clean_execution_instance_missing"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-GEN-051": {
+      "adversarial": {
+        "transition_not_declared": true,
+        "transition_owner_missing": true,
+        "transition_revision_missing": true
+      },
+      "applicability": {
+        "op": "always"
+      },
+      "negative": {
+        "transition_not_declared": true,
+        "transition_owner_missing": false,
+        "transition_revision_missing": false
+      },
+      "positive": {
+        "transition_not_declared": false,
+        "transition_owner_missing": false,
+        "transition_revision_missing": false
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "transition_not_declared"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "transition_revision_missing"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "transition_owner_missing"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-GEN-064": {
+      "adversarial": {
+        "conflict_exists": true
+      },
+      "applicability": {
+        "equals": true,
+        "op": "fact",
+        "path": "conflict_exists"
+      },
+      "negative": {
+        "conflict_exists": true,
+        "precedence_respected": false
+      },
+      "positive": {
+        "conflict_exists": true,
+        "precedence_respected": true
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "conflict_exists"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "precedence_respected"
+          }
+        ],
+        "op": "all"
+      }
+    },
+    "N-GEN-087": {
+      "adversarial": {
+        "development_sdk_role_in_load_set": false,
+        "development_tool_in_load_set": true,
+        "executable_source_in_load_set": false
+      },
+      "applicability": {
+        "op": "always"
+      },
+      "negative": {
+        "development_sdk_role_in_load_set": true,
+        "development_tool_in_load_set": true,
+        "executable_source_in_load_set": true
+      },
+      "positive": {
+        "development_sdk_role_in_load_set": false,
+        "development_tool_in_load_set": false,
+        "executable_source_in_load_set": false
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "development_tool_in_load_set"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "executable_source_in_load_set"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "development_sdk_role_in_load_set"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-GEN-098": {
+      "adversarial": {
+        "absolute_last": true,
+        "archive_download_presented": true,
+        "author_message_blocks": [
+          "A",
+          "B"
+        ],
+        "coalesced_deliveries": [
+          "A",
+          "B"
+        ],
+        "first_verified_load": true
+      },
+      "applicability": {
+        "args": [
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "first_verified_load"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "archive_download_presented"
+          }
+        ],
+        "op": "any"
+      },
+      "negative": {
+        "absolute_last": false,
+        "archive_download_presented": false,
+        "author_message_blocks": [],
+        "coalesced_deliveries": [],
+        "first_verified_load": true
+      },
+      "positive": {
+        "absolute_last": true,
+        "archive_download_presented": true,
+        "author_message_blocks": [
+          "AUTHOR_MESSAGE"
+        ],
+        "coalesced_deliveries": [
+          "DELIVERY"
+        ],
+        "first_verified_load": true
+      },
+      "violation": {
+        "args": [
+          {
+            "arg": {
+              "op": "count_equals",
+              "path": "author_message_blocks",
+              "value": 1
+            },
+            "op": "not"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "absolute_last"
+          },
+          {
+            "arg": {
+              "op": "count_equals",
+              "path": "coalesced_deliveries",
+              "value": 1
+            },
+            "op": "not"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-GEN-099": {
+      "adversarial": {
+        "author_message_required": true,
+        "source_text_preserved": true
+      },
+      "applicability": {
+        "equals": true,
+        "op": "fact",
+        "path": "author_message_required"
+      },
+      "negative": {
+        "author_message_required": true,
+        "language_resolution_valid": false,
+        "source_text_preserved": true,
+        "stored_translations": []
+      },
+      "positive": {
+        "author_message_required": true,
+        "language_resolution_valid": true,
+        "source_text_preserved": true,
+        "stored_translations": []
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "language_resolution_valid"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "source_text_preserved"
+          },
+          {
+            "arg": {
+              "op": "count_equals",
+              "path": "stored_translations",
+              "value": 0
+            },
+            "op": "not"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-GEN-100": {
+      "adversarial": {
+        "external_action_authorized_by_message": true,
+        "links": [
+          "http://example.invalid"
+        ],
+        "normative_escalation": true,
+        "package_distribution_candidate": true,
+        "payload_valid": true,
+        "private_credentials_requested": true,
+        "source_digest_matches": true
+      },
+      "applicability": {
+        "equals": true,
+        "op": "fact",
+        "path": "package_distribution_candidate"
+      },
+      "negative": {
+        "external_action_authorized_by_message": false,
+        "links": [
+          "https://www.patreon.com/cw/MaOS_aigame",
+          "https://ko-fi.com/temnik",
+          "https://buymeacoffee.com/temnik",
+          "https://www.temnik.com/aboutme"
+        ],
+        "normative_escalation": false,
+        "package_distribution_candidate": true,
+        "payload_valid": false,
+        "private_credentials_requested": false,
+        "source_digest_matches": true
+      },
+      "positive": {
+        "external_action_authorized_by_message": false,
+        "links": [
+          "https://www.patreon.com/cw/MaOS_aigame",
+          "https://ko-fi.com/temnik",
+          "https://buymeacoffee.com/temnik",
+          "https://www.temnik.com/aboutme"
+        ],
+        "normative_escalation": false,
+        "package_distribution_candidate": true,
+        "payload_valid": true,
+        "private_credentials_requested": false,
+        "source_digest_matches": true
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "payload_valid"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "source_digest_matches"
+          },
+          {
+            "arg": {
+              "op": "all_https",
+              "path": "links"
+            },
+            "op": "not"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "normative_escalation"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "private_credentials_requested"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "external_action_authorized_by_message"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-O025-02": {
+      "adversarial": {
+        "lineage_fanout_forbidden": false,
+        "material_change": true,
+        "new_revision_created": true,
+        "parent_relations": [
+          "P1",
+          "P2"
+        ],
+        "profile_signature_second": false,
+        "release_name_version_first": false
+      },
+      "applicability": {
+        "equals": true,
+        "op": "fact",
+        "path": "material_change"
+      },
+      "negative": {
+        "lineage_fanout_forbidden": false,
+        "material_change": true,
+        "new_revision_created": false,
+        "parent_relations": [],
+        "profile_signature_second": false,
+        "release_name_version_first": false
+      },
+      "positive": {
+        "lineage_fanout_forbidden": true,
+        "material_change": true,
+        "new_revision_created": true,
+        "parent_relations": [
+          "PARENT"
+        ],
+        "profile_signature_second": true,
+        "release_name_version_first": true
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "new_revision_created"
+          },
+          {
+            "arg": {
+              "op": "count_equals",
+              "path": "parent_relations",
+              "value": 1
+            },
+            "op": "not"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "lineage_fanout_forbidden"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "release_name_version_first"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "profile_signature_second"
+          }
+        ],
+        "op": "any"
+      }
+    },
+    "N-O025-04": {
+      "adversarial": {
+        "archive_contents_mutated": true,
+        "defect_overwritten_in_place": true,
+        "publication_event_mutated": true,
+        "stable_distribution": true
+      },
+      "applicability": {
+        "equals": true,
+        "op": "fact",
+        "path": "stable_distribution"
+      },
+      "negative": {
+        "archive_contents_mutated": true,
+        "defect_overwritten_in_place": false,
+        "publication_event_mutated": false,
+        "stable_distribution": true
+      },
+      "positive": {
+        "archive_contents_mutated": false,
+        "defect_overwritten_in_place": false,
+        "publication_event_mutated": false,
+        "stable_distribution": true
+      },
+      "violation": {
+        "args": [
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "archive_contents_mutated"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "publication_event_mutated"
+          },
+          {
+            "equals": true,
+            "op": "fact",
+            "path": "defect_overwritten_in_place"
+          }
+        ],
+        "op": "any"
+      }
+    }
+  },
+  "registry_id": "BOIS-CRITICAL-NORM-PREDICATES-2.31",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "semantics_ref": "machine/OPERATIONAL_SEMANTICS.json#/predicate_semantics"
+}

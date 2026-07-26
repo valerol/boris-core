@@ -1,0 +1,14 @@
+{
+  "artifact_version": "2.31",
+  "delegated_key_sha256": "19cc39ad82b4df1870ce9a3e014c0c55f25e40556e8a4785f7833abfe528c070",
+  "delegation_id": "v2.31_BOIS_Project_Release_Key_Delegation",
+  "scope": [
+    "v2.31_Public_BOIS_Common_Core",
+    "v2.31_Temnik_BOIS_Common_Core",
+    "v2.31_Assurance_BOIS_Validation_Toolset"
+  ],
+  "status": "ACTIVE_FOR_V2.31_EXTERNAL_REVIEW_CANDIDATES",
+  "trust_anchor_sha256": "ca073b43d1d1d2bf296cf48295d9e7d37fd22b5b65b43b6405782ed5fd7223f1",
+  "valid_from": "2026-07-25T20:31:00Z",
+  "valid_until": null
+}

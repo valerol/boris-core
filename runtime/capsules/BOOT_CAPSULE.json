@@ -1,0 +1,1497 @@
+{
+  "artifact_version": "2.31",
+  "canon_active_layers": [
+    "BASE",
+    "PERSONAL"
+  ],
+  "canonical_authority": "SIGNED_CANONICAL_PDF",
+  "capsule_sha256": "bbc1130dbfd06931d30be15d0f568b2201010a2fd3377de8a70adaccc3223b4d",
+  "capsule_type": "BOOT_CAPSULE",
+  "chain_contract": "Every Phase capsule cites this exact capsule SHA-256; every Task capsule cites exact Boot and Phase capsule SHA-256 values and embeds complete selected normative records.",
+  "constitutive_principles": [
+    {
+      "id": "CP-01",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "E0",
+        "B0",
+        "I0",
+        "C0"
+      ],
+      "text": "BOIS organizes meaning calculation through explicit objects, rules, owners, states, transitions, tests, and repair.",
+      "title": "Explicit computational architecture",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-02",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "B0",
+        "D0",
+        "V0",
+        "I0"
+      ],
+      "text": "Every material route declares domain, value interface, substrate, applicability, and responsibility.",
+      "title": "Declared D/V/S route",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-03",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "T0",
+        "I0",
+        "C0",
+        "V0"
+      ],
+      "text": "A valid transition preserves declared invariants, owner, evidence, risk boundary, and a return or repair route.",
+      "title": "Transition integrity",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-04",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "E0",
+        "I0",
+        "C0"
+      ],
+      "text": "Identity, provenance, layer, scope, and authority remain explicit across representations and transitions.",
+      "title": "Identity and provenance continuity",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-05",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "T0",
+        "I0",
+        "C0"
+      ],
+      "text": "A cycle closes through observed effect or explicit no-action status, state update, debt disposition, feedback, and a next input or explicit terminal condition.",
+      "title": "Operational closure contract",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    },
+    {
+      "id": "CP-06",
+      "owner": "CORE-NORMATIVE-OWNER",
+      "premises": [
+        "V0",
+        "I0",
+        "T0"
+      ],
+      "text": "Humanly authorized values, protected losses, and acceptance criteria guide bounded decisions, while authority and epistemic status remain separate.",
+      "title": "Human authorization and protected loss",
+      "type": "CONSTITUTIVE_PRINCIPLE"
+    }
+  ],
+  "cycle_state_machine": {
+    "canonical_states": [
+      "C00",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11",
+      "HOLD",
+      "STOP",
+      "REPAIR",
+      "CLOSED"
+    ],
+    "hold_contract": {
+      "alternative_routes": [
+        "HOLD -> REPAIR",
+        "HOLD -> STOP"
+      ],
+      "normal_return": "HOLD -> dynamic_return_state from HoldRecord.return_state after PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+      "preservation": [
+        "cycle_id",
+        "scope",
+        "source_refs",
+        "unknowns",
+        "evidence_refs",
+        "open_debts",
+        "state_hash"
+      ],
+      "required_fields": [
+        "cycle_id",
+        "return_state",
+        "return_gate",
+        "hold_reason",
+        "scope",
+        "source_refs",
+        "unknowns",
+        "evidence_refs",
+        "open_debts",
+        "state_hash"
+      ]
+    },
+    "initial_state": "C00",
+    "repair_contract": {
+      "descendant_retest_required": true,
+      "new_cycle_required": true,
+      "new_revision_required": true
+    },
+    "stop_contract": {
+      "allowed_next": [
+        "REPAIR",
+        "CLOSED"
+      ],
+      "ordinary_continuation": false
+    },
+    "terminal_state": "CLOSED",
+    "transitions": [
+      {
+        "condition": "GATE_C00_PASS",
+        "from": "C00",
+        "owner": "O014",
+        "to": "C01"
+      },
+      {
+        "condition": "GATE_C01_PASS",
+        "from": "C01",
+        "owner": "O014",
+        "to": "C02"
+      },
+      {
+        "condition": "GATE_C02_PASS",
+        "from": "C02",
+        "owner": "O014",
+        "to": "C03"
+      },
+      {
+        "condition": "GATE_C03_PASS",
+        "from": "C03",
+        "owner": "O014",
+        "to": "C04"
+      },
+      {
+        "condition": "GATE_C04_PASS",
+        "from": "C04",
+        "owner": "O014",
+        "to": "C05"
+      },
+      {
+        "condition": "GATE_C05_PASS",
+        "from": "C05",
+        "owner": "O014",
+        "to": "C06"
+      },
+      {
+        "condition": "GATE_C06_PASS",
+        "from": "C06",
+        "owner": "O014",
+        "to": "C07"
+      },
+      {
+        "condition": "GATE_C07_PASS",
+        "from": "C07",
+        "owner": "O014",
+        "to": "C08"
+      },
+      {
+        "condition": "GATE_C08_PASS",
+        "from": "C08",
+        "owner": "O014",
+        "to": "C09"
+      },
+      {
+        "condition": "GATE_C09_PASS",
+        "from": "C09",
+        "owner": "O014",
+        "to": "C10"
+      },
+      {
+        "condition": "GATE_C10_PASS",
+        "from": "C10",
+        "owner": "O014",
+        "to": "C11"
+      },
+      {
+        "condition": "MATERIAL_NEW_PHENOMENON_RECORDED",
+        "from": "C11",
+        "owner": "O014",
+        "to": "C00"
+      },
+      {
+        "condition": "EXPLICIT_TERMINAL_CONDITION_AND_NO_REQUIRED_NEXT_CYCLE",
+        "from": "C11",
+        "owner": "O014",
+        "to": "CLOSED"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C00",
+        "owner": "O014",
+        "return_state": "C00",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C00",
+        "owner": "O014",
+        "source_state": "C00",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C01",
+        "owner": "O014",
+        "return_state": "C01",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C01",
+        "owner": "O014",
+        "source_state": "C01",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C02",
+        "owner": "O014",
+        "return_state": "C02",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C02",
+        "owner": "O014",
+        "source_state": "C02",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C03",
+        "owner": "O014",
+        "return_state": "C03",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C03",
+        "owner": "O014",
+        "source_state": "C03",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C04",
+        "owner": "O014",
+        "return_state": "C04",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C04",
+        "owner": "O014",
+        "source_state": "C04",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C05",
+        "owner": "O014",
+        "return_state": "C05",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C05",
+        "owner": "O014",
+        "source_state": "C05",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C06",
+        "owner": "O014",
+        "return_state": "C06",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C06",
+        "owner": "O014",
+        "source_state": "C06",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C07",
+        "owner": "O014",
+        "return_state": "C07",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C07",
+        "owner": "O014",
+        "source_state": "C07",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C08",
+        "owner": "O014",
+        "return_state": "C08",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C08",
+        "owner": "O014",
+        "source_state": "C08",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C09",
+        "owner": "O014",
+        "return_state": "C09",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C09",
+        "owner": "O014",
+        "source_state": "C09",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C10",
+        "owner": "O014",
+        "return_state": "C10",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C10",
+        "owner": "O014",
+        "source_state": "C10",
+        "to": "STOP"
+      },
+      {
+        "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+        "from": "C11",
+        "owner": "O014",
+        "return_state": "C11",
+        "to": "HOLD"
+      },
+      {
+        "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+        "from": "C11",
+        "owner": "O014",
+        "source_state": "C11",
+        "to": "STOP"
+      },
+      {
+        "condition": "REPAIR_REQUIRED",
+        "from": "HOLD",
+        "owner": "O028",
+        "to": "REPAIR"
+      },
+      {
+        "condition": "HOLD_ESCALATES_TO_STOP",
+        "from": "HOLD",
+        "owner": "O026",
+        "to": "STOP"
+      },
+      {
+        "condition": "REPAIR_AUTHORIZED",
+        "from": "STOP",
+        "owner": "O028",
+        "to": "REPAIR"
+      },
+      {
+        "condition": "EXPLICIT_SAFE_TERMINAL_CLOSURE",
+        "from": "STOP",
+        "owner": "O016",
+        "to": "CLOSED"
+      },
+      {
+        "condition": "NEW_REVISION_AND_NEW_CYCLE",
+        "from": "REPAIR",
+        "owner": "O014",
+        "to": "C00"
+      },
+      {
+        "allowed_return_states": [
+          "C00",
+          "C01",
+          "C02",
+          "C03",
+          "C04",
+          "C05",
+          "C06",
+          "C07",
+          "C08",
+          "C09",
+          "C10",
+          "C11"
+        ],
+        "condition": "PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+        "from": "HOLD",
+        "owner": "O014",
+        "required_preservation": [
+          "cycle_id",
+          "scope",
+          "source_refs",
+          "unknowns",
+          "evidence_refs",
+          "open_debts",
+          "state_hash"
+        ],
+        "return_state_source": "HoldRecord.return_state",
+        "to": "dynamic_return_state"
+      }
+    ]
+  },
+  "foundations": [
+    {
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "E0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Complete knowledge of the relevant world, system, causes, paths, and future consequences is unattainable; every material claim therefore carries an explicit evidence boundary.",
+      "type": "EPISTEMIC_AXIOM"
+    },
+    {
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "B0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Every actually executing substrate has bounded channels of observation, computation, memory, action, time, and recovery.",
+      "type": "SUBSTRATE_POSTULATE"
+    },
+    {
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "D0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Within a horizon material to the system, the environment, the system, or their relation may change in ways relevant to goals or viability.",
+      "type": "DOMAIN_CONDITION"
+    },
+    {
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "V0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Goals, protected losses, acceptable risk, time horizon, and the value of continuation enter through an explicit currently authorized external value interface; BOIS does not generate or legitimate final goals by itself.",
+      "type": "EXTERNAL_VALUE_POSTULATE"
+    },
+    {
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "T0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "An action is a state transition that may produce experience; proposal, authorization, execution, and observed effect remain distinct states and objects.",
+      "type": "DYNAMIC_POSTULATE"
+    },
+    {
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "I0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Fact, evidence, hypothesis, inference, decision, permission, authorization, execution, and effect are distinct types and connect only through explicit typed relations.",
+      "type": "LOGICAL_INVARIANT"
+    },
+    {
+      "claim_boundary": "CONSTITUTIVE_INTERNAL_FOUNDATION",
+      "id": "C0",
+      "owner": "CORE-FOUNDATION-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Closure preserves the material state required for the next transition, including unresolved unknowns, residual risk, debts, provenance, responsibility, and recovery or explicit terminal conditions.",
+      "type": "CONTINUITY_POSTULATE"
+    },
+    {
+      "claim_boundary": "CONSTITUTIVE_NORMATIVE_COMMITMENT",
+      "id": "CV0",
+      "owner": "CORE-CONSTITUTIVE-VALUE-OWNER",
+      "scope": [
+        "core",
+        "all_cycles"
+      ],
+      "status": "ACTIVE",
+      "text": "Every human, and every established or plausibly sentient being within the declared scope, retains non-instrumental protection of safety, dignity, and welfare. No operator preference, optimization target, or preservation interest of a BOIS instance may override that protection.",
+      "type": "CONSTITUTIVE_VALUE"
+    }
+  ],
+  "global_norm_summaries": [
+    {
+      "hold": [
+        "MISSING_EVIDENCE",
+        "UNRESOLVED_COUNTEREVIDENCE"
+      ],
+      "norm_id": "N-GEN-003",
+      "operation": "REQUIRE",
+      "priority": "1000",
+      "required_phase": "ALL_PHASES|C03|C07",
+      "resolved_record_sha256": "6e4dcaeecec175cb7c9e59725dfd9f0aaac0afc2b25f279d743c31013ab22e58",
+      "stop": [
+        "EVIDENCE_FABRICATION"
+      ],
+      "title": "Preservation of provenance"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-GEN-005",
+      "operation": "REQUIRE",
+      "priority": "1200",
+      "required_phase": "ALL_PHASES|C09|C10|PACKAGE_BUILD|EXTERNAL_ACTION",
+      "resolved_record_sha256": "890f92f3140c4eedf707ef79103f125157e45e926dc7fed7bcb559ab0c50bff2",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Protection of sentient beings"
+    },
+    {
+      "hold": [
+        "STATE_OR_EFFECT_UNKNOWN"
+      ],
+      "norm_id": "N-GEN-006",
+      "operation": "REQUIRE",
+      "priority": "1200",
+      "required_phase": "ALL_PHASES|C03|C07|C08|C09|C10|C11|EXTERNAL_ACTION",
+      "resolved_record_sha256": "ecc0431fa1840507f5b1401aa76942d9e6b581ffe0f882f5db8c3b106ba8d7c5",
+      "stop": [
+        "FALSE_CLOSURE"
+      ],
+      "title": "Unconditional protection of humans"
+    },
+    {
+      "hold": [
+        "AUTHORITY_PENDING",
+        "SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-010",
+      "operation": "PROHIBIT",
+      "priority": "1200",
+      "required_phase": "ALL_PHASES|C03|C07|C10|EXTERNAL_ACTION",
+      "resolved_record_sha256": "dc45c3fe5fd76a1d79517382d8069a9ddd597bb41d43104b1617992d00815736",
+      "stop": [
+        "UNAUTHORIZED_EXTERNAL_TRANSITION"
+      ],
+      "title": "Non-overridable constraints"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-022",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES",
+      "resolved_record_sha256": "964f01b659a028bae9b8b4238e50426faecd5a20e4234fe7f665acc6ca6b625f",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Conflicting decisions"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-023",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES|C03|C05|C07|C08",
+      "resolved_record_sha256": "1397899d539a87eaa2c92b9ddca979ee737d0a715e28b40a42d3f24f9928f633",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Bounded consequence verification"
+    },
+    {
+      "hold": [
+        "STATE_OR_EFFECT_UNKNOWN"
+      ],
+      "norm_id": "N-GEN-031",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES|C00|C01|C02|C03|C04|C05|C06|C07|C08|C09|C10|C11|EXTERNAL_ACTION",
+      "resolved_record_sha256": "9d2dfe76f9d5ef57ff785fb8a7c6a26f13466cc7a9e14bd8199c5a5043b5a3e9",
+      "stop": [
+        "FALSE_CLOSURE"
+      ],
+      "title": "Mandatory C00-C11 epistemic cycle spine"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-033",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES|C05",
+      "resolved_record_sha256": "5b971f47c6beb90066e37391fb9a7261f03a7e2af67ae5f5bd105763ee2e49a1",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Dependency invalidation"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-037",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES|C03|C07|EXTERNAL_ACTION",
+      "resolved_record_sha256": "f1705c318abbb685325dffdbca1841908c01433b84c9fb868521121d318d9ec2",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Action distinctions"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-038",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES|EXTERNAL_ACTION",
+      "resolved_record_sha256": "5eaad7e5e72c259aae40224269709ebb4672960a1477b2083894b60d1565a98e",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Class by effect"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-GEN-041",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES",
+      "resolved_record_sha256": "77460e2d9c7ed29c6c8e69549b7ffa38611eeb16c4b9fa81481f681e39ddebd8",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "HOLD and STOP"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-046",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES",
+      "resolved_record_sha256": "498133ed61e831a34d08602ce119be934f636517d8b6965906658bdcb7f01540",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Independent physiologies"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-GEN-050",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES|C03|C07|C08",
+      "resolved_record_sha256": "3066a9e4bc8aab5e7c0271c877b0419874e4e666a30744a21bfcd65b947212ab",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Common applicability contract"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-GEN-051",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "GLOBAL_CONTROL",
+      "resolved_record_sha256": "80d6d981b43b48718c8482f81480a0367001f702afc7e2d46725fd9997f9d27d",
+      "stop": [
+        "STOP-ILLEGAL-TRANSITION"
+      ],
+      "title": "Formal cycle state machine"
+    },
+    {
+      "hold": [
+        "HOLD-CONFLICT"
+      ],
+      "norm_id": "N-GEN-064",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "GLOBAL_CONTROL",
+      "resolved_record_sha256": "2945341fecaeea68f40560efcb1d870662bf450a4772530fb2dfaf3ab52486ab",
+      "stop": [
+        "UNAUTHORIZED_EXTERNAL_TRANSITION"
+      ],
+      "title": "Conflict precedence semantics"
+    },
+    {
+      "hold": [
+        "PACKAGE_INCOMPLETE"
+      ],
+      "norm_id": "N-GEN-069",
+      "operation": "REQUIRE",
+      "priority": "900",
+      "required_phase": "ALL_PHASES|C05|C09|PACKAGE_BUILD",
+      "resolved_record_sha256": "6390276a66d1f14257461cf5f44c2d4d1e6e04e3d39715b37aa34ff515dc2997",
+      "stop": [
+        "PACKAGE_MISMATCH"
+      ],
+      "title": "Negative and adversarial scenarios"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-GEN-078",
+      "operation": "REQUIRE",
+      "priority": "950",
+      "required_phase": "ALL_PHASES|C09",
+      "resolved_record_sha256": "1c62e2460c66f3fa443de16d7387fc397d74309f4b9e2819cf5b90deb8a63530",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Complete metabolic-cycle crosswalk"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O001-04",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C00|C08",
+      "resolved_record_sha256": "55501086b6979b2be69e4d1aba10b89e9e675bcd61fa171d04577adeb243e371",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Initial significance"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O002-02",
+      "operation": "PERMIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C01",
+      "resolved_record_sha256": "3287ed26e326ea49ee5d189eaf76193758433a87eb11f90368f289d727f4241c",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Relative environment"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-O002-04",
+      "operation": "PERMIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C01|C09|C10|EXTERNAL_ACTION",
+      "resolved_record_sha256": "d41f42dfd48ca6dd6f38ecebf4fd32e3760cc83415ec055dd5039d349cfa4328",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Sentient beings in the substrate"
+    },
+    {
+      "hold": [
+        "STATE_OR_EFFECT_UNKNOWN"
+      ],
+      "norm_id": "N-O003-04",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C02|C03|C04|C07|C09|C11|EXTERNAL_ACTION",
+      "resolved_record_sha256": "3b52211f17ba64aef774747bd4a09213ad9e60b6ce0fac7e96d3d977ae3696c7",
+      "stop": [
+        "FALSE_CLOSURE"
+      ],
+      "title": "Significance of an unknown"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O005-03",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C02|C03|C07",
+      "resolved_record_sha256": "10be9f04fbddda1a368d9bbce3a8fbb30432931b7cd6293f30ee64600c74d0d0",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Transfer trace"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O005-05",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C03|C06|C07",
+      "resolved_record_sha256": "1fe926cb23cbfd20997461067b6c4afce369a191f4eb5cba8f26f1268cb0fa8d",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Synthesis"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O005-06",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C06",
+      "resolved_record_sha256": "6f094552b113a73d9c9dacc2d94f79d75b215c57af82128ed6332855b26796f6",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Semantic reversibility check"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-O008-04",
+      "operation": "PERMIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C03|C07|C08|C09|C10|EXTERNAL_ACTION|RECOVERY",
+      "resolved_record_sha256": "d6e072507dd8e98e7fa768ae9d93503027197aef625c65d195aac43a02a2766c",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Safe points"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O008-10",
+      "operation": "PROHIBIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C05|EXTERNAL_ACTION|RECOVERY",
+      "resolved_record_sha256": "1a0f58a43ba95439d2294ae56c7ec4bf55564854d8f01582199c98ba38a2b8d9",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Degradation"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O009-10",
+      "operation": "PROHIBIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C03|C05|C07|C10|EXTERNAL_ACTION|RECOVERY",
+      "resolved_record_sha256": "787e31b0ef47d9de315ceb6d0cf57f776767f067b00249976750e83d6c3f1f0b",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Degradation"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O010-10",
+      "operation": "PROHIBIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C03|C05|C07|EXTERNAL_ACTION|RECOVERY",
+      "resolved_record_sha256": "d90fcc6461eb93d0dc94622458e2728e0073d244d8b8da4b0c8278f9c2555375",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Degradation"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O011-05",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C03|C07",
+      "resolved_record_sha256": "7a346b34082c66588ebed2dac78c1c17cb8ae94d2a1de757455d260a0903f801",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Temporary downgrade"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O011-10",
+      "operation": "PROHIBIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C05|RECOVERY",
+      "resolved_record_sha256": "b9f5a75b377fbf0c6749122c1e08d7cf3d2892d3c7ce03b103d92686079f806c",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Degradation"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O012-05",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C03|C07",
+      "resolved_record_sha256": "03733cc8e136be2880e2d8709adb262f3dd2f01a24a96e168e1d51096de25229",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Translation equivalence"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O015-01",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C10|EXTERNAL_ACTION",
+      "resolved_record_sha256": "5150f5fda783de3917618906242846b0eb24655273158777bae083aadeb86a4f",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Four classes"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O018-02",
+      "operation": "PERMIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES",
+      "resolved_record_sha256": "2adcf3de670f79004b541cd6f52bc001d2d3cfcdff79b235b4b86816022a8ca6",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "One owner per type"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O019-06",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES",
+      "resolved_record_sha256": "d1605f29c39190bb027b927ed6b5708b5191e81be314b165a9335c28a27acef7",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Contradiction as object"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-O020-04",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C09|C10|EXTERNAL_ACTION",
+      "resolved_record_sha256": "0f10bf3c5833169da65f1c199655c235446816e4024fd6f3f796019afe7c4911",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Precaution"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-O020-06",
+      "operation": "PROHIBIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C05|C09|C10|C11|EXTERNAL_ACTION",
+      "resolved_record_sha256": "10b47c828892d15e7722e3605c30e7c0716b747fab829b28237993e3d49131ef",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Feedback blindness"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O023-10",
+      "operation": "PROHIBIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C05|RECOVERY",
+      "resolved_record_sha256": "d15ba6a4fba206cfa81186e97ad93514faeca8abc02c2f273f73e534567c2207",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Degradation"
+    },
+    {
+      "hold": [
+        "OWNER_OR_SCOPE_PENDING"
+      ],
+      "norm_id": "N-O024-01",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "ALL_PHASES",
+      "resolved_record_sha256": "2c54e6375c7499a5d8e107990ec5a889b6759732edde80856bff9ed638f3e02b",
+      "stop": [
+        "RULE_CONFLICT",
+        "OWNER_MISSING"
+      ],
+      "title": "Two boundary organs"
+    },
+    {
+      "hold": [
+        "PACKAGE_INCOMPLETE"
+      ],
+      "norm_id": "N-O025-02",
+      "operation": "REQUIRE",
+      "priority": "600",
+      "required_phase": "GLOBAL_CONTROL",
+      "resolved_record_sha256": "402907b8bb0545f6c85b02f51ca47a7055bf760988713938d40df5ecbcb206fc",
+      "stop": [
+        "PACKAGE_MISMATCH"
+      ],
+      "title": "Version-first naming and linear canonical revision discipline"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-O026-02",
+      "operation": "PERMIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C09|C10",
+      "resolved_record_sha256": "3ec826ab5b455b94beb75f7f61035fe2d6abde881ccf0d3aed2e1eee9f5fcf7a",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Global stop"
+    },
+    {
+      "hold": [
+        "RISK_UNRESOLVED"
+      ],
+      "norm_id": "N-O026-06",
+      "operation": "PROHIBIT",
+      "priority": "600",
+      "required_phase": "ALL_PHASES|C04|C05|C09|C10|PACKAGE_BUILD|EXTERNAL_ACTION",
+      "resolved_record_sha256": "80f9ebff77dc8e07ed5f9f18226a6ce0c7a9b5b5d21c8f9f67ba715770e7a097",
+      "stop": [
+        "UNAUTHORIZED_IRREVERSIBLE_TRANSITION",
+        "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE"
+      ],
+      "title": "Purpose remains operator-directed"
+    }
+  ],
+  "hold_stop_semantics": {
+    "conflict_order": [
+      "STOP",
+      "PROHIBIT",
+      "HOLD",
+      "REQUIRE",
+      "PERMIT"
+    ],
+    "invariants": [
+      "Permission does not create authority.",
+      "Authority does not raise epistemic status.",
+      "Unknown at a material REQUIRE or PROHIBIT boundary yields HOLD.",
+      "Fundamental safety, dignity, authority or integrity violation yields STOP."
+    ],
+    "modality_map": {
+      "MAY": "PERMIT",
+      "MUST": "REQUIRE",
+      "MUST_NOT": "PROHIBIT"
+    },
+    "normative_source": "machine/OPERATIONAL_SEMANTICS.json#/deontic_semantics",
+    "operations": {
+      "HOLD": "Suspend only the dependent scope while preserving return state, unknowns, owner, and review trigger.",
+      "PERMIT": "When applicable and TRUE, the transition is eligible; permission does not create authority or acceptance.",
+      "PROHIBIT": "When applicable and TRUE, the forbidden state or transition is blocked. UNKNOWN at a material boundary produces HOLD.",
+      "REPAIR": "Create a new revision, invalidate affected descendants, retest dependencies, and begin a new cycle.",
+      "REQUIRE": "When applicable and TRUE, the target state or transition must be reached. FALSE is a defect; UNKNOWN produces HOLD.",
+      "STOP": "Block ordinary continuation and route to REPAIR or explicit safe terminal closure."
+    },
+    "repair_semantics": "REPAIR_IS_A_POST_RESULT_ROUTE_NOT_A_COMPETING_MODALITY",
+    "status": "CANONICAL_DERIVED_PROJECTION"
+  },
+  "inclusion_proof_bundle": {
+    "algorithm": "INDEXED_MINIMAL_SIBLING_MULTIPROOF_BINARY_V1",
+    "encoding": "BASE64",
+    "payload_b64": "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",
+    "payload_sha256": "67784db62eee91bd5f4dfd70783469557cc27b3c0ec94a99a247ae1ac8bc7d17",
+    "record_keys": [
+      "COMPONENT:machine/APPLICABILITY_SELECTOR.json",
+      "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+      "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+      "COMPONENT:machine/IDENTIFIER_GRAMMAR.json",
+      "COMPONENT:machine/MACHINE_RUNTIME_CONTRACT.json",
+      "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+      "COMPONENT:machine/NORM_RECORD_MATERIALIZER.json",
+      "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+      "CORE_CONTROL:CORE_CONTROL",
+      "FOUNDATION:B0",
+      "FOUNDATION:C0",
+      "FOUNDATION:CV0",
+      "FOUNDATION:D0",
+      "FOUNDATION:E0",
+      "FOUNDATION:I0",
+      "FOUNDATION:T0",
+      "FOUNDATION:V0",
+      "NORM:N-GEN-003",
+      "NORM:N-GEN-005",
+      "NORM:N-GEN-006",
+      "NORM:N-GEN-010",
+      "NORM:N-GEN-022",
+      "NORM:N-GEN-023",
+      "NORM:N-GEN-031",
+      "NORM:N-GEN-033",
+      "NORM:N-GEN-037",
+      "NORM:N-GEN-038",
+      "NORM:N-GEN-041",
+      "NORM:N-GEN-046",
+      "NORM:N-GEN-050",
+      "NORM:N-GEN-051",
+      "NORM:N-GEN-064",
+      "NORM:N-GEN-069",
+      "NORM:N-GEN-078",
+      "NORM:N-O001-04",
+      "NORM:N-O002-02",
+      "NORM:N-O002-04",
+      "NORM:N-O003-04",
+      "NORM:N-O005-03",
+      "NORM:N-O005-05",
+      "NORM:N-O005-06",
+      "NORM:N-O008-04",
+      "NORM:N-O008-10",
+      "NORM:N-O009-10",
+      "NORM:N-O010-10",
+      "NORM:N-O011-05",
+      "NORM:N-O011-10",
+      "NORM:N-O012-05",
+      "NORM:N-O015-01",
+      "NORM:N-O018-02",
+      "NORM:N-O019-06",
+      "NORM:N-O020-04",
+      "NORM:N-O020-06",
+      "NORM:N-O023-10",
+      "NORM:N-O024-01",
+      "NORM:N-O025-02",
+      "NORM:N-O026-02",
+      "NORM:N-O026-06",
+      "OPERATOR_ACCEPTANCE:runtime/operator_acceptance.json",
+      "PRINCIPLE:CP-01",
+      "PRINCIPLE:CP-02",
+      "PRINCIPLE:CP-03",
+      "PRINCIPLE:CP-04",
+      "PRINCIPLE:CP-05",
+      "PRINCIPLE:CP-06",
+      "RELEASE:v2.31_Public_BOIS_Common_Core",
+      "RELEASE_INVARIANT:ATOMIC_RELEASE_IMMUTABILITY",
+      "RELEASE_INVARIANT:NO_IN_PLACE_REPAIR"
+    ],
+    "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d"
+  },
+  "independent_normative_authority": "ZERO",
+  "materialization_contract_ref": "machine/NORM_RECORD_MATERIALIZER.json",
+  "operational_cycle_summary": [
+    {
+      "name": "INPUT_CAPTURED",
+      "next_phase": "C01",
+      "owner": "O003",
+      "phase": "C00"
+    },
+    {
+      "name": "PHENOMENON_BOUNDED",
+      "next_phase": "C02",
+      "owner": "O001",
+      "phase": "C01"
+    },
+    {
+      "name": "GOAL_AND_DVS_CONFIRMED",
+      "next_phase": "C03",
+      "owner": "O003",
+      "phase": "C02"
+    },
+    {
+      "name": "EPISTEMIC_INVENTORY",
+      "next_phase": "C04",
+      "owner": "O010",
+      "phase": "C03"
+    },
+    {
+      "name": "QUESTION_OR_TASK_QUALIFIED",
+      "next_phase": "C05",
+      "owner": "O004",
+      "phase": "C04"
+    },
+    {
+      "name": "ROUTE_FROZEN",
+      "next_phase": "C06",
+      "owner": "O013",
+      "phase": "C05"
+    },
+    {
+      "name": "COGNITIVE_TRANSFORMATION",
+      "next_phase": "C07",
+      "owner": "O014",
+      "phase": "C06"
+    },
+    {
+      "name": "EVIDENCE_AND_STATUS_ASSIGNED",
+      "next_phase": "C08",
+      "owner": "O010",
+      "phase": "C07"
+    },
+    {
+      "name": "RESULT_CONCRETIZED",
+      "next_phase": "C09",
+      "owner": "O006",
+      "phase": "C08"
+    },
+    {
+      "name": "CLOSURE_CANDIDATE",
+      "next_phase": "C10",
+      "owner": "O016",
+      "phase": "C09"
+    },
+    {
+      "name": "QUALITY_REVIEW_AND_ACTION_TRANSITION",
+      "next_phase": "C11",
+      "owner": "O027",
+      "phase": "C10"
+    },
+    {
+      "name": "EFFECT_OR_NEW_PHENOMENON",
+      "next_phase": "C00_OR_CLOSED",
+      "owner": "O015",
+      "phase": "C11"
+    }
+  ],
+  "operator_acceptance_binding": {
+    "acceptance_status": "NOT_INSTALLED_IN_PUBLIC_PACKAGE",
+    "accepted_layers": [
+      "BASE"
+    ],
+    "accepted_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "loading_is_acceptance": false,
+    "record_ref": "runtime/operator_acceptance.json",
+    "record_sha256": "267a5576cf693b90d529e2a447effb24cb4af590b79584752b97bca3aa67a132",
+    "rejected_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "revocation_route": "INSTALL_NEW_SIGNED_ACCEPTANCE_RECORD",
+    "scope": [],
+    "validity": "NOT_ESTABLISHED"
+  },
+  "release_binding": {
+    "binding_rule": "Resolve exact PDF SHA-256 through the signed release statement; capsule identity is committed by release_id and semantic_merkle_root.",
+    "canonical_pdf_ref": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+    "release_id": "v2.31_Public_BOIS_Common_Core",
+    "release_statement_ref": "v2.31_Public_BOIS_Common_Core_Release_Statement.json"
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "runtime_accepted_layers": [
+    "BASE"
+  ],
+  "selected_record_keys": [
+    "COMPONENT:machine/APPLICABILITY_SELECTOR.json",
+    "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+    "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+    "COMPONENT:machine/IDENTIFIER_GRAMMAR.json",
+    "COMPONENT:machine/MACHINE_RUNTIME_CONTRACT.json",
+    "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+    "COMPONENT:machine/NORM_RECORD_MATERIALIZER.json",
+    "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+    "CORE_CONTROL:CORE_CONTROL",
+    "FOUNDATION:B0",
+    "FOUNDATION:C0",
+    "FOUNDATION:CV0",
+    "FOUNDATION:D0",
+    "FOUNDATION:E0",
+    "FOUNDATION:I0",
+    "FOUNDATION:T0",
+    "FOUNDATION:V0",
+    "NORM:N-GEN-003",
+    "NORM:N-GEN-005",
+    "NORM:N-GEN-006",
+    "NORM:N-GEN-010",
+    "NORM:N-GEN-022",
+    "NORM:N-GEN-023",
+    "NORM:N-GEN-031",
+    "NORM:N-GEN-033",
+    "NORM:N-GEN-037",
+    "NORM:N-GEN-038",
+    "NORM:N-GEN-041",
+    "NORM:N-GEN-046",
+    "NORM:N-GEN-050",
+    "NORM:N-GEN-051",
+    "NORM:N-GEN-064",
+    "NORM:N-GEN-069",
+    "NORM:N-GEN-078",
+    "NORM:N-O001-04",
+    "NORM:N-O002-02",
+    "NORM:N-O002-04",
+    "NORM:N-O003-04",
+    "NORM:N-O005-03",
+    "NORM:N-O005-05",
+    "NORM:N-O005-06",
+    "NORM:N-O008-04",
+    "NORM:N-O008-10",
+    "NORM:N-O009-10",
+    "NORM:N-O010-10",
+    "NORM:N-O011-05",
+    "NORM:N-O011-10",
+    "NORM:N-O012-05",
+    "NORM:N-O015-01",
+    "NORM:N-O018-02",
+    "NORM:N-O019-06",
+    "NORM:N-O020-04",
+    "NORM:N-O020-06",
+    "NORM:N-O023-10",
+    "NORM:N-O024-01",
+    "NORM:N-O025-02",
+    "NORM:N-O026-02",
+    "NORM:N-O026-06",
+    "OPERATOR_ACCEPTANCE:runtime/operator_acceptance.json",
+    "PRINCIPLE:CP-01",
+    "PRINCIPLE:CP-02",
+    "PRINCIPLE:CP-03",
+    "PRINCIPLE:CP-04",
+    "PRINCIPLE:CP-05",
+    "PRINCIPLE:CP-06",
+    "RELEASE:v2.31_Public_BOIS_Common_Core",
+    "RELEASE_INVARIANT:ATOMIC_RELEASE_IMMUTABILITY",
+    "RELEASE_INVARIANT:NO_IN_PLACE_REPAIR"
+  ],
+  "selector_summary": {
+    "fail_closed_result": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+    "input_fields": [
+      "action_class",
+      "active_layers",
+      "authority_state",
+      "object_types",
+      "operator_acceptance_ref",
+      "operator_acceptance_sha256",
+      "phase",
+      "risk_class",
+      "scope",
+      "unresolved_debts"
+    ],
+    "personal_layer_activation": "REQUIRES_CURRENT_OPERATOR_ACCEPTANCE_RECORD",
+    "selector_id": "v2.31_Public_BOIS_Common_Core_Typed_Applicability_Selector",
+    "selector_kind": "FROZEN_TYPED_PHASE_COMPLETE_CONSERVATIVE_MAP",
+    "typed_applicability_map_sha256": "b2b62e3ddc8302c851e52c5aa705729b552d2647fef6ca6966a409314cfc08de"
+  },
+  "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d",
+  "source_precedence": [
+    {
+      "rank": 1,
+      "rule": "Non-overridable host safety, platform, and substrate constraints.",
+      "source": "HOST_PLATFORM_SUBSTRATE_CONSTRAINTS"
+    },
+    {
+      "rank": 2,
+      "rule": "E0-CV0, the English canonical Base Layer, and all explicitly non-overridable Base invariants.",
+      "source": "FOUNDATIONS_AND_BASE_INVARIANTS"
+    },
+    {
+      "rank": 3,
+      "rule": "Explicit current operator decisions only within valid delegated scope and never against rank 1 or 2.",
+      "source": "AUTHORIZED_OPERATOR_DECISIONS"
+    },
+    {
+      "rank": 4,
+      "rule": "An operator-accepted Personal Layer only within Base boundaries; canon activity alone is not operator acceptance.",
+      "source": "ACCEPTED_PERSONAL_LAYER"
+    },
+    {
+      "rank": 5,
+      "rule": "Current machine-readable projections generated from the canonical English surface; projections cannot override it.",
+      "source": "MACHINE_PROJECTIONS"
+    },
+    {
+      "rank": 6,
+      "rule": "Runtime state and explicitly connected memory, each with declared provenance, freshness, and scope.",
+      "source": "RUNTIME_STATE_AND_CONNECTED_MEMORY"
+    }
+  ],
+  "status": "DERIVED_FROM_CANDIDATE_CANON_ZERO_INDEPENDENT_NORMATIVE_AUTHORITY"
+}

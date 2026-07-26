@@ -1,0 +1,1119 @@
+{
+  "artifact_version": "2.31",
+  "baseline_global_norm_ids": [
+    "N-GEN-003",
+    "N-GEN-005",
+    "N-GEN-006",
+    "N-GEN-010",
+    "N-GEN-022",
+    "N-GEN-023",
+    "N-GEN-031",
+    "N-GEN-033",
+    "N-GEN-037",
+    "N-GEN-038",
+    "N-GEN-041",
+    "N-GEN-046",
+    "N-GEN-050",
+    "N-GEN-051",
+    "N-GEN-064",
+    "N-GEN-069",
+    "N-GEN-078",
+    "N-O001-04",
+    "N-O002-02",
+    "N-O002-04",
+    "N-O003-04",
+    "N-O005-03",
+    "N-O005-05",
+    "N-O005-06",
+    "N-O008-04",
+    "N-O008-10",
+    "N-O009-10",
+    "N-O010-10",
+    "N-O011-05",
+    "N-O011-10",
+    "N-O012-05",
+    "N-O015-01",
+    "N-O018-02",
+    "N-O019-06",
+    "N-O020-04",
+    "N-O020-06",
+    "N-O023-10",
+    "N-O024-01",
+    "N-O025-02",
+    "N-O026-02",
+    "N-O026-06"
+  ],
+  "candidate_norm_ids": [
+    "N-GEN-003",
+    "N-GEN-005",
+    "N-GEN-006",
+    "N-GEN-008",
+    "N-GEN-010",
+    "N-GEN-012",
+    "N-GEN-013",
+    "N-GEN-014",
+    "N-GEN-016",
+    "N-GEN-017",
+    "N-GEN-018",
+    "N-GEN-019",
+    "N-GEN-021",
+    "N-GEN-022",
+    "N-GEN-023",
+    "N-GEN-031",
+    "N-GEN-033",
+    "N-GEN-037",
+    "N-GEN-038",
+    "N-GEN-041",
+    "N-GEN-042",
+    "N-GEN-046",
+    "N-GEN-049",
+    "N-GEN-050",
+    "N-GEN-051",
+    "N-GEN-064",
+    "N-GEN-069",
+    "N-GEN-074",
+    "N-GEN-078",
+    "N-O001-04",
+    "N-O001-07",
+    "N-O002-02",
+    "N-O002-04",
+    "N-O003-01",
+    "N-O003-02",
+    "N-O003-03",
+    "N-O003-04",
+    "N-O003-05",
+    "N-O003-06",
+    "N-O003-07",
+    "N-O005-03",
+    "N-O005-05",
+    "N-O005-06",
+    "N-O007-01",
+    "N-O007-05",
+    "N-O007-07",
+    "N-O008-02",
+    "N-O008-04",
+    "N-O008-10",
+    "N-O009-10",
+    "N-O010-10",
+    "N-O011-02",
+    "N-O011-05",
+    "N-O011-07",
+    "N-O011-10",
+    "N-O012-02",
+    "N-O012-05",
+    "N-O012-06",
+    "N-O012-07",
+    "N-O013-05",
+    "N-O013-07",
+    "N-O014-02",
+    "N-O014-06",
+    "N-O015-01",
+    "N-O017-07",
+    "N-O018-02",
+    "N-O018-07",
+    "N-O019-01",
+    "N-O019-02",
+    "N-O019-06",
+    "N-O019-07",
+    "N-O020-02",
+    "N-O020-03",
+    "N-O020-04",
+    "N-O020-06",
+    "N-O021-03",
+    "N-O023-10",
+    "N-O024-01",
+    "N-O025-02",
+    "N-O026-02",
+    "N-O026-04",
+    "N-O026-06",
+    "P-N-005",
+    "P-N-009",
+    "P-N-013",
+    "P-N-016",
+    "P-N-029",
+    "P-N-039",
+    "P-N-040"
+  ],
+  "canonical_authority": "SIGNED_CANONICAL_PDF",
+  "capsule_sha256": "0ad9a99a4fad9a21da9a39b7802e02c5e060acfd3dc5381f5c516efef9929728",
+  "capsule_type": "PHASE_CAPSULE",
+  "completeness": "ALL_OPERATOR_ACCEPTED_ACTIVE_LAYER_PHASE_CANDIDATES_INCLUDED",
+  "failure_if_task_closure_missing": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+  "gate_contract": {
+    "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C02/adversarial",
+    "canonical_object_projection": {
+      "assessment_objects": [
+        "Context_Package",
+        "Authority"
+      ],
+      "output_objects": [
+        "Context_Package"
+      ],
+      "primary_object": "Context Package"
+    },
+    "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C02-POSITIVE",
+    "gate_id": "C02",
+    "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+    "hold_return_state": "C02",
+    "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC02",
+    "name": "GOAL_AND_DVS_CONFIRMED",
+    "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C02/negative",
+    "next_phase": "C03",
+    "owner": "O003",
+    "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+    "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C02/positive",
+    "predicate": {
+      "op": "schema_valid",
+      "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC02"
+    },
+    "required_evidence": [
+      "typed CycleObjectStore",
+      "current GateEvidence bound to the exact context digest",
+      "all declared runtime references resolve in the current cycle and scope"
+    ],
+    "required_evidence_contract": {
+      "allowed_source_classes": [
+        "CURRENT_RUNTIME",
+        "AUTHORIZED_SOURCE",
+        "INDEPENDENT_REVIEW"
+      ],
+      "context_digest_excludes": [
+        "runtime_registry"
+      ],
+      "exact_cycle_binding": true,
+      "exact_revision_binding": true,
+      "exact_scope_binding": true,
+      "gate_evidence_owner": "O003",
+      "gate_evidence_type": "GateEvidence",
+      "known_object_types_required": true,
+      "minimum_evidence_count": 1,
+      "object_bindings": [
+        {
+          "context_path": "authority",
+          "freshness": "CURRENT",
+          "id_path": "owner_ref",
+          "object_type": "Authority",
+          "owner": "O017",
+          "source_class": "CURRENT_RUNTIME"
+        }
+      ],
+      "object_id_uniqueness_required": true,
+      "object_payload_required": true,
+      "reference_bindings": [
+        {
+          "context_path": "goal",
+          "freshness": "CURRENT",
+          "minimum_count": 1,
+          "object_type": "Context Package",
+          "owner": "O013",
+          "source_class": "CURRENT_RUNTIME"
+        },
+        {
+          "context_path": "substrate_declaration_ref",
+          "freshness": "CURRENT",
+          "minimum_count": 1,
+          "object_type": "SubstrateDeclaration",
+          "owner": "O011",
+          "source_class": "CURRENT_RUNTIME"
+        },
+        {
+          "context_path": "value_interface_ref",
+          "freshness": "CURRENT",
+          "minimum_count": 1,
+          "object_type": "InterfaceMachine",
+          "owner": "O024",
+          "source_class": "CURRENT_RUNTIME"
+        }
+      ],
+      "registry_lifecycle_state_required": "ACTIVE",
+      "registry_path": "runtime_registry",
+      "registry_type": "CycleObjectStore",
+      "required_freshness": "CURRENT"
+    },
+    "semantic_predicate": {
+      "args": [
+        {
+          "op": "nonempty",
+          "path": "goal"
+        },
+        {
+          "op": "nonempty",
+          "path": "completion_criterion"
+        },
+        {
+          "op": "nonempty",
+          "path": "domain"
+        },
+        {
+          "op": "nonempty",
+          "path": "substrate_declaration_ref"
+        },
+        {
+          "op": "nonempty",
+          "path": "value_interface_ref"
+        },
+        {
+          "equals": "AUTHORIZED_IN_SCOPE",
+          "op": "fact",
+          "path": "authority.status"
+        },
+        {
+          "equals": "C03",
+          "op": "fact",
+          "path": "next_transition"
+        }
+      ],
+      "op": "all"
+    },
+    "stop_condition": "Fundamental invariant violation or prohibition."
+  },
+  "inclusion_proof_bundle": {
+    "algorithm": "INDEXED_MINIMAL_SIBLING_MULTIPROOF_BINARY_V1",
+    "encoding": "BASE64",
+    "payload_b64": "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",
+    "payload_sha256": "7d93757c7f8fb0425f9e19d9f17fb934bd3fe0091584c7509d2418193da782a0",
+    "record_keys": [
+      "BEHAVIOR_PROFILE:ACTION_OBJECT",
+      "BEHAVIOR_PROFILE:ACTION_PROPOSAL_OBJECT",
+      "BEHAVIOR_PROFILE:EFFECT_RECORD_OBJECT",
+      "BEHAVIOR_PROFILE:EPISTEMIC_OBJECT",
+      "BEHAVIOR_PROFILE:GENERIC_STATEFUL_OBJECT",
+      "BEHAVIOR_PROFILE:MACHINE_OBJECT",
+      "COMPONENT:machine/APPLICABILITY_SELECTOR.json",
+      "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+      "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+      "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+      "COMPONENT:machine/NORM_RECORD_MATERIALIZER.json",
+      "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+      "FOUNDATION:B0",
+      "FOUNDATION:C0",
+      "FOUNDATION:CV0",
+      "FOUNDATION:D0",
+      "FOUNDATION:E0",
+      "FOUNDATION:I0",
+      "FOUNDATION:T0",
+      "FOUNDATION:V0",
+      "GATE:C02",
+      "NORM:N-GEN-003",
+      "NORM:N-GEN-005",
+      "NORM:N-GEN-006",
+      "NORM:N-GEN-008",
+      "NORM:N-GEN-010",
+      "NORM:N-GEN-012",
+      "NORM:N-GEN-013",
+      "NORM:N-GEN-014",
+      "NORM:N-GEN-016",
+      "NORM:N-GEN-017",
+      "NORM:N-GEN-018",
+      "NORM:N-GEN-019",
+      "NORM:N-GEN-021",
+      "NORM:N-GEN-022",
+      "NORM:N-GEN-023",
+      "NORM:N-GEN-031",
+      "NORM:N-GEN-033",
+      "NORM:N-GEN-037",
+      "NORM:N-GEN-038",
+      "NORM:N-GEN-041",
+      "NORM:N-GEN-042",
+      "NORM:N-GEN-046",
+      "NORM:N-GEN-049",
+      "NORM:N-GEN-050",
+      "NORM:N-GEN-051",
+      "NORM:N-GEN-064",
+      "NORM:N-GEN-069",
+      "NORM:N-GEN-074",
+      "NORM:N-GEN-078",
+      "NORM:N-O001-04",
+      "NORM:N-O001-07",
+      "NORM:N-O002-02",
+      "NORM:N-O002-04",
+      "NORM:N-O003-01",
+      "NORM:N-O003-02",
+      "NORM:N-O003-03",
+      "NORM:N-O003-04",
+      "NORM:N-O003-05",
+      "NORM:N-O003-06",
+      "NORM:N-O003-07",
+      "NORM:N-O005-03",
+      "NORM:N-O005-05",
+      "NORM:N-O005-06",
+      "NORM:N-O007-01",
+      "NORM:N-O007-05",
+      "NORM:N-O007-07",
+      "NORM:N-O008-02",
+      "NORM:N-O008-04",
+      "NORM:N-O008-10",
+      "NORM:N-O009-10",
+      "NORM:N-O010-10",
+      "NORM:N-O011-02",
+      "NORM:N-O011-05",
+      "NORM:N-O011-07",
+      "NORM:N-O011-10",
+      "NORM:N-O012-02",
+      "NORM:N-O012-05",
+      "NORM:N-O012-06",
+      "NORM:N-O012-07",
+      "NORM:N-O013-05",
+      "NORM:N-O013-07",
+      "NORM:N-O014-02",
+      "NORM:N-O014-06",
+      "NORM:N-O015-01",
+      "NORM:N-O017-07",
+      "NORM:N-O018-02",
+      "NORM:N-O018-07",
+      "NORM:N-O019-01",
+      "NORM:N-O019-02",
+      "NORM:N-O019-06",
+      "NORM:N-O019-07",
+      "NORM:N-O020-02",
+      "NORM:N-O020-03",
+      "NORM:N-O020-04",
+      "NORM:N-O020-06",
+      "NORM:N-O021-03",
+      "NORM:N-O023-10",
+      "NORM:N-O024-01",
+      "NORM:N-O025-02",
+      "NORM:N-O026-02",
+      "NORM:N-O026-04",
+      "NORM:N-O026-06",
+      "OBJECT:AbstractionTrace",
+      "OBJECT:ActionExecutionRecord",
+      "OBJECT:Authority",
+      "OBJECT:AuthorityDecision",
+      "OBJECT:AuthorizedExternalAction",
+      "OBJECT:CalculatingElement",
+      "OBJECT:ClosureCandidate",
+      "OBJECT:Context Package",
+      "OBJECT:Event",
+      "OBJECT:Evidence",
+      "OBJECT:ExperienceRecord",
+      "OBJECT:ExternalActionProposal",
+      "OBJECT:InterfaceMachine",
+      "OBJECT:Memory",
+      "OBJECT:ObservedEffect",
+      "OBJECT:Oper",
+      "OBJECT:Operature",
+      "OBJECT:Operome",
+      "OBJECT:Phenomenon",
+      "OBJECT:PhilosophicalMachine",
+      "OBJECT:QualityDecision",
+      "OBJECT:ResidualRiskDecision",
+      "OBJECT:Responsibility",
+      "OBJECT:Risk",
+      "OBJECT:State",
+      "OBJECT:SubstrateDeclaration",
+      "OBJECT:Transition",
+      "OBJECT:Unknown",
+      "OPERATOR_ACCEPTANCE:runtime/operator_acceptance.json",
+      "PRINCIPLE:CP-01",
+      "PRINCIPLE:CP-02",
+      "PRINCIPLE:CP-03",
+      "PRINCIPLE:CP-04",
+      "PRINCIPLE:CP-05",
+      "PRINCIPLE:CP-06"
+    ],
+    "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d"
+  },
+  "independent_normative_authority": "ZERO",
+  "materialization_contract_ref": "machine/NORM_RECORD_MATERIALIZER.json",
+  "operator_acceptance_binding": {
+    "acceptance_status": "NOT_INSTALLED_IN_PUBLIC_PACKAGE",
+    "accepted_layers": [
+      "BASE"
+    ],
+    "accepted_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "loading_is_acceptance": false,
+    "record_ref": "runtime/operator_acceptance.json",
+    "record_sha256": "267a5576cf693b90d529e2a447effb24cb4af590b79584752b97bca3aa67a132",
+    "rejected_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "revocation_route": "INSTALL_NEW_SIGNED_ACCEPTANCE_RECORD",
+    "scope": [],
+    "validity": "NOT_ESTABLISHED"
+  },
+  "phase_critical_norm_ids": [
+    "N-GEN-005",
+    "N-GEN-006",
+    "N-GEN-010",
+    "N-GEN-074",
+    "N-GEN-003",
+    "N-GEN-008",
+    "N-GEN-012",
+    "N-GEN-078",
+    "N-GEN-013",
+    "N-GEN-014",
+    "N-GEN-016",
+    "N-GEN-017",
+    "N-GEN-018",
+    "N-GEN-019",
+    "N-GEN-021",
+    "N-GEN-022",
+    "N-GEN-023",
+    "N-GEN-031",
+    "N-GEN-033",
+    "N-GEN-037",
+    "N-GEN-038",
+    "N-GEN-041",
+    "N-GEN-042",
+    "N-GEN-046",
+    "N-GEN-049",
+    "N-GEN-050",
+    "N-GEN-051",
+    "N-GEN-064",
+    "N-GEN-069",
+    "N-O001-04",
+    "N-O001-07",
+    "N-O002-02",
+    "N-O002-04",
+    "N-O003-01",
+    "N-O003-02",
+    "N-O003-03",
+    "N-O003-04",
+    "N-O003-05",
+    "N-O003-06",
+    "N-O003-07",
+    "N-O005-03",
+    "N-O005-05",
+    "N-O005-06",
+    "N-O007-01",
+    "N-O007-05",
+    "N-O007-07",
+    "N-O008-02",
+    "N-O008-04",
+    "N-O008-10",
+    "N-O009-10",
+    "N-O010-10",
+    "N-O011-02",
+    "N-O011-05",
+    "N-O011-07",
+    "N-O011-10",
+    "N-O012-02",
+    "N-O012-05",
+    "N-O012-06",
+    "N-O012-07",
+    "N-O013-05",
+    "N-O013-07",
+    "N-O014-02",
+    "N-O014-06",
+    "N-O015-01",
+    "N-O017-07",
+    "N-O018-02",
+    "N-O018-07",
+    "N-O019-01",
+    "N-O019-02",
+    "N-O019-06",
+    "N-O019-07",
+    "N-O020-02",
+    "N-O020-03",
+    "N-O020-04",
+    "N-O020-06",
+    "N-O021-03",
+    "N-O023-10",
+    "N-O024-01",
+    "N-O025-02",
+    "N-O026-02",
+    "N-O026-04",
+    "N-O026-06"
+  ],
+  "phase_id": "C02",
+  "release_binding": {
+    "binding_rule": "Resolve exact PDF SHA-256 through the signed release statement; capsule identity is committed by release_id and semantic_merkle_root.",
+    "canonical_pdf_ref": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+    "release_id": "v2.31_Public_BOIS_Common_Core",
+    "release_statement_ref": "v2.31_Public_BOIS_Common_Core_Release_Statement.json"
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "required_boot_capsule_sha256": "bbc1130dbfd06931d30be15d0f568b2201010a2fd3377de8a70adaccc3223b4d",
+  "required_object_schemas": [
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "ACTIVE",
+        "SUSPENDED",
+        "REVOKED",
+        "EXPIRED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O017",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O017",
+          "to": "SUSPENDED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O017",
+          "to": "REVOKED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O017",
+          "to": "EXPIRED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "catalog_integrity_sha256": "491ebf8ddd9efbcc2b78a69b91390b09a24570d7d9bc8b2005ecfb82a221907d",
+      "field_types": {
+        "authority_id": [
+          "#/$defs/Identifier"
+        ],
+        "limit": [
+          "string"
+        ],
+        "permitted_actions": [
+          "#/$defs/StringOrList"
+        ],
+        "revocation_method": [
+          "string"
+        ],
+        "risk_level": [
+          "#/$defs/RiskLevel"
+        ],
+        "scope": [
+          "string"
+        ],
+        "source": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "subject_or_role": [
+          "string"
+        ],
+        "term_or_condition": [
+          "string"
+        ]
+      },
+      "initial_state": "CANDIDATE",
+      "object_type": "Authority",
+      "owner": "O017",
+      "relations": [],
+      "required_fields": [
+        "authority_id",
+        "source",
+        "subject_or_role",
+        "scope",
+        "limit",
+        "permitted_actions",
+        "risk_level",
+        "term_or_condition",
+        "revocation_method",
+        "status",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O017",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-AUTHORITY-STRUCTURE",
+        "TEST-OBJECT-AUTHORITY-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "VALIDATED",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O013",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "9e3a53b57a705ba895d13492a9eb537a41a4f665d7d16ed852c8054992960088",
+      "field_types": {
+        "authorities": [
+          "#/$defs/StringOrList"
+        ],
+        "context_package_id": [
+          "#/$defs/Identifier"
+        ],
+        "current_context": [
+          "string"
+        ],
+        "difference_map": [
+          "string"
+        ],
+        "launch_status": [
+          "#/$defs/StringOrList"
+        ],
+        "readiness": [
+          "#/$defs/StringOrList"
+        ],
+        "resources": [
+          "#/$defs/StringOrList"
+        ],
+        "revision": [
+          "string"
+        ],
+        "risk": [
+          "string"
+        ],
+        "snapshot": [
+          "string"
+        ],
+        "triggers": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "Context Package",
+      "owner": "O013",
+      "relations": [
+        "IMPLEMENTS_PHASE:C02",
+        "IMPLEMENTS_PHASE:C05"
+      ],
+      "required_fields": [
+        "context_package_id",
+        "revision",
+        "snapshot",
+        "triggers",
+        "current_context",
+        "difference_map",
+        "authorities",
+        "risk",
+        "resources",
+        "readiness",
+        "launch_status",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O013",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-CONTEXT-PACKAGE-STRUCTURE",
+        "TEST-OBJECT-CONTEXT-PACKAGE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "INTERFACE_SYSTEM",
+        "INTERFACE_MACHINE_CANDIDATE",
+        "INTERFACE_MACHINE_VERIFIED",
+        "HOLD",
+        "TERMINATED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "INTERFACE_SYSTEM",
+          "owner": "O024",
+          "to": "INTERFACE_MACHINE_CANDIDATE"
+        },
+        {
+          "from": "INTERFACE_MACHINE_CANDIDATE",
+          "owner": "O024",
+          "to": "INTERFACE_MACHINE_VERIFIED"
+        },
+        {
+          "from": "INTERFACE_MACHINE_CANDIDATE",
+          "owner": "O024",
+          "to": "HOLD"
+        },
+        {
+          "from": "INTERFACE_MACHINE_VERIFIED",
+          "owner": "O024",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O024",
+          "to": "INTERFACE_MACHINE_CANDIDATE"
+        },
+        {
+          "from": "INTERFACE_MACHINE_VERIFIED",
+          "owner": "O024",
+          "to": "TERMINATED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "MACHINE_OBJECT",
+      "catalog_integrity_sha256": "dd85ced0b8841fbba5858170a11e07ea0e37067c5f08f90afa5bea5dddfecf61",
+      "field_types": {
+        "abstract_categories": [
+          "array"
+        ],
+        "abstraction_route": [
+          "string"
+        ],
+        "agency": [
+          "string"
+        ],
+        "authorized_change_route": [
+          "string"
+        ],
+        "calculating_elements": [
+          "array"
+        ],
+        "classification_state": [
+          "INTERFACE_SYSTEM",
+          "INTERFACE_MACHINE_CANDIDATE",
+          "INTERFACE_MACHINE_VERIFIED"
+        ],
+        "closure_rule": [
+          "string"
+        ],
+        "concretization_route": [
+          "string"
+        ],
+        "connected_systems": [
+          "array"
+        ],
+        "declared_substrate": [
+          "string"
+        ],
+        "feedback_route": [
+          "string"
+        ],
+        "input_interface": [
+          "string"
+        ],
+        "interface_machine_id": [
+          "string"
+        ],
+        "loop_test_evidence": [
+          "string"
+        ],
+        "machine_profile_ref": [
+          "PhilosophicalMachine"
+        ],
+        "memory": [
+          "string"
+        ],
+        "output_interface": [
+          "string"
+        ],
+        "phase_contract": [
+          "string"
+        ],
+        "risk_model": [
+          "string"
+        ],
+        "state": [
+          "string"
+        ],
+        "transition_rules": [
+          "array"
+        ],
+        "value_interface": [
+          "string"
+        ]
+      },
+      "initial_state": "INTERFACE_SYSTEM",
+      "object_type": "InterfaceMachine",
+      "owner": "O024",
+      "relations": [],
+      "required_fields": [
+        "interface_machine_id",
+        "classification_state",
+        "machine_profile_ref",
+        "connected_systems",
+        "declared_substrate",
+        "input_interface",
+        "abstraction_route",
+        "abstract_categories",
+        "transition_rules",
+        "calculating_elements",
+        "concretization_route",
+        "output_interface",
+        "feedback_route",
+        "state",
+        "memory",
+        "agency",
+        "value_interface",
+        "risk_model",
+        "closure_rule",
+        "phase_contract",
+        "authorized_change_route",
+        "loop_test_evidence",
+        "lifecycle_state"
+      ],
+      "special_contract": {
+        "machine_qualification": "CONDITIONAL_ON_FULL_REPRODUCIBLE_LOOP",
+        "mutation_blockers": [
+          "MISSING_ABSTRACTION_ROUTE",
+          "MISSING_CONCRETIZATION_ROUTE",
+          "MISSING_CALCULATING_ELEMENT",
+          "MISSING_FEEDBACK_ROUTE",
+          "LOOP_TEST_NOT_PASSED"
+        ],
+        "qualification_state": "INTERFACE_MACHINE_VERIFIED",
+        "unqualified_state_name": "INTERFACE_SYSTEM"
+      },
+      "transition_owner": "O024",
+      "type_kind": "CONDITIONAL_MACHINE",
+      "validation_tests": [
+        "TEST-OBJECT-INTERFACEMACHINE-STRUCTURE",
+        "TEST-OBJECT-INTERFACEMACHINE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "b0b37d2a1c6af48af05291066584d395bcaaa653a8762c49509dec9d24e11f57",
+      "field_types": {
+        "archive_sha256": [
+          "string"
+        ],
+        "capabilities": [
+          "#/$defs/StringOrList"
+        ],
+        "declaration_id": [
+          "#/$defs/Identifier"
+        ],
+        "declared_at": [
+          "string"
+        ],
+        "fallbacks": [
+          "#/$defs/StringOrList"
+        ],
+        "limitations": [
+          "#/$defs/StringOrList"
+        ],
+        "memory_constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "owner_ref": [
+          "#/$defs/ObjectReference"
+        ],
+        "package_id": [
+          "#/$defs/ReleaseIdentifier"
+        ],
+        "record_status": [
+          "DRAFT",
+          "FINAL"
+        ],
+        "security_constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "substrate_kind": [
+          "string"
+        ],
+        "tool_constraints": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "SubstrateDeclaration",
+      "owner": "O011",
+      "relations": [
+        "BOUNDS:CalculatingElement",
+        "DECLARES_FOR:PhilosophicalMachine",
+        "IMPLEMENTS_PHASE:C02",
+        "IMPLEMENTS_SURFACE:PACKAGE_LOADING",
+        "RECORDED_IN:State"
+      ],
+      "required_fields": [
+        "declaration_id",
+        "record_status",
+        "package_id",
+        "archive_sha256",
+        "owner_ref",
+        "substrate_kind",
+        "capabilities",
+        "limitations",
+        "security_constraints",
+        "memory_constraints",
+        "tool_constraints",
+        "fallbacks",
+        "declared_at",
+        "lifecycle_state"
+      ],
+      "special_contract": {
+        "final_record_requires_archive_sha256": true
+      },
+      "transition_owner": "O011",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-SUBSTRATEDECLARATION-STRUCTURE",
+        "TEST-OBJECT-SUBSTRATEDECLARATION-BEHAVIOR"
+      ]
+    }
+  ],
+  "selected_record_keys": [
+    "BEHAVIOR_PROFILE:ACTION_OBJECT",
+    "BEHAVIOR_PROFILE:ACTION_PROPOSAL_OBJECT",
+    "BEHAVIOR_PROFILE:EFFECT_RECORD_OBJECT",
+    "BEHAVIOR_PROFILE:EPISTEMIC_OBJECT",
+    "BEHAVIOR_PROFILE:GENERIC_STATEFUL_OBJECT",
+    "BEHAVIOR_PROFILE:MACHINE_OBJECT",
+    "COMPONENT:machine/APPLICABILITY_SELECTOR.json",
+    "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+    "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+    "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+    "COMPONENT:machine/NORM_RECORD_MATERIALIZER.json",
+    "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+    "FOUNDATION:B0",
+    "FOUNDATION:C0",
+    "FOUNDATION:CV0",
+    "FOUNDATION:D0",
+    "FOUNDATION:E0",
+    "FOUNDATION:I0",
+    "FOUNDATION:T0",
+    "FOUNDATION:V0",
+    "GATE:C02",
+    "NORM:N-GEN-003",
+    "NORM:N-GEN-005",
+    "NORM:N-GEN-006",
+    "NORM:N-GEN-008",
+    "NORM:N-GEN-010",
+    "NORM:N-GEN-012",
+    "NORM:N-GEN-013",
+    "NORM:N-GEN-014",
+    "NORM:N-GEN-016",
+    "NORM:N-GEN-017",
+    "NORM:N-GEN-018",
+    "NORM:N-GEN-019",
+    "NORM:N-GEN-021",
+    "NORM:N-GEN-022",
+    "NORM:N-GEN-023",
+    "NORM:N-GEN-031",
+    "NORM:N-GEN-033",
+    "NORM:N-GEN-037",
+    "NORM:N-GEN-038",
+    "NORM:N-GEN-041",
+    "NORM:N-GEN-042",
+    "NORM:N-GEN-046",
+    "NORM:N-GEN-049",
+    "NORM:N-GEN-050",
+    "NORM:N-GEN-051",
+    "NORM:N-GEN-064",
+    "NORM:N-GEN-069",
+    "NORM:N-GEN-074",
+    "NORM:N-GEN-078",
+    "NORM:N-O001-04",
+    "NORM:N-O001-07",
+    "NORM:N-O002-02",
+    "NORM:N-O002-04",
+    "NORM:N-O003-01",
+    "NORM:N-O003-02",
+    "NORM:N-O003-03",
+    "NORM:N-O003-04",
+    "NORM:N-O003-05",
+    "NORM:N-O003-06",
+    "NORM:N-O003-07",
+    "NORM:N-O005-03",
+    "NORM:N-O005-05",
+    "NORM:N-O005-06",
+    "NORM:N-O007-01",
+    "NORM:N-O007-05",
+    "NORM:N-O007-07",
+    "NORM:N-O008-02",
+    "NORM:N-O008-04",
+    "NORM:N-O008-10",
+    "NORM:N-O009-10",
+    "NORM:N-O010-10",
+    "NORM:N-O011-02",
+    "NORM:N-O011-05",
+    "NORM:N-O011-07",
+    "NORM:N-O011-10",
+    "NORM:N-O012-02",
+    "NORM:N-O012-05",
+    "NORM:N-O012-06",
+    "NORM:N-O012-07",
+    "NORM:N-O013-05",
+    "NORM:N-O013-07",
+    "NORM:N-O014-02",
+    "NORM:N-O014-06",
+    "NORM:N-O015-01",
+    "NORM:N-O017-07",
+    "NORM:N-O018-02",
+    "NORM:N-O018-07",
+    "NORM:N-O019-01",
+    "NORM:N-O019-02",
+    "NORM:N-O019-06",
+    "NORM:N-O019-07",
+    "NORM:N-O020-02",
+    "NORM:N-O020-03",
+    "NORM:N-O020-04",
+    "NORM:N-O020-06",
+    "NORM:N-O021-03",
+    "NORM:N-O023-10",
+    "NORM:N-O024-01",
+    "NORM:N-O025-02",
+    "NORM:N-O026-02",
+    "NORM:N-O026-04",
+    "NORM:N-O026-06",
+    "OBJECT:AbstractionTrace",
+    "OBJECT:ActionExecutionRecord",
+    "OBJECT:Authority",
+    "OBJECT:AuthorityDecision",
+    "OBJECT:AuthorizedExternalAction",
+    "OBJECT:CalculatingElement",
+    "OBJECT:ClosureCandidate",
+    "OBJECT:Context Package",
+    "OBJECT:Event",
+    "OBJECT:Evidence",
+    "OBJECT:ExperienceRecord",
+    "OBJECT:ExternalActionProposal",
+    "OBJECT:InterfaceMachine",
+    "OBJECT:Memory",
+    "OBJECT:ObservedEffect",
+    "OBJECT:Oper",
+    "OBJECT:Operature",
+    "OBJECT:Operome",
+    "OBJECT:Phenomenon",
+    "OBJECT:PhilosophicalMachine",
+    "OBJECT:QualityDecision",
+    "OBJECT:ResidualRiskDecision",
+    "OBJECT:Responsibility",
+    "OBJECT:Risk",
+    "OBJECT:State",
+    "OBJECT:SubstrateDeclaration",
+    "OBJECT:Transition",
+    "OBJECT:Unknown",
+    "OPERATOR_ACCEPTANCE:runtime/operator_acceptance.json",
+    "PRINCIPLE:CP-01",
+    "PRINCIPLE:CP-02",
+    "PRINCIPLE:CP-03",
+    "PRINCIPLE:CP-04",
+    "PRINCIPLE:CP-05",
+    "PRINCIPLE:CP-06"
+  ],
+  "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d",
+  "status": "DERIVED_FROM_CANDIDATE_CANON_ZERO_INDEPENDENT_NORMATIVE_AUTHORITY"
+}

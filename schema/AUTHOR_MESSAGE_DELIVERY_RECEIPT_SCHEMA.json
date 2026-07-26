@@ -1,0 +1,66 @@
+{
+  "$id": "urn:bois:v2.31_Public_BOIS_Common_Core:author-message-delivery-receipt-schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "archive_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "delivered_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "delivery_receipt_id": {
+      "type": "string"
+    },
+    "effective_operator_language": {
+      "type": "string"
+    },
+    "message_id": {
+      "const": "AUTHOR_MESSAGE"
+    },
+    "position": {
+      "const": "ABSOLUTE_LAST_INTERPRETER_CONTROLLED_VISIBLE_BLOCK"
+    },
+    "rendered_text_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "runtime_instance_id": {
+      "type": "string"
+    },
+    "source_text_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "translation_kind": {
+      "enum": [
+        "RUNTIME_TRANSLATION",
+        "SOURCE_LANGUAGE_ALREADY_MATCHES",
+        "ENGLISH_FALLBACK"
+      ]
+    },
+    "trigger": {
+      "enum": [
+        "FIRST_VERIFIED_PACKAGE_LOAD",
+        "ARCHIVE_DOWNLOAD_PRESENTED",
+        "BOTH_TRIGGERS_COALESCED"
+      ]
+    }
+  },
+  "required": [
+    "delivery_receipt_id",
+    "message_id",
+    "archive_sha256",
+    "runtime_instance_id",
+    "trigger",
+    "effective_operator_language",
+    "translation_kind",
+    "source_text_sha256",
+    "rendered_text_sha256",
+    "position",
+    "delivered_at"
+  ],
+  "type": "object"
+}

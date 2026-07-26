@@ -1,0 +1,85 @@
+{
+  "$id": "urn:bois:schema:semantic-preservation:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "added_norms": {
+      "const": 0
+    },
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "authorized_derived_surface_changes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "authorized_semantic_repairs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "changed_norm_formulations": {
+      "const": 0
+    },
+    "gate_count_changed": {
+      "const": 0
+    },
+    "norm_formulations_compared": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "object_types_changed": {
+      "const": 0
+    },
+    "parent_archive_sha256": {
+      "type": "string"
+    },
+    "parent_release_id": {
+      "type": "string"
+    },
+    "parent_snapshot": {
+      "type": "object"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "removed_norms": {
+      "const": 0
+    },
+    "report_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "successor_snapshot": {
+      "type": "object"
+    },
+    "unauthorized_semantic_delta_count": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "added_norms",
+    "artifact_version",
+    "authorized_derived_surface_changes",
+    "authorized_semantic_repairs",
+    "changed_norm_formulations",
+    "gate_count_changed",
+    "norm_formulations_compared",
+    "object_types_changed",
+    "parent_archive_sha256",
+    "parent_release_id",
+    "parent_snapshot",
+    "release_id",
+    "removed_norms",
+    "report_id",
+    "status",
+    "successor_snapshot",
+    "unauthorized_semantic_delta_count"
+  ],
+  "type": "object"
+}

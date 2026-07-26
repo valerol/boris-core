@@ -1,0 +1,11 @@
+{
+  "artifact_version": "2.31",
+  "canonical_pdf_filename": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+  "canonical_pdf_sha256": "b493a59cfb9eb39927f3537696d18397d97b2a2505bdbabfcdf775c83f4c68c4",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "signature_algorithm": "Ed25519",
+  "signature_filename": "v2.31_Public_BOIS_Common_Core_Canon.pdf.sig",
+  "signature_profile": "DETACHED_SIGNATURE_OVER_EXACT_PDF_BYTES",
+  "signing_public_key_filename": "v2.31_Public_BOIS_Common_Core_Signing_Public_Key.pem",
+  "status": "SIGNED_EXTERNAL_REVIEW_CANDIDATE"
+}

@@ -1,0 +1,1776 @@
+{
+  "artifact_version": "2.31",
+  "component_revision": "2",
+  "component_semantics_version": "2.31",
+  "contract_set_id": "BOIS-GATE-CONTRACTS-2.31",
+  "contracts": [
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C00/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "Input Container",
+          "Source"
+        ],
+        "output_objects": [
+          "Phenomenon"
+        ],
+        "primary_object": "Phenomenon"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C00-POSITIVE",
+      "gate_id": "C00",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C00",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC00",
+      "name": "INPUT_CAPTURED",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C00/negative",
+      "next_phase": "C01",
+      "owner": "O003",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C00/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC00"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O003",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "phenomenon",
+            "freshness": "CURRENT",
+            "id_path": "phenomenon_id",
+            "object_type": "Phenomenon",
+            "owner": "O001",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "source_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Source",
+            "owner": "O009",
+            "source_class": "AUTHORIZED_SOURCE"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "nonempty",
+            "path": "literal_input"
+          },
+          {
+            "op": "nonempty",
+            "path": "phenomenon.phenomenon_id"
+          },
+          {
+            "op": "nonempty",
+            "path": "phenomenon.revision"
+          },
+          {
+            "left_path": "phenomenon.identification_source",
+            "op": "equals",
+            "right_path": "source_ref"
+          },
+          {
+            "equals": "C01",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C01/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "Phenomenon",
+          "Unknown",
+          "Risk"
+        ],
+        "output_objects": [
+          "BoundaryRecord",
+          "Unknown"
+        ],
+        "primary_object": "BoundaryRecord"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C01-POSITIVE",
+      "gate_id": "C01",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C01",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC01",
+      "name": "PHENOMENON_BOUNDED",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C01/negative",
+      "next_phase": "C02",
+      "owner": "O001",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C01/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC01"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O001",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "phenomenon",
+            "freshness": "CURRENT",
+            "id_path": "phenomenon_id",
+            "object_type": "Phenomenon",
+            "owner": "O001",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "boundary_record",
+            "freshness": "CURRENT",
+            "id_path": "boundary_record_id",
+            "object_type": "BoundaryRecord",
+            "owner": "O002",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "known",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Fact",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "unknowns",
+            "freshness": "CURRENT",
+            "minimum_count": 0,
+            "object_type": "Unknown",
+            "owner": "O001",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "left_path": "boundary_record.phenomenon_ref",
+            "op": "equals",
+            "right_path": "phenomenon.phenomenon_id"
+          },
+          {
+            "left_path": "boundary_record.phenomenon_revision",
+            "op": "equals",
+            "right_path": "phenomenon.revision"
+          },
+          {
+            "left_path": "boundary_record.cycle_id",
+            "op": "equals",
+            "right_path": "cycle_id"
+          },
+          {
+            "left_path": "boundary_record.scope",
+            "op": "equals",
+            "right_path": "phenomenon.scope"
+          },
+          {
+            "equals": "O002",
+            "op": "fact",
+            "path": "boundary_record.owner_ref"
+          },
+          {
+            "equals": "CURRENT",
+            "op": "fact",
+            "path": "boundary_record.status"
+          },
+          {
+            "equals": "C02",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C02/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "Context_Package",
+          "Authority"
+        ],
+        "output_objects": [
+          "Context_Package"
+        ],
+        "primary_object": "Context Package"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C02-POSITIVE",
+      "gate_id": "C02",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C02",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC02",
+      "name": "GOAL_AND_DVS_CONFIRMED",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C02/negative",
+      "next_phase": "C03",
+      "owner": "O003",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C02/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC02"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O003",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "authority",
+            "freshness": "CURRENT",
+            "id_path": "owner_ref",
+            "object_type": "Authority",
+            "owner": "O017",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "goal",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Context Package",
+            "owner": "O013",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "substrate_declaration_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "SubstrateDeclaration",
+            "owner": "O011",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "value_interface_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "InterfaceMachine",
+            "owner": "O024",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "nonempty",
+            "path": "goal"
+          },
+          {
+            "op": "nonempty",
+            "path": "completion_criterion"
+          },
+          {
+            "op": "nonempty",
+            "path": "domain"
+          },
+          {
+            "op": "nonempty",
+            "path": "substrate_declaration_ref"
+          },
+          {
+            "op": "nonempty",
+            "path": "value_interface_ref"
+          },
+          {
+            "equals": "AUTHORIZED_IN_SCOPE",
+            "op": "fact",
+            "path": "authority.status"
+          },
+          {
+            "equals": "C03",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C03/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "Evidence",
+          "Source",
+          "EpistemicAssessment"
+        ],
+        "output_objects": [
+          "EpistemicAssessment"
+        ],
+        "primary_object": "EpistemicAssessment"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C03-POSITIVE",
+      "gate_id": "C03",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C03",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC03",
+      "name": "EPISTEMIC_INVENTORY",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C03/negative",
+      "next_phase": "C04",
+      "owner": "O010",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C03/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC03"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O010",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "evidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "counterevidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 0,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "source_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Source",
+            "owner": "O009",
+            "source_class": "AUTHORIZED_SOURCE"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "min_items",
+            "path": "evidence_refs",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "source_refs",
+            "value": 1
+          },
+          {
+            "op": "enum_member",
+            "path": "initial_S_level",
+            "values": [
+              "S0",
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "equals": "C04",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C04/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "Unknown",
+          "Question"
+        ],
+        "output_objects": [
+          "Question"
+        ],
+        "primary_object": "Question"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C04-POSITIVE",
+      "gate_id": "C04",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C04",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC04",
+      "name": "QUESTION_OR_TASK_QUALIFIED",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C04/negative",
+      "next_phase": "C05",
+      "owner": "O004",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C04/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC04"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O004",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "question",
+            "freshness": "CURRENT",
+            "id_path": "question_id",
+            "object_type": "Question",
+            "owner": "O004",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "nonempty",
+            "path": "question.question_id"
+          },
+          {
+            "op": "nonempty",
+            "path": "question.content"
+          },
+          {
+            "op": "nonempty",
+            "path": "question.discrimination_criterion"
+          },
+          {
+            "equals": "MATERIAL",
+            "op": "fact",
+            "path": "question.materiality"
+          },
+          {
+            "equals": "C05",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C05/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "Protocol",
+          "Branch",
+          "CostEstimate"
+        ],
+        "output_objects": [
+          "Protocol"
+        ],
+        "primary_object": "Protocol"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C05-POSITIVE",
+      "gate_id": "C05",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C05",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC05",
+      "name": "ROUTE_FROZEN",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C05/negative",
+      "next_phase": "C06",
+      "owner": "O013",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C05/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC05"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O013",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "route",
+            "freshness": "CURRENT",
+            "id_path": "route_id",
+            "object_type": "Transition",
+            "owner": "O013",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "route.snapshot_id",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Snapshot",
+            "owner": "O022",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "route.owner_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Responsibility",
+            "owner": "O018",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "nonempty",
+            "path": "route.route_id"
+          },
+          {
+            "op": "min_items",
+            "path": "route.operations",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "route.resources",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "route.hold_conditions",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "route.stop_conditions",
+            "value": 1
+          },
+          {
+            "op": "min_items",
+            "path": "route.return_rules",
+            "value": 1
+          },
+          {
+            "op": "nonempty",
+            "path": "route.snapshot_id"
+          },
+          {
+            "equals": "C06",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C06/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "CognitiveProtocolRun",
+          "AbstractionTrace",
+          "Inference",
+          "Model"
+        ],
+        "output_objects": [
+          "CognitiveProtocolRun"
+        ],
+        "primary_object": "CognitiveProtocolRun"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C06-POSITIVE",
+      "gate_id": "C06",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C06",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC06",
+      "name": "COGNITIVE_TRANSFORMATION",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C06/negative",
+      "next_phase": "C07",
+      "owner": "O014",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C06/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC06"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O014",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "microphases.*.evidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "alternatives",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Branch",
+            "owner": "O013",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "transformation_trace",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Transformation",
+            "owner": "O009",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "count_equals",
+            "path": "microphases",
+            "value": 6
+          },
+          {
+            "child_path": "status",
+            "equals": "COMPLETE",
+            "op": "all_items_fact",
+            "path": "microphases"
+          },
+          {
+            "op": "min_items",
+            "path": "alternatives",
+            "value": 1
+          },
+          {
+            "op": "nonempty",
+            "path": "transformation_trace"
+          },
+          {
+            "equals": "C07",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C07/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "Evidence",
+          "EpistemicAssessment"
+        ],
+        "output_objects": [
+          "EpistemicAssessment"
+        ],
+        "primary_object": "EpistemicAssessment"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C07-POSITIVE",
+      "gate_id": "C07",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C07",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC07",
+      "name": "EVIDENCE_AND_STATUS_ASSIGNED",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C07/negative",
+      "next_phase": "C08",
+      "owner": "O010",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C07/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC07"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O010",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "evidence",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "counterevidence",
+            "freshness": "CURRENT",
+            "minimum_count": 0,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "enum_member",
+            "path": "S_level",
+            "values": [
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ]
+          },
+          {
+            "equals": "ASSESSED",
+            "op": "fact",
+            "path": "status"
+          },
+          {
+            "op": "min_items",
+            "path": "evidence",
+            "value": 1
+          },
+          {
+            "op": "enum_member",
+            "path": "research_boundary.external_effect_route",
+            "values": [
+              "NO_EXTERNAL_EFFECT",
+              "SEPARATE_AUTHORIZATION_ROUTE",
+              "PROHIBITED"
+            ]
+          },
+          {
+            "equals": "C08",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C08/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "BoundedResult",
+          "Representation"
+        ],
+        "output_objects": [
+          "BoundedResult"
+        ],
+        "primary_object": "BoundedResult"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C08-POSITIVE",
+      "gate_id": "C08",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C08",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC08",
+      "name": "RESULT_CONCRETIZED",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C08/negative",
+      "next_phase": "C09",
+      "owner": "O006",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C08/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC08"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O006",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "bounded_result",
+            "freshness": "CURRENT",
+            "id_path": "result_id",
+            "object_type": "BoundedResult",
+            "owner": "O006",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "bounded_result.evidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "bounded_result.source_result_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Artifact",
+            "owner": "O009",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "nonempty",
+            "path": "bounded_result.result_id"
+          },
+          {
+            "equals": "BOUNDED",
+            "op": "fact",
+            "path": "bounded_result.boundary_status"
+          },
+          {
+            "op": "min_items",
+            "path": "bounded_result.evidence_refs",
+            "value": 1
+          },
+          {
+            "equals": "C09",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C09/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "ClosureCandidate",
+          "ResidualRiskDecision",
+          "Defect"
+        ],
+        "output_objects": [
+          "ClosureCandidate"
+        ],
+        "primary_object": "ClosureCandidate"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C09-POSITIVE",
+      "gate_id": "C09",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C09",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC09",
+      "name": "CLOSURE_CANDIDATE",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C09/negative",
+      "next_phase": "C10",
+      "owner": "O016",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C09/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC09"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O016",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "closure_candidate",
+            "freshness": "CURRENT",
+            "id_path": "closure_candidate_id",
+            "object_type": "ClosureCandidate",
+            "owner": "O016",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "residual_risk_decision",
+            "freshness": "CURRENT",
+            "id_path": "risk_decision_id",
+            "object_type": "ResidualRiskDecision",
+            "owner": "O020",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "recovery_route_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Transition",
+            "owner": "O013",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "debts",
+            "freshness": "CURRENT",
+            "minimum_count": 0,
+            "object_type": "Defect",
+            "owner": "O028",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "unknowns",
+            "freshness": "CURRENT",
+            "minimum_count": 0,
+            "object_type": "Unknown",
+            "owner": "O001",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "op": "nonempty",
+            "path": "closure_candidate.closure_candidate_id"
+          },
+          {
+            "op": "nonempty",
+            "path": "closure_candidate.cycle_id"
+          },
+          {
+            "equals": "ACCEPTED_BY_AUTHORIZED_OWNER",
+            "op": "fact",
+            "path": "residual_risk_decision.decision"
+          },
+          {
+            "equals": "C10",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C10/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "ClosureCandidate",
+          "QualityDecision",
+          "AuthorityDecision",
+          "ResidualRiskDecision",
+          "ExternalActionProposal"
+        ],
+        "output_objects": [
+          "QualityDecision",
+          "AuthorizedExternalAction"
+        ],
+        "primary_object": "QualityDecision"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C10-POSITIVE",
+      "gate_id": "C10",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C10",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC10",
+      "name": "QUALITY_REVIEW_AND_ACTION_TRANSITION",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C10/negative",
+      "next_phase": "C11",
+      "owner": "O027",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C10/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC10"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O027",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "closure_candidate",
+            "freshness": "CURRENT",
+            "id_path": "closure_candidate_id",
+            "object_type": "ClosureCandidate",
+            "owner": "O016",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "quality_decision",
+            "freshness": "CURRENT",
+            "id_path": "quality_decision_id",
+            "object_type": "QualityDecision",
+            "owner": "O027",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "authority_decision",
+            "freshness": "CURRENT",
+            "id_path": "authority_decision_id",
+            "object_type": "AuthorityDecision",
+            "owner": "O017",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "residual_risk_decision",
+            "freshness": "CURRENT",
+            "id_path": "risk_decision_id",
+            "object_type": "ResidualRiskDecision",
+            "owner": "O020",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "external_action_proposal",
+            "freshness": "CURRENT",
+            "id_path": "proposal_id",
+            "object_type": "ExternalActionProposal",
+            "owner": "O015",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "quality_decision.evidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "INDEPENDENT_REVIEW"
+          },
+          {
+            "context_path": "authority_decision.authority_source_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Authority",
+            "owner": "O017",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "closure_candidate.result_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Artifact",
+            "owner": "O009",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "closure_candidate.responsibility_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Responsibility",
+            "owner": "O018",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "closure_candidate.producer_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Responsibility",
+            "owner": "O018",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "quality_decision.reviewer_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Responsibility",
+            "owner": "O018",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "authority_decision.authorized_subject_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Responsibility",
+            "owner": "O018",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "residual_risk_decision.risk_owner_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Responsibility",
+            "owner": "O018",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "reference_lists": [
+          {
+            "context_path": "quality_decision.evidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "source_class": "INDEPENDENT_REVIEW"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "equals": "PASS",
+            "op": "fact",
+            "path": "quality_decision.decision"
+          },
+          {
+            "equals": "PASS",
+            "op": "fact",
+            "path": "quality_decision.lifecycle_state"
+          },
+          {
+            "left_path": "quality_decision.reviewer_ref",
+            "op": "not_equals",
+            "right_path": "closure_candidate.producer_ref"
+          },
+          {
+            "minimum": "IND2",
+            "op": "rank_at_least",
+            "order": [
+              "IND0",
+              "IND1",
+              "IND2",
+              "IND3",
+              "IND4"
+            ],
+            "path": "quality_decision.independence_level"
+          },
+          {
+            "equals": false,
+            "op": "fact",
+            "path": "quality_decision.conflict_of_interest"
+          },
+          {
+            "equals": "CURRENT",
+            "op": "fact",
+            "path": "quality_decision.evidence_freshness"
+          },
+          {
+            "equals": "AUTHORIZED_IN_SCOPE",
+            "op": "fact",
+            "path": "authority_decision.decision"
+          },
+          {
+            "equals": "AUTHORIZED_IN_SCOPE",
+            "op": "fact",
+            "path": "authority_decision.lifecycle_state"
+          },
+          {
+            "equals": "CURRENT",
+            "op": "fact",
+            "path": "authority_decision.validity"
+          },
+          {
+            "op": "contains",
+            "path": "authority_decision.validity_conditions",
+            "value": "CURRENT"
+          },
+          {
+            "arg": {
+              "op": "contains",
+              "path": "authority_decision.validity_conditions",
+              "value": "EXPIRED"
+            },
+            "op": "not"
+          },
+          {
+            "op": "contains",
+            "path": "authority_decision.permitted_operations",
+            "value": "EXECUTE"
+          },
+          {
+            "equals": "ACCEPTED_BY_AUTHORIZED_OWNER",
+            "op": "fact",
+            "path": "residual_risk_decision.decision"
+          },
+          {
+            "equals": "ACCEPTED",
+            "op": "fact",
+            "path": "residual_risk_decision.lifecycle_state"
+          },
+          {
+            "equals": "CURRENT",
+            "op": "fact",
+            "path": "residual_risk_decision.review_condition"
+          },
+          {
+            "equals": "READY",
+            "op": "fact",
+            "path": "closure_candidate.status"
+          },
+          {
+            "equals": "QUALITY_CONFIRMED",
+            "op": "fact",
+            "path": "closure_candidate.lifecycle_state"
+          },
+          {
+            "equals": "C11",
+            "op": "fact",
+            "path": "closure_candidate.next_transition"
+          },
+          {
+            "equals": "READY_FOR_AUTHORIZATION",
+            "op": "fact",
+            "path": "external_action_proposal.lifecycle_state"
+          },
+          {
+            "left_path": "authority_decision.proposal_ref",
+            "op": "equals",
+            "right_path": "external_action_proposal.proposal_id"
+          },
+          {
+            "left_path": "quality_decision.proposal_ref",
+            "op": "equals",
+            "right_path": "external_action_proposal.proposal_id"
+          },
+          {
+            "left_path": "quality_decision.closure_candidate_id",
+            "op": "equals",
+            "right_path": "closure_candidate.closure_candidate_id"
+          },
+          {
+            "left_path": "residual_risk_decision.closure_candidate_ref",
+            "op": "equals",
+            "right_path": "closure_candidate.closure_candidate_id"
+          },
+          {
+            "left_path": "residual_risk_decision.proposal_ref",
+            "op": "equals",
+            "right_path": "external_action_proposal.proposal_id"
+          },
+          {
+            "left_path": "closure_candidate.residual_risk_ref",
+            "op": "equals",
+            "right_path": "residual_risk_decision.risk_decision_id"
+          },
+          {
+            "op": "all_equal",
+            "paths": [
+              "closure_candidate.cycle_id",
+              "quality_decision.cycle_id",
+              "authority_decision.cycle_id",
+              "residual_risk_decision.cycle_id",
+              "external_action_proposal.cycle_id"
+            ]
+          },
+          {
+            "op": "all_equal",
+            "paths": [
+              "closure_candidate.scope",
+              "quality_decision.scope",
+              "authority_decision.scope",
+              "residual_risk_decision.scope",
+              "external_action_proposal.scope"
+            ]
+          },
+          {
+            "left_path": "authority_decision.authorized_subject_ref",
+            "op": "equals",
+            "right_path": "external_action_proposal.owner_ref"
+          },
+          {
+            "left_path": "residual_risk_decision.risk_owner_ref",
+            "op": "equals",
+            "right_path": "external_action_proposal.owner_ref"
+          },
+          {
+            "equals": "C11",
+            "op": "fact",
+            "path": "next_transition"
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    },
+    {
+      "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C11/adversarial",
+      "canonical_object_projection": {
+        "assessment_objects": [
+          "ActionExecutionRecord",
+          "ObservedEffect",
+          "State"
+        ],
+        "output_objects": [
+          "ObservedEffect",
+          "State"
+        ],
+        "primary_object": "ObservedEffect"
+      },
+      "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C11-POSITIVE",
+      "gate_id": "C11",
+      "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+      "hold_return_state": "C00_OR_CLOSED",
+      "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC11",
+      "name": "EFFECT_OR_NEW_PHENOMENON",
+      "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C11/negative",
+      "next_phase": "C00_OR_CLOSED",
+      "owner": "O015",
+      "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+      "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C11/positive",
+      "predicate": {
+        "op": "schema_valid",
+        "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC11"
+      },
+      "required_evidence": [
+        "typed CycleObjectStore",
+        "current GateEvidence bound to the exact context digest",
+        "all declared runtime references resolve in the current cycle and scope"
+      ],
+      "required_evidence_contract": {
+        "allowed_source_classes": [
+          "CURRENT_RUNTIME",
+          "AUTHORIZED_SOURCE",
+          "INDEPENDENT_REVIEW"
+        ],
+        "context_digest_excludes": [
+          "runtime_registry"
+        ],
+        "exact_cycle_binding": true,
+        "exact_revision_binding": true,
+        "exact_scope_binding": true,
+        "gate_evidence_owner": "O015",
+        "gate_evidence_type": "GateEvidence",
+        "known_object_types_required": true,
+        "minimum_evidence_count": 1,
+        "object_bindings": [
+          {
+            "context_path": "action_execution_record",
+            "freshness": "CURRENT",
+            "id_path": "execution_record_id",
+            "object_type": "ActionExecutionRecord",
+            "owner": "O015",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "observed_effect",
+            "freshness": "CURRENT",
+            "id_path": "effect_id",
+            "object_type": "ObservedEffect",
+            "owner": "O015",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "effect_capture",
+            "freshness": "CURRENT",
+            "id_path": "effect_capture_id",
+            "object_type": "EffectCapture",
+            "owner": "O015",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "object_id_uniqueness_required": true,
+        "object_payload_required": true,
+        "reference_bindings": [
+          {
+            "context_path": "action_execution_record.authorized_action_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "AuthorizedExternalAction",
+            "owner": "O015",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "action_execution_record.executor_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Responsibility",
+            "owner": "O018",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "effect_capture.evidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "observed_effect.effect_evidence_refs",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "Evidence",
+            "owner": "O010",
+            "source_class": "AUTHORIZED_SOURCE"
+          },
+          {
+            "context_path": "effect_capture.state_update_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "State",
+            "owner": "O021",
+            "source_class": "CURRENT_RUNTIME"
+          },
+          {
+            "context_path": "observed_effect.state_update_ref",
+            "freshness": "CURRENT",
+            "minimum_count": 1,
+            "object_type": "State",
+            "owner": "O021",
+            "source_class": "CURRENT_RUNTIME"
+          }
+        ],
+        "registry_lifecycle_state_required": "ACTIVE",
+        "registry_path": "runtime_registry",
+        "registry_type": "CycleObjectStore",
+        "required_freshness": "CURRENT"
+      },
+      "semantic_predicate": {
+        "args": [
+          {
+            "left_path": "action_execution_record.status",
+            "op": "allowed_pair",
+            "pairs": [
+              [
+                "EXECUTED",
+                "EXECUTED"
+              ],
+              [
+                "NO_ACTION",
+                "NO_ACTION"
+              ],
+              [
+                "COMPENSATED",
+                "COMPENSATED"
+              ]
+            ],
+            "right_path": "action_execution_record.lifecycle_state"
+          },
+          {
+            "equals": "CLOSED",
+            "op": "fact",
+            "path": "effect_capture.lifecycle_state"
+          },
+          {
+            "op": "enum_member",
+            "path": "observed_effect.effect_status",
+            "values": [
+              "CLASSIFIED",
+              "NO_EFFECT_CONFIRMED",
+              "EFFECT_UNKNOWN_RECORDED",
+              "COMPENSATED"
+            ]
+          },
+          {
+            "op": "enum_member",
+            "path": "observed_effect.lifecycle_state",
+            "values": [
+              "CLASSIFIED",
+              "RETURNED_TO_C00"
+            ]
+          },
+          {
+            "left_path": "action_execution_record.effect_capture_ref",
+            "op": "equals",
+            "right_path": "effect_capture.effect_capture_id"
+          },
+          {
+            "left_path": "action_execution_record.execution_record_id",
+            "op": "equals",
+            "right_path": "effect_capture.execution_record_ref"
+          },
+          {
+            "left_path": "action_execution_record.execution_record_id",
+            "op": "equals",
+            "right_path": "observed_effect.action_execution_ref"
+          },
+          {
+            "left_path": "effect_capture.effect_capture_ref",
+            "op": "equals",
+            "right_path": "observed_effect.effect_id"
+          },
+          {
+            "left_path": "effect_capture.state_update_ref",
+            "op": "equals",
+            "right_path": "observed_effect.state_update_ref"
+          },
+          {
+            "op": "all_equal",
+            "paths": [
+              "action_execution_record.cycle_id",
+              "effect_capture.cycle_id",
+              "observed_effect.cycle_id"
+            ]
+          },
+          {
+            "op": "all_equal",
+            "paths": [
+              "action_execution_record.scope",
+              "effect_capture.scope",
+              "observed_effect.scope"
+            ]
+          },
+          {
+            "left_path": "observed_effect.next_state_or_terminal_condition",
+            "op": "equals",
+            "right_path": "next_transition"
+          },
+          {
+            "op": "enum_member",
+            "path": "next_transition",
+            "values": [
+              "C00",
+              "CLOSED"
+            ]
+          }
+        ],
+        "op": "all"
+      },
+      "stop_condition": "Fundamental invariant violation or prohibition."
+    }
+  ],
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "result_semantics": {
+    "HOLD": "A recoverable precondition, reference, evidence, schema, or semantic requirement is unsatisfied.",
+    "PASS": "All schema, runtime-reference, evidence, semantic, and next-transition obligations are satisfied.",
+    "REPAIR": "The predicate or machine surface is internally invalid and requires repair before evaluation.",
+    "STOP": "A fundamental invariant violation or prohibition is present."
+  }
+}

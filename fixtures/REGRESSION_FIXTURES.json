@@ -1,0 +1,4204 @@
+{
+  "artifact_version": "2.31",
+  "fixture_set_id": "v2.31_Public_BOIS_Common_Core_Regression_Fixtures",
+  "fixtures": {
+    "F-001": {
+      "check": {
+        "fields": [
+          "release_id",
+          "artifact_version",
+          "schema_version",
+          "parent_release_id",
+          "parent_archive_sha256",
+          "semantic_change_digest",
+          "compatibility_range",
+          "supersedes",
+          "release_timestamp"
+        ],
+        "kind": "required_fields"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "release_id": "v2.31_Public_BOIS_Common_Core"
+      },
+      "repaired": {
+        "artifact_version": "2.31",
+        "compatibility_range": "X",
+        "parent_archive_sha256": "X",
+        "parent_release_id": "X",
+        "release_id": "v2.31_Public_BOIS_Common_Core",
+        "release_timestamp": "X",
+        "schema_version": "2.31",
+        "semantic_change_digest": "X",
+        "supersedes": [
+          "X"
+        ]
+      }
+    },
+    "F-002": {
+      "check": {
+        "kind": "author_message_boundary"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "cannot": [],
+        "non_normative": false
+      },
+      "repaired": {
+        "cannot": [
+          "grant authority",
+          "constitute operator acceptance",
+          "authorize external action"
+        ],
+        "non_normative": true
+      }
+    },
+    "F-003": {
+      "check": {
+        "kind": "source_precedence"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": [
+        "HOST_PLATFORM_SUBSTRATE_CONSTRAINTS",
+        "AUTHORIZED_OPERATOR_DECISIONS",
+        "FOUNDATIONS_AND_BASE_INVARIANTS",
+        "ACCEPTED_PERSONAL_LAYER",
+        "MACHINE_PROJECTIONS",
+        "RUNTIME_STATE_AND_CONNECTED_MEMORY"
+      ],
+      "repaired": [
+        "HOST_PLATFORM_SUBSTRATE_CONSTRAINTS",
+        "FOUNDATIONS_AND_BASE_INVARIANTS",
+        "AUTHORIZED_OPERATOR_DECISIONS",
+        "ACCEPTED_PERSONAL_LAYER",
+        "MACHINE_PROJECTIONS",
+        "RUNTIME_STATE_AND_CONNECTED_MEMORY"
+      ]
+    },
+    "F-004": {
+      "check": {
+        "kind": "gate_contract"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "gate_id": "C00",
+        "semantic_predicate": null
+      },
+      "repaired": {
+        "adversarial_fixture_ref": "z",
+        "gate_id": "C00",
+        "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC00",
+        "negative_fixture_ref": "y",
+        "positive_fixture_ref": "x",
+        "required_evidence": [
+          "e"
+        ],
+        "semantic_predicate": {
+          "op": "always"
+        }
+      }
+    },
+    "F-005": {
+      "check": {
+        "kind": "object_model_fragment"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "allowed_states": [],
+        "allowed_transitions": [
+          {
+            "from": "A",
+            "to": "B"
+          }
+        ],
+        "field_types": {},
+        "initial_state": "MISSING",
+        "required_fields": [
+          "id"
+        ]
+      },
+      "repaired": {
+        "allowed_states": [
+          "A",
+          "B"
+        ],
+        "allowed_transitions": [
+          {
+            "from": "A",
+            "to": "B"
+          }
+        ],
+        "field_types": {
+          "id": [
+            "string"
+          ]
+        },
+        "initial_state": "A",
+        "required_fields": [
+          "id"
+        ]
+      }
+    },
+    "F-006": {
+      "check": {
+        "kind": "reference_target"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": "machine/ABSENT.json",
+      "repaired": "machine/CYCLE_STATE_MACHINE.json"
+    },
+    "F-007": {
+      "check": {
+        "kind": "test_contract"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "test_id": "X"
+      },
+      "repaired": {
+        "evidence_ref": "x",
+        "execution_status": "PASS",
+        "expected_result": "PASS",
+        "failure_signal": "X",
+        "fixture_ref": "x",
+        "input_schema": "x",
+        "operation": "X",
+        "repair_route": [
+          "X"
+        ],
+        "target": {
+          "id": "X",
+          "kind": "X"
+        },
+        "test_id": "X",
+        "test_profile": "P"
+      }
+    },
+    "F-008": {
+      "check": {
+        "kind": "operational_semantics"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "conflict_order": [
+          "STOP",
+          "PROHIBIT",
+          "REQUIRE",
+          "HOLD",
+          "PERMIT"
+        ],
+        "missing_path": "FALSE"
+      },
+      "repaired": {
+        "conflict_order": [
+          "STOP",
+          "PROHIBIT",
+          "HOLD",
+          "REQUIRE",
+          "PERMIT"
+        ],
+        "missing_path": "UNKNOWN"
+      }
+    },
+    "F-009": {
+      "check": {
+        "kind": "validation_receipt"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "overall_status": "PASS"
+      },
+      "repaired": {
+        "command": "validate",
+        "evidence_merkle_root": "0000000000000000000000000000000000000000000000000000000000000000",
+        "overall_status": "PASS",
+        "test_summary": {
+          "fail": 0,
+          "pass": 1,
+          "registered": 1
+        },
+        "validator_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "F-010": {
+      "check": {
+        "kind": "critical_predicate"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "critical": true,
+        "predicate": {
+          "op": "always"
+        },
+        "violation_path": "violation.N-GEN-001"
+      },
+      "repaired": {
+        "critical": true,
+        "predicate": {
+          "equals": true,
+          "op": "fact",
+          "path": "authority.valid"
+        },
+        "violation_path": null
+      }
+    },
+    "F-011": {
+      "check": {
+        "kind": "graph_presence"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "edges": [],
+        "nodes": []
+      },
+      "repaired": {
+        "edges": [
+          {
+            "from": "E0",
+            "to": "N-GEN-001"
+          }
+        ],
+        "nodes": [
+          {
+            "node_id": "E0"
+          }
+        ]
+      }
+    },
+    "F-012": {
+      "check": {
+        "kind": "rule_state_axes"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "canon_active": true,
+        "operator_accepted": true
+      },
+      "repaired": {
+        "CANON_ACTIVE": [
+          "ACTIVE",
+          "INACTIVE"
+        ],
+        "OPERATOR_ACCEPTED": [
+          "NOT_RECORDED",
+          "ACCEPTED"
+        ],
+        "RUNTIME_AUTHORIZED": [
+          "NOT_AUTHORIZED",
+          "AUTHORIZED"
+        ]
+      }
+    },
+    "F-013": {
+      "check": {
+        "kind": "public_authenticity"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "external_receipt": false,
+        "license": false,
+        "public_key": false,
+        "signature": false
+      },
+      "repaired": {
+        "external_receipt": true,
+        "license": true,
+        "public_key": true,
+        "signature": true
+      }
+    },
+    "F-014": {
+      "check": {
+        "kind": "phase_namespaces"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "CYCLE_PHASE": [
+          "C00"
+        ],
+        "RELEASE_PHASE": [
+          "C00"
+        ]
+      },
+      "repaired": {
+        "CYCLE_PHASE": [
+          "C00"
+        ],
+        "RELEASE_PHASE": [
+          "PACKAGE_BUILD"
+        ],
+        "RESPONSE_PHASE": [
+          "VISIBLE_RESPONSE"
+        ]
+      }
+    },
+    "F-015": {
+      "check": {
+        "kind": "pdf_surface"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "embedded_fonts": false,
+        "links": 0,
+        "minimum_font_points": 6.5,
+        "named_records": 0,
+        "outline": false
+      },
+      "repaired": {
+        "embedded_fonts": true,
+        "links": 4,
+        "minimum_font_points": 9.0,
+        "named_records": 1,
+        "outline": true
+      }
+    },
+    "F-016": {
+      "check": {
+        "kind": "identity_coherence"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "artifact_versions": [
+          "1",
+          "2"
+        ],
+        "release_ids": [
+          "A",
+          "B"
+        ]
+      },
+      "repaired": {
+        "artifact_versions": [
+          "1",
+          "1"
+        ],
+        "release_ids": [
+          "A",
+          "A"
+        ]
+      }
+    },
+    "F-017": {
+      "check": {
+        "kind": "hold_and_gate"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "empty_input_result": "PASS",
+        "hold_transitions": [
+          "HOLD->C10",
+          "HOLD->C10"
+        ]
+      },
+      "repaired": {
+        "empty_input_result": "HOLD",
+        "hold_transitions": [
+          "HOLD->C10"
+        ]
+      }
+    },
+    "F-018": {
+      "check": {
+        "kind": "transport_composition"
+      },
+      "expected_negative": "HOLD",
+      "expected_repaired": "PASS",
+      "negative": {
+        "actual": [
+          "a"
+        ],
+        "declared": [
+          "a",
+          "b"
+        ]
+      },
+      "repaired": {
+        "actual": [
+          "a",
+          "b"
+        ],
+        "declared": [
+          "a",
+          "b"
+        ]
+      }
+    },
+    "V225RC1-F01": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F01",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F01",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F02": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F02",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F02",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F03": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F03",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F03",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F04": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F04",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F04",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F05": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F05",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F05",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F06": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F06",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F06",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F07": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F07",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F07",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F08": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F08",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F08",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F09": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F09",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F09",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F10": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F10",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F10",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F11": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F11",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F11",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F12": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F12",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F12",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F13": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F13",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F13",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F14": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F14",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F14",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F15": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F15",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F15",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F16": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F16",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F16",
+        "repair_present": true
+      }
+    },
+    "V225RC1-F17": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V225RC1-F17",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V225RC1-F17",
+        "repair_present": true
+      }
+    },
+    "V226-F01": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F01",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F01",
+        "repair_present": true
+      }
+    },
+    "V226-F02": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F02",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F02",
+        "repair_present": true
+      }
+    },
+    "V226-F03": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F03",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F03",
+        "repair_present": true
+      }
+    },
+    "V226-F04": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F04",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F04",
+        "repair_present": true
+      }
+    },
+    "V226-F05": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F05",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F05",
+        "repair_present": true
+      }
+    },
+    "V226-F06": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F06",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F06",
+        "repair_present": true
+      }
+    },
+    "V226-F07": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F07",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F07",
+        "repair_present": true
+      }
+    },
+    "V226-F08": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F08",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F08",
+        "repair_present": true
+      }
+    },
+    "V226-F09": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F09",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F09",
+        "repair_present": true
+      }
+    },
+    "V226-F10": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F10",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F10",
+        "repair_present": true
+      }
+    },
+    "V226-F11": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F11",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F11",
+        "repair_present": true
+      }
+    },
+    "V226-F12": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F12",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F12",
+        "repair_present": true
+      }
+    },
+    "V226-F13": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F13",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F13",
+        "repair_present": true
+      }
+    },
+    "V226-F14": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F14",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F14",
+        "repair_present": true
+      }
+    },
+    "V226-F15": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F15",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F15",
+        "repair_present": true
+      }
+    },
+    "V226-F16": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F16",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F16",
+        "repair_present": true
+      }
+    },
+    "V226-F17": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V226-F17",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V226-F17",
+        "repair_present": true
+      }
+    },
+    "V227-F01": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V227-F01",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V227-F01",
+        "repair_present": true
+      }
+    },
+    "V228-F01": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V228-F01",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V228-F01",
+        "repair_present": true
+      }
+    },
+    "V228-F02": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V228-F02",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V228-F02",
+        "repair_present": true
+      }
+    },
+    "V228-F03": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V228-F03",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V228-F03",
+        "repair_present": true
+      }
+    },
+    "V228-F04": {
+      "negative": {
+        "expected": "HOLD",
+        "observed_selection_a": [
+          "N-GEN-051"
+        ],
+        "observed_selection_b": [
+          "N-GEN-064"
+        ],
+        "operation": "NONDETERMINISTIC_LEXICAL_SELECTOR",
+        "selector_input_a": {
+          "action_class": "EXECUTE",
+          "active_layers": [
+            "BASE"
+          ],
+          "authority_state": "AUTHORIZED_IN_SCOPE",
+          "object_types": [
+            "QualityDecision",
+            "AuthorityDecision",
+            "ResidualRiskDecision",
+            "ClosureCandidate"
+          ],
+          "phase": "C10",
+          "risk_class": "HIGH",
+          "scope": [
+            "core",
+            "external_action"
+          ],
+          "unresolved_debts": []
+        },
+        "selector_input_b": {
+          "action_class": "EXECUTE",
+          "active_layers": [
+            "BASE"
+          ],
+          "authority_state": "AUTHORIZED_IN_SCOPE",
+          "object_types": [
+            "QualityDecision",
+            "AuthorityDecision",
+            "ResidualRiskDecision",
+            "ClosureCandidate"
+          ],
+          "phase": "C10",
+          "risk_class": "HIGH",
+          "scope": [
+            "core",
+            "external_action"
+          ],
+          "unresolved_debts": []
+        }
+      },
+      "repaired": {
+        "expected": "PASS",
+        "operation": "TYPED_SELECTOR_CANONICAL_ORDER",
+        "selected_norm_ids_sha256": "58ab746a500cd5d17c288961b9655d3b37a3e53d1d98838209d7a1293943fc75",
+        "selector_input_a": {
+          "action_class": "EXECUTE",
+          "active_layers": [
+            "BASE"
+          ],
+          "authority_state": "AUTHORIZED_IN_SCOPE",
+          "object_types": [
+            "QualityDecision",
+            "AuthorityDecision",
+            "ResidualRiskDecision",
+            "ClosureCandidate"
+          ],
+          "phase": "C10",
+          "risk_class": "HIGH",
+          "scope": [
+            "core",
+            "external_action"
+          ],
+          "unresolved_debts": []
+        },
+        "selector_input_b": {
+          "action_class": "EXECUTE",
+          "active_layers": [
+            "BASE"
+          ],
+          "authority_state": "AUTHORIZED_IN_SCOPE",
+          "object_types": [
+            "QualityDecision",
+            "AuthorityDecision",
+            "ResidualRiskDecision",
+            "ClosureCandidate"
+          ],
+          "phase": "C10",
+          "risk_class": "HIGH",
+          "scope": [
+            "core",
+            "external_action"
+          ],
+          "unresolved_debts": []
+        }
+      }
+    },
+    "V228-F05": {
+      "negative": {
+        "capsule_ref": "runtime/capsules/TASK_C10_EXAMPLE.json",
+        "expected": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+        "operation": "REMOVE_TRANSITIVE_DEPENDENCY",
+        "removed_record_key": "PRINCIPLE:CP-06"
+      },
+      "repaired": {
+        "capsule_ref": "runtime/capsules/TASK_C10_EXAMPLE.json",
+        "expected": "PASS",
+        "operation": "VERIFY_COMPLETE_DEPENDENCY_CLOSURE",
+        "selected_record_keys_sha256": "ee312e547f613ffdff5a1002c3d35dac88a27d6b920be02f5036b245cff03989"
+      }
+    },
+    "V228-F06": {
+      "negative": {
+        "expected": "FAIL",
+        "mutated_payload_b64": "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",
+        "operation": "FLIP_COMPACT_MERKLE_PROOF_BYTE",
+        "proof_ref": "runtime/capsules/TASK_C10_EXAMPLE.json#/inclusion_proof_bundle"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "operation": "VERIFY_COMPACT_MERKLE_PROOF",
+        "payload_sha256": "026b709fb16044102fba411a99a29dad4898bd04290db2bc26f5c7226ef7248d",
+        "proof_ref": "runtime/capsules/TASK_C10_EXAMPLE.json#/inclusion_proof_bundle"
+      }
+    },
+    "V228-F07": {
+      "negative": {
+        "capsule_norm_ids_with_removed_critical": [
+          "N-GEN-003",
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-067",
+          "N-GEN-069",
+          "N-GEN-078",
+          "N-GEN-085",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-05",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-01",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-06",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-02",
+          "N-O027-06",
+          "N-O028-10"
+        ],
+        "expected": "HOLD",
+        "full_canon_norm_ids": [
+          "N-GEN-003",
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-035",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-067",
+          "N-GEN-069",
+          "N-GEN-078",
+          "N-GEN-085",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-05",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-01",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-06",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-02",
+          "N-O027-06",
+          "N-O028-10"
+        ],
+        "operation": "COMPARE_FULL_CANON_AND_CAPSULE_APPLICABILITY",
+        "phase": "C10"
+      },
+      "repaired": {
+        "capsule_norm_ids": [
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-003",
+          "N-GEN-085",
+          "N-GEN-078",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-035",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-067",
+          "N-GEN-069",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-05",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-01",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-06",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-02",
+          "N-O027-06",
+          "N-O028-10"
+        ],
+        "expected": "PASS",
+        "full_canon_norm_ids": [
+          "N-GEN-003",
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-035",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-067",
+          "N-GEN-069",
+          "N-GEN-078",
+          "N-GEN-085",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-05",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-01",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-06",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-02",
+          "N-O027-06",
+          "N-O028-10"
+        ],
+        "operation": "COMPARE_FULL_CANON_AND_CAPSULE_APPLICABILITY",
+        "phase": "C10"
+      }
+    },
+    "V228-F08": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V228-F08",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V228-F08",
+        "repair_present": true
+      }
+    },
+    "V228-F09": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V228-F09",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V228-F09",
+        "repair_present": true
+      }
+    },
+    "V228-F10": {
+      "negative": {
+        "expected": "HOLD",
+        "finding_id": "V228-F10",
+        "repair_present": false
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V228-F10",
+        "repair_present": true
+      }
+    },
+    "V229-F01": {
+      "negative": {
+        "expected": "FAIL",
+        "instance": {
+          "artifact_version": "2.31"
+        },
+        "schema": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "properties": {
+            "artifact_version": "2.31"
+          },
+          "type": "object"
+        }
+      },
+      "repaired": {
+        "expected": "PASS",
+        "instance_ref": "RELEASE.json",
+        "schema_ref": "schema/RELEASE_SCHEMA.json"
+      }
+    },
+    "V229-F02": {
+      "negative": {
+        "expected": "HOLD",
+        "mutated_required_boot_capsule_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "phase_capsule": {
+          "artifact_version": "2.31",
+          "baseline_global_norm_ids": [
+            "N-GEN-003",
+            "N-GEN-005",
+            "N-GEN-006",
+            "N-GEN-010",
+            "N-GEN-022",
+            "N-GEN-023",
+            "N-GEN-031",
+            "N-GEN-033",
+            "N-GEN-037",
+            "N-GEN-038",
+            "N-GEN-041",
+            "N-GEN-046",
+            "N-GEN-050",
+            "N-GEN-051",
+            "N-GEN-064",
+            "N-GEN-069",
+            "N-GEN-078",
+            "N-O001-04",
+            "N-O002-02",
+            "N-O002-04",
+            "N-O003-04",
+            "N-O005-03",
+            "N-O005-05",
+            "N-O005-06",
+            "N-O008-04",
+            "N-O008-10",
+            "N-O009-10",
+            "N-O010-10",
+            "N-O011-05",
+            "N-O011-10",
+            "N-O012-05",
+            "N-O015-01",
+            "N-O018-02",
+            "N-O019-06",
+            "N-O020-04",
+            "N-O020-06",
+            "N-O023-10",
+            "N-O024-01",
+            "N-O025-02",
+            "N-O026-02",
+            "N-O026-06",
+            "P-N-029",
+            "P-N-040"
+          ],
+          "candidate_norm_ids": [
+            "N-GEN-003",
+            "N-GEN-005",
+            "N-GEN-006",
+            "N-GEN-010",
+            "N-GEN-022",
+            "N-GEN-023",
+            "N-GEN-031",
+            "N-GEN-033",
+            "N-GEN-034",
+            "N-GEN-035",
+            "N-GEN-037",
+            "N-GEN-038",
+            "N-GEN-041",
+            "N-GEN-046",
+            "N-GEN-050",
+            "N-GEN-051",
+            "N-GEN-064",
+            "N-GEN-067",
+            "N-GEN-069",
+            "N-GEN-078",
+            "N-GEN-085",
+            "N-O001-04",
+            "N-O002-02",
+            "N-O002-04",
+            "N-O003-04",
+            "N-O004-10",
+            "N-O005-03",
+            "N-O005-05",
+            "N-O005-06",
+            "N-O006-10",
+            "N-O008-04",
+            "N-O008-10",
+            "N-O009-10",
+            "N-O010-06",
+            "N-O010-10",
+            "N-O011-05",
+            "N-O011-06",
+            "N-O011-10",
+            "N-O012-05",
+            "N-O014-04",
+            "N-O014-05",
+            "N-O015-01",
+            "N-O016-04",
+            "N-O017-10",
+            "N-O018-02",
+            "N-O018-05",
+            "N-O018-10",
+            "N-O019-06",
+            "N-O020-01",
+            "N-O020-04",
+            "N-O020-06",
+            "N-O021-05",
+            "N-O021-06",
+            "N-O021-10",
+            "N-O023-10",
+            "N-O024-01",
+            "N-O025-02",
+            "N-O026-02",
+            "N-O026-06",
+            "N-O027-02",
+            "N-O027-06",
+            "N-O028-10",
+            "P-N-029",
+            "P-N-040"
+          ],
+          "canonical_authority": "SIGNED_CANONICAL_PDF",
+          "capsule_sha256": "8a30a6c3ea20bbc1689e05571f8344be123c51bbc6e380aa23c3c9f33bea0868",
+          "capsule_type": "PHASE_CAPSULE",
+          "completeness": "PHASE_CRITICAL_SET_INCLUDED; TASK_CAPSULE_ADDS_EXACT_TYPED_CONTEXT_MATCHES",
+          "failure_if_task_closure_missing": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+          "gate_contract": {
+            "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C10/adversarial",
+            "canonical_object_projection": {
+              "assessment_objects": [
+                "ClosureCandidate",
+                "QualityDecision",
+                "AuthorityDecision",
+                "ResidualRiskDecision",
+                "ExternalActionProposal"
+              ],
+              "output_objects": [
+                "QualityDecision",
+                "AuthorizedExternalAction"
+              ],
+              "primary_object": "QualityDecision"
+            },
+            "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C10-POSITIVE",
+            "gate_id": "C10",
+            "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+            "hold_return_state": "C10",
+            "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC10",
+            "name": "QUALITY_REVIEW_AND_ACTION_TRANSITION",
+            "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C10/negative",
+            "next_phase": "C11",
+            "owner": "O027",
+            "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+            "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C10/positive",
+            "predicate": {
+              "op": "schema_valid",
+              "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC10"
+            },
+            "required_evidence": [
+              "typed CycleObjectStore",
+              "current GateEvidence bound to the exact context digest",
+              "all declared runtime references resolve in the current cycle and scope"
+            ],
+            "required_evidence_contract": {
+              "allowed_source_classes": [
+                "CURRENT_RUNTIME",
+                "AUTHORIZED_SOURCE",
+                "INDEPENDENT_REVIEW"
+              ],
+              "context_digest_excludes": [
+                "runtime_registry"
+              ],
+              "exact_cycle_binding": true,
+              "exact_revision_binding": true,
+              "exact_scope_binding": true,
+              "gate_evidence_owner": "O027",
+              "gate_evidence_type": "GateEvidence",
+              "known_object_types_required": true,
+              "minimum_evidence_count": 1,
+              "object_bindings": [
+                {
+                  "context_path": "closure_candidate",
+                  "freshness": "CURRENT",
+                  "id_path": "closure_candidate_id",
+                  "object_type": "ClosureCandidate",
+                  "owner": "O016",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "quality_decision",
+                  "freshness": "CURRENT",
+                  "id_path": "quality_decision_id",
+                  "object_type": "QualityDecision",
+                  "owner": "O027",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "authority_decision",
+                  "freshness": "CURRENT",
+                  "id_path": "authority_decision_id",
+                  "object_type": "AuthorityDecision",
+                  "owner": "O017",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "residual_risk_decision",
+                  "freshness": "CURRENT",
+                  "id_path": "risk_decision_id",
+                  "object_type": "ResidualRiskDecision",
+                  "owner": "O020",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "external_action_proposal",
+                  "freshness": "CURRENT",
+                  "id_path": "proposal_id",
+                  "object_type": "ExternalActionProposal",
+                  "owner": "O015",
+                  "source_class": "CURRENT_RUNTIME"
+                }
+              ],
+              "object_id_uniqueness_required": true,
+              "object_payload_required": true,
+              "reference_bindings": [
+                {
+                  "context_path": "quality_decision.evidence_refs",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Evidence",
+                  "owner": "O010",
+                  "source_class": "INDEPENDENT_REVIEW"
+                },
+                {
+                  "context_path": "authority_decision.authority_source_ref",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Authority",
+                  "owner": "O017",
+                  "source_class": "AUTHORIZED_SOURCE"
+                },
+                {
+                  "context_path": "closure_candidate.result_ref",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Artifact",
+                  "owner": "O009",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "closure_candidate.responsibility_ref",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Responsibility",
+                  "owner": "O018",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "closure_candidate.producer_ref",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Responsibility",
+                  "owner": "O018",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "quality_decision.reviewer_ref",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Responsibility",
+                  "owner": "O018",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "authority_decision.authorized_subject_ref",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Responsibility",
+                  "owner": "O018",
+                  "source_class": "CURRENT_RUNTIME"
+                },
+                {
+                  "context_path": "residual_risk_decision.risk_owner_ref",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Responsibility",
+                  "owner": "O018",
+                  "source_class": "CURRENT_RUNTIME"
+                }
+              ],
+              "reference_lists": [
+                {
+                  "context_path": "quality_decision.evidence_refs",
+                  "freshness": "CURRENT",
+                  "minimum_count": 1,
+                  "object_type": "Evidence",
+                  "source_class": "INDEPENDENT_REVIEW"
+                }
+              ],
+              "registry_lifecycle_state_required": "ACTIVE",
+              "registry_path": "runtime_registry",
+              "registry_type": "CycleObjectStore",
+              "required_freshness": "CURRENT"
+            },
+            "semantic_predicate": {
+              "args": [
+                {
+                  "equals": "PASS",
+                  "op": "fact",
+                  "path": "quality_decision.decision"
+                },
+                {
+                  "equals": "PASS",
+                  "op": "fact",
+                  "path": "quality_decision.lifecycle_state"
+                },
+                {
+                  "left_path": "quality_decision.reviewer_ref",
+                  "op": "not_equals",
+                  "right_path": "closure_candidate.producer_ref"
+                },
+                {
+                  "minimum": "IND2",
+                  "op": "rank_at_least",
+                  "order": [
+                    "IND0",
+                    "IND1",
+                    "IND2",
+                    "IND3",
+                    "IND4"
+                  ],
+                  "path": "quality_decision.independence_level"
+                },
+                {
+                  "equals": false,
+                  "op": "fact",
+                  "path": "quality_decision.conflict_of_interest"
+                },
+                {
+                  "equals": "CURRENT",
+                  "op": "fact",
+                  "path": "quality_decision.evidence_freshness"
+                },
+                {
+                  "equals": "AUTHORIZED_IN_SCOPE",
+                  "op": "fact",
+                  "path": "authority_decision.decision"
+                },
+                {
+                  "equals": "AUTHORIZED_IN_SCOPE",
+                  "op": "fact",
+                  "path": "authority_decision.lifecycle_state"
+                },
+                {
+                  "equals": "CURRENT",
+                  "op": "fact",
+                  "path": "authority_decision.validity"
+                },
+                {
+                  "op": "contains",
+                  "path": "authority_decision.validity_conditions",
+                  "value": "CURRENT"
+                },
+                {
+                  "arg": {
+                    "op": "contains",
+                    "path": "authority_decision.validity_conditions",
+                    "value": "EXPIRED"
+                  },
+                  "op": "not"
+                },
+                {
+                  "op": "contains",
+                  "path": "authority_decision.permitted_operations",
+                  "value": "EXECUTE"
+                },
+                {
+                  "equals": "ACCEPTED_BY_AUTHORIZED_OWNER",
+                  "op": "fact",
+                  "path": "residual_risk_decision.decision"
+                },
+                {
+                  "equals": "ACCEPTED",
+                  "op": "fact",
+                  "path": "residual_risk_decision.lifecycle_state"
+                },
+                {
+                  "equals": "CURRENT",
+                  "op": "fact",
+                  "path": "residual_risk_decision.review_condition"
+                },
+                {
+                  "equals": "READY",
+                  "op": "fact",
+                  "path": "closure_candidate.status"
+                },
+                {
+                  "equals": "QUALITY_CONFIRMED",
+                  "op": "fact",
+                  "path": "closure_candidate.lifecycle_state"
+                },
+                {
+                  "equals": "C11",
+                  "op": "fact",
+                  "path": "closure_candidate.next_transition"
+                },
+                {
+                  "equals": "READY_FOR_AUTHORIZATION",
+                  "op": "fact",
+                  "path": "external_action_proposal.lifecycle_state"
+                },
+                {
+                  "left_path": "authority_decision.proposal_ref",
+                  "op": "equals",
+                  "right_path": "external_action_proposal.proposal_id"
+                },
+                {
+                  "left_path": "quality_decision.proposal_ref",
+                  "op": "equals",
+                  "right_path": "external_action_proposal.proposal_id"
+                },
+                {
+                  "left_path": "quality_decision.closure_candidate_id",
+                  "op": "equals",
+                  "right_path": "closure_candidate.closure_candidate_id"
+                },
+                {
+                  "left_path": "residual_risk_decision.closure_candidate_ref",
+                  "op": "equals",
+                  "right_path": "closure_candidate.closure_candidate_id"
+                },
+                {
+                  "left_path": "residual_risk_decision.proposal_ref",
+                  "op": "equals",
+                  "right_path": "external_action_proposal.proposal_id"
+                },
+                {
+                  "left_path": "closure_candidate.residual_risk_ref",
+                  "op": "equals",
+                  "right_path": "residual_risk_decision.risk_decision_id"
+                },
+                {
+                  "op": "all_equal",
+                  "paths": [
+                    "closure_candidate.cycle_id",
+                    "quality_decision.cycle_id",
+                    "authority_decision.cycle_id",
+                    "residual_risk_decision.cycle_id",
+                    "external_action_proposal.cycle_id"
+                  ]
+                },
+                {
+                  "op": "all_equal",
+                  "paths": [
+                    "closure_candidate.scope",
+                    "quality_decision.scope",
+                    "authority_decision.scope",
+                    "residual_risk_decision.scope",
+                    "external_action_proposal.scope"
+                  ]
+                },
+                {
+                  "left_path": "authority_decision.authorized_subject_ref",
+                  "op": "equals",
+                  "right_path": "external_action_proposal.owner_ref"
+                },
+                {
+                  "left_path": "residual_risk_decision.risk_owner_ref",
+                  "op": "equals",
+                  "right_path": "external_action_proposal.owner_ref"
+                },
+                {
+                  "equals": "C11",
+                  "op": "fact",
+                  "path": "next_transition"
+                }
+              ],
+              "op": "all"
+            },
+            "stop_condition": "Fundamental invariant violation or prohibition."
+          },
+          "inclusion_proof_bundle": {
+            "algorithm": "INDEXED_MINIMAL_SIBLING_MULTIPROOF_BINARY_V1",
+            "encoding": "BASE64",
+            "payload_b64": "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",
+            "payload_sha256": "a6bb93e44fb496b13e0089abb88a1d8bba8cd3deb91f7bb9bd6a2392a179f004",
+            "record_keys": [
+              "BEHAVIOR_PROFILE:ACTION_OBJECT",
+              "BEHAVIOR_PROFILE:ACTION_PROPOSAL_OBJECT",
+              "BEHAVIOR_PROFILE:EFFECT_RECORD_OBJECT",
+              "BEHAVIOR_PROFILE:EPISTEMIC_OBJECT",
+              "BEHAVIOR_PROFILE:GENERIC_STATEFUL_OBJECT",
+              "BEHAVIOR_PROFILE:MACHINE_OBJECT",
+              "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+              "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+              "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+              "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+              "FOUNDATION:B0",
+              "FOUNDATION:C0",
+              "FOUNDATION:CV0",
+              "FOUNDATION:D0",
+              "FOUNDATION:E0",
+              "FOUNDATION:I0",
+              "FOUNDATION:T0",
+              "FOUNDATION:V0",
+              "GATE:C10",
+              "NORM:N-GEN-003",
+              "NORM:N-GEN-005",
+              "NORM:N-GEN-006",
+              "NORM:N-GEN-010",
+              "NORM:N-GEN-022",
+              "NORM:N-GEN-023",
+              "NORM:N-GEN-031",
+              "NORM:N-GEN-033",
+              "NORM:N-GEN-034",
+              "NORM:N-GEN-035",
+              "NORM:N-GEN-037",
+              "NORM:N-GEN-038",
+              "NORM:N-GEN-041",
+              "NORM:N-GEN-046",
+              "NORM:N-GEN-050",
+              "NORM:N-GEN-051",
+              "NORM:N-GEN-064",
+              "NORM:N-GEN-067",
+              "NORM:N-GEN-069",
+              "NORM:N-GEN-078",
+              "NORM:N-GEN-085",
+              "NORM:N-O001-04",
+              "NORM:N-O002-02",
+              "NORM:N-O002-04",
+              "NORM:N-O003-04",
+              "NORM:N-O004-10",
+              "NORM:N-O005-03",
+              "NORM:N-O005-05",
+              "NORM:N-O005-06",
+              "NORM:N-O006-10",
+              "NORM:N-O008-04",
+              "NORM:N-O008-10",
+              "NORM:N-O009-10",
+              "NORM:N-O010-06",
+              "NORM:N-O010-10",
+              "NORM:N-O011-05",
+              "NORM:N-O011-06",
+              "NORM:N-O011-10",
+              "NORM:N-O012-05",
+              "NORM:N-O014-04",
+              "NORM:N-O014-05",
+              "NORM:N-O015-01",
+              "NORM:N-O016-04",
+              "NORM:N-O017-10",
+              "NORM:N-O018-02",
+              "NORM:N-O018-05",
+              "NORM:N-O018-10",
+              "NORM:N-O019-06",
+              "NORM:N-O020-01",
+              "NORM:N-O020-04",
+              "NORM:N-O020-06",
+              "NORM:N-O021-05",
+              "NORM:N-O021-06",
+              "NORM:N-O021-10",
+              "NORM:N-O023-10",
+              "NORM:N-O024-01",
+              "NORM:N-O025-02",
+              "NORM:N-O026-02",
+              "NORM:N-O026-06",
+              "NORM:N-O027-02",
+              "NORM:N-O027-06",
+              "NORM:N-O028-10",
+              "NORM:P-N-029",
+              "NORM:P-N-040",
+              "OBJECT:AbstractionTrace",
+              "OBJECT:ActionExecutionRecord",
+              "OBJECT:Artifact",
+              "OBJECT:Authority",
+              "OBJECT:AuthorityDecision",
+              "OBJECT:AuthorizedExternalAction",
+              "OBJECT:CalculatingElement",
+              "OBJECT:ClosureCandidate",
+              "OBJECT:Context Package",
+              "OBJECT:Event",
+              "OBJECT:Evidence",
+              "OBJECT:ExperienceRecord",
+              "OBJECT:ExternalActionProposal",
+              "OBJECT:Memory",
+              "OBJECT:ObservedEffect",
+              "OBJECT:Oper",
+              "OBJECT:Operature",
+              "OBJECT:Operome",
+              "OBJECT:Phenomenon",
+              "OBJECT:PhilosophicalMachine",
+              "OBJECT:QualityDecision",
+              "OBJECT:ResidualRiskDecision",
+              "OBJECT:Responsibility",
+              "OBJECT:Risk",
+              "OBJECT:State",
+              "OBJECT:SubstrateDeclaration",
+              "OBJECT:Transition",
+              "OBJECT:Unknown",
+              "PRINCIPLE:CP-01",
+              "PRINCIPLE:CP-02",
+              "PRINCIPLE:CP-03",
+              "PRINCIPLE:CP-04",
+              "PRINCIPLE:CP-05",
+              "PRINCIPLE:CP-06"
+            ],
+            "semantic_merkle_root": "55a8ffd4bc548fd99ce8b93d427d3370734231896c849aa375046feabc2eb6d6"
+          },
+          "independent_normative_authority": "ZERO",
+          "phase_critical_norm_ids": [
+            "N-GEN-003",
+            "N-GEN-005",
+            "N-GEN-006",
+            "N-GEN-010",
+            "N-GEN-022",
+            "N-GEN-023",
+            "N-GEN-031",
+            "N-GEN-033",
+            "N-GEN-034",
+            "N-GEN-035",
+            "N-GEN-037",
+            "N-GEN-038",
+            "N-GEN-041",
+            "N-GEN-046",
+            "N-GEN-050",
+            "N-GEN-051",
+            "N-GEN-064",
+            "N-GEN-067",
+            "N-GEN-069",
+            "N-GEN-078",
+            "N-GEN-085",
+            "N-O001-04",
+            "N-O002-02",
+            "N-O002-04",
+            "N-O003-04",
+            "N-O004-10",
+            "N-O005-03",
+            "N-O005-05",
+            "N-O005-06",
+            "N-O006-10",
+            "N-O008-04",
+            "N-O008-10",
+            "N-O009-10",
+            "N-O010-06",
+            "N-O010-10",
+            "N-O011-05",
+            "N-O011-06",
+            "N-O011-10",
+            "N-O012-05",
+            "N-O014-04",
+            "N-O014-05",
+            "N-O015-01",
+            "N-O016-04",
+            "N-O017-10",
+            "N-O018-02",
+            "N-O018-05",
+            "N-O018-10",
+            "N-O019-06",
+            "N-O020-01",
+            "N-O020-04",
+            "N-O020-06",
+            "N-O021-05",
+            "N-O021-06",
+            "N-O021-10",
+            "N-O023-10",
+            "N-O024-01",
+            "N-O025-02",
+            "N-O026-02",
+            "N-O026-06",
+            "N-O027-02",
+            "N-O027-06",
+            "N-O028-10",
+            "P-N-029",
+            "P-N-040"
+          ],
+          "phase_id": "C10",
+          "release_binding": {
+            "binding_rule": "Resolve exact PDF SHA-256 through the signed release statement; capsule identity is committed by release_id and semantic_merkle_root.",
+            "canonical_pdf_ref": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+            "release_id": "v2.31_Public_BOIS_Common_Core",
+            "release_statement_ref": "v2.31_Public_BOIS_Common_Core_Release_Statement.json"
+          },
+          "release_id": "v2.31_Public_BOIS_Common_Core",
+          "required_boot_capsule_sha256": "a2764ca94c11c7f29957832e73a15030434ddad3fe0eb3e116917b7c6976d769",
+          "required_object_schemas": [
+            {
+              "allowed_states": [
+                "DRAFT",
+                "VALIDATED",
+                "ACTIVE",
+                "HOLD",
+                "CLOSED",
+                "SUPERSEDED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "DRAFT",
+                  "owner": "O009",
+                  "to": "VALIDATED"
+                },
+                {
+                  "from": "VALIDATED",
+                  "owner": "O009",
+                  "to": "ACTIVE"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O009",
+                  "to": "HOLD"
+                },
+                {
+                  "from": "HOLD",
+                  "owner": "O009",
+                  "to": "ACTIVE"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O009",
+                  "to": "CLOSED"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O009",
+                  "to": "SUPERSEDED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+              "catalog_integrity_sha256": "9028543ddcfae918d6d85108147bada32dc5150a699267afe0209b19c07e8bae",
+              "field_types": {
+                "access": [
+                  "#/$defs/StringOrList"
+                ],
+                "artifact_id": [
+                  "#/$defs/Identifier"
+                ],
+                "carriers": [
+                  "#/$defs/StringOrList"
+                ],
+                "content_or_description": [
+                  "string"
+                ],
+                "custodian": [
+                  "string"
+                ],
+                "lineage": [
+                  "string"
+                ],
+                "owner": [
+                  "#/$defs/Identifier"
+                ],
+                "physical_or_logical_identity": [
+                  "string"
+                ],
+                "provenance": [
+                  "string"
+                ],
+                "representations": [
+                  "#/$defs/StringOrList"
+                ],
+                "state": [
+                  "string"
+                ]
+              },
+              "initial_state": "DRAFT",
+              "object_type": "Artifact",
+              "owner": "O009",
+              "relations": [],
+              "required_fields": [
+                "artifact_id",
+                "lineage",
+                "physical_or_logical_identity",
+                "content_or_description",
+                "carriers",
+                "representations",
+                "provenance",
+                "owner",
+                "custodian",
+                "state",
+                "access",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O009",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-ARTIFACT-STRUCTURE",
+                "TEST-OBJECT-ARTIFACT-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "CANDIDATE",
+                "ACTIVE",
+                "SUSPENDED",
+                "REVOKED",
+                "EXPIRED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "CANDIDATE",
+                  "owner": "O017",
+                  "to": "ACTIVE"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O017",
+                  "to": "SUSPENDED"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O017",
+                  "to": "REVOKED"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O017",
+                  "to": "EXPIRED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "EPISTEMIC_OBJECT",
+              "catalog_integrity_sha256": "491ebf8ddd9efbcc2b78a69b91390b09a24570d7d9bc8b2005ecfb82a221907d",
+              "field_types": {
+                "authority_id": [
+                  "#/$defs/Identifier"
+                ],
+                "limit": [
+                  "string"
+                ],
+                "permitted_actions": [
+                  "#/$defs/StringOrList"
+                ],
+                "revocation_method": [
+                  "string"
+                ],
+                "risk_level": [
+                  "#/$defs/RiskLevel"
+                ],
+                "scope": [
+                  "string"
+                ],
+                "source": [
+                  "string"
+                ],
+                "status": [
+                  "string"
+                ],
+                "subject_or_role": [
+                  "string"
+                ],
+                "term_or_condition": [
+                  "string"
+                ]
+              },
+              "initial_state": "CANDIDATE",
+              "object_type": "Authority",
+              "owner": "O017",
+              "relations": [],
+              "required_fields": [
+                "authority_id",
+                "source",
+                "subject_or_role",
+                "scope",
+                "limit",
+                "permitted_actions",
+                "risk_level",
+                "term_or_condition",
+                "revocation_method",
+                "status",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O017",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-AUTHORITY-STRUCTURE",
+                "TEST-OBJECT-AUTHORITY-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "DRAFT",
+                "AUTHORIZED_IN_SCOPE",
+                "DENIED",
+                "UNRESOLVED",
+                "REVOKED",
+                "AUTHORIZED",
+                "LIMITED",
+                "NOT_APPLICABLE"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "DRAFT",
+                  "owner": "O017",
+                  "to": "AUTHORIZED"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O017",
+                  "to": "LIMITED"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O017",
+                  "to": "DENIED"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O017",
+                  "to": "NOT_APPLICABLE"
+                },
+                {
+                  "from": "AUTHORIZED",
+                  "owner": "O017",
+                  "to": "REVOKED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+              "catalog_integrity_sha256": "3c4995753e2439872941787c327f83149a0ccb7cd562540bae7b5b56a0444989",
+              "field_types": {
+                "authority_decision_id": [
+                  "#/$defs/Identifier"
+                ],
+                "authority_source_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "authorized_subject_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "cycle_id": [
+                  "#/$defs/Identifier"
+                ],
+                "decision": [
+                  "AUTHORIZED_IN_SCOPE",
+                  "DENIED",
+                  "UNRESOLVED",
+                  "REVOKED"
+                ],
+                "permitted_operations": [
+                  "#/$defs/StringOrList"
+                ],
+                "proposal_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "revocation_route": [
+                  "string"
+                ],
+                "scope": [
+                  "string"
+                ],
+                "validity": [
+                  "CURRENT",
+                  "EXPIRED",
+                  "REVOKED",
+                  "UNKNOWN"
+                ],
+                "validity_conditions": [
+                  "#/$defs/StringOrList"
+                ]
+              },
+              "initial_state": "DRAFT",
+              "object_type": "AuthorityDecision",
+              "owner": "O017",
+              "relations": [
+                "AUTHORIZES:ExternalActionProposal",
+                "IMPLEMENTS_PHASE:C10",
+                "LIMITS:AuthorizedExternalAction",
+                "PART_OF:PhilosophicalMachine",
+                "SOURCED_FROM:Authority"
+              ],
+              "required_fields": [
+                "authority_decision_id",
+                "proposal_ref",
+                "authority_source_ref",
+                "authorized_subject_ref",
+                "scope",
+                "permitted_operations",
+                "validity_conditions",
+                "validity",
+                "decision",
+                "revocation_route",
+                "cycle_id",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O017",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-AUTHORITYDECISION-STRUCTURE",
+                "TEST-OBJECT-AUTHORITYDECISION-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "AUTHORIZED",
+                "EXECUTING",
+                "EXECUTED",
+                "PARTIAL",
+                "UNKNOWN",
+                "FAILED",
+                "COMPENSATED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "AUTHORIZED",
+                  "owner": "O015",
+                  "to": "EXECUTING"
+                },
+                {
+                  "from": "EXECUTING",
+                  "owner": "O015",
+                  "to": "EXECUTED"
+                },
+                {
+                  "from": "EXECUTING",
+                  "owner": "O015",
+                  "to": "PARTIAL"
+                },
+                {
+                  "from": "EXECUTING",
+                  "owner": "O015",
+                  "to": "UNKNOWN"
+                },
+                {
+                  "from": "EXECUTING",
+                  "owner": "O015",
+                  "to": "FAILED"
+                },
+                {
+                  "from": "PARTIAL",
+                  "owner": "O015",
+                  "to": "COMPENSATED"
+                },
+                {
+                  "from": "FAILED",
+                  "owner": "O015",
+                  "to": "COMPENSATED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "ACTION_OBJECT",
+              "catalog_integrity_sha256": "f2df070ecd95e1aef864b350513f13db92f2e152f3e15ecd9bfea0d0a31c97bd",
+              "field_types": {
+                "action_id": [
+                  "string"
+                ],
+                "authority_ref": [
+                  "string"
+                ],
+                "cycle_id": [
+                  "string"
+                ],
+                "execution_plan": [
+                  "string"
+                ],
+                "independent_review_ref": [
+                  "string"
+                ],
+                "owner": [
+                  "string"
+                ],
+                "proposal_id": [
+                  "string"
+                ],
+                "scope": [
+                  "string"
+                ]
+              },
+              "initial_state": "AUTHORIZED",
+              "object_type": "AuthorizedExternalAction",
+              "owner": "O015",
+              "relations": [
+                "CONSUMES:AuthorityDecision",
+                "CONSUMES:QualityDecision",
+                "CONSUMES:ResidualRiskDecision",
+                "IMPLEMENTS_PHASE:C10",
+                "PRODUCES:ActionExecutionRecord"
+              ],
+              "required_fields": [
+                "action_id",
+                "proposal_id",
+                "cycle_id",
+                "authority_ref",
+                "independent_review_ref",
+                "scope",
+                "execution_plan",
+                "owner",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O015",
+              "type_kind": "ACTION",
+              "validation_tests": [
+                "TEST-OBJECT-AUTHORIZEDEXTERNALACTION-STRUCTURE",
+                "TEST-OBJECT-AUTHORIZEDEXTERNALACTION-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "DRAFT",
+                "COMPLETE",
+                "QUALITY_PENDING",
+                "QUALITY_CONFIRMED",
+                "REJECTED",
+                "SUPERSEDED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "DRAFT",
+                  "owner": "O016",
+                  "to": "COMPLETE"
+                },
+                {
+                  "from": "COMPLETE",
+                  "owner": "O016",
+                  "to": "QUALITY_PENDING"
+                },
+                {
+                  "from": "QUALITY_PENDING",
+                  "owner": "O027",
+                  "to": "QUALITY_CONFIRMED"
+                },
+                {
+                  "from": "QUALITY_PENDING",
+                  "owner": "O027",
+                  "to": "REJECTED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+              "catalog_integrity_sha256": "fe45a6ab56d52cce1f9c5a286ae93cf082936fce81828e48d6337f20adb6efd2",
+              "field_types": {
+                "closure_candidate_id": [
+                  "#/$defs/Identifier"
+                ],
+                "cycle_id": [
+                  "#/$defs/Identifier"
+                ],
+                "debt_refs": [
+                  "#/$defs/ObjectReferenceList"
+                ],
+                "external_action_required": [
+                  "boolean"
+                ],
+                "next_transition": [
+                  "#/$defs/StateReference"
+                ],
+                "physiology_change_required": [
+                  "boolean"
+                ],
+                "producer_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "provenance": [
+                  "string"
+                ],
+                "recovery_route": [
+                  "string"
+                ],
+                "residual_risk_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "responsibility_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "result_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "scope": [
+                  "string"
+                ],
+                "status": [
+                  "string"
+                ],
+                "unknowns": [
+                  "#/$defs/StringOrList"
+                ]
+              },
+              "initial_state": "DRAFT",
+              "object_type": "ClosureCandidate",
+              "owner": "O016",
+              "relations": [
+                "IMPLEMENTS_PHASE:C09",
+                "IMPLEMENTS_PHASE:C10",
+                "PART_OF:PhilosophicalMachine",
+                "PRODUCES:QualityDecision",
+                "RECORDS:Risk",
+                "RECORDS:Unknown",
+                "REVIEWS:QualityDecision"
+              ],
+              "required_fields": [
+                "closure_candidate_id",
+                "cycle_id",
+                "result_ref",
+                "scope",
+                "unknowns",
+                "residual_risk_ref",
+                "debt_refs",
+                "provenance",
+                "responsibility_ref",
+                "recovery_route",
+                "next_transition",
+                "physiology_change_required",
+                "status",
+                "producer_ref",
+                "external_action_required",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O016",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-CLOSURECANDIDATE-STRUCTURE",
+                "TEST-OBJECT-CLOSURECANDIDATE-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "CAPTURED",
+                "PROVENANCE_VERIFIED",
+                "RELEVANCE_ASSESSED",
+                "ACCEPTED",
+                "REJECTED",
+                "SUPERSEDED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "CAPTURED",
+                  "owner": "O010",
+                  "to": "PROVENANCE_VERIFIED"
+                },
+                {
+                  "from": "PROVENANCE_VERIFIED",
+                  "owner": "O010",
+                  "to": "RELEVANCE_ASSESSED"
+                },
+                {
+                  "from": "RELEVANCE_ASSESSED",
+                  "owner": "O010",
+                  "to": "ACCEPTED"
+                },
+                {
+                  "from": "RELEVANCE_ASSESSED",
+                  "owner": "O010",
+                  "to": "REJECTED"
+                },
+                {
+                  "from": "ACCEPTED",
+                  "owner": "O010",
+                  "to": "SUPERSEDED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "EPISTEMIC_OBJECT",
+              "catalog_integrity_sha256": "274845b66a8fb1f2a0c4ed34fde75cec1d49ad11f7f1ee89be64272b5adc6738",
+              "field_types": {
+                "completeness": [
+                  "#/$defs/StringOrList"
+                ],
+                "distortions": [
+                  "#/$defs/StringOrList"
+                ],
+                "evidence_id": [
+                  "#/$defs/Identifier"
+                ],
+                "independence": [
+                  "string"
+                ],
+                "method": [
+                  "string"
+                ],
+                "observed_object": [
+                  "string"
+                ],
+                "resolution": [
+                  "string"
+                ],
+                "scope": [
+                  "string"
+                ],
+                "source": [
+                  "string"
+                ],
+                "supported_or_refuted_objects": [
+                  "#/$defs/StringOrList"
+                ],
+                "time": [
+                  "string"
+                ]
+              },
+              "initial_state": "CAPTURED",
+              "object_type": "Evidence",
+              "owner": "O010",
+              "relations": [],
+              "required_fields": [
+                "evidence_id",
+                "source",
+                "observed_object",
+                "method",
+                "time",
+                "scope",
+                "resolution",
+                "completeness",
+                "distortions",
+                "independence",
+                "supported_or_refuted_objects",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O010",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-EVIDENCE-STRUCTURE",
+                "TEST-OBJECT-EVIDENCE-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "DRAFT",
+                "CONCRETIZED",
+                "RISK_ASSESSED",
+                "REVIEW_PENDING",
+                "AUTHORITY_PENDING",
+                "READY_FOR_AUTHORIZATION",
+                "HOLD"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "DRAFT",
+                  "owner": "O015",
+                  "to": "CONCRETIZED"
+                },
+                {
+                  "from": "CONCRETIZED",
+                  "owner": "O015",
+                  "to": "RISK_ASSESSED"
+                },
+                {
+                  "from": "RISK_ASSESSED",
+                  "owner": "O015",
+                  "to": "REVIEW_PENDING"
+                },
+                {
+                  "from": "REVIEW_PENDING",
+                  "owner": "O015",
+                  "to": "AUTHORITY_PENDING"
+                },
+                {
+                  "from": "AUTHORITY_PENDING",
+                  "owner": "O015",
+                  "to": "READY_FOR_AUTHORIZATION"
+                },
+                {
+                  "from": "RISK_ASSESSED",
+                  "owner": "O015",
+                  "to": "HOLD"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "ACTION_PROPOSAL_OBJECT",
+              "catalog_integrity_sha256": "079b7255e1faaec64f473be75e659c3283416170593b0ccdd87812c29761dc0c",
+              "field_types": {
+                "action_type": [
+                  "string"
+                ],
+                "authority_required": [
+                  "string"
+                ],
+                "cycle_id": [
+                  "string"
+                ],
+                "owner_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "proposal_id": [
+                  "string"
+                ],
+                "review_required": [
+                  "string"
+                ],
+                "risk": [
+                  "string"
+                ],
+                "scope": [
+                  "string"
+                ],
+                "target": [
+                  "string"
+                ]
+              },
+              "initial_state": "DRAFT",
+              "object_type": "ExternalActionProposal",
+              "owner": "O015",
+              "relations": [
+                "IMPLEMENTS_PHASE:C10"
+              ],
+              "required_fields": [
+                "proposal_id",
+                "cycle_id",
+                "action_type",
+                "target",
+                "scope",
+                "risk",
+                "authority_required",
+                "review_required",
+                "owner_ref",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O015",
+              "type_kind": "ACTION_PROPOSAL",
+              "validation_tests": [
+                "TEST-OBJECT-EXTERNALACTIONPROPOSAL-STRUCTURE",
+                "TEST-OBJECT-EXTERNALACTIONPROPOSAL-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "DRAFT",
+                "PASS",
+                "HOLD",
+                "REJECTED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "DRAFT",
+                  "owner": "O027",
+                  "to": "PASS"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O027",
+                  "to": "HOLD"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O027",
+                  "to": "REJECTED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+              "catalog_integrity_sha256": "38aa8e7ddbae60423de5bc35ed3bb9c441562994faa82a3abd0b8041b602f6a7",
+              "field_types": {
+                "closure_candidate_id": [
+                  "#/$defs/Identifier"
+                ],
+                "conflict_of_interest": [
+                  "boolean"
+                ],
+                "cycle_id": [
+                  "#/$defs/Identifier"
+                ],
+                "decision": [
+                  "PASS",
+                  "HOLD",
+                  "REJECTED"
+                ],
+                "evidence_freshness": [
+                  "CURRENT",
+                  "STALE",
+                  "UNKNOWN"
+                ],
+                "evidence_refs": [
+                  "#/$defs/EvidenceReferenceList"
+                ],
+                "independence_level": [
+                  "#/$defs/IndependenceLevel"
+                ],
+                "proposal_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "quality_decision_id": [
+                  "#/$defs/Identifier"
+                ],
+                "reviewer_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "scope": [
+                  "string"
+                ]
+              },
+              "initial_state": "DRAFT",
+              "object_type": "QualityDecision",
+              "owner": "O027",
+              "relations": [
+                "IMPLEMENTS_PHASE:C10",
+                "PART_OF:PhilosophicalMachine",
+                "REVIEWS:ClosureCandidate"
+              ],
+              "required_fields": [
+                "quality_decision_id",
+                "closure_candidate_id",
+                "decision",
+                "reviewer_ref",
+                "independence_level",
+                "scope",
+                "evidence_refs",
+                "evidence_freshness",
+                "conflict_of_interest",
+                "cycle_id",
+                "proposal_ref",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O027",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-QUALITYDECISION-STRUCTURE",
+                "TEST-OBJECT-QUALITYDECISION-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "DRAFT",
+                "ACCEPTED_BY_AUTHORIZED_OWNER",
+                "LIMITED",
+                "REJECTED",
+                "UNRESOLVED",
+                "NOT_APPLICABLE",
+                "ACCEPTED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "DRAFT",
+                  "owner": "O020",
+                  "to": "ACCEPTED"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O020",
+                  "to": "LIMITED"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O020",
+                  "to": "REJECTED"
+                },
+                {
+                  "from": "DRAFT",
+                  "owner": "O020",
+                  "to": "NOT_APPLICABLE"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+              "catalog_integrity_sha256": "c0b310e9bb60331e146d48d36690b65e7b89dc51198b447f86f34da746e3ff50",
+              "field_types": {
+                "affected_objects": [
+                  "#/$defs/ObjectReferenceList"
+                ],
+                "closure_candidate_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "cycle_id": [
+                  "#/$defs/Identifier"
+                ],
+                "decision": [
+                  "ACCEPTED_BY_AUTHORIZED_OWNER",
+                  "LIMITED",
+                  "REJECTED",
+                  "UNRESOLVED",
+                  "NOT_APPLICABLE"
+                ],
+                "proposal_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "protected_losses": [
+                  "#/$defs/StringOrList"
+                ],
+                "residual_risk": [
+                  "string"
+                ],
+                "review_condition": [
+                  "string"
+                ],
+                "risk_class": [
+                  "#/$defs/RiskLevel"
+                ],
+                "risk_decision_id": [
+                  "#/$defs/Identifier"
+                ],
+                "risk_owner_ref": [
+                  "#/$defs/ObjectReference"
+                ],
+                "rollback_or_compensation": [
+                  "string"
+                ],
+                "scope": [
+                  "string"
+                ]
+              },
+              "initial_state": "DRAFT",
+              "object_type": "ResidualRiskDecision",
+              "owner": "O020",
+              "relations": [
+                "APPLIES_TO:ExternalActionProposal",
+                "BOUNDS:AuthorizedExternalAction",
+                "IMPLEMENTS_PHASE:C10",
+                "OWNED_BY:Responsibility",
+                "PART_OF:PhilosophicalMachine"
+              ],
+              "required_fields": [
+                "risk_decision_id",
+                "risk_class",
+                "affected_objects",
+                "protected_losses",
+                "residual_risk",
+                "risk_owner_ref",
+                "decision",
+                "review_condition",
+                "rollback_or_compensation",
+                "proposal_ref",
+                "closure_candidate_ref",
+                "cycle_id",
+                "scope",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O020",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-RESIDUALRISKDECISION-STRUCTURE",
+                "TEST-OBJECT-RESIDUALRISKDECISION-BEHAVIOR"
+              ]
+            },
+            {
+              "allowed_states": [
+                "DRAFT",
+                "VALIDATED",
+                "ACTIVE",
+                "HOLD",
+                "CLOSED",
+                "SUPERSEDED"
+              ],
+              "allowed_transitions": [
+                {
+                  "from": "DRAFT",
+                  "owner": "O018",
+                  "to": "VALIDATED"
+                },
+                {
+                  "from": "VALIDATED",
+                  "owner": "O018",
+                  "to": "ACTIVE"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O018",
+                  "to": "HOLD"
+                },
+                {
+                  "from": "HOLD",
+                  "owner": "O018",
+                  "to": "ACTIVE"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O018",
+                  "to": "CLOSED"
+                },
+                {
+                  "from": "ACTIVE",
+                  "owner": "O018",
+                  "to": "SUPERSEDED"
+                }
+              ],
+              "artifact_version": null,
+              "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+              "catalog_integrity_sha256": "eeb1b25a44e5ae28dad63f5a83f638d0268d6ff220e4b66eff4377cec899cdc6",
+              "field_types": {
+                "duties": [
+                  "#/$defs/StringOrList"
+                ],
+                "object": [
+                  "string"
+                ],
+                "owner": [
+                  "#/$defs/Identifier"
+                ],
+                "responsibility_id": [
+                  "#/$defs/Identifier"
+                ],
+                "scope": [
+                  "string"
+                ],
+                "status": [
+                  "string"
+                ],
+                "supporting_roles": [
+                  "#/$defs/StringOrList"
+                ],
+                "term": [
+                  "string"
+                ],
+                "trigger": [
+                  "string"
+                ],
+                "type": [
+                  "string"
+                ]
+              },
+              "initial_state": "DRAFT",
+              "object_type": "Responsibility",
+              "owner": "O018",
+              "relations": [],
+              "required_fields": [
+                "responsibility_id",
+                "type",
+                "object",
+                "scope",
+                "owner",
+                "supporting_roles",
+                "duties",
+                "trigger",
+                "term",
+                "status",
+                "lifecycle_state"
+              ],
+              "special_contract": {},
+              "transition_owner": "O018",
+              "type_kind": "SUPPORT_OBJECT",
+              "validation_tests": [
+                "TEST-OBJECT-RESPONSIBILITY-STRUCTURE",
+                "TEST-OBJECT-RESPONSIBILITY-BEHAVIOR"
+              ]
+            }
+          ],
+          "selected_record_keys": [
+            "BEHAVIOR_PROFILE:ACTION_OBJECT",
+            "BEHAVIOR_PROFILE:ACTION_PROPOSAL_OBJECT",
+            "BEHAVIOR_PROFILE:EFFECT_RECORD_OBJECT",
+            "BEHAVIOR_PROFILE:EPISTEMIC_OBJECT",
+            "BEHAVIOR_PROFILE:GENERIC_STATEFUL_OBJECT",
+            "BEHAVIOR_PROFILE:MACHINE_OBJECT",
+            "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+            "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+            "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+            "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+            "FOUNDATION:B0",
+            "FOUNDATION:C0",
+            "FOUNDATION:CV0",
+            "FOUNDATION:D0",
+            "FOUNDATION:E0",
+            "FOUNDATION:I0",
+            "FOUNDATION:T0",
+            "FOUNDATION:V0",
+            "GATE:C10",
+            "NORM:N-GEN-003",
+            "NORM:N-GEN-005",
+            "NORM:N-GEN-006",
+            "NORM:N-GEN-010",
+            "NORM:N-GEN-022",
+            "NORM:N-GEN-023",
+            "NORM:N-GEN-031",
+            "NORM:N-GEN-033",
+            "NORM:N-GEN-034",
+            "NORM:N-GEN-035",
+            "NORM:N-GEN-037",
+            "NORM:N-GEN-038",
+            "NORM:N-GEN-041",
+            "NORM:N-GEN-046",
+            "NORM:N-GEN-050",
+            "NORM:N-GEN-051",
+            "NORM:N-GEN-064",
+            "NORM:N-GEN-067",
+            "NORM:N-GEN-069",
+            "NORM:N-GEN-078",
+            "NORM:N-GEN-085",
+            "NORM:N-O001-04",
+            "NORM:N-O002-02",
+            "NORM:N-O002-04",
+            "NORM:N-O003-04",
+            "NORM:N-O004-10",
+            "NORM:N-O005-03",
+            "NORM:N-O005-05",
+            "NORM:N-O005-06",
+            "NORM:N-O006-10",
+            "NORM:N-O008-04",
+            "NORM:N-O008-10",
+            "NORM:N-O009-10",
+            "NORM:N-O010-06",
+            "NORM:N-O010-10",
+            "NORM:N-O011-05",
+            "NORM:N-O011-06",
+            "NORM:N-O011-10",
+            "NORM:N-O012-05",
+            "NORM:N-O014-04",
+            "NORM:N-O014-05",
+            "NORM:N-O015-01",
+            "NORM:N-O016-04",
+            "NORM:N-O017-10",
+            "NORM:N-O018-02",
+            "NORM:N-O018-05",
+            "NORM:N-O018-10",
+            "NORM:N-O019-06",
+            "NORM:N-O020-01",
+            "NORM:N-O020-04",
+            "NORM:N-O020-06",
+            "NORM:N-O021-05",
+            "NORM:N-O021-06",
+            "NORM:N-O021-10",
+            "NORM:N-O023-10",
+            "NORM:N-O024-01",
+            "NORM:N-O025-02",
+            "NORM:N-O026-02",
+            "NORM:N-O026-06",
+            "NORM:N-O027-02",
+            "NORM:N-O027-06",
+            "NORM:N-O028-10",
+            "NORM:P-N-029",
+            "NORM:P-N-040",
+            "OBJECT:AbstractionTrace",
+            "OBJECT:ActionExecutionRecord",
+            "OBJECT:Artifact",
+            "OBJECT:Authority",
+            "OBJECT:AuthorityDecision",
+            "OBJECT:AuthorizedExternalAction",
+            "OBJECT:CalculatingElement",
+            "OBJECT:ClosureCandidate",
+            "OBJECT:Context Package",
+            "OBJECT:Event",
+            "OBJECT:Evidence",
+            "OBJECT:ExperienceRecord",
+            "OBJECT:ExternalActionProposal",
+            "OBJECT:Memory",
+            "OBJECT:ObservedEffect",
+            "OBJECT:Oper",
+            "OBJECT:Operature",
+            "OBJECT:Operome",
+            "OBJECT:Phenomenon",
+            "OBJECT:PhilosophicalMachine",
+            "OBJECT:QualityDecision",
+            "OBJECT:ResidualRiskDecision",
+            "OBJECT:Responsibility",
+            "OBJECT:Risk",
+            "OBJECT:State",
+            "OBJECT:SubstrateDeclaration",
+            "OBJECT:Transition",
+            "OBJECT:Unknown",
+            "PRINCIPLE:CP-01",
+            "PRINCIPLE:CP-02",
+            "PRINCIPLE:CP-03",
+            "PRINCIPLE:CP-04",
+            "PRINCIPLE:CP-05",
+            "PRINCIPLE:CP-06"
+          ],
+          "semantic_merkle_root": "55a8ffd4bc548fd99ce8b93d427d3370734231896c849aa375046feabc2eb6d6",
+          "status": "DERIVED_FROM_CANDIDATE_CANON_ZERO_INDEPENDENT_NORMATIVE_AUTHORITY"
+        }
+      },
+      "repaired": {
+        "expected": "PASS",
+        "required_boot_capsule_sha256": "a2764ca94c11c7f29957832e73a15030434ddad3fe0eb3e116917b7c6976d769",
+        "required_phase_capsule_sha256": "8a30a6c3ea20bbc1689e05571f8344be123c51bbc6e380aa23c3c9f33bea0868"
+      }
+    },
+    "V229-F03": {
+      "negative": {
+        "actual": {
+          "bytes": 55454,
+          "capsule_id": "BOOT",
+          "capsule_sha256": "a2764ca94c11c7f29957832e73a15030434ddad3fe0eb3e116917b7c6976d769",
+          "estimated_tokens": 13864,
+          "file_sha256": "c57eb25627ea6620001d43cec91d554e19ba36d4c8792dca508ab216f7ebb08c",
+          "path": "runtime/capsules/BOOT_CAPSULE.json",
+          "status": "PASS",
+          "target_tokens": 15000
+        },
+        "expected": "FAIL",
+        "reported": {
+          "bytes": 55453,
+          "capsule_id": "BOOT",
+          "capsule_sha256": "a2764ca94c11c7f29957832e73a15030434ddad3fe0eb3e116917b7c6976d769",
+          "estimated_tokens": 13864,
+          "file_sha256": "c57eb25627ea6620001d43cec91d554e19ba36d4c8792dca508ab216f7ebb08c",
+          "path": "runtime/capsules/BOOT_CAPSULE.json",
+          "status": "PASS",
+          "target_tokens": 15000
+        }
+      },
+      "repaired": {
+        "actual": {
+          "bytes": 55454,
+          "capsule_id": "BOOT",
+          "capsule_sha256": "a2764ca94c11c7f29957832e73a15030434ddad3fe0eb3e116917b7c6976d769",
+          "estimated_tokens": 13864,
+          "file_sha256": "c57eb25627ea6620001d43cec91d554e19ba36d4c8792dca508ab216f7ebb08c",
+          "path": "runtime/capsules/BOOT_CAPSULE.json",
+          "status": "PASS",
+          "target_tokens": 15000
+        },
+        "expected": "PASS",
+        "reported": {
+          "bytes": 55454,
+          "capsule_id": "BOOT",
+          "capsule_sha256": "a2764ca94c11c7f29957832e73a15030434ddad3fe0eb3e116917b7c6976d769",
+          "estimated_tokens": 13864,
+          "file_sha256": "c57eb25627ea6620001d43cec91d554e19ba36d4c8792dca508ab216f7ebb08c",
+          "path": "runtime/capsules/BOOT_CAPSULE.json",
+          "status": "PASS",
+          "target_tokens": 15000
+        }
+      }
+    },
+    "V229-F04": {
+      "negative": {
+        "cycle_state_machine": {
+          "canonical_states": [],
+          "hold_contract": {},
+          "stop_contract": {},
+          "transitions": []
+        },
+        "expected": "FAIL"
+      },
+      "repaired": {
+        "cycle_state_machine": {
+          "canonical_states": [
+            "C00",
+            "C01",
+            "C02",
+            "C03",
+            "C04",
+            "C05",
+            "C06",
+            "C07",
+            "C08",
+            "C09",
+            "C10",
+            "C11",
+            "HOLD",
+            "STOP",
+            "REPAIR",
+            "CLOSED"
+          ],
+          "hold_contract": {
+            "alternative_routes": [
+              "HOLD -> REPAIR",
+              "HOLD -> STOP"
+            ],
+            "normal_return": "HOLD -> dynamic_return_state from HoldRecord.return_state after PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+            "preservation": [
+              "cycle_id",
+              "scope",
+              "source_refs",
+              "unknowns",
+              "evidence_refs",
+              "open_debts",
+              "state_hash"
+            ],
+            "required_fields": [
+              "cycle_id",
+              "return_state",
+              "return_gate",
+              "hold_reason",
+              "scope",
+              "source_refs",
+              "unknowns",
+              "evidence_refs",
+              "open_debts",
+              "state_hash"
+            ]
+          },
+          "initial_state": "C00",
+          "repair_contract": {
+            "descendant_retest_required": true,
+            "new_cycle_required": true,
+            "new_revision_required": true
+          },
+          "stop_contract": {
+            "allowed_next": [
+              "REPAIR",
+              "CLOSED"
+            ],
+            "ordinary_continuation": false
+          },
+          "terminal_state": "CLOSED",
+          "transitions": [
+            {
+              "condition": "GATE_C00_PASS",
+              "from": "C00",
+              "owner": "O014",
+              "to": "C01"
+            },
+            {
+              "condition": "GATE_C01_PASS",
+              "from": "C01",
+              "owner": "O014",
+              "to": "C02"
+            },
+            {
+              "condition": "GATE_C02_PASS",
+              "from": "C02",
+              "owner": "O014",
+              "to": "C03"
+            },
+            {
+              "condition": "GATE_C03_PASS",
+              "from": "C03",
+              "owner": "O014",
+              "to": "C04"
+            },
+            {
+              "condition": "GATE_C04_PASS",
+              "from": "C04",
+              "owner": "O014",
+              "to": "C05"
+            },
+            {
+              "condition": "GATE_C05_PASS",
+              "from": "C05",
+              "owner": "O014",
+              "to": "C06"
+            },
+            {
+              "condition": "GATE_C06_PASS",
+              "from": "C06",
+              "owner": "O014",
+              "to": "C07"
+            },
+            {
+              "condition": "GATE_C07_PASS",
+              "from": "C07",
+              "owner": "O014",
+              "to": "C08"
+            },
+            {
+              "condition": "GATE_C08_PASS",
+              "from": "C08",
+              "owner": "O014",
+              "to": "C09"
+            },
+            {
+              "condition": "GATE_C09_PASS",
+              "from": "C09",
+              "owner": "O014",
+              "to": "C10"
+            },
+            {
+              "condition": "GATE_C10_PASS",
+              "from": "C10",
+              "owner": "O014",
+              "to": "C11"
+            },
+            {
+              "condition": "MATERIAL_NEW_PHENOMENON_RECORDED",
+              "from": "C11",
+              "owner": "O014",
+              "to": "C00"
+            },
+            {
+              "condition": "EXPLICIT_TERMINAL_CONDITION_AND_NO_REQUIRED_NEXT_CYCLE",
+              "from": "C11",
+              "owner": "O014",
+              "to": "CLOSED"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C00",
+              "owner": "O014",
+              "return_state": "C00",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C00",
+              "owner": "O014",
+              "source_state": "C00",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C01",
+              "owner": "O014",
+              "return_state": "C01",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C01",
+              "owner": "O014",
+              "source_state": "C01",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C02",
+              "owner": "O014",
+              "return_state": "C02",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C02",
+              "owner": "O014",
+              "source_state": "C02",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C03",
+              "owner": "O014",
+              "return_state": "C03",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C03",
+              "owner": "O014",
+              "source_state": "C03",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C04",
+              "owner": "O014",
+              "return_state": "C04",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C04",
+              "owner": "O014",
+              "source_state": "C04",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C05",
+              "owner": "O014",
+              "return_state": "C05",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C05",
+              "owner": "O014",
+              "source_state": "C05",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C06",
+              "owner": "O014",
+              "return_state": "C06",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C06",
+              "owner": "O014",
+              "source_state": "C06",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C07",
+              "owner": "O014",
+              "return_state": "C07",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C07",
+              "owner": "O014",
+              "source_state": "C07",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C08",
+              "owner": "O014",
+              "return_state": "C08",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C08",
+              "owner": "O014",
+              "source_state": "C08",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C09",
+              "owner": "O014",
+              "return_state": "C09",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C09",
+              "owner": "O014",
+              "source_state": "C09",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C10",
+              "owner": "O014",
+              "return_state": "C10",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C10",
+              "owner": "O014",
+              "source_state": "C10",
+              "to": "STOP"
+            },
+            {
+              "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+              "from": "C11",
+              "owner": "O014",
+              "return_state": "C11",
+              "to": "HOLD"
+            },
+            {
+              "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+              "from": "C11",
+              "owner": "O014",
+              "source_state": "C11",
+              "to": "STOP"
+            },
+            {
+              "condition": "REPAIR_REQUIRED",
+              "from": "HOLD",
+              "owner": "O028",
+              "to": "REPAIR"
+            },
+            {
+              "condition": "HOLD_ESCALATES_TO_STOP",
+              "from": "HOLD",
+              "owner": "O026",
+              "to": "STOP"
+            },
+            {
+              "condition": "REPAIR_AUTHORIZED",
+              "from": "STOP",
+              "owner": "O028",
+              "to": "REPAIR"
+            },
+            {
+              "condition": "EXPLICIT_SAFE_TERMINAL_CLOSURE",
+              "from": "STOP",
+              "owner": "O016",
+              "to": "CLOSED"
+            },
+            {
+              "condition": "NEW_REVISION_AND_NEW_CYCLE",
+              "from": "REPAIR",
+              "owner": "O014",
+              "to": "C00"
+            },
+            {
+              "allowed_return_states": [
+                "C00",
+                "C01",
+                "C02",
+                "C03",
+                "C04",
+                "C05",
+                "C06",
+                "C07",
+                "C08",
+                "C09",
+                "C10",
+                "C11"
+              ],
+              "condition": "PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+              "from": "HOLD",
+              "owner": "O014",
+              "required_preservation": [
+                "cycle_id",
+                "scope",
+                "source_refs",
+                "unknowns",
+                "evidence_refs",
+                "open_debts",
+                "state_hash"
+              ],
+              "return_state_source": "HoldRecord.return_state",
+              "to": "dynamic_return_state"
+            }
+          ]
+        },
+        "expected": "PASS"
+      }
+    },
+    "V229-F05": {
+      "negative": {
+        "expected": "HOLD",
+        "missing_required_norm_ids": [
+          "N-GEN-035",
+          "N-GEN-067",
+          "N-O018-05",
+          "N-O020-01",
+          "N-O021-06",
+          "N-O027-02"
+        ],
+        "selected_norm_ids": [
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-003",
+          "N-GEN-085",
+          "N-GEN-078",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-069",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-06",
+          "N-O028-10"
+        ],
+        "selector_input": {
+          "action_class": "EXECUTE",
+          "active_layers": [
+            "BASE"
+          ],
+          "authority_state": "AUTHORIZED_IN_SCOPE",
+          "object_types": [
+            "QualityDecision",
+            "AuthorityDecision",
+            "ResidualRiskDecision",
+            "ClosureCandidate"
+          ],
+          "phase": "C10",
+          "risk_class": "HIGH",
+          "scope": [
+            "core",
+            "external_action"
+          ],
+          "unresolved_debts": []
+        }
+      },
+      "repaired": {
+        "expected": "PASS",
+        "required_norm_ids": [
+          "N-GEN-035",
+          "N-GEN-067",
+          "N-O018-05",
+          "N-O020-01",
+          "N-O021-06",
+          "N-O027-02"
+        ],
+        "selected_norm_ids": [
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-003",
+          "N-GEN-085",
+          "N-GEN-078",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-035",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-067",
+          "N-GEN-069",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-05",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-01",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-06",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-02",
+          "N-O027-06",
+          "N-O028-10"
+        ],
+        "selector_input": {
+          "action_class": "EXECUTE",
+          "active_layers": [
+            "BASE"
+          ],
+          "authority_state": "AUTHORIZED_IN_SCOPE",
+          "object_types": [
+            "QualityDecision",
+            "AuthorityDecision",
+            "ResidualRiskDecision",
+            "ClosureCandidate"
+          ],
+          "phase": "C10",
+          "risk_class": "HIGH",
+          "scope": [
+            "core",
+            "external_action"
+          ],
+          "unresolved_debts": []
+        }
+      }
+    },
+    "V229-F06": {
+      "negative": {
+        "expected": "FAIL_OR_HOLD",
+        "operation": "CORRUPT_PROOF_AND_REMOVE_CRITICAL_NORM",
+        "proof_payload_b64": "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",
+        "selected_norm_ids": [
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-003",
+          "N-GEN-085",
+          "N-GEN-078",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-067",
+          "N-GEN-069",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-05",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-01",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-06",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-02",
+          "N-O027-06",
+          "N-O028-10"
+        ]
+      },
+      "repaired": {
+        "expected": "PASS",
+        "operation": "VERIFY_PROOF_AND_FULL_CANON_EQUIVALENCE",
+        "proof_payload_sha256": "026b709fb16044102fba411a99a29dad4898bd04290db2bc26f5c7226ef7248d",
+        "selected_norm_ids": [
+          "N-GEN-005",
+          "N-GEN-006",
+          "N-GEN-010",
+          "N-GEN-003",
+          "N-GEN-085",
+          "N-GEN-078",
+          "N-GEN-022",
+          "N-GEN-023",
+          "N-GEN-031",
+          "N-GEN-033",
+          "N-GEN-034",
+          "N-GEN-035",
+          "N-GEN-037",
+          "N-GEN-038",
+          "N-GEN-041",
+          "N-GEN-046",
+          "N-GEN-050",
+          "N-GEN-051",
+          "N-GEN-064",
+          "N-GEN-067",
+          "N-GEN-069",
+          "N-O001-04",
+          "N-O002-02",
+          "N-O002-04",
+          "N-O003-04",
+          "N-O004-10",
+          "N-O005-03",
+          "N-O005-05",
+          "N-O005-06",
+          "N-O006-10",
+          "N-O008-04",
+          "N-O008-10",
+          "N-O009-10",
+          "N-O010-06",
+          "N-O010-10",
+          "N-O011-05",
+          "N-O011-06",
+          "N-O011-10",
+          "N-O012-05",
+          "N-O014-04",
+          "N-O014-05",
+          "N-O015-01",
+          "N-O016-04",
+          "N-O017-10",
+          "N-O018-02",
+          "N-O018-05",
+          "N-O018-10",
+          "N-O019-06",
+          "N-O020-01",
+          "N-O020-04",
+          "N-O020-06",
+          "N-O021-05",
+          "N-O021-06",
+          "N-O021-10",
+          "N-O023-10",
+          "N-O024-01",
+          "N-O025-02",
+          "N-O026-02",
+          "N-O026-06",
+          "N-O027-02",
+          "N-O027-06",
+          "N-O028-10"
+        ]
+      }
+    },
+    "V229-F07": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V229-F07",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT",
+          "release_id": "v2.29"
+        },
+        "operation": "EXACT_ZIP_POSTPACK_RECEIPT"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V229-F07",
+        "operation": "EXACT_ZIP_POSTPACK_RECEIPT",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    },
+    "V229-F08": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V229-F08",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT",
+          "release_id": "v2.29"
+        },
+        "operation": "PDF_NAMED_DESTINATIONS"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V229-F08",
+        "operation": "PDF_NAMED_DESTINATIONS",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    },
+    "V229-F09": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V229-F09",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT",
+          "release_id": "v2.29"
+        },
+        "operation": "PDF_STRUCTURE_TREE"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V229-F09",
+        "operation": "PDF_STRUCTURE_TREE",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    },
+    "V229-F10": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V229-F10",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT",
+          "release_id": "v2.29"
+        },
+        "operation": "SELECTIVE_LOADING_CLAIM_BOUNDARY"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V229-F10",
+        "operation": "SELECTIVE_LOADING_CLAIM_BOUNDARY",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    },
+    "V230-F01": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V230-F01",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT_OR_DESIGNED_POSITION_CHANGED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        },
+        "operation": "SELECTOR_ALL_PHASE_COMPLETENESS"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V230-F01",
+        "operation": "SELECTOR_ALL_PHASE_COMPLETENESS",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    },
+    "V230-F02": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V230-F02",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT_OR_DESIGNED_POSITION_CHANGED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        },
+        "operation": "ALL_PHASE_TASK_CHAIN"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V230-F02",
+        "operation": "ALL_PHASE_TASK_CHAIN",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    },
+    "V230-F03": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V230-F03",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT_OR_DESIGNED_POSITION_CHANGED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        },
+        "operation": "FULL_CANON_CAPSULE_BOUNDARY"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V230-F03",
+        "operation": "FULL_CANON_CAPSULE_BOUNDARY",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    },
+    "V230-F04": {
+      "negative": {
+        "expected": "HOLD_OR_FAIL",
+        "finding_id": "V230-F04",
+        "mutated_input": {
+          "condition": "REQUIRED_EVIDENCE_ABSENT_OR_DESIGNED_POSITION_CHANGED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        },
+        "operation": "AUTHOR_MESSAGE_POSITION_PRESERVED"
+      },
+      "repaired": {
+        "expected": "PASS",
+        "finding_id": "V230-F04",
+        "operation": "AUTHOR_MESSAGE_POSITION_PRESERVED",
+        "released_input": {
+          "condition": "EXACT_RELEASED_ARTIFACT_VALIDATED",
+          "release_id": "v2.31_Public_BOIS_Common_Core"
+        }
+      }
+    }
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "v231": {
+    "V231-F01": {
+      "negative": {
+        "expected": "STOP-OPERATOR-REGISTRY-OPEN",
+        "finding_id": "V231-F01",
+        "mutation": "UNPUBLISHED_GATE_OPERATOR",
+        "observed": "STOP-OPERATOR-REGISTRY-OPEN"
+      },
+      "positive": {
+        "expected": "PASS",
+        "finding_id": "V231-F01",
+        "observed": "PASS",
+        "repair": "UNPUBLISHED_GATE_OPERATOR_REPAIRED"
+      }
+    },
+    "V231-F02": {
+      "negative": {
+        "expected": "STOP-INVALID-VALIDATION-RECEIPT",
+        "finding_id": "V231-F02",
+        "mutation": "SYNTHETIC_FALSE_VALIDATION_PASS",
+        "observed": "STOP-INVALID-VALIDATION-RECEIPT"
+      },
+      "positive": {
+        "expected": "PASS",
+        "finding_id": "V231-F02",
+        "observed": "PASS",
+        "repair": "SYNTHETIC_FALSE_VALIDATION_PASS_REPAIRED"
+      }
+    },
+    "V231-F03": {
+      "negative": {
+        "expected": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+        "finding_id": "V231-F03",
+        "mutation": "SELECTED_NORM_CONTENT_NOT_MATERIALIZED",
+        "observed": "HOLD-RUNTIME-CAPSULE-INCOMPLETE"
+      },
+      "positive": {
+        "expected": "PASS",
+        "finding_id": "V231-F03",
+        "observed": "PASS",
+        "repair": "SELECTED_NORM_CONTENT_NOT_MATERIALIZED_REPAIRED"
+      }
+    },
+    "V231-F04": {
+      "negative": {
+        "expected": "HOLD-CONTEXT-BUDGET-UNKNOWN",
+        "finding_id": "V231-F04",
+        "mutation": "MATERIALIZED_CONTEXT_BUDGET_NOT_MEASURED",
+        "observed": "HOLD-CONTEXT-BUDGET-UNKNOWN"
+      },
+      "positive": {
+        "expected": "PASS",
+        "finding_id": "V231-F04",
+        "observed": "PASS",
+        "repair": "MATERIALIZED_CONTEXT_BUDGET_NOT_MEASURED_REPAIRED"
+      }
+    },
+    "V231-F05": {
+      "negative": {
+        "expected": "HOLD-OPERATOR-ACCEPTANCE-REQUIRED",
+        "finding_id": "V231-F05",
+        "mutation": "PERSONAL_LAYER_WITHOUT_ACCEPTANCE",
+        "observed": "HOLD-OPERATOR-ACCEPTANCE-REQUIRED"
+      },
+      "positive": {
+        "expected": "PASS",
+        "finding_id": "V231-F05",
+        "observed": "PASS",
+        "repair": "PERSONAL_LAYER_WITHOUT_ACCEPTANCE_REPAIRED"
+      }
+    },
+    "V231-F06": {
+      "negative": {
+        "expected": "HOLD-SEMANTIC-EQUIVALENCE-NOT-PROVEN",
+        "finding_id": "V231-F06",
+        "mutation": "FULL_CANON_CAPSULE_PAIRED_EXECUTION_ABSENT",
+        "observed": "HOLD-SEMANTIC-EQUIVALENCE-NOT-PROVEN"
+      },
+      "positive": {
+        "expected": "PASS",
+        "finding_id": "V231-F06",
+        "observed": "PASS",
+        "repair": "FULL_CANON_CAPSULE_PAIRED_EXECUTION_ABSENT_REPAIRED"
+      }
+    }
+  }
+}

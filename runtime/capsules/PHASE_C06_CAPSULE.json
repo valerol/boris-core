@@ -1,0 +1,1361 @@
+{
+  "artifact_version": "2.31",
+  "baseline_global_norm_ids": [
+    "N-GEN-003",
+    "N-GEN-005",
+    "N-GEN-006",
+    "N-GEN-010",
+    "N-GEN-022",
+    "N-GEN-023",
+    "N-GEN-031",
+    "N-GEN-033",
+    "N-GEN-037",
+    "N-GEN-038",
+    "N-GEN-041",
+    "N-GEN-046",
+    "N-GEN-050",
+    "N-GEN-051",
+    "N-GEN-064",
+    "N-GEN-069",
+    "N-GEN-078",
+    "N-O001-04",
+    "N-O002-02",
+    "N-O002-04",
+    "N-O003-04",
+    "N-O005-03",
+    "N-O005-05",
+    "N-O005-06",
+    "N-O008-04",
+    "N-O008-10",
+    "N-O009-10",
+    "N-O010-10",
+    "N-O011-05",
+    "N-O011-10",
+    "N-O012-05",
+    "N-O015-01",
+    "N-O018-02",
+    "N-O019-06",
+    "N-O020-04",
+    "N-O020-06",
+    "N-O023-10",
+    "N-O024-01",
+    "N-O025-02",
+    "N-O026-02",
+    "N-O026-06"
+  ],
+  "candidate_norm_ids": [
+    "N-GEN-001",
+    "N-GEN-003",
+    "N-GEN-005",
+    "N-GEN-006",
+    "N-GEN-010",
+    "N-GEN-018",
+    "N-GEN-022",
+    "N-GEN-023",
+    "N-GEN-025",
+    "N-GEN-027",
+    "N-GEN-031",
+    "N-GEN-032",
+    "N-GEN-033",
+    "N-GEN-037",
+    "N-GEN-038",
+    "N-GEN-039",
+    "N-GEN-041",
+    "N-GEN-046",
+    "N-GEN-050",
+    "N-GEN-051",
+    "N-GEN-052",
+    "N-GEN-060",
+    "N-GEN-064",
+    "N-GEN-069",
+    "N-GEN-074",
+    "N-GEN-078",
+    "N-O001-04",
+    "N-O002-02",
+    "N-O002-04",
+    "N-O002-07",
+    "N-O003-02",
+    "N-O003-04",
+    "N-O005-01",
+    "N-O005-02",
+    "N-O005-03",
+    "N-O005-05",
+    "N-O005-06",
+    "N-O005-07",
+    "N-O005-10",
+    "N-O006-01",
+    "N-O006-02",
+    "N-O006-03",
+    "N-O006-04",
+    "N-O006-05",
+    "N-O006-07",
+    "N-O006-10",
+    "N-O007-04",
+    "N-O007-05",
+    "N-O007-06",
+    "N-O007-10",
+    "N-O008-03",
+    "N-O008-04",
+    "N-O008-10",
+    "N-O009-05",
+    "N-O009-07",
+    "N-O009-10",
+    "N-O010-03",
+    "N-O010-10",
+    "N-O011-03",
+    "N-O011-05",
+    "N-O011-06",
+    "N-O011-10",
+    "N-O012-05",
+    "N-O013-02",
+    "N-O013-03",
+    "N-O015-01",
+    "N-O016-02",
+    "N-O018-02",
+    "N-O019-06",
+    "N-O020-04",
+    "N-O020-06",
+    "N-O021-01",
+    "N-O023-10",
+    "N-O024-01",
+    "N-O025-02",
+    "N-O026-02",
+    "N-O026-06",
+    "P-N-006",
+    "P-N-014",
+    "P-N-029",
+    "P-N-040"
+  ],
+  "canonical_authority": "SIGNED_CANONICAL_PDF",
+  "capsule_sha256": "a633d3d280b42f788aed610dd22d0c04ddd0f31c8c95bda65c1487a665859b00",
+  "capsule_type": "PHASE_CAPSULE",
+  "completeness": "ALL_OPERATOR_ACCEPTED_ACTIVE_LAYER_PHASE_CANDIDATES_INCLUDED",
+  "failure_if_task_closure_missing": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+  "gate_contract": {
+    "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C06/adversarial",
+    "canonical_object_projection": {
+      "assessment_objects": [
+        "CognitiveProtocolRun",
+        "AbstractionTrace",
+        "Inference",
+        "Model"
+      ],
+      "output_objects": [
+        "CognitiveProtocolRun"
+      ],
+      "primary_object": "CognitiveProtocolRun"
+    },
+    "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C06-POSITIVE",
+    "gate_id": "C06",
+    "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+    "hold_return_state": "C06",
+    "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC06",
+    "name": "COGNITIVE_TRANSFORMATION",
+    "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C06/negative",
+    "next_phase": "C07",
+    "owner": "O014",
+    "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+    "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C06/positive",
+    "predicate": {
+      "op": "schema_valid",
+      "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC06"
+    },
+    "required_evidence": [
+      "typed CycleObjectStore",
+      "current GateEvidence bound to the exact context digest",
+      "all declared runtime references resolve in the current cycle and scope"
+    ],
+    "required_evidence_contract": {
+      "allowed_source_classes": [
+        "CURRENT_RUNTIME",
+        "AUTHORIZED_SOURCE",
+        "INDEPENDENT_REVIEW"
+      ],
+      "context_digest_excludes": [
+        "runtime_registry"
+      ],
+      "exact_cycle_binding": true,
+      "exact_revision_binding": true,
+      "exact_scope_binding": true,
+      "gate_evidence_owner": "O014",
+      "gate_evidence_type": "GateEvidence",
+      "known_object_types_required": true,
+      "minimum_evidence_count": 1,
+      "object_bindings": [],
+      "object_id_uniqueness_required": true,
+      "object_payload_required": true,
+      "reference_bindings": [
+        {
+          "context_path": "microphases.*.evidence_refs",
+          "freshness": "CURRENT",
+          "minimum_count": 1,
+          "object_type": "Evidence",
+          "owner": "O010",
+          "source_class": "AUTHORIZED_SOURCE"
+        },
+        {
+          "context_path": "alternatives",
+          "freshness": "CURRENT",
+          "minimum_count": 1,
+          "object_type": "Branch",
+          "owner": "O013",
+          "source_class": "CURRENT_RUNTIME"
+        },
+        {
+          "context_path": "transformation_trace",
+          "freshness": "CURRENT",
+          "minimum_count": 1,
+          "object_type": "Transformation",
+          "owner": "O009",
+          "source_class": "CURRENT_RUNTIME"
+        }
+      ],
+      "registry_lifecycle_state_required": "ACTIVE",
+      "registry_path": "runtime_registry",
+      "registry_type": "CycleObjectStore",
+      "required_freshness": "CURRENT"
+    },
+    "semantic_predicate": {
+      "args": [
+        {
+          "op": "count_equals",
+          "path": "microphases",
+          "value": 6
+        },
+        {
+          "child_path": "status",
+          "equals": "COMPLETE",
+          "op": "all_items_fact",
+          "path": "microphases"
+        },
+        {
+          "op": "min_items",
+          "path": "alternatives",
+          "value": 1
+        },
+        {
+          "op": "nonempty",
+          "path": "transformation_trace"
+        },
+        {
+          "equals": "C07",
+          "op": "fact",
+          "path": "next_transition"
+        }
+      ],
+      "op": "all"
+    },
+    "stop_condition": "Fundamental invariant violation or prohibition."
+  },
+  "inclusion_proof_bundle": {
+    "algorithm": "INDEXED_MINIMAL_SIBLING_MULTIPROOF_BINARY_V1",
+    "encoding": "BASE64",
+    "payload_b64": "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",
+    "payload_sha256": "8b7c694dd657267e23579cc191f3c69745c091f9076da318127c015ab86cfe71",
+    "record_keys": [
+      "BEHAVIOR_PROFILE:ACTION_OBJECT",
+      "BEHAVIOR_PROFILE:ACTION_PROPOSAL_OBJECT",
+      "BEHAVIOR_PROFILE:EFFECT_RECORD_OBJECT",
+      "BEHAVIOR_PROFILE:EPISTEMIC_OBJECT",
+      "BEHAVIOR_PROFILE:GENERIC_STATEFUL_OBJECT",
+      "BEHAVIOR_PROFILE:MACHINE_OBJECT",
+      "BEHAVIOR_PROFILE:PROCESS_OBJECT",
+      "COMPONENT:machine/APPLICABILITY_SELECTOR.json",
+      "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+      "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+      "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+      "COMPONENT:machine/NORM_RECORD_MATERIALIZER.json",
+      "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+      "FOUNDATION:B0",
+      "FOUNDATION:C0",
+      "FOUNDATION:CV0",
+      "FOUNDATION:D0",
+      "FOUNDATION:E0",
+      "FOUNDATION:I0",
+      "FOUNDATION:T0",
+      "FOUNDATION:V0",
+      "GATE:C06",
+      "NORM:N-GEN-001",
+      "NORM:N-GEN-003",
+      "NORM:N-GEN-005",
+      "NORM:N-GEN-006",
+      "NORM:N-GEN-010",
+      "NORM:N-GEN-018",
+      "NORM:N-GEN-022",
+      "NORM:N-GEN-023",
+      "NORM:N-GEN-025",
+      "NORM:N-GEN-027",
+      "NORM:N-GEN-031",
+      "NORM:N-GEN-032",
+      "NORM:N-GEN-033",
+      "NORM:N-GEN-037",
+      "NORM:N-GEN-038",
+      "NORM:N-GEN-039",
+      "NORM:N-GEN-041",
+      "NORM:N-GEN-046",
+      "NORM:N-GEN-050",
+      "NORM:N-GEN-051",
+      "NORM:N-GEN-052",
+      "NORM:N-GEN-060",
+      "NORM:N-GEN-064",
+      "NORM:N-GEN-069",
+      "NORM:N-GEN-074",
+      "NORM:N-GEN-078",
+      "NORM:N-O001-04",
+      "NORM:N-O002-02",
+      "NORM:N-O002-04",
+      "NORM:N-O002-07",
+      "NORM:N-O003-02",
+      "NORM:N-O003-04",
+      "NORM:N-O005-01",
+      "NORM:N-O005-02",
+      "NORM:N-O005-03",
+      "NORM:N-O005-05",
+      "NORM:N-O005-06",
+      "NORM:N-O005-07",
+      "NORM:N-O005-10",
+      "NORM:N-O006-01",
+      "NORM:N-O006-02",
+      "NORM:N-O006-03",
+      "NORM:N-O006-04",
+      "NORM:N-O006-05",
+      "NORM:N-O006-07",
+      "NORM:N-O006-10",
+      "NORM:N-O007-04",
+      "NORM:N-O007-05",
+      "NORM:N-O007-06",
+      "NORM:N-O007-10",
+      "NORM:N-O008-03",
+      "NORM:N-O008-04",
+      "NORM:N-O008-10",
+      "NORM:N-O009-05",
+      "NORM:N-O009-07",
+      "NORM:N-O009-10",
+      "NORM:N-O010-03",
+      "NORM:N-O010-10",
+      "NORM:N-O011-03",
+      "NORM:N-O011-05",
+      "NORM:N-O011-06",
+      "NORM:N-O011-10",
+      "NORM:N-O012-05",
+      "NORM:N-O013-02",
+      "NORM:N-O013-03",
+      "NORM:N-O015-01",
+      "NORM:N-O016-02",
+      "NORM:N-O018-02",
+      "NORM:N-O019-06",
+      "NORM:N-O020-04",
+      "NORM:N-O020-06",
+      "NORM:N-O021-01",
+      "NORM:N-O023-10",
+      "NORM:N-O024-01",
+      "NORM:N-O025-02",
+      "NORM:N-O026-02",
+      "NORM:N-O026-06",
+      "OBJECT:AbstractionTrace",
+      "OBJECT:ActionExecutionRecord",
+      "OBJECT:Authority",
+      "OBJECT:AuthorityDecision",
+      "OBJECT:AuthorizedExternalAction",
+      "OBJECT:Branch",
+      "OBJECT:CalculatingElement",
+      "OBJECT:ClosureCandidate",
+      "OBJECT:CognitiveProtocolRun",
+      "OBJECT:Context Package",
+      "OBJECT:Event",
+      "OBJECT:Evidence",
+      "OBJECT:ExperienceRecord",
+      "OBJECT:ExternalActionProposal",
+      "OBJECT:Inference",
+      "OBJECT:Memory",
+      "OBJECT:Model",
+      "OBJECT:ObservedEffect",
+      "OBJECT:Oper",
+      "OBJECT:Operature",
+      "OBJECT:Operome",
+      "OBJECT:Phenomenon",
+      "OBJECT:PhilosophicalMachine",
+      "OBJECT:QualityDecision",
+      "OBJECT:ResidualRiskDecision",
+      "OBJECT:Responsibility",
+      "OBJECT:Risk",
+      "OBJECT:State",
+      "OBJECT:SubstrateDeclaration",
+      "OBJECT:Transformation",
+      "OBJECT:Transition",
+      "OBJECT:Unknown",
+      "OPERATOR_ACCEPTANCE:runtime/operator_acceptance.json",
+      "PRINCIPLE:CP-01",
+      "PRINCIPLE:CP-02",
+      "PRINCIPLE:CP-03",
+      "PRINCIPLE:CP-04",
+      "PRINCIPLE:CP-05",
+      "PRINCIPLE:CP-06"
+    ],
+    "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d"
+  },
+  "independent_normative_authority": "ZERO",
+  "materialization_contract_ref": "machine/NORM_RECORD_MATERIALIZER.json",
+  "operator_acceptance_binding": {
+    "acceptance_status": "NOT_INSTALLED_IN_PUBLIC_PACKAGE",
+    "accepted_layers": [
+      "BASE"
+    ],
+    "accepted_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "loading_is_acceptance": false,
+    "record_ref": "runtime/operator_acceptance.json",
+    "record_sha256": "267a5576cf693b90d529e2a447effb24cb4af590b79584752b97bca3aa67a132",
+    "rejected_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "revocation_route": "INSTALL_NEW_SIGNED_ACCEPTANCE_RECORD",
+    "scope": [],
+    "validity": "NOT_ESTABLISHED"
+  },
+  "phase_critical_norm_ids": [
+    "N-GEN-005",
+    "N-GEN-006",
+    "N-GEN-010",
+    "N-GEN-074",
+    "N-GEN-001",
+    "N-GEN-003",
+    "N-GEN-078",
+    "N-GEN-018",
+    "N-GEN-022",
+    "N-GEN-023",
+    "N-GEN-025",
+    "N-GEN-027",
+    "N-GEN-031",
+    "N-GEN-032",
+    "N-GEN-033",
+    "N-GEN-037",
+    "N-GEN-038",
+    "N-GEN-039",
+    "N-GEN-041",
+    "N-GEN-046",
+    "N-GEN-050",
+    "N-GEN-051",
+    "N-GEN-052",
+    "N-GEN-060",
+    "N-GEN-064",
+    "N-GEN-069",
+    "N-O001-04",
+    "N-O002-02",
+    "N-O002-04",
+    "N-O002-07",
+    "N-O003-02",
+    "N-O003-04",
+    "N-O005-01",
+    "N-O005-02",
+    "N-O005-03",
+    "N-O005-05",
+    "N-O005-06",
+    "N-O005-07",
+    "N-O005-10",
+    "N-O006-01",
+    "N-O006-02",
+    "N-O006-03",
+    "N-O006-04",
+    "N-O006-05",
+    "N-O006-07",
+    "N-O006-10",
+    "N-O007-04",
+    "N-O007-05",
+    "N-O007-06",
+    "N-O007-10",
+    "N-O008-03",
+    "N-O008-04",
+    "N-O008-10",
+    "N-O009-05",
+    "N-O009-07",
+    "N-O009-10",
+    "N-O010-03",
+    "N-O010-10",
+    "N-O011-03",
+    "N-O011-05",
+    "N-O011-06",
+    "N-O011-10",
+    "N-O012-05",
+    "N-O013-02",
+    "N-O013-03",
+    "N-O015-01",
+    "N-O016-02",
+    "N-O018-02",
+    "N-O019-06",
+    "N-O020-04",
+    "N-O020-06",
+    "N-O021-01",
+    "N-O023-10",
+    "N-O024-01",
+    "N-O025-02",
+    "N-O026-02",
+    "N-O026-06"
+  ],
+  "phase_id": "C06",
+  "release_binding": {
+    "binding_rule": "Resolve exact PDF SHA-256 through the signed release statement; capsule identity is committed by release_id and semantic_merkle_root.",
+    "canonical_pdf_ref": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+    "release_id": "v2.31_Public_BOIS_Common_Core",
+    "release_statement_ref": "v2.31_Public_BOIS_Common_Core_Release_Statement.json"
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "required_boot_capsule_sha256": "bbc1130dbfd06931d30be15d0f568b2201010a2fd3377de8a70adaccc3223b4d",
+  "required_object_schemas": [
+    {
+      "allowed_states": [
+        "CANDIDATE",
+        "UP_COMPLETE",
+        "TRANSFORMED",
+        "DOWN_COMPLETE",
+        "HOLD"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CANDIDATE",
+          "owner": "O005",
+          "to": "UP_COMPLETE"
+        },
+        {
+          "from": "UP_COMPLETE",
+          "owner": "O005",
+          "to": "TRANSFORMED"
+        },
+        {
+          "from": "TRANSFORMED",
+          "owner": "O005",
+          "to": "DOWN_COMPLETE"
+        },
+        {
+          "from": "UP_COMPLETE",
+          "owner": "O005",
+          "to": "HOLD"
+        },
+        {
+          "from": "TRANSFORMED",
+          "owner": "O005",
+          "to": "HOLD"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "catalog_integrity_sha256": "59f1f116d211d5c8a25bc6ddfe814e2d98d5d7f4fcb5948b8d8f5352e432f5d3",
+      "field_types": {
+        "invariants": [
+          "array"
+        ],
+        "non_transferable_claims": [
+          "array"
+        ],
+        "return_route": [
+          "string"
+        ],
+        "selected_features": [
+          "string"
+        ],
+        "source_level": [
+          "string"
+        ],
+        "target_level": [
+          "string"
+        ],
+        "trace_id": [
+          "string"
+        ]
+      },
+      "initial_state": "CANDIDATE",
+      "object_type": "AbstractionTrace",
+      "owner": "O005",
+      "relations": [
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "trace_id",
+        "source_level",
+        "target_level",
+        "selected_features",
+        "invariants",
+        "non_transferable_claims",
+        "return_route",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O005",
+      "type_kind": "TRACE",
+      "validation_tests": [
+        "TEST-OBJECT-ABSTRACTIONTRACE-STRUCTURE",
+        "TEST-OBJECT-ABSTRACTIONTRACE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "VALIDATED",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O013",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O013",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O013",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "9ccfe497f2ae21b1bd84cb3786c1fc10ec1d079ffa1fd35d5167444a508c7c8c",
+      "field_types": {
+        "assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "branch_id": [
+          "#/$defs/Identifier"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "descendants": [
+          "#/$defs/StringOrList"
+        ],
+        "goal": [
+          "string"
+        ],
+        "inputs": [
+          "#/$defs/StringOrList"
+        ],
+        "local_closure": [
+          "string"
+        ],
+        "parent_cycle_id": [
+          "#/$defs/Identifier"
+        ],
+        "resources": [
+          "#/$defs/StringOrList"
+        ],
+        "risk": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "Branch",
+      "owner": "O013",
+      "relations": [],
+      "required_fields": [
+        "branch_id",
+        "parent_cycle_id",
+        "goal",
+        "assumptions",
+        "inputs",
+        "dependencies",
+        "resources",
+        "risk",
+        "status",
+        "local_closure",
+        "descendants",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O013",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-BRANCH-STRUCTURE",
+        "TEST-OBJECT-BRANCH-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "READY",
+        "ABSTRACTION_UP",
+        "CATEGORY_TRANSFORMATION",
+        "PROPOSAL_AND_EVIDENCE",
+        "CONCRETIZATION_DOWN",
+        "COMPLETE",
+        "HOLD"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "READY",
+          "owner": "O014",
+          "to": "ABSTRACTION_UP"
+        },
+        {
+          "from": "ABSTRACTION_UP",
+          "owner": "O014",
+          "to": "CATEGORY_TRANSFORMATION"
+        },
+        {
+          "from": "CATEGORY_TRANSFORMATION",
+          "owner": "O014",
+          "to": "PROPOSAL_AND_EVIDENCE"
+        },
+        {
+          "from": "PROPOSAL_AND_EVIDENCE",
+          "owner": "O014",
+          "to": "CONCRETIZATION_DOWN"
+        },
+        {
+          "from": "CONCRETIZATION_DOWN",
+          "owner": "O014",
+          "to": "COMPLETE"
+        },
+        {
+          "from": "ABSTRACTION_UP",
+          "owner": "O014",
+          "to": "HOLD"
+        },
+        {
+          "from": "CATEGORY_TRANSFORMATION",
+          "owner": "O014",
+          "to": "HOLD"
+        },
+        {
+          "from": "PROPOSAL_AND_EVIDENCE",
+          "owner": "O014",
+          "to": "HOLD"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "PROCESS_OBJECT",
+      "catalog_integrity_sha256": "b31a35456402bb5ad3593a77205211b6e32b4949e1d36c9bbd8fa8f064b157dd",
+      "field_types": {
+        "cycle_id": [
+          "string"
+        ],
+        "evidence": [
+          "array"
+        ],
+        "inputs": [
+          "array"
+        ],
+        "microphase": [
+          "string"
+        ],
+        "outputs": [
+          "array"
+        ],
+        "owner": [
+          "string"
+        ],
+        "protocol_id": [
+          "string"
+        ],
+        "run_id": [
+          "string"
+        ]
+      },
+      "initial_state": "READY",
+      "object_type": "CognitiveProtocolRun",
+      "owner": "O014",
+      "relations": [
+        "IMPLEMENTS_PHASE:C06",
+        "PART_OF:PhilosophicalMachine"
+      ],
+      "required_fields": [
+        "run_id",
+        "cycle_id",
+        "protocol_id",
+        "microphase",
+        "inputs",
+        "outputs",
+        "owner",
+        "evidence",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O014",
+      "type_kind": "PROCESS",
+      "validation_tests": [
+        "TEST-OBJECT-COGNITIVEPROTOCOLRUN-STRUCTURE",
+        "TEST-OBJECT-COGNITIVEPROTOCOLRUN-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "CAPTURED",
+        "PROVENANCE_VERIFIED",
+        "RELEVANCE_ASSESSED",
+        "ACCEPTED",
+        "REJECTED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "CAPTURED",
+          "owner": "O010",
+          "to": "PROVENANCE_VERIFIED"
+        },
+        {
+          "from": "PROVENANCE_VERIFIED",
+          "owner": "O010",
+          "to": "RELEVANCE_ASSESSED"
+        },
+        {
+          "from": "RELEVANCE_ASSESSED",
+          "owner": "O010",
+          "to": "ACCEPTED"
+        },
+        {
+          "from": "RELEVANCE_ASSESSED",
+          "owner": "O010",
+          "to": "REJECTED"
+        },
+        {
+          "from": "ACCEPTED",
+          "owner": "O010",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "EPISTEMIC_OBJECT",
+      "catalog_integrity_sha256": "274845b66a8fb1f2a0c4ed34fde75cec1d49ad11f7f1ee89be64272b5adc6738",
+      "field_types": {
+        "completeness": [
+          "#/$defs/StringOrList"
+        ],
+        "distortions": [
+          "#/$defs/StringOrList"
+        ],
+        "evidence_id": [
+          "#/$defs/Identifier"
+        ],
+        "independence": [
+          "string"
+        ],
+        "method": [
+          "string"
+        ],
+        "observed_object": [
+          "string"
+        ],
+        "resolution": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "source": [
+          "string"
+        ],
+        "supported_or_refuted_objects": [
+          "#/$defs/StringOrList"
+        ],
+        "time": [
+          "string"
+        ]
+      },
+      "initial_state": "CAPTURED",
+      "object_type": "Evidence",
+      "owner": "O010",
+      "relations": [],
+      "required_fields": [
+        "evidence_id",
+        "source",
+        "observed_object",
+        "method",
+        "time",
+        "scope",
+        "resolution",
+        "completeness",
+        "distortions",
+        "independence",
+        "supported_or_refuted_objects",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O010",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-EVIDENCE-STRUCTURE",
+        "TEST-OBJECT-EVIDENCE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "VALIDATED",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O006",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "7a91c5c5feb6905b4dc4d30831aeb1787d7f5dcfdb16f3b8479061d67ddce2f6",
+      "field_types": {
+        "S": [
+          "#/$defs/StringOrList"
+        ],
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "inference_id": [
+          "#/$defs/Identifier"
+        ],
+        "operation": [
+          "string"
+        ],
+        "premises_and_revisions": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "sensitivity": [
+          "string"
+        ],
+        "support": [
+          "string"
+        ],
+        "trace": [
+          "string"
+        ],
+        "validity": [
+          "string"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "Inference",
+      "owner": "O006",
+      "relations": [],
+      "required_fields": [
+        "inference_id",
+        "premises_and_revisions",
+        "operation",
+        "assumptions",
+        "scope",
+        "trace",
+        "alternatives",
+        "sensitivity",
+        "validity",
+        "support",
+        "S",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O006",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-INFERENCE-STRUCTURE",
+        "TEST-OBJECT-INFERENCE-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "VALIDATED",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O006",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O006",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O006",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "72080f86e978fdfdfa70c7d3e6f87d5e8cb92db3234920ebe3e46572d9e0af1d",
+      "field_types": {
+        "S": [
+          "#/$defs/StringOrList"
+        ],
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "assumptions": [
+          "#/$defs/StringOrList"
+        ],
+        "mechanisms": [
+          "#/$defs/StringOrList"
+        ],
+        "model_id": [
+          "#/$defs/Identifier"
+        ],
+        "objects": [
+          "#/$defs/StringOrList"
+        ],
+        "parameters": [
+          "#/$defs/StringOrList"
+        ],
+        "predictions": [
+          "#/$defs/StringOrList"
+        ],
+        "purpose": [
+          "string"
+        ],
+        "relations": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "tests": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "Model",
+      "owner": "O006",
+      "relations": [],
+      "required_fields": [
+        "model_id",
+        "purpose",
+        "objects",
+        "relations",
+        "mechanisms",
+        "assumptions",
+        "parameters",
+        "predictions",
+        "tests",
+        "alternatives",
+        "scope",
+        "S",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O006",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-MODEL-STRUCTURE",
+        "TEST-OBJECT-MODEL-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "VALIDATED",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "40cddad04ed9845f482d41982069a8fcd0b11359f6707de233ee09f23830db8e",
+      "field_types": {
+        "alternatives": [
+          "#/$defs/StringOrList"
+        ],
+        "ambiguities": [
+          "#/$defs/StringOrList"
+        ],
+        "dependencies": [
+          "#/$defs/StringOrList"
+        ],
+        "executor": [
+          "#/$defs/Identifier"
+        ],
+        "input_revisions": [
+          "string"
+        ],
+        "method": [
+          "string"
+        ],
+        "output": [
+          "string"
+        ],
+        "reliability": [
+          "string"
+        ],
+        "scope": [
+          "string"
+        ],
+        "transformation_id": [
+          "#/$defs/Identifier"
+        ],
+        "verification": [
+          "string"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "Transformation",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "transformation_id",
+        "input_revisions",
+        "output",
+        "method",
+        "executor",
+        "scope",
+        "ambiguities",
+        "alternatives",
+        "verification",
+        "reliability",
+        "dependencies",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-TRANSFORMATION-STRUCTURE",
+        "TEST-OBJECT-TRANSFORMATION-BEHAVIOR"
+      ]
+    }
+  ],
+  "selected_record_keys": [
+    "BEHAVIOR_PROFILE:ACTION_OBJECT",
+    "BEHAVIOR_PROFILE:ACTION_PROPOSAL_OBJECT",
+    "BEHAVIOR_PROFILE:EFFECT_RECORD_OBJECT",
+    "BEHAVIOR_PROFILE:EPISTEMIC_OBJECT",
+    "BEHAVIOR_PROFILE:GENERIC_STATEFUL_OBJECT",
+    "BEHAVIOR_PROFILE:MACHINE_OBJECT",
+    "BEHAVIOR_PROFILE:PROCESS_OBJECT",
+    "COMPONENT:machine/APPLICABILITY_SELECTOR.json",
+    "COMPONENT:machine/CRITICAL_NORM_PREDICATES.json",
+    "COMPONENT:machine/CYCLE_STATE_MACHINE.json",
+    "COMPONENT:machine/NORM_PRESENTATION_PROFILES.json",
+    "COMPONENT:machine/NORM_RECORD_MATERIALIZER.json",
+    "COMPONENT:machine/OPERATIONAL_SEMANTICS.json",
+    "FOUNDATION:B0",
+    "FOUNDATION:C0",
+    "FOUNDATION:CV0",
+    "FOUNDATION:D0",
+    "FOUNDATION:E0",
+    "FOUNDATION:I0",
+    "FOUNDATION:T0",
+    "FOUNDATION:V0",
+    "GATE:C06",
+    "NORM:N-GEN-001",
+    "NORM:N-GEN-003",
+    "NORM:N-GEN-005",
+    "NORM:N-GEN-006",
+    "NORM:N-GEN-010",
+    "NORM:N-GEN-018",
+    "NORM:N-GEN-022",
+    "NORM:N-GEN-023",
+    "NORM:N-GEN-025",
+    "NORM:N-GEN-027",
+    "NORM:N-GEN-031",
+    "NORM:N-GEN-032",
+    "NORM:N-GEN-033",
+    "NORM:N-GEN-037",
+    "NORM:N-GEN-038",
+    "NORM:N-GEN-039",
+    "NORM:N-GEN-041",
+    "NORM:N-GEN-046",
+    "NORM:N-GEN-050",
+    "NORM:N-GEN-051",
+    "NORM:N-GEN-052",
+    "NORM:N-GEN-060",
+    "NORM:N-GEN-064",
+    "NORM:N-GEN-069",
+    "NORM:N-GEN-074",
+    "NORM:N-GEN-078",
+    "NORM:N-O001-04",
+    "NORM:N-O002-02",
+    "NORM:N-O002-04",
+    "NORM:N-O002-07",
+    "NORM:N-O003-02",
+    "NORM:N-O003-04",
+    "NORM:N-O005-01",
+    "NORM:N-O005-02",
+    "NORM:N-O005-03",
+    "NORM:N-O005-05",
+    "NORM:N-O005-06",
+    "NORM:N-O005-07",
+    "NORM:N-O005-10",
+    "NORM:N-O006-01",
+    "NORM:N-O006-02",
+    "NORM:N-O006-03",
+    "NORM:N-O006-04",
+    "NORM:N-O006-05",
+    "NORM:N-O006-07",
+    "NORM:N-O006-10",
+    "NORM:N-O007-04",
+    "NORM:N-O007-05",
+    "NORM:N-O007-06",
+    "NORM:N-O007-10",
+    "NORM:N-O008-03",
+    "NORM:N-O008-04",
+    "NORM:N-O008-10",
+    "NORM:N-O009-05",
+    "NORM:N-O009-07",
+    "NORM:N-O009-10",
+    "NORM:N-O010-03",
+    "NORM:N-O010-10",
+    "NORM:N-O011-03",
+    "NORM:N-O011-05",
+    "NORM:N-O011-06",
+    "NORM:N-O011-10",
+    "NORM:N-O012-05",
+    "NORM:N-O013-02",
+    "NORM:N-O013-03",
+    "NORM:N-O015-01",
+    "NORM:N-O016-02",
+    "NORM:N-O018-02",
+    "NORM:N-O019-06",
+    "NORM:N-O020-04",
+    "NORM:N-O020-06",
+    "NORM:N-O021-01",
+    "NORM:N-O023-10",
+    "NORM:N-O024-01",
+    "NORM:N-O025-02",
+    "NORM:N-O026-02",
+    "NORM:N-O026-06",
+    "OBJECT:AbstractionTrace",
+    "OBJECT:ActionExecutionRecord",
+    "OBJECT:Authority",
+    "OBJECT:AuthorityDecision",
+    "OBJECT:AuthorizedExternalAction",
+    "OBJECT:Branch",
+    "OBJECT:CalculatingElement",
+    "OBJECT:ClosureCandidate",
+    "OBJECT:CognitiveProtocolRun",
+    "OBJECT:Context Package",
+    "OBJECT:Event",
+    "OBJECT:Evidence",
+    "OBJECT:ExperienceRecord",
+    "OBJECT:ExternalActionProposal",
+    "OBJECT:Inference",
+    "OBJECT:Memory",
+    "OBJECT:Model",
+    "OBJECT:ObservedEffect",
+    "OBJECT:Oper",
+    "OBJECT:Operature",
+    "OBJECT:Operome",
+    "OBJECT:Phenomenon",
+    "OBJECT:PhilosophicalMachine",
+    "OBJECT:QualityDecision",
+    "OBJECT:ResidualRiskDecision",
+    "OBJECT:Responsibility",
+    "OBJECT:Risk",
+    "OBJECT:State",
+    "OBJECT:SubstrateDeclaration",
+    "OBJECT:Transformation",
+    "OBJECT:Transition",
+    "OBJECT:Unknown",
+    "OPERATOR_ACCEPTANCE:runtime/operator_acceptance.json",
+    "PRINCIPLE:CP-01",
+    "PRINCIPLE:CP-02",
+    "PRINCIPLE:CP-03",
+    "PRINCIPLE:CP-04",
+    "PRINCIPLE:CP-05",
+    "PRINCIPLE:CP-06"
+  ],
+  "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d",
+  "status": "DERIVED_FROM_CANDIDATE_CANON_ZERO_INDEPENDENT_NORMATIVE_AUTHORITY"
+}

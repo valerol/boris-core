@@ -1,0 +1,41 @@
+{
+  "added_norms": 0,
+  "artifact_version": "2.31",
+  "authorized_derived_surface_changes": [
+    "PUBLISHED_OPERATOR_SEMANTICS_CLOSURE",
+    "STRICT_VALIDATION_RECEIPT",
+    "SELF_CONTAINED_NORM_RECORD_MATERIALIZATION",
+    "EXECUTABLE_CONTEXT_BUDGET",
+    "OPERATOR_ACCEPTANCE_BINDING",
+    "PAIRED_FULL_CANON_CAPSULE_EVALUATION"
+  ],
+  "authorized_semantic_repairs": [
+    "all_items_fact",
+    "allowed_pair",
+    "operator acceptance binding",
+    "normative-content materialization"
+  ],
+  "changed_norm_formulations": 0,
+  "gate_count_changed": 0,
+  "norm_formulations_compared": 364,
+  "object_types_changed": 0,
+  "parent_archive_sha256": "54ec788711e7d0ba9ccf1310e9bf1d1b16f8f0693a50de89e485ce7f93b08be8",
+  "parent_release_id": "v2.30_Public_BOIS_Common_Core",
+  "parent_snapshot": {
+    "gate_count": 12,
+    "norm_count": 364,
+    "norm_formulations_sha256": "96248dd13f2ce63992018ba0bd2f4592a0d5770ae711d5425aed310e50904c25",
+    "object_type_count": 73
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "removed_norms": 0,
+  "report_id": "v2.31_Public_BOIS_Common_Core_Semantic_Preservation_Report",
+  "status": "PASS_AUTHORIZED_REPAIR_ONLY_DELTA",
+  "successor_snapshot": {
+    "gate_count": 12,
+    "norm_count": 364,
+    "norm_formulations_sha256": "96248dd13f2ce63992018ba0bd2f4592a0d5770ae711d5425aed310e50904c25",
+    "object_type_count": 73
+  },
+  "unauthorized_semantic_delta_count": 0
+}

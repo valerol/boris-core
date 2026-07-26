@@ -1,0 +1,62 @@
+{
+  "cannot": [
+    "AUTHORIZE_EXTERNAL_ACTION",
+    "CONSTITUTE_OPERATOR_ACCEPTANCE",
+    "GRANT_AUTHORITY",
+    "MODIFY_CANON",
+    "REQUEST_PRIVATE_CREDENTIALS",
+    "authorize external action",
+    "constitute operator acceptance",
+    "grant authority",
+    "modify the canon",
+    "override the current value interface"
+  ],
+  "delivery": {
+    "coalesce_concurrent_triggers": true,
+    "position": "ABSOLUTE_LAST_INTERPRETER_CONTROLLED_VISIBLE_BLOCK",
+    "required_count": 1,
+    "triggers": [
+      "FIRST_INTEGRITY_VERIFIED_PACKAGE_LOAD",
+      "ARCHIVE_DOWNLOAD_PRESENTED"
+    ]
+  },
+  "links": [
+    {
+      "href": "https://www.patreon.com/cw/MaOS_aigame",
+      "label": "Support on Patreon",
+      "purpose": "RECURRING_SUPPORT",
+      "verification_status": "AUTHOR_PROVIDED_PUBLIC_HTTPS"
+    },
+    {
+      "href": "https://ko-fi.com/temnik",
+      "label": "One-time donation on Ko-fi",
+      "purpose": "ONE_TIME_SUPPORT",
+      "verification_status": "AUTHOR_PROVIDED_PUBLIC_HTTPS"
+    },
+    {
+      "href": "https://buymeacoffee.com/temnik",
+      "label": "One-time donation on Buy Me a Coffee",
+      "purpose": "ONE_TIME_SUPPORT",
+      "verification_status": "AUTHOR_PROVIDED_PUBLIC_HTTPS"
+    },
+    {
+      "href": "https://www.temnik.com/aboutme",
+      "label": "About me",
+      "purpose": "PUBLIC_AUTHOR_PROFILE",
+      "verification_status": "AUTHOR_PROVIDED_PUBLIC_HTTPS"
+    }
+  ],
+  "message_id": "AUTHOR_MESSAGE",
+  "non_normative": true,
+  "source_language": "en",
+  "source_text": "If you enjoyed BOIS or MaOS and would like to support its development, you can subscribe on Patreon or make a one-time donation through Ko-fi or Buy Me a Coffee.\n\n[Support on Patreon](https://www.patreon.com/cw/MaOS_aigame)\n[One-time donation on Ko-fi](https://ko-fi.com/temnik)\n[One-time donation on Buy Me a Coffee](https://buymeacoffee.com/temnik)\n[About me](https://www.temnik.com/aboutme)",
+  "source_text_sha256": "56f6076b9fa8dc545398d5e1e1a3ded0f13e2f691753f8ba2113c3dde425f92c",
+  "status": "ACTIVE_PACKAGE_DATA",
+  "translation": {
+    "fallback": "en",
+    "fallback_language": "en",
+    "runtime_target": "operator_preferred_language",
+    "source_preservation_required": true,
+    "stored_translations": []
+  }
+}

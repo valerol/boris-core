@@ -1,0 +1,75 @@
+{
+  "$id": "urn:bois:schema:phase-capsule:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "canonical_authority": {
+      "type": "string"
+    },
+    "capsule_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "capsule_type": {
+      "const": "PHASE_CAPSULE"
+    },
+    "inclusion_proof_bundle": {
+      "type": "object"
+    },
+    "independent_normative_authority": {
+      "const": "ZERO"
+    },
+    "operator_acceptance_binding": {
+      "type": "object"
+    },
+    "phase_critical_norm_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "phase_id": {
+      "pattern": "^C(0[0-9]|1[01])$",
+      "type": "string"
+    },
+    "release_binding": {
+      "type": "object"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "selected_record_keys": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "semantic_merkle_root": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_version",
+    "release_id",
+    "capsule_sha256",
+    "semantic_merkle_root",
+    "release_binding",
+    "status",
+    "independent_normative_authority",
+    "canonical_authority",
+    "capsule_type",
+    "phase_id",
+    "operator_acceptance_binding",
+    "phase_critical_norm_ids",
+    "selected_record_keys",
+    "inclusion_proof_bundle"
+  ],
+  "type": "object"
+}

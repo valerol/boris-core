@@ -1,0 +1,48 @@
+{
+  "$id": "urn:bois:schema:paired-execution:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "full_canon_capsule_semantic_equivalence": {
+      "const": "HOLD_FOR_354_KERNEL_INTERPRETED_NORMS"
+    },
+    "gate_execution": {
+      "type": "object"
+    },
+    "kernel_interpreted_record_delivery": {
+      "type": "object"
+    },
+    "phase_results": {
+      "maxItems": 12,
+      "minItems": 12,
+      "type": "array"
+    },
+    "record_identity": {
+      "type": "object"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "report_id": {
+      "type": "string"
+    },
+    "typed_predicate_execution": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "artifact_version",
+    "full_canon_capsule_semantic_equivalence",
+    "gate_execution",
+    "kernel_interpreted_record_delivery",
+    "phase_results",
+    "record_identity",
+    "release_id",
+    "report_id",
+    "typed_predicate_execution"
+  ],
+  "type": "object"
+}

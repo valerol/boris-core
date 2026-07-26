@@ -1,0 +1,41 @@
+{
+  "$id": "urn:bois:schema:gate-contracts:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "component_revision": {
+      "type": "string"
+    },
+    "component_semantics_version": {
+      "type": "string"
+    },
+    "contract_set_id": {
+      "type": "string"
+    },
+    "contracts": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "result_semantics": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "artifact_version",
+    "component_revision",
+    "component_semantics_version",
+    "contract_set_id",
+    "contracts",
+    "release_id",
+    "result_semantics"
+  ],
+  "type": "object"
+}

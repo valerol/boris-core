@@ -1,0 +1,226 @@
+{
+  "$defs": {
+    "Norm": {
+      "type": "object"
+    }
+  },
+  "$id": "urn:bois:schema:core-canon:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "applicability_selector_ref": {
+      "type": "string"
+    },
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "author_message_ref": {
+      "type": "string"
+    },
+    "canonical_artifact_profile": {
+      "type": "object"
+    },
+    "canonical_language": {
+      "type": "string"
+    },
+    "constitutive_principles": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "critical_predicates_ref": {
+      "type": "string"
+    },
+    "cycle_state_machine_ref": {
+      "type": "string"
+    },
+    "default_language": {
+      "type": "string"
+    },
+    "definition": {
+      "type": "string"
+    },
+    "dependency_graph_ref": {
+      "type": "string"
+    },
+    "derived_claims": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "fallback_language": {
+      "type": "string"
+    },
+    "foundations": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "frozen_release_invariants": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "gate_contracts_ref": {
+      "type": "string"
+    },
+    "identifier_grammar_ref": {
+      "type": "string"
+    },
+    "justification_graph_ref": {
+      "type": "string"
+    },
+    "layer_composition": {
+      "type": "object"
+    },
+    "lexicon": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "machine_id": {
+      "type": "string"
+    },
+    "machine_runtime_contract_ref": {
+      "type": "string"
+    },
+    "naming_standard": {
+      "type": "object"
+    },
+    "norm_counts": {
+      "type": "object"
+    },
+    "norm_presentation_profiles_ref": {
+      "type": "string"
+    },
+    "norms": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "object_instance_schema_ref": {
+      "type": "string"
+    },
+    "object_model_ref": {
+      "type": "string"
+    },
+    "operational_cycle": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "operational_semantics_ref": {
+      "type": "string"
+    },
+    "operator_acceptance_ref": {
+      "type": "string"
+    },
+    "package_boundary": {
+      "type": "object"
+    },
+    "phase_vocabulary_ref": {
+      "type": "string"
+    },
+    "regression_registry_ref": {
+      "type": "string"
+    },
+    "relation_types_ref": {
+      "type": "string"
+    },
+    "release_id": {
+      "type": "string"
+    },
+    "rule_state_axes": {
+      "type": "object"
+    },
+    "runtime_capsule_schemas": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "scales": {
+      "type": "object"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "semantic_merkle_index_ref": {
+      "type": "string"
+    },
+    "source_classes": {
+      "type": "object"
+    },
+    "source_model_ref": {
+      "type": "string"
+    },
+    "source_precedence": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "status": {
+      "type": "string"
+    },
+    "test_registry_ref": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "applicability_selector_ref",
+    "artifact_version",
+    "author_message_ref",
+    "canonical_artifact_profile",
+    "canonical_language",
+    "constitutive_principles",
+    "critical_predicates_ref",
+    "cycle_state_machine_ref",
+    "default_language",
+    "definition",
+    "dependency_graph_ref",
+    "derived_claims",
+    "fallback_language",
+    "foundations",
+    "frozen_release_invariants",
+    "gate_contracts_ref",
+    "identifier_grammar_ref",
+    "justification_graph_ref",
+    "layer_composition",
+    "lexicon",
+    "machine_id",
+    "machine_runtime_contract_ref",
+    "naming_standard",
+    "norm_counts",
+    "norm_presentation_profiles_ref",
+    "norms",
+    "object_instance_schema_ref",
+    "object_model_ref",
+    "operational_cycle",
+    "operational_semantics_ref",
+    "operator_acceptance_ref",
+    "package_boundary",
+    "phase_vocabulary_ref",
+    "regression_registry_ref",
+    "relation_types_ref",
+    "release_id",
+    "rule_state_axes",
+    "runtime_capsule_schemas",
+    "scales",
+    "schema_version",
+    "semantic_merkle_index_ref",
+    "source_classes",
+    "source_model_ref",
+    "source_precedence",
+    "status",
+    "test_registry_ref"
+  ],
+  "type": "object"
+}

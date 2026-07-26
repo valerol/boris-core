@@ -1,0 +1,51 @@
+{
+  "$id": "urn:bois:v2.31_Public_BOIS_Common_Core:relation-schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "relation_type": {
+      "enum": [
+        "APPLIES_TO",
+        "AUTHORIZES",
+        "BOUNDS",
+        "COMPOSED_OF",
+        "CONSUMES",
+        "CREATES",
+        "DECLARES_FOR",
+        "DERIVED_FROM",
+        "EVIDENCES",
+        "EXECUTES",
+        "HAS_AGENCY",
+        "HAS_CLOSURE_RULE",
+        "HAS_MEMORY",
+        "HAS_RISK_MODEL",
+        "HAS_SUBSTRATE_DECLARATION",
+        "HAS_VALUE_INTERFACE",
+        "IMPLEMENTS_PHASE",
+        "IMPLEMENTS_SURFACE",
+        "INVENTORIES",
+        "LIMITS",
+        "OBSERVES",
+        "OWNED_BY",
+        "PART_OF",
+        "PRODUCES",
+        "RECORDED_IN",
+        "RECORDS",
+        "REVIEWS",
+        "SOURCED_FROM",
+        "UPDATES",
+        "USES_EVIDENCE"
+      ]
+    },
+    "target": {
+      "minLength": 1,
+      "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "relation_type",
+    "target"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,14 @@
+BOIS PUBLIC RELEASE LICENSE - LIMITED UNMODIFIED REDISTRIBUTION
+
+Copyright (c) 2026 Temnik. All rights reserved except as stated below.
+
+Permission is granted to copy and redistribute this exact, unmodified release archive in its entirety for public access, study, evaluation, and archival preservation, provided that:
+1. the archive, release statement, signature, checksums, attribution, and Author Message remain intact;
+2. the redistributed copy is not represented as a modified or independently authored official BOIS release;
+3. no trademark, endorsement, warranty, or authority is implied.
+
+Inspection, validation, and execution of the included validation-only source code are permitted for evaluating this release.
+
+No permission is granted by this file to publish modified derivatives as official BOIS releases, to remove attribution from an official copy, or to use the author's identity as an endorsement. Other rights remain reserved unless separately granted in writing.
+
+THE RELEASE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. FIELD EFFECTIVENESS, RUNTIME COMPATIBILITY, EXTERNAL VALIDATION, AND QA-E ARE NOT CLAIMED.

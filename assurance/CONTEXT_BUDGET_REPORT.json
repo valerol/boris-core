@@ -1,0 +1,425 @@
+{
+  "aggregate_budget_claim": "MEASURED_NOT_ASSUMED; EXECUTION REQUIRES A CONTEXT WINDOW AT LEAST THE DECLARED PER-PHASE MINIMUM",
+  "artifact_version": "2.31",
+  "boot_status": "PASS",
+  "boot_target_tokens": 15000,
+  "full_semantic_equivalence_claim": "HOLD_FOR_354_KERNEL_INTERPRETED_NORMS",
+  "items": [
+    {
+      "bytes": 56150,
+      "capsule_id": "BOOT",
+      "capsule_sha256": "bbc1130dbfd06931d30be15d0f568b2201010a2fd3377de8a70adaccc3223b4d",
+      "category": "BOOT",
+      "estimated_tokens": 14038,
+      "path": "runtime/capsules/BOOT_CAPSULE.json",
+      "sha256": "46d8f98fcf2f26b1eb9ea25d70568a6bc4f8cde9c1a84c28b2aa8032c3d6fcd1"
+    },
+    {
+      "bytes": 30042,
+      "capsule_id": "PHASE_C00",
+      "capsule_sha256": "32fcfe81819fb9a53e6eb4cda1235bbd7673af35e80fc8ac26349288b70e6d46",
+      "category": "PHASE",
+      "estimated_tokens": 7511,
+      "path": "runtime/capsules/PHASE_C00_CAPSULE.json",
+      "sha256": "ac31e7899c3ecf4171e4567b3b110560aef443dc75da37cb089bbcd68125cb04"
+    },
+    {
+      "bytes": 38928,
+      "capsule_id": "PHASE_C01",
+      "capsule_sha256": "ca9826df9ad28c3f526d68da6544c9f901706575e5bb63f6c6761b1ddb27a32e",
+      "category": "PHASE",
+      "estimated_tokens": 9732,
+      "path": "runtime/capsules/PHASE_C01_CAPSULE.json",
+      "sha256": "aad0bfb1480bd729e58a7ae6c9a7a19dc8e56bcace977da2ef8d5a6063cea96c"
+    },
+    {
+      "bytes": 49285,
+      "capsule_id": "PHASE_C02",
+      "capsule_sha256": "0ad9a99a4fad9a21da9a39b7802e02c5e060acfd3dc5381f5c516efef9929728",
+      "category": "PHASE",
+      "estimated_tokens": 12322,
+      "path": "runtime/capsules/PHASE_C02_CAPSULE.json",
+      "sha256": "bf1a774d4fc08fd3d6222054c0b3a2ccac76ed3607033d9ac17211d03005bb83"
+    },
+    {
+      "bytes": 67910,
+      "capsule_id": "PHASE_C03",
+      "capsule_sha256": "0465b01af279e39068eb88d01f9df29c52fb0abeea585f8bb5761a15a20dfc8e",
+      "category": "PHASE",
+      "estimated_tokens": 16978,
+      "path": "runtime/capsules/PHASE_C03_CAPSULE.json",
+      "sha256": "c666e7a8f2e346e3a98de96b09f42aa55dc973514bbf505a6f728983d0a6984a"
+    },
+    {
+      "bytes": 35375,
+      "capsule_id": "PHASE_C04",
+      "capsule_sha256": "9eff8787941e3774b34d0776f8bf2289b5277a31f3fc27f29c6888d3968547ad",
+      "category": "PHASE",
+      "estimated_tokens": 8844,
+      "path": "runtime/capsules/PHASE_C04_CAPSULE.json",
+      "sha256": "317c762ab1bb987215fec5e19edc929f9413a00be497e33cb26a94b4cde2ba7a"
+    },
+    {
+      "bytes": 53957,
+      "capsule_id": "PHASE_C05",
+      "capsule_sha256": "d4822f088c26b1baff2a4d89b34c3ac0df6a5263b45040b995dd11c544d528c9",
+      "category": "PHASE",
+      "estimated_tokens": 13490,
+      "path": "runtime/capsules/PHASE_C05_CAPSULE.json",
+      "sha256": "27b5f1908708cc572d112ffc7227598fcf1cc9746e1701b2c6708f79b376d546"
+    },
+    {
+      "bytes": 54237,
+      "capsule_id": "PHASE_C06",
+      "capsule_sha256": "a633d3d280b42f788aed610dd22d0c04ddd0f31c8c95bda65c1487a665859b00",
+      "category": "PHASE",
+      "estimated_tokens": 13560,
+      "path": "runtime/capsules/PHASE_C06_CAPSULE.json",
+      "sha256": "5bf48a312d66beeb494e80510e04a71b66d66dc62cdb8cfe9da733f3fb61067b"
+    },
+    {
+      "bytes": 65454,
+      "capsule_id": "PHASE_C07",
+      "capsule_sha256": "0afc769dfa753599ac3ad490f3e9e1ec770b374aa2201b07518dacd3dc49204c",
+      "category": "PHASE",
+      "estimated_tokens": 16364,
+      "path": "runtime/capsules/PHASE_C07_CAPSULE.json",
+      "sha256": "3db364b1a09103ea327317957f2786e4d68b629d130c1e228ad695b7393bdf3b"
+    },
+    {
+      "bytes": 47118,
+      "capsule_id": "PHASE_C08",
+      "capsule_sha256": "f0c66d1606140ee2a794e900e31b72ed1818c53208cc4f4250e54d9ff844f1d3",
+      "category": "PHASE",
+      "estimated_tokens": 11780,
+      "path": "runtime/capsules/PHASE_C08_CAPSULE.json",
+      "sha256": "c3d02f43c3e810b41790b5652369b7c05d140fa8e2858c6fa3e32add1e193cf0"
+    },
+    {
+      "bytes": 61902,
+      "capsule_id": "PHASE_C09",
+      "capsule_sha256": "949de73b59378b358af5e41b5b640ed3bfdea51f409b7c5df5a0f6585f33a9f8",
+      "category": "PHASE",
+      "estimated_tokens": 15476,
+      "path": "runtime/capsules/PHASE_C09_CAPSULE.json",
+      "sha256": "929de84dbe6b9bfa99f73e9931bde97ea86eddbc53fac504b27d502bf5765272"
+    },
+    {
+      "bytes": 66994,
+      "capsule_id": "PHASE_C10",
+      "capsule_sha256": "3946d213f06530481e7b6116651ccabf1fa7d716ad14e806e0dc66c2f091deaa",
+      "category": "PHASE",
+      "estimated_tokens": 16749,
+      "path": "runtime/capsules/PHASE_C10_CAPSULE.json",
+      "sha256": "0f3290b94c22bd381833be3782df6aed40f4148f4cdf560524243f540ff4583f"
+    },
+    {
+      "bytes": 62526,
+      "capsule_id": "PHASE_C11",
+      "capsule_sha256": "9a1c62f5123d91d3a1299c01d200314d6ec472c44922f527fae572c1e19b7e7d",
+      "category": "PHASE",
+      "estimated_tokens": 15632,
+      "path": "runtime/capsules/PHASE_C11_CAPSULE.json",
+      "sha256": "aceab7c956dda4a50fa7e0679781065586cd94c346c73f6cb1a56b2ebcc95a7e"
+    },
+    {
+      "bytes": 203045,
+      "capsule_id": "TASK_C00",
+      "capsule_sha256": "e44277287f7e4df106f3360f911b3c9bda7e30ff130adfb7f6ff4a1bc3e6e13d",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 50762,
+      "path": "runtime/capsules/TASK_C00_EXAMPLE.json",
+      "sha256": "1f91795209a5ce62afb2c79d41e649417b84039a995232b602d3fcd555a3e20a"
+    },
+    {
+      "bytes": 212044,
+      "capsule_id": "TASK_C01",
+      "capsule_sha256": "9f25882ad76596f1857fa30a1d6eea0cd8c867031f96c9a05729e643872fde34",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 53011,
+      "path": "runtime/capsules/TASK_C01_EXAMPLE.json",
+      "sha256": "471436e2c2b1beebd43de70a702be10ce8a3bd9a79b1446f74d0724ea235f404"
+    },
+    {
+      "bytes": 341301,
+      "capsule_id": "TASK_C02",
+      "capsule_sha256": "8888a8eba63882b852d8429c0036d544d7377b879a1bd4f8fa6a78416ebf48d8",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 85326,
+      "path": "runtime/capsules/TASK_C02_EXAMPLE.json",
+      "sha256": "5be7bf964b5c433ae70bc26c3aaaedefd6469b8c927d297924dee89d740b4b91"
+    },
+    {
+      "bytes": 985438,
+      "capsule_id": "TASK_C03",
+      "capsule_sha256": "fda5e9ca5d4d459c3f72062f8b426e1f6bb58c039426a13c61619ec318d1e70a",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 246360,
+      "path": "runtime/capsules/TASK_C03_EXAMPLE.json",
+      "sha256": "d842577de35bede6c907c1c55b341a9e28e9942c034d3f422a87a133c93a93dc"
+    },
+    {
+      "bytes": 300593,
+      "capsule_id": "TASK_C04",
+      "capsule_sha256": "90757159aec9b2617d600e30917b035f89e7d711e354890ad9a157564682d14e",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 75149,
+      "path": "runtime/capsules/TASK_C04_EXAMPLE.json",
+      "sha256": "d687c2f39f738a48f113838ca8c3f5280333ed6d1ba410373cc43776959c20e4"
+    },
+    {
+      "bytes": 507473,
+      "capsule_id": "TASK_C05",
+      "capsule_sha256": "57609c4cc86fad31286d51569a306b4ba0f44fca7413198a64c1dc28a66dcb1f",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 126869,
+      "path": "runtime/capsules/TASK_C05_EXAMPLE.json",
+      "sha256": "ad3b3965c4d2aa552c8b1c6a09fac99f86e61981537279d688ebfe32cb2f05cb"
+    },
+    {
+      "bytes": 328719,
+      "capsule_id": "TASK_C06",
+      "capsule_sha256": "f8e075e386d5496549c5ad4049a88a696afb555d900b5f30066de0c06c1b1d32",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 82180,
+      "path": "runtime/capsules/TASK_C06_EXAMPLE.json",
+      "sha256": "30d1c560e7bd0eadec0cc702255c320a4414063db359b40cc3b445cfad407967"
+    },
+    {
+      "bytes": 982966,
+      "capsule_id": "TASK_C07",
+      "capsule_sha256": "0e48b8bc53a9d1f250a9153c8fae397bc6423c3740d744dbcdb12f423568bef5",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 245742,
+      "path": "runtime/capsules/TASK_C07_EXAMPLE.json",
+      "sha256": "7fbfbcc2934e107c1a92305d372e09923251dc0dd6cd18e4699068c96120ded6"
+    },
+    {
+      "bytes": 422330,
+      "capsule_id": "TASK_C08",
+      "capsule_sha256": "323d2398f52cf24820b4d9684e3fd991023fcc6e587baf8a3395992b39145a88",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 105583,
+      "path": "runtime/capsules/TASK_C08_EXAMPLE.json",
+      "sha256": "12ee4adead55068d926e268a5c34ce4821f4e2812c3c67c56434bbded4f2d295"
+    },
+    {
+      "bytes": 560442,
+      "capsule_id": "TASK_C09",
+      "capsule_sha256": "e108ca7b9b8f3ca83e7013064f1eaeef01dbd2c0bd136f0c6876192835f95892",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 140111,
+      "path": "runtime/capsules/TASK_C09_EXAMPLE.json",
+      "sha256": "b7a2a1ed7bc336a816fe3d26c4b588bd7a27bab180b9d5d37bb3791e2675bf35"
+    },
+    {
+      "bytes": 290271,
+      "capsule_id": "TASK_C10",
+      "capsule_sha256": "9593c763c4f1096cf5bf3e71d74bb5a21c4d759f591957911de3f529864abfb1",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 72568,
+      "path": "runtime/capsules/TASK_C10_EXAMPLE.json",
+      "sha256": "48fbf03af3d0b9362e1ba0f9aa1bb0e278b69e2875f3e0060f8a10b7fee214b0"
+    },
+    {
+      "bytes": 401156,
+      "capsule_id": "TASK_C11",
+      "capsule_sha256": "a140e3f74b9eefd64146a871b8fbd1bfb7bcc8fe8ca0f7e5bc1879e67c2fcbca",
+      "category": "TASK_MATERIALIZED",
+      "estimated_tokens": 100289,
+      "path": "runtime/capsules/TASK_C11_EXAMPLE.json",
+      "sha256": "79cf7cad29ac573399096ccbde3e115b684235b5120c7a5d8b072d456a777a0e"
+    }
+  ],
+  "measurement": "ceil(exact pretty JSON UTF-8 bytes / 4); includes full selected normative records in each Task Capsule",
+  "phase_budgets": [
+    {
+      "aggregate_required_tokens": 120311,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 50762,
+      "minimum_context_window_tokens": 131072,
+      "phase": "C00",
+      "phase_tokens": 7511,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 124781,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 53011,
+      "minimum_context_window_tokens": 131072,
+      "phase": "C01",
+      "phase_tokens": 9732,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 159686,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 85326,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C02",
+      "phase_tokens": 12322,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 325376,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 246360,
+      "minimum_context_window_tokens": 524288,
+      "phase": "C03",
+      "phase_tokens": 16978,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 146031,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 75149,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C04",
+      "phase_tokens": 8844,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 202397,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 126869,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C05",
+      "phase_tokens": 13490,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 157778,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 82180,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C06",
+      "phase_tokens": 13560,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 324144,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 245742,
+      "minimum_context_window_tokens": 524288,
+      "phase": "C07",
+      "phase_tokens": 16364,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 179401,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 105583,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C08",
+      "phase_tokens": 11780,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 217625,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 140111,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C09",
+      "phase_tokens": 15476,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 151355,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 72568,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C10",
+      "phase_tokens": 16749,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    },
+    {
+      "aggregate_required_tokens": 177959,
+      "boot_tokens": 14038,
+      "budget_status": "PASS_MEASURED",
+      "materialized_task_tokens": 100289,
+      "minimum_context_window_tokens": 262144,
+      "phase": "C11",
+      "phase_tokens": 15632,
+      "reserve_tokens": {
+        "output": 8000,
+        "task_input": 12000,
+        "tool_results": 12000,
+        "working_objects": 16000
+      }
+    }
+  ],
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "report_id": "v2.31_Public_BOIS_Common_Core_Executable_Context_Budget_Report",
+  "reserves": {
+    "output": 8000,
+    "task_input": 12000,
+    "tool_results": 12000,
+    "working_objects": 16000
+  }
+}

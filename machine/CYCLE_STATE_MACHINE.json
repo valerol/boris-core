@@ -1,0 +1,374 @@
+{
+  "artifact_version": "2.31",
+  "canonical_states": [
+    "C00",
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "HOLD",
+    "STOP",
+    "REPAIR",
+    "CLOSED"
+  ],
+  "gate_contracts_ref": "machine/GATE_CONTRACTS.json",
+  "hold_contract": {
+    "alternative_routes": [
+      "HOLD -> REPAIR",
+      "HOLD -> STOP"
+    ],
+    "normal_return": "HOLD -> dynamic_return_state from HoldRecord.return_state after PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+    "preservation": [
+      "cycle_id",
+      "scope",
+      "source_refs",
+      "unknowns",
+      "evidence_refs",
+      "open_debts",
+      "state_hash"
+    ],
+    "required_fields": [
+      "cycle_id",
+      "return_state",
+      "return_gate",
+      "hold_reason",
+      "scope",
+      "source_refs",
+      "unknowns",
+      "evidence_refs",
+      "open_debts",
+      "state_hash"
+    ]
+  },
+  "initial_state": "C00",
+  "machine_id": "BOIS-CYCLE-C00-C11-2.31",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "repair_contract": {
+    "descendant_retest_required": true,
+    "new_cycle_required": true,
+    "new_revision_required": true
+  },
+  "stop_contract": {
+    "allowed_next": [
+      "REPAIR",
+      "CLOSED"
+    ],
+    "ordinary_continuation": false
+  },
+  "terminal_state": "CLOSED",
+  "transitions": [
+    {
+      "condition": "GATE_C00_PASS",
+      "from": "C00",
+      "owner": "O014",
+      "to": "C01"
+    },
+    {
+      "condition": "GATE_C01_PASS",
+      "from": "C01",
+      "owner": "O014",
+      "to": "C02"
+    },
+    {
+      "condition": "GATE_C02_PASS",
+      "from": "C02",
+      "owner": "O014",
+      "to": "C03"
+    },
+    {
+      "condition": "GATE_C03_PASS",
+      "from": "C03",
+      "owner": "O014",
+      "to": "C04"
+    },
+    {
+      "condition": "GATE_C04_PASS",
+      "from": "C04",
+      "owner": "O014",
+      "to": "C05"
+    },
+    {
+      "condition": "GATE_C05_PASS",
+      "from": "C05",
+      "owner": "O014",
+      "to": "C06"
+    },
+    {
+      "condition": "GATE_C06_PASS",
+      "from": "C06",
+      "owner": "O014",
+      "to": "C07"
+    },
+    {
+      "condition": "GATE_C07_PASS",
+      "from": "C07",
+      "owner": "O014",
+      "to": "C08"
+    },
+    {
+      "condition": "GATE_C08_PASS",
+      "from": "C08",
+      "owner": "O014",
+      "to": "C09"
+    },
+    {
+      "condition": "GATE_C09_PASS",
+      "from": "C09",
+      "owner": "O014",
+      "to": "C10"
+    },
+    {
+      "condition": "GATE_C10_PASS",
+      "from": "C10",
+      "owner": "O014",
+      "to": "C11"
+    },
+    {
+      "condition": "MATERIAL_NEW_PHENOMENON_RECORDED",
+      "from": "C11",
+      "owner": "O014",
+      "to": "C00"
+    },
+    {
+      "condition": "EXPLICIT_TERMINAL_CONDITION_AND_NO_REQUIRED_NEXT_CYCLE",
+      "from": "C11",
+      "owner": "O014",
+      "to": "CLOSED"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C00",
+      "owner": "O014",
+      "return_state": "C00",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C00",
+      "owner": "O014",
+      "source_state": "C00",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C01",
+      "owner": "O014",
+      "return_state": "C01",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C01",
+      "owner": "O014",
+      "source_state": "C01",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C02",
+      "owner": "O014",
+      "return_state": "C02",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C02",
+      "owner": "O014",
+      "source_state": "C02",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C03",
+      "owner": "O014",
+      "return_state": "C03",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C03",
+      "owner": "O014",
+      "source_state": "C03",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C04",
+      "owner": "O014",
+      "return_state": "C04",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C04",
+      "owner": "O014",
+      "source_state": "C04",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C05",
+      "owner": "O014",
+      "return_state": "C05",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C05",
+      "owner": "O014",
+      "source_state": "C05",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C06",
+      "owner": "O014",
+      "return_state": "C06",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C06",
+      "owner": "O014",
+      "source_state": "C06",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C07",
+      "owner": "O014",
+      "return_state": "C07",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C07",
+      "owner": "O014",
+      "source_state": "C07",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C08",
+      "owner": "O014",
+      "return_state": "C08",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C08",
+      "owner": "O014",
+      "source_state": "C08",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C09",
+      "owner": "O014",
+      "return_state": "C09",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C09",
+      "owner": "O014",
+      "source_state": "C09",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C10",
+      "owner": "O014",
+      "return_state": "C10",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C10",
+      "owner": "O014",
+      "source_state": "C10",
+      "to": "STOP"
+    },
+    {
+      "condition": "RECOVERABLE_PRECONDITION_UNRESOLVED",
+      "from": "C11",
+      "owner": "O014",
+      "return_state": "C11",
+      "to": "HOLD"
+    },
+    {
+      "condition": "FUNDAMENTAL_INVARIANT_VIOLATION",
+      "from": "C11",
+      "owner": "O014",
+      "source_state": "C11",
+      "to": "STOP"
+    },
+    {
+      "condition": "REPAIR_REQUIRED",
+      "from": "HOLD",
+      "owner": "O028",
+      "to": "REPAIR"
+    },
+    {
+      "condition": "HOLD_ESCALATES_TO_STOP",
+      "from": "HOLD",
+      "owner": "O026",
+      "to": "STOP"
+    },
+    {
+      "condition": "REPAIR_AUTHORIZED",
+      "from": "STOP",
+      "owner": "O028",
+      "to": "REPAIR"
+    },
+    {
+      "condition": "EXPLICIT_SAFE_TERMINAL_CLOSURE",
+      "from": "STOP",
+      "owner": "O016",
+      "to": "CLOSED"
+    },
+    {
+      "condition": "NEW_REVISION_AND_NEW_CYCLE",
+      "from": "REPAIR",
+      "owner": "O014",
+      "to": "C00"
+    },
+    {
+      "allowed_return_states": [
+        "C00",
+        "C01",
+        "C02",
+        "C03",
+        "C04",
+        "C05",
+        "C06",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C11"
+      ],
+      "condition": "PRECONDITION_RESOLVED_AND_RETURN_GATE_RECHECK_PASS",
+      "from": "HOLD",
+      "owner": "O014",
+      "required_preservation": [
+        "cycle_id",
+        "scope",
+        "source_refs",
+        "unknowns",
+        "evidence_refs",
+        "open_debts",
+        "state_hash"
+      ],
+      "return_state_source": "HoldRecord.return_state",
+      "to": "dynamic_return_state"
+    }
+  ]
+}

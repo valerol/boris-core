@@ -1,0 +1,33 @@
+{
+  "$id": "urn:bois:schema:regression-tests:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "registry_id": {
+      "type": "string"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "status": {
+      "type": "string"
+    },
+    "tests": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "artifact_version",
+    "registry_id",
+    "release_id",
+    "status",
+    "tests"
+  ],
+  "type": "object"
+}

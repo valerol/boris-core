@@ -1,0 +1,31 @@
+{
+  "$id": "urn:bois:schema:source-model:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "components": {
+      "type": "object"
+    },
+    "release": {
+      "type": "object"
+    },
+    "source_model_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "source_model_version": {
+      "const": "2.31"
+    },
+    "visible_record_index": {
+      "type": "array"
+    }
+  },
+  "required": [
+    "source_model_version",
+    "release",
+    "components",
+    "visible_record_index",
+    "source_model_sha256"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,36 @@
+{
+  "CANON_LOAD_SET": {
+    "development_tools_allowed": false,
+    "executable_source_allowed": false,
+    "included_roles": [
+      "CANONICAL_PDF",
+      "TYPED_PROJECTION",
+      "SCHEMA",
+      "RUNTIME_DATA",
+      "FIXTURE_DATA",
+      "LINEAGE_DATA",
+      "ASSURANCE_DECLARATION"
+    ]
+  },
+  "DEVELOPMENT_SDK": {
+    "included_in_loading_artifact": false,
+    "location": "EXTERNAL_PRIVATE_BUILD_ENVIRONMENT"
+  },
+  "DISTRIBUTION_BUNDLE": {
+    "kind": "ONE_DETERMINISTIC_ZIP_PER_PROFILE_SIGNATURE",
+    "profile_signatures_are_not_branches": true
+  },
+  "VALIDATION_TOOLSET": {
+    "included_in_loading_artifact": false,
+    "location": "EXTERNAL_COMPANION"
+  },
+  "artifact_version": "2.31",
+  "policy_id": "v2.31_Artifact_Set_Policy",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "runtime_capsules": {
+    "independent_normative_authority": "ZERO",
+    "required_failure": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+    "status": "DERIVED_ON_DEMAND_OR_PUBLISHED_EXAMPLES"
+  },
+  "self_conformance_norm": "N-GEN-087"
+}

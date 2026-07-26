@@ -1,0 +1,19 @@
+{
+  "artifact_version": "2.31",
+  "context_budget": "MEASURED",
+  "execution_receipt_count": 1933,
+  "full_semantic_conformance": "HOLD_FOR_354_KERNEL_INTERPRETED_NORMS",
+  "operator_acceptance_binding": "PASS",
+  "operator_semantics_vectors": 20,
+  "receipt_type": "PREPACK_QUALIFICATION_RECEIPT",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "stage": "PREPACK_FINAL_ZIP_SHA256_NOT_YET_AVAILABLE",
+  "status": "PASS_PREPACK_WITH_EXPLICIT_BOUNDARY",
+  "task_capsule_materialization": "PASS_C00_C11",
+  "test_registry_count": 1933,
+  "toolset_filename": "v2.31_Assurance_BOIS_Validation_Toolset.zip",
+  "toolset_sha256": "b603e5c4c8b64c63910ab478935b6b9f94c0c476e2b2416e9ec1218ed46e948e",
+  "validator_core_sha256": "fdeaa018f99b43fbf30441952be3d6f0c228a48b75474231b5546d447a6da506",
+  "validator_filename": "v2.31_Assurance_validate.py",
+  "validator_sha256": "e20c61806661ccd13bf76f30a3365f97756f38cef9258e6cfa5f28a9d162d3ed"
+}

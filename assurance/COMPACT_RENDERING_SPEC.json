@@ -1,0 +1,17 @@
+{
+  "artifact_version": "2.31",
+  "author_message": "ABSOLUTE_FINAL_CONTROLLED_VISIBLE_BLOCK",
+  "field_visibility": "ALL_NORMATIVE_FIELDS_VISIBLE_IN_COMPACT_HUMAN_GRAMMAR",
+  "full_typed_payload": "EMBEDDED_ASSOCIATED_FILE",
+  "justification_graph": "DIRECT_GROUNDS_VISIBLE_FULL_GRAPH_EMBEDDED",
+  "minimum_font_points": 9,
+  "page_budget": {
+    "maximum": 380,
+    "minimum": 220,
+    "target": "250-350"
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "spec_id": "v2.31_Public_BOIS_Common_Core_Compact_Rendering_Spec",
+  "test_receipts": "AGGREGATED_VISIBLE_FULL_EMBEDDED",
+  "visible_raw_json_chunks": 0
+}

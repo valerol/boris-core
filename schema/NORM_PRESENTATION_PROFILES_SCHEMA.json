@@ -1,0 +1,48 @@
+{
+  "$id": "urn:bois:schema:norm-profiles:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "profile_set_id": {
+      "type": "string"
+    },
+    "profiles": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "records": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "resolution_equivalence_sha256": {
+      "type": "string"
+    },
+    "resolution_rule": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_version",
+    "profile_set_id",
+    "profiles",
+    "records",
+    "release_id",
+    "resolution_equivalence_sha256",
+    "resolution_rule",
+    "status"
+  ],
+  "type": "object"
+}

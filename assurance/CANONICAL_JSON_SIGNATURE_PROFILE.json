@@ -1,0 +1,19 @@
+{
+  "additional_properties": "REJECT_UNLESS_SCHEMA_ALLOWS",
+  "algorithm": "Ed25519",
+  "array_order": "PRESERVED",
+  "artifact_version": "2.31",
+  "canonicalization": "RFC8785_STYLE_SORTED_UTF8_NO_WHITESPACE",
+  "encoding": "UTF-8",
+  "json_serialization": "SORTED_KEYS_COMPACT_SEPARATORS",
+  "object_key_order": "LEXICOGRAPHIC",
+  "profile_id": "v2.31_Public_BOIS_Common_Core_Canonical_JSON_Signature_Profile",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "release_key_delegation_ref": "trust/RELEASE_KEY_DELEGATION.json",
+  "signature_algorithm": "Ed25519",
+  "signature_encoding": "BASE64_STANDARD",
+  "signed_bytes": "CANONICAL_JSON_BYTES",
+  "trust_anchor_ref": "trust/PROJECT_TRUST_ANCHOR.pem",
+  "unicode": "NFC",
+  "whitespace": "NONE_OUTSIDE_JSON_STRINGS"
+}

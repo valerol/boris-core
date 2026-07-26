@@ -1,0 +1,61 @@
+{
+  "artifact_version": "2.31",
+  "author_message_delivery": {
+    "payload_ref": "runtime/AUTHOR_MESSAGE.json",
+    "policy_ref": "machine/CORE_CANON.json#/norms/97",
+    "receipt_schema_ref": "schema/AUTHOR_MESSAGE_DELIVERY_RECEIPT_SCHEMA.json"
+  },
+  "authority": {
+    "archive_grants_external_action_authority": false,
+    "operator_acceptance_separate": true,
+    "runtime_authorization_separate": true
+  },
+  "canonical_language": "en",
+  "canonical_pdf_ref": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+  "default_language": "en",
+  "external_validation": "NOT_RUN_AFTER_V2.31_REPAIR",
+  "fallback_language": "en",
+  "field_effectiveness": "NOT_CLAIMED",
+  "machine_runtime_contract_ref": "machine/MACHINE_RUNTIME_CONTRACT.json",
+  "operator_acceptance_semantics": {
+    "canon_active": "INDEPENDENT_AXIS",
+    "operator_accepted": "REQUIRES_EXPLICIT_OPERATOR_RECORD",
+    "package_load": "DOES_NOT_ACCEPT_RULES",
+    "runtime_authorized": "REQUIRES_CURRENT_SCOPE_AND_AUTHORITY"
+  },
+  "personal_layer": {
+    "canon_activity_is_acceptance": false,
+    "kind": "ANONYMIZED_FUNCTIONAL_PROFILE"
+  },
+  "profile_id": "BOIS-RUNTIME-PROFILE-2.31",
+  "qa_e": "NOT_CLAIMED",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "release_lineage": "SINGLE_PARENT_LINEAR",
+  "runtime_compatibility": "NOT_RUN",
+  "selective_loading": {
+    "dependency_graph_ref": "machine/DEPENDENCY_GRAPH.json",
+    "full_canon_fallback_triggers": [
+      "CONFLICT",
+      "AMBIGUITY",
+      "AUDIT",
+      "MIGRATION",
+      "PROVENANCE_CHECK",
+      "OPERATOR_REQUEST"
+    ],
+    "incomplete_result": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+    "order": [
+      "BOOT_CAPSULE",
+      "PHASE_CAPSULE",
+      "TASK_CAPSULE"
+    ],
+    "selector_ref": "machine/APPLICABILITY_SELECTOR.json",
+    "semantic_root_ref": "machine/SEMANTIC_MERKLE_INDEX.json#/semantic_merkle_root"
+  },
+  "status": "RUNTIME_PROFILE_DECLARED_NOT_ACTIVATED_BY_LOAD",
+  "stored_translations": [],
+  "visible_language_resolution": {
+    "current_visible_response_language": 2,
+    "explicit_operator_preference": 1,
+    "fallback": "en"
+  }
+}

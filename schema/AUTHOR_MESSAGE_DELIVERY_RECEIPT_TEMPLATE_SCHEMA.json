@@ -1,0 +1,64 @@
+{
+  "$id": "urn:bois:v2.31_Public_BOIS_Common_Core:author-message-delivery-receipt-template-schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "archive_sha256": {
+      "const": "RUNTIME_ASSIGNED"
+    },
+    "delivered_at": {
+      "const": "RUNTIME_ASSIGNED"
+    },
+    "delivery_receipt_id": {
+      "const": "RUNTIME_ASSIGNED"
+    },
+    "effective_operator_language": {
+      "const": "RUNTIME_ASSIGNED"
+    },
+    "message_id": {
+      "const": "AUTHOR_MESSAGE"
+    },
+    "position": {
+      "const": "ABSOLUTE_LAST_INTERPRETER_CONTROLLED_VISIBLE_BLOCK"
+    },
+    "rendered_text_sha256": {
+      "const": "RUNTIME_ASSIGNED"
+    },
+    "runtime_instance_id": {
+      "const": "RUNTIME_ASSIGNED"
+    },
+    "source_text_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "template": {
+      "const": true
+    },
+    "translation_kind": {
+      "const": "RUNTIME_ASSIGNED"
+    },
+    "trigger": {
+      "const": "RUNTIME_ASSIGNED"
+    }
+  },
+  "required": [
+    "$schema",
+    "template",
+    "delivery_receipt_id",
+    "message_id",
+    "archive_sha256",
+    "runtime_instance_id",
+    "trigger",
+    "effective_operator_language",
+    "translation_kind",
+    "source_text_sha256",
+    "rendered_text_sha256",
+    "position",
+    "delivered_at"
+  ],
+  "type": "object"
+}

@@ -12,8 +12,16 @@
           "type": "string"
         },
         "invariants": {
-          "items": {},
           "type": "array"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "DEFINED",
+            "IN_USE",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "owner": {
           "minLength": 1,
@@ -29,7 +37,8 @@
         "definition",
         "scope",
         "owner",
-        "invariants"
+        "invariants",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -37,11 +46,19 @@
       "additionalProperties": false,
       "properties": {
         "invariants": {
-          "items": {},
           "type": "array"
         },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "UP_COMPLETE",
+            "TRANSFORMED",
+            "DOWN_COMPLETE",
+            "HOLD"
+          ],
+          "type": "string"
+        },
         "non_transferable_claims": {
-          "items": {},
           "type": "array"
         },
         "return_route": {
@@ -72,7 +89,8 @@
         "selected_features",
         "invariants",
         "non_transferable_claims",
-        "return_route"
+        "return_route",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -81,6 +99,17 @@
       "properties": {
         "current_catalog": {
           "type": "object"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "NOT_RUN",
+            "RUNNING",
+            "PASS_INTERNAL_STATIC",
+            "HOLD",
+            "FAIL",
+            "REPAIR_REQUIRED"
+          ],
+          "type": "string"
         },
         "mutations": {
           "type": "object"
@@ -105,7 +134,8 @@
         "current_catalog",
         "mutations",
         "result",
-        "runtime_authorization"
+        "runtime_authorization",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -144,6 +174,17 @@
         "initiator": {
           "$ref": "#/$defs/Identifier"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "plan": {
           "minLength": 1,
           "type": "string"
@@ -174,7 +215,8 @@
         "actual_effect",
         "risk",
         "reversibility",
-        "STOP"
+        "STOP",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -194,7 +236,7 @@
           "$ref": "#/$defs/ObjectReference"
         },
         "end_time": {
-          "format": "date-time",
+          "minLength": 1,
           "type": "string"
         },
         "errors": {
@@ -206,6 +248,19 @@
         "executor_ref": {
           "$ref": "#/$defs/ObjectReference"
         },
+        "lifecycle_state": {
+          "enum": [
+            "PLANNED",
+            "EXECUTING",
+            "EXECUTED",
+            "PARTIAL",
+            "FAILED",
+            "UNKNOWN",
+            "NO_ACTION",
+            "COMPENSATED"
+          ],
+          "type": "string"
+        },
         "observations": {
           "$ref": "#/$defs/StringOrList"
         },
@@ -213,8 +268,12 @@
           "minLength": 1,
           "type": "string"
         },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
         "start_time": {
-          "format": "date-time",
+          "minLength": 1,
           "type": "string"
         },
         "status": {
@@ -241,7 +300,9 @@
         "observations",
         "errors",
         "rollback_or_compensation_status",
-        "effect_capture_ref"
+        "effect_capture_ref",
+        "lifecycle_state",
+        "scope"
       ],
       "type": "object"
     },
@@ -263,6 +324,17 @@
         },
         "custodian": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "lineage": {
@@ -299,7 +371,8 @@
         "owner",
         "custodian",
         "state",
-        "access"
+        "access",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -325,6 +398,16 @@
       "properties": {
         "authority_id": {
           "$ref": "#/$defs/Identifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "ACTIVE",
+            "SUSPENDED",
+            "REVOKED",
+            "EXPIRED"
+          ],
+          "type": "string"
         },
         "limit": {
           "minLength": 1,
@@ -371,7 +454,8 @@
         "risk_level",
         "term_or_condition",
         "revocation_method",
-        "status"
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -387,12 +471,27 @@
         "authorized_subject_ref": {
           "$ref": "#/$defs/ObjectReference"
         },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
         "decision": {
           "enum": [
             "AUTHORIZED_IN_SCOPE",
             "DENIED",
             "UNRESOLVED",
             "REVOKED"
+          ]
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "AUTHORIZED_IN_SCOPE",
+            "DENIED",
+            "UNRESOLVED",
+            "REVOKED",
+            "AUTHORIZED",
+            "LIMITED",
+            "NOT_APPLICABLE"
           ],
           "type": "string"
         },
@@ -410,6 +509,15 @@
           "minLength": 1,
           "type": "string"
         },
+        "validity": {
+          "enum": [
+            "CURRENT",
+            "EXPIRED",
+            "REVOKED",
+            "UNKNOWN"
+          ],
+          "type": "string"
+        },
         "validity_conditions": {
           "$ref": "#/$defs/StringOrList"
         }
@@ -422,8 +530,11 @@
         "scope",
         "permitted_operations",
         "validity_conditions",
+        "validity",
         "decision",
-        "revocation_route"
+        "revocation_route",
+        "cycle_id",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -450,6 +561,18 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "AUTHORIZED",
+            "EXECUTING",
+            "EXECUTED",
+            "PARTIAL",
+            "UNKNOWN",
+            "FAILED",
+            "COMPENSATED"
+          ],
+          "type": "string"
+        },
         "owner": {
           "minLength": 1,
           "type": "string"
@@ -471,7 +594,68 @@
         "independent_review_ref",
         "scope",
         "execution_plan",
-        "owner"
+        "owner",
+        "lifecycle_state"
+      ],
+      "type": "object"
+    },
+    "BoundaryRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "boundary": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "boundary_record_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "CURRENT",
+            "HOLD",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
+        "owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "phenomenon_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "phenomenon_revision": {
+          "$ref": "#/$defs/RevisionIdentifier"
+        },
+        "revision": {
+          "$ref": "#/$defs/RevisionIdentifier"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "DRAFT",
+            "CURRENT",
+            "SUPERSEDED"
+          ]
+        }
+      },
+      "required": [
+        "boundary_record_id",
+        "phenomenon_ref",
+        "phenomenon_revision",
+        "cycle_id",
+        "scope",
+        "boundary",
+        "owner_ref",
+        "revision",
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -490,6 +674,16 @@
         },
         "excluded_claims": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "owner": {
           "$ref": "#/$defs/Identifier"
@@ -517,7 +711,8 @@
         "unknowns",
         "excluded_claims",
         "evidence_refs",
-        "owner"
+        "owner",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -542,6 +737,17 @@
         },
         "inputs": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "local_closure": {
           "minLength": 1,
@@ -573,7 +779,8 @@
         "risk",
         "status",
         "local_closure",
-        "descendants"
+        "descendants",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -588,8 +795,17 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "AVAILABLE",
+            "LIMITED",
+            "UNAVAILABLE",
+            "DEGRADED"
+          ],
+          "type": "string"
+        },
         "limits": {
-          "items": {},
           "type": "array"
         },
         "owner": {
@@ -601,7 +817,6 @@
           "type": "string"
         },
         "supported_operations": {
-          "items": {},
           "type": "array"
         }
       },
@@ -611,7 +826,8 @@
         "supported_operations",
         "capacity",
         "limits",
-        "owner"
+        "owner",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -633,6 +849,17 @@
         },
         "durability": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "location": {
@@ -670,7 +897,8 @@
         "durability",
         "reading_method",
         "dependencies",
-        "loss_risk"
+        "loss_risk",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -696,6 +924,15 @@
         },
         "levels": {
           "$ref": "#/$defs/ClosureLevels"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "QUALITY_CONFIRMED",
+            "REJECTED",
+            "EFFECT_REGISTERED"
+          ],
+          "type": "string"
         },
         "positions": {
           "$ref": "#/$defs/StringOrList"
@@ -727,7 +964,8 @@
         "dependencies",
         "candidate",
         "quality_confirmation",
-        "scope"
+        "scope",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -745,6 +983,17 @@
         },
         "external_action_required": {
           "type": "boolean"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "COMPLETE",
+            "QUALITY_PENDING",
+            "QUALITY_CONFIRMED",
+            "REJECTED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "next_transition": {
           "$ref": "#/$defs/StateReference"
@@ -799,7 +1048,8 @@
         "physiology_change_required",
         "status",
         "producer_ref",
-        "external_action_required"
+        "external_action_required",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -814,19 +1064,28 @@
           "type": "string"
         },
         "evidence": {
-          "items": {},
           "type": "array"
         },
         "inputs": {
-          "items": {},
           "type": "array"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "READY",
+            "ABSTRACTION_UP",
+            "CATEGORY_TRANSFORMATION",
+            "PROPOSAL_AND_EVIDENCE",
+            "CONCRETIZATION_DOWN",
+            "COMPLETE",
+            "HOLD"
+          ],
+          "type": "string"
         },
         "microphase": {
           "minLength": 1,
           "type": "string"
         },
         "outputs": {
-          "items": {},
           "type": "array"
         },
         "owner": {
@@ -850,7 +1109,8 @@
         "inputs",
         "outputs",
         "owner",
-        "evidence"
+        "evidence",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -870,6 +1130,17 @@
         },
         "interfaces": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "VERIFIED",
+            "READY",
+            "ACTIVE",
+            "HOLD",
+            "TERMINATED"
+          ],
+          "type": "string"
         },
         "memory": {
           "minLength": 1,
@@ -909,11 +1180,12 @@
         "memory",
         "HOLD/STOP",
         "recovery",
-        "termination"
+        "termination",
+        "lifecycle_state"
       ],
       "type": "object"
     },
-    "Context Package": {
+    "Context_Package": {
       "additionalProperties": false,
       "properties": {
         "authorities": {
@@ -932,6 +1204,17 @@
         },
         "launch_status": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "readiness": {
           "$ref": "#/$defs/StringOrList"
@@ -966,7 +1249,8 @@
         "risk",
         "resources",
         "readiness",
-        "launch_status"
+        "launch_status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -995,6 +1279,17 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "resolution_routes": {
           "$ref": "#/$defs/StringOrList"
         },
@@ -1011,7 +1306,8 @@
         "divergent_assumptions",
         "influence",
         "resolution_routes",
-        "status"
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1049,6 +1345,27 @@
         },
         "goal": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "C00",
+            "C01",
+            "C02",
+            "C03",
+            "C04",
+            "C05",
+            "C06",
+            "C07",
+            "C08",
+            "C09",
+            "C10",
+            "C11",
+            "HOLD",
+            "STOP",
+            "REPAIR",
+            "CLOSED"
+          ],
           "type": "string"
         },
         "parent": {
@@ -1092,7 +1409,52 @@
         "risks",
         "HOLD/STOP",
         "closure",
-        "quality"
+        "quality",
+        "lifecycle_state"
+      ],
+      "type": "object"
+    },
+    "CycleObjectStore": {
+      "additionalProperties": false,
+      "properties": {
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "gate_evidence_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
+        "objects": {
+          "$ref": "#/$defs/RuntimeObjectRecordList"
+        },
+        "registry_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "registry_revision": {
+          "$ref": "#/$defs/RevisionIdentifier"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "registry_id",
+        "cycle_id",
+        "scope",
+        "registry_revision",
+        "gate_evidence_ref",
+        "objects",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1118,6 +1480,17 @@
         },
         "detection": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "OPEN",
+            "ANALYZED",
+            "REPAIR_CANDIDATE",
+            "RETESTED",
+            "CLOSED",
+            "IRREPARABLE"
+          ],
           "type": "string"
         },
         "object_or_revision": {
@@ -1152,7 +1525,8 @@
         "dependencies",
         "HOLD/STOP",
         "repair_plan",
-        "status"
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1174,6 +1548,17 @@
         },
         "goal": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "method": {
@@ -1207,11 +1592,12 @@
         "method",
         "evidence",
         "residual",
-        "status_by_carrier"
+        "status_by_carrier",
+        "lifecycle_state"
       ],
       "type": "object"
     },
-    "Destruction Evidence": {
+    "Destruction_Evidence": {
       "additionalProperties": false,
       "properties": {
         "carrier_id": {
@@ -1229,6 +1615,17 @@
         },
         "executor": {
           "$ref": "#/$defs/Identifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "materials": {
           "$ref": "#/$defs/StringOrList"
@@ -1260,7 +1657,8 @@
         "materials",
         "verifier",
         "result",
-        "retention_term"
+        "retention_term",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1268,7 +1666,7 @@
       "additionalProperties": false,
       "properties": {
         "captured_at": {
-          "format": "date-time",
+          "minLength": 1,
           "type": "string"
         },
         "cycle_id": {
@@ -1286,8 +1684,22 @@
         "execution_record_ref": {
           "$ref": "#/$defs/ObjectReference"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "owner_ref": {
           "$ref": "#/$defs/ObjectReference"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
         },
         "state_update_ref": {
           "$ref": "#/$defs/ObjectReference"
@@ -1301,7 +1713,9 @@
         "evidence_refs",
         "state_update_ref",
         "captured_at",
-        "owner_ref"
+        "owner_ref",
+        "lifecycle_state",
+        "scope"
       ],
       "type": "object"
     },
@@ -1316,12 +1730,21 @@
           "type": "string"
         },
         "counterevidence_refs": {
-          "items": {},
           "type": "array"
         },
         "evidence_refs": {
-          "items": {},
           "type": "array"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "owner": {
           "enum": [
@@ -1335,11 +1758,9 @@
           ]
         },
         "review_conditions": {
-          "items": {},
           "type": "array"
         },
         "source_refs": {
-          "items": {},
           "type": "array"
         },
         "status": {
@@ -1361,7 +1782,8 @@
         "counterevidence_refs",
         "S_level",
         "status",
-        "review_conditions"
+        "review_conditions",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1384,6 +1806,17 @@
         },
         "evidence": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "participants": {
           "$ref": "#/$defs/StringOrList"
@@ -1415,7 +1848,8 @@
         "cause",
         "effect",
         "evidence",
-        "dependencies"
+        "dependencies",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1433,6 +1867,17 @@
         },
         "independence": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CAPTURED",
+            "PROVENANCE_VERIFIED",
+            "RELEVANCE_ASSESSED",
+            "ACCEPTED",
+            "REJECTED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "method": {
@@ -1474,7 +1919,8 @@
         "completeness",
         "distortions",
         "independence",
-        "supported_or_refuted_objects"
+        "supported_or_refuted_objects",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1501,7 +1947,6 @@
           "type": "string"
         },
         "evidence_refs": {
-          "items": {},
           "type": "array"
         },
         "experience_id": {
@@ -1512,8 +1957,17 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "CAPTURED",
+            "PROVENANCE_VERIFIED",
+            "BOUNDED",
+            "ASSESSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "observations": {
-          "items": {},
           "type": "array"
         },
         "operation_or_action_ref": {
@@ -1537,7 +1991,8 @@
         "evidence_refs",
         "scope",
         "freshness",
-        "owner"
+        "owner",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1563,6 +2018,17 @@
         "explanation_id": {
           "$ref": "#/$defs/Identifier"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "mechanism_or_conditions": {
           "$ref": "#/$defs/StringOrList"
         },
@@ -1584,7 +2050,8 @@
         "alternatives",
         "counterdata",
         "scope",
-        "S"
+        "S",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1601,6 +2068,18 @@
         },
         "cycle_id": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "CONCRETIZED",
+            "RISK_ASSESSED",
+            "REVIEW_PENDING",
+            "AUTHORITY_PENDING",
+            "READY_FOR_AUTHORIZATION",
+            "HOLD"
+          ],
           "type": "string"
         },
         "owner_ref": {
@@ -1636,7 +2115,8 @@
         "risk",
         "authority_required",
         "review_required",
-        "owner_ref"
+        "owner_ref",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1662,6 +2142,16 @@
         },
         "fact_id": {
           "$ref": "#/$defs/Identifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "SUPPORTED",
+            "ESTABLISHED",
+            "CONTESTED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "phenomenon": {
           "minLength": 1,
@@ -1694,11 +2184,12 @@
         "counterevidence",
         "S",
         "status",
-        "review_conditions"
+        "review_conditions",
+        "lifecycle_state"
       ],
       "type": "object"
     },
-    "Freshness Profile": {
+    "Freshness_Profile": {
       "additionalProperties": false,
       "properties": {
         "allowable_risk": {
@@ -1721,6 +2212,17 @@
         },
         "freshness_id": {
           "$ref": "#/$defs/Identifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "method_or_accuracy": {
           "minLength": 1,
@@ -1754,7 +2256,8 @@
         "change_rate",
         "task",
         "allowable_risk",
-        "next_review_time"
+        "next_review_time",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -1762,119 +2265,83 @@
       "additionalProperties": false,
       "properties": {
         "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "literal_input": {
           "minLength": 1,
-          "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
+          "type": "string"
+        },
+        "next_transition": {
+          "const": "C01",
           "type": "string"
         },
         "phenomenon": {
-          "additionalProperties": false,
-          "properties": {
-            "boundary": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "formulation": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "identification_source": {
-              "minLength": 1,
-              "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
-              "type": "string"
-            },
-            "phenomenon_id": {
-              "minLength": 1,
-              "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
-              "type": "string"
-            },
-            "scope": {
-              "oneOf": [
-                {
-                  "minLength": 1,
-                  "type": "string"
-                },
-                {
-                  "items": {
-                    "minLength": 1,
-                    "type": "string"
-                  },
-                  "minItems": 1,
-                  "type": "array",
-                  "uniqueItems": true
-                }
-              ]
-            }
-          },
-          "required": [
-            "phenomenon_id",
-            "formulation",
-            "boundary",
-            "scope",
-            "identification_source"
-          ],
-          "type": "object"
+          "$ref": "#/$defs/Phenomenon"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
         },
         "source_ref": {
-          "minLength": 1,
-          "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
-          "type": "string"
+          "$ref": "#/$defs/ObjectReference"
         }
       },
       "required": [
         "cycle_id",
+        "literal_input",
         "phenomenon",
-        "source_ref"
+        "source_ref",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
     "GateContextC01": {
       "additionalProperties": false,
       "properties": {
-        "context": {
-          "additionalProperties": false,
-          "properties": {
-            "applicability_boundary": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "domain": {
-              "minLength": 1,
-              "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
-              "type": "string"
-            },
-            "initial_risk": {
-              "minLength": 1,
-              "type": "string"
-            },
-            "known": {
-              "items": {
-                "minLength": 1,
-                "type": "string"
-              },
-              "minItems": 1,
-              "type": "array"
-            },
-            "unknowns": {
-              "items": {
-                "minLength": 1,
-                "type": "string"
-              },
-              "minItems": 1,
-              "type": "array"
-            }
+        "boundary_record": {
+          "$ref": "#/$defs/BoundaryRecord"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "initial_risk": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "known": {
+          "items": {
+            "type": "string"
           },
-          "required": [
-            "domain",
-            "known",
-            "unknowns",
-            "applicability_boundary",
-            "initial_risk"
-          ],
-          "type": "object"
+          "minItems": 1,
+          "type": "array"
+        },
+        "next_transition": {
+          "const": "C02",
+          "type": "string"
+        },
+        "phenomenon": {
+          "$ref": "#/$defs/Phenomenon"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
+        },
+        "unknowns": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
         }
       },
       "required": [
-        "context"
+        "cycle_id",
+        "phenomenon",
+        "boundary_record",
+        "known",
+        "unknowns",
+        "initial_risk",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
@@ -1930,6 +2397,13 @@
           "minLength": 1,
           "type": "string"
         },
+        "next_transition": {
+          "const": "C03",
+          "type": "string"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
+        },
         "substrate_declaration_ref": {
           "minLength": 1,
           "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
@@ -1947,7 +2421,9 @@
         "domain",
         "value_interface_ref",
         "substrate_declaration_ref",
-        "authority"
+        "authority",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
@@ -1988,6 +2464,13 @@
           ],
           "type": "string"
         },
+        "next_transition": {
+          "const": "C04",
+          "type": "string"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
+        },
         "source_refs": {
           "items": {
             "minLength": 1,
@@ -2002,13 +2485,19 @@
         "evidence_refs",
         "counterevidence_refs",
         "source_refs",
-        "initial_S_level"
+        "initial_S_level",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
     "GateContextC04": {
       "additionalProperties": false,
       "properties": {
+        "next_transition": {
+          "const": "C05",
+          "type": "string"
+        },
         "question": {
           "additionalProperties": false,
           "properties": {
@@ -2040,16 +2529,25 @@
             "materiality"
           ],
           "type": "object"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
         }
       },
       "required": [
-        "question"
+        "question",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
     "GateContextC05": {
       "additionalProperties": false,
       "properties": {
+        "next_transition": {
+          "const": "C06",
+          "type": "string"
+        },
         "route": {
           "additionalProperties": false,
           "properties": {
@@ -2129,10 +2627,15 @@
             "snapshot_id"
           ],
           "type": "object"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
         }
       },
       "required": [
-        "route"
+        "route",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
@@ -2186,6 +2689,13 @@
           "type": "array",
           "uniqueItems": true
         },
+        "next_transition": {
+          "const": "C07",
+          "type": "string"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
+        },
         "transformation_trace": {
           "minLength": 1,
           "pattern": "^[A-Za-z][A-Za-z0-9]*(?:[-_.:][A-Za-z0-9]+)*$",
@@ -2195,7 +2705,9 @@
       "required": [
         "microphases",
         "transformation_trace",
-        "alternatives"
+        "alternatives",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
@@ -2227,6 +2739,10 @@
           "minItems": 1,
           "type": "array"
         },
+        "next_transition": {
+          "const": "C08",
+          "type": "string"
+        },
         "research_boundary": {
           "additionalProperties": false,
           "properties": {
@@ -2244,6 +2760,9 @@
           ],
           "type": "object"
         },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
+        },
         "status": {
           "const": "ASSESSED"
         }
@@ -2253,7 +2772,9 @@
         "status",
         "evidence",
         "counterevidence",
-        "research_boundary"
+        "research_boundary",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
@@ -2336,18 +2857,17 @@
           "type": "object"
         },
         "next_transition": {
-          "enum": [
-            "C09",
-            "HOLD",
-            "STOP",
-            "REPAIR"
-          ],
+          "const": "C09",
           "type": "string"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
         }
       },
       "required": [
         "bounded_result",
-        "next_transition"
+        "next_transition",
+        "runtime_registry"
       ],
       "type": "object"
     },
@@ -2401,12 +2921,7 @@
           "uniqueItems": true
         },
         "next_transition": {
-          "enum": [
-            "C10",
-            "HOLD",
-            "STOP",
-            "REPAIR"
-          ],
+          "const": "C10",
           "type": "string"
         },
         "recovery_route_ref": {
@@ -2456,6 +2971,9 @@
           ],
           "type": "object"
         },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
+        },
         "unknowns": {
           "items": {
             "minLength": 1,
@@ -2471,7 +2989,8 @@
         "recovery_route_ref",
         "debts",
         "unknowns",
-        "next_transition"
+        "next_transition",
+        "runtime_registry"
       ],
       "type": "object"
     },
@@ -2487,11 +3006,18 @@
         "external_action_proposal": {
           "$ref": "#/$defs/ExternalActionProposal"
         },
+        "next_transition": {
+          "const": "C11",
+          "type": "string"
+        },
         "quality_decision": {
           "$ref": "#/$defs/QualityDecision"
         },
         "residual_risk_decision": {
           "$ref": "#/$defs/ResidualRiskDecision"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
         }
       },
       "required": [
@@ -2499,7 +3025,9 @@
         "quality_decision",
         "authority_decision",
         "residual_risk_decision",
-        "external_action_proposal"
+        "external_action_proposal",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
     },
@@ -2512,16 +3040,95 @@
         "effect_capture": {
           "$ref": "#/$defs/EffectCapture"
         },
+        "next_transition": {
+          "enum": [
+            "C00",
+            "CLOSED"
+          ],
+          "type": "string"
+        },
         "observed_effect": {
           "$ref": "#/$defs/ObservedEffect"
+        },
+        "runtime_registry": {
+          "$ref": "#/$defs/CycleObjectStore"
         }
       },
       "required": [
         "action_execution_record",
         "observed_effect",
-        "effect_capture"
+        "effect_capture",
+        "runtime_registry",
+        "next_transition"
       ],
       "type": "object"
+    },
+    "GateEvidence": {
+      "additionalProperties": false,
+      "properties": {
+        "context_sha256": {
+          "$ref": "#/$defs/SHA256"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "freshness": {
+          "enum": [
+            "CURRENT",
+            "STALE",
+            "UNKNOWN"
+          ]
+        },
+        "gate_evidence_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "gate_id": {
+          "$ref": "#/$defs/GateIdentifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "CURRENT",
+            "STALE",
+            "REVOKED"
+          ],
+          "type": "string"
+        },
+        "owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "revision": {
+          "$ref": "#/$defs/RevisionIdentifier"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_class": {
+          "enum": [
+            "CURRENT_RUNTIME",
+            "AUTHORIZED_SOURCE",
+            "INDEPENDENT_REVIEW"
+          ]
+        }
+      },
+      "required": [
+        "gate_evidence_id",
+        "gate_id",
+        "cycle_id",
+        "scope",
+        "context_sha256",
+        "owner_ref",
+        "revision",
+        "freshness",
+        "source_class",
+        "lifecycle_state"
+      ],
+      "type": "object"
+    },
+    "GateIdentifier": {
+      "pattern": "^C(?:0[0-9]|1[01])$",
+      "type": "string"
     },
     "HoldReturnContext": {
       "additionalProperties": false,
@@ -2578,6 +3185,17 @@
         "hypothesis_id": {
           "$ref": "#/$defs/Identifier"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "protocols": {
           "$ref": "#/$defs/StringOrList"
         },
@@ -2601,7 +3219,8 @@
         "falsification_criteria",
         "protocols",
         "S",
-        "status"
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -2656,6 +3275,17 @@
         "inference_id": {
           "$ref": "#/$defs/Identifier"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "operation": {
           "minLength": 1,
           "type": "string"
@@ -2696,11 +3326,12 @@
         "sensitivity",
         "validity",
         "support",
-        "S"
+        "S",
+        "lifecycle_state"
       ],
       "type": "object"
     },
-    "Input Container": {
+    "Input_Container": {
       "additionalProperties": false,
       "properties": {
         "availability": {
@@ -2728,6 +3359,17 @@
         "input_id": {
           "$ref": "#/$defs/Identifier"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "sensitivity": {
           "minLength": 1,
           "type": "string"
@@ -2751,7 +3393,8 @@
         "availability",
         "identified_phenomena",
         "constraints",
-        "sensitivity"
+        "sensitivity",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -2774,6 +3417,17 @@
         },
         "instruction_id": {
           "$ref": "#/$defs/Identifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "preconditions": {
           "$ref": "#/$defs/StringOrList"
@@ -2812,7 +3466,8 @@
         "errors",
         "STOP",
         "rollback_or_compensation",
-        "freshness"
+        "freshness",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -2820,7 +3475,6 @@
       "additionalProperties": false,
       "properties": {
         "abstract_categories": {
-          "items": {},
           "type": "array"
         },
         "abstraction_route": {
@@ -2836,7 +3490,6 @@
           "type": "string"
         },
         "calculating_elements": {
-          "items": {},
           "type": "array"
         },
         "classification_state": {
@@ -2855,7 +3508,6 @@
           "type": "string"
         },
         "connected_systems": {
-          "items": {},
           "type": "array"
         },
         "declared_substrate": {
@@ -2872,6 +3524,16 @@
         },
         "interface_machine_id": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "INTERFACE_SYSTEM",
+            "INTERFACE_MACHINE_CANDIDATE",
+            "INTERFACE_MACHINE_VERIFIED",
+            "HOLD",
+            "TERMINATED"
+          ],
           "type": "string"
         },
         "loop_test_evidence": {
@@ -2904,7 +3566,6 @@
           "type": "string"
         },
         "transition_rules": {
-          "items": {},
           "type": "array"
         },
         "value_interface": {
@@ -2934,7 +3595,8 @@
         "closure_rule",
         "phase_contract",
         "authorized_change_route",
-        "loop_test_evidence"
+        "loop_test_evidence",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -2945,7 +3607,6 @@
       "additionalProperties": false,
       "properties": {
         "allowed_transitions": {
-          "items": {},
           "type": "array"
         },
         "entry_trigger": {
@@ -2954,6 +3615,17 @@
         },
         "exit_trigger": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DECLARED",
+            "READY",
+            "ACTIVE",
+            "COMPLETED",
+            "HOLD",
+            "STOPPED"
+          ],
           "type": "string"
         },
         "machine_id": {
@@ -2969,7 +3641,6 @@
           "type": "string"
         },
         "required_evidence": {
-          "items": {},
           "type": "array"
         }
       },
@@ -2980,7 +3651,8 @@
         "exit_trigger",
         "owner",
         "required_evidence",
-        "allowed_transitions"
+        "allowed_transitions",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3005,6 +3677,17 @@
         },
         "freshness": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "ACCEPTED",
+            "ACTIVE",
+            "STALE",
+            "CORRECTED",
+            "DELETED"
+          ],
+          "type": "string"
         },
         "memory_item_id": {
           "$ref": "#/$defs/Identifier"
@@ -3041,7 +3724,8 @@
         "activation",
         "freshness",
         "supersession",
-        "deletion"
+        "deletion",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3056,6 +3740,17 @@
         },
         "assumptions": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "mechanisms": {
           "$ref": "#/$defs/StringOrList"
@@ -3099,7 +3794,8 @@
         "tests",
         "alternatives",
         "scope",
-        "S"
+        "S",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3159,17 +3855,29 @@
             "COMPENSATED"
           ]
         },
+        "lifecycle_state": {
+          "enum": [
+            "CAPTURED",
+            "PROVENANCE_VERIFIED",
+            "CLASSIFIED",
+            "RETURNED_TO_C00"
+          ],
+          "type": "string"
+        },
         "next_state_or_terminal_condition": {
           "$ref": "#/$defs/StateReference"
         },
         "observations": {
-          "items": {},
           "type": "array"
         },
         "owner_ref": {
           "$ref": "#/$defs/ObjectReference"
         },
         "provenance": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope": {
           "minLength": 1,
           "type": "string"
         },
@@ -3187,7 +3895,9 @@
         "provenance",
         "state_update_ref",
         "next_state_or_terminal_condition",
-        "owner_ref"
+        "owner_ref",
+        "lifecycle_state",
+        "scope"
       ],
       "type": "object"
     },
@@ -3208,6 +3918,15 @@
         },
         "evidence_refs": {
           "$ref": "#/$defs/EvidenceReferenceList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "OBSERVED",
+            "VALIDATED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "machine_ref": {
           "$ref": "#/$defs/ObjectReference"
@@ -3249,7 +3968,8 @@
         "memory_write_refs",
         "cost",
         "micro_closure",
-        "residue"
+        "residue",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3257,7 +3977,6 @@
       "additionalProperties": false,
       "properties": {
         "dependency_edges": {
-          "items": {},
           "type": "array"
         },
         "entry_state": {
@@ -3268,6 +3987,16 @@
         },
         "invariants": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "TYPED",
+            "VALIDATED",
+            "EXECUTED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "machine_ref": {
           "$ref": "#/$defs/ObjectReference"
@@ -3303,7 +4032,8 @@
         "exit_state",
         "scope",
         "invariants",
-        "test_refs"
+        "test_refs",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3321,6 +4051,16 @@
         },
         "gaps": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "OPEN",
+            "CANDIDATE",
+            "SUPPORTED",
+            "REFUTED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "object_ref": {
           "$ref": "#/$defs/ObjectReference"
@@ -3349,17 +4089,14 @@
         "exceptions",
         "gaps",
         "confidence",
-        "alternative_models"
+        "alternative_models",
+        "lifecycle_state"
       ],
       "type": "object"
     },
     "Phenomenon": {
       "additionalProperties": false,
       "properties": {
-        "boundary": {
-          "minLength": 1,
-          "type": "string"
-        },
         "class": {
           "minLength": 1,
           "type": "string"
@@ -3372,11 +4109,25 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "phenomenon_id": {
           "$ref": "#/$defs/Identifier"
         },
         "related_inputs": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "revision": {
+          "$ref": "#/$defs/RevisionIdentifier"
         },
         "risks": {
           "$ref": "#/$defs/StringOrList"
@@ -3401,14 +4152,15 @@
         "phenomenon_id",
         "class",
         "formulation",
-        "boundary",
         "scope",
         "time",
         "identification_source",
         "related_inputs",
         "unknowns",
         "risks",
-        "status"
+        "status",
+        "revision",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3444,6 +4196,18 @@
         },
         "input_interface": {
           "$ref": "#/$defs/ObjectReference"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "STRUCTURED",
+            "LOOP_VERIFIED",
+            "OPERABLE",
+            "PHASE_CHANGE_PENDING",
+            "HOLD",
+            "CLOSED"
+          ],
+          "type": "string"
         },
         "machine_id": {
           "minLength": 1,
@@ -3489,7 +4253,8 @@
         "risk_model",
         "closure_rule",
         "phase_contract",
-        "authorized_change_route"
+        "authorized_change_route",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3498,6 +4263,15 @@
       "properties": {
         "input_category": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "TYPED",
+            "EXECUTED",
+            "TERMINATED"
+          ],
           "type": "string"
         },
         "output_category": {
@@ -3517,7 +4291,6 @@
           "type": "string"
         },
         "transitions": {
-          "items": {},
           "type": "array"
         }
       },
@@ -3527,7 +4300,8 @@
         "transitions",
         "output_category",
         "scope",
-        "owner"
+        "owner",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3551,6 +4325,16 @@
         },
         "lifecycle": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "INTERNAL_QA",
+            "RELEASED",
+            "HOLD",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "name": {
@@ -3593,7 +4377,8 @@
         "lifecycle",
         "compatibility",
         "tests",
-        "release_status"
+        "release_status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -3619,6 +4404,17 @@
       "properties": {
         "exact_formulation": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "party": {
@@ -3661,7 +4457,8 @@
         "provenance",
         "status",
         "related_decisions",
-        "revision"
+        "revision",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4182,6 +4979,171 @@
             "arg"
           ],
           "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "child_path": {
+              "type": "string"
+            },
+            "equals": {},
+            "op": {
+              "const": "all_items_fact"
+            },
+            "path": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "op",
+            "path",
+            "child_path",
+            "equals"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "left_path": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "op": {
+              "const": "allowed_pair"
+            },
+            "pairs": {
+              "items": {
+                "items": false,
+                "maxItems": 2,
+                "minItems": 2,
+                "prefixItems": [
+                  {},
+                  {}
+                ],
+                "type": "array"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "right_path": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "op",
+            "left_path",
+            "right_path",
+            "pairs"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "contains"
+            },
+            "path": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "value": {}
+          },
+          "required": [
+            "op",
+            "path",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "count_equals"
+            },
+            "path": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "value": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "op",
+            "path",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "left_path": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "op": {
+              "const": "not_equals"
+            },
+            "right_path": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "op",
+            "left_path",
+            "right_path"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "minimum": {},
+            "op": {
+              "const": "rank_at_least"
+            },
+            "order": {
+              "minItems": 1,
+              "type": "array",
+              "uniqueItems": true
+            },
+            "path": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "op",
+            "path",
+            "minimum",
+            "order"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "const": "schema_valid"
+            },
+            "schema_ref": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "op",
+            "schema_ref"
+          ],
+          "type": "object"
         }
       ]
     },
@@ -4221,6 +5183,17 @@
         "inputs": {
           "$ref": "#/$defs/StringOrList"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "operations": {
           "$ref": "#/$defs/StringOrList"
         },
@@ -4255,7 +5228,8 @@
         "cost",
         "risk",
         "HOLD/STOP",
-        "completion"
+        "completion",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4267,6 +5241,9 @@
         },
         "conflict_of_interest": {
           "type": "boolean"
+        },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
         },
         "decision": {
           "enum": [
@@ -4288,6 +5265,18 @@
         "independence_level": {
           "$ref": "#/$defs/IndependenceLevel"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "PASS",
+            "HOLD",
+            "REJECTED"
+          ],
+          "type": "string"
+        },
+        "proposal_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
         "quality_decision_id": {
           "$ref": "#/$defs/Identifier"
         },
@@ -4308,7 +5297,10 @@
         "scope",
         "evidence_refs",
         "evidence_freshness",
-        "conflict_of_interest"
+        "conflict_of_interest",
+        "cycle_id",
+        "proposal_ref",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4323,6 +5315,17 @@
         },
         "discriminating_power": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "provenance": {
@@ -4363,11 +5366,12 @@
         "discriminating_power",
         "cost",
         "risk",
-        "research_route"
+        "research_route",
+        "lifecycle_state"
       ],
       "type": "object"
     },
-    "Relational Alignment": {
+    "Relational_Alignment": {
       "additionalProperties": false,
       "properties": {
         "aligned_part": {
@@ -4383,6 +5387,17 @@
         },
         "differences": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "position_references": {
           "$ref": "#/$defs/StringOrList"
@@ -4408,9 +5423,14 @@
         "aligned_part",
         "differences",
         "required_protocol",
-        "revision"
+        "revision",
+        "lifecycle_state"
       ],
       "type": "object"
+    },
+    "ReleaseIdentifier": {
+      "const": "v2.31_Public_BOIS_Common_Core",
+      "type": "string"
     },
     "Representation": {
       "additionalProperties": false,
@@ -4440,6 +5460,17 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "losses": {
           "$ref": "#/$defs/StringOrList"
         },
@@ -4461,7 +5492,8 @@
         "losses",
         "ambiguities",
         "availability",
-        "correspondence"
+        "correspondence",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4486,7 +5518,6 @@
       "additionalProperties": false,
       "properties": {
         "affected_objects": {
-          "items": {},
           "type": "array"
         },
         "authority": {
@@ -4525,6 +5556,19 @@
             "POSSIBLE",
             "CONFIRMED"
           ]
+        },
+        "lifecycle_state": {
+          "enum": [
+            "PROPOSED",
+            "BOUNDED",
+            "AUTHORIZED_FOR_RESEARCH",
+            "EXECUTING",
+            "COMPLETE",
+            "PARTIAL",
+            "UNKNOWN",
+            "FAILED"
+          ],
+          "type": "string"
         },
         "method": {
           "minLength": 1,
@@ -4593,7 +5637,8 @@
         "risk_class",
         "rollback_path",
         "observation_method",
-        "result_boundary"
+        "result_boundary",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4606,6 +5651,9 @@
         "closure_candidate_ref": {
           "$ref": "#/$defs/ObjectReference"
         },
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
         "decision": {
           "enum": [
             "ACCEPTED_BY_AUTHORIZED_OWNER",
@@ -4613,6 +5661,17 @@
             "REJECTED",
             "UNRESOLVED",
             "NOT_APPLICABLE"
+          ]
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "ACCEPTED_BY_AUTHORIZED_OWNER",
+            "LIMITED",
+            "REJECTED",
+            "UNRESOLVED",
+            "NOT_APPLICABLE",
+            "ACCEPTED"
           ],
           "type": "string"
         },
@@ -4642,6 +5701,10 @@
         "rollback_or_compensation": {
           "minLength": 1,
           "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
         }
       },
       "required": [
@@ -4655,7 +5718,10 @@
         "review_condition",
         "rollback_or_compensation",
         "proposal_ref",
-        "closure_candidate_ref"
+        "closure_candidate_ref",
+        "cycle_id",
+        "scope",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4664,6 +5730,17 @@
       "properties": {
         "duties": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "object": {
           "minLength": 1,
@@ -4709,7 +5786,8 @@
         "duties",
         "trigger",
         "term",
-        "status"
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4743,6 +5821,16 @@
         "changed_fields": {
           "$ref": "#/$defs/StringOrList"
         },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "REVIEWED",
+            "ACCEPTED",
+            "SUPERSEDED",
+            "REJECTED"
+          ],
+          "type": "string"
+        },
         "object_id": {
           "$ref": "#/$defs/Identifier"
         },
@@ -4763,9 +5851,14 @@
         "author_or_executor",
         "approvals",
         "quality",
-        "activation_status"
+        "activation_status",
+        "lifecycle_state"
       ],
       "type": "object"
+    },
+    "RevisionIdentifier": {
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$",
+      "type": "string"
     },
     "Risk": {
       "additionalProperties": false,
@@ -4775,6 +5868,17 @@
         },
         "distribution": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "measures": {
@@ -4827,7 +5931,8 @@
         "vulnerability",
         "measures",
         "residual",
-        "owner"
+        "owner",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4847,7 +5952,7 @@
       "additionalProperties": false,
       "properties": {
         "acceptance_set_sha256": {
-          "pattern": "^[0-9a-f]{64}$",
+          "minLength": 1,
           "type": "string"
         },
         "active_accepted_count": {
@@ -4856,6 +5961,16 @@
         "catalog_count": {
           "type": "integer"
         },
+        "lifecycle_state": {
+          "enum": [
+            "CANDIDATE",
+            "COMPLETE",
+            "HOLD",
+            "REPAIR",
+            "VERIFIED"
+          ],
+          "type": "string"
+        },
         "preserved_non_active_count": {
           "type": "integer"
         },
@@ -4863,7 +5978,6 @@
           "$ref": "#/$defs/Identifier"
         },
         "rows": {
-          "items": {},
           "type": "array"
         },
         "runtime_authorization": {
@@ -4878,7 +5992,8 @@
         "preserved_non_active_count",
         "acceptance_set_sha256",
         "runtime_authorization",
-        "rows"
+        "rows",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -4886,7 +6001,7 @@
       "additionalProperties": false,
       "properties": {
         "acceptance_row_sha256": {
-          "pattern": "^[0-9a-f]{64}$",
+          "minLength": 1,
           "type": "string"
         },
         "canonical_acceptance_status": {
@@ -4910,6 +6025,17 @@
             "BASE_CORE",
             "PERSONAL_LAYER"
           ]
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DISCOVERED",
+            "VERIFIED",
+            "ACCEPTED_FOR_INTERPRETATION",
+            "PRESERVED_NON_ACTIVE",
+            "HOLD",
+            "REPAIR"
+          ],
+          "type": "string"
         },
         "load_recognition_status": {
           "enum": [
@@ -4948,9 +6074,79 @@
         "runtime_authorization",
         "external_action_permission",
         "fingerprint",
-        "acceptance_row_sha256"
+        "acceptance_row_sha256",
+        "lifecycle_state"
       ],
       "type": "object"
+    },
+    "RuntimeObjectRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "cycle_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "freshness": {
+          "enum": [
+            "CURRENT",
+            "STALE",
+            "UNKNOWN"
+          ]
+        },
+        "object_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "object_type": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "owner_ref": {
+          "$ref": "#/$defs/ObjectReference"
+        },
+        "payload": {
+          "type": "object"
+        },
+        "payload_sha256": {
+          "$ref": "#/$defs/SHA256"
+        },
+        "revision": {
+          "$ref": "#/$defs/RevisionIdentifier"
+        },
+        "scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_class": {
+          "enum": [
+            "CURRENT_RUNTIME",
+            "AUTHORIZED_SOURCE",
+            "INDEPENDENT_REVIEW"
+          ]
+        }
+      },
+      "required": [
+        "object_id",
+        "object_type",
+        "revision",
+        "cycle_id",
+        "scope",
+        "owner_ref",
+        "freshness",
+        "source_class",
+        "payload_sha256",
+        "payload"
+      ],
+      "type": "object"
+    },
+    "RuntimeObjectRecordList": {
+      "items": {
+        "$ref": "#/$defs/RuntimeObjectRecord"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "SHA256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
     },
     "SLevel": {
       "enum": [
@@ -4986,6 +6182,17 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "snapshot_id": {
           "$ref": "#/$defs/Identifier"
         },
@@ -5012,7 +6219,8 @@
         "availability",
         "constraints",
         "historical_status",
-        "verification_source"
+        "verification_source",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5031,6 +6239,17 @@
         },
         "independence": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "place": {
@@ -5071,7 +6290,8 @@
         "access",
         "independence",
         "constraints",
-        "related_artifacts"
+        "related_artifacts",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5097,6 +6317,17 @@
         },
         "level_profile": {
           "$ref": "#/$defs/LevelProfile"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "representations": {
           "$ref": "#/$defs/StringOrList"
@@ -5126,7 +6357,8 @@
         "resources",
         "representations",
         "freshness",
-        "revision"
+        "revision",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5174,7 +6406,7 @@
       "additionalProperties": false,
       "properties": {
         "archive_sha256": {
-          "pattern": "^[0-9a-f]{64}$",
+          "minLength": 1,
           "type": "string"
         },
         "capabilities": {
@@ -5184,11 +6416,21 @@
           "$ref": "#/$defs/Identifier"
         },
         "declared_at": {
-          "format": "date-time",
+          "minLength": 1,
           "type": "string"
         },
         "fallbacks": {
           "$ref": "#/$defs/StringOrList"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "limitations": {
           "$ref": "#/$defs/StringOrList"
@@ -5200,7 +6442,7 @@
           "$ref": "#/$defs/ObjectReference"
         },
         "package_id": {
-          "const": "BOIS_COMMON_CORE_TEMNIK_V2_22"
+          "$ref": "#/$defs/ReleaseIdentifier"
         },
         "record_status": {
           "enum": [
@@ -5232,7 +6474,8 @@
         "memory_constraints",
         "tool_constraints",
         "fallbacks",
-        "declared_at"
+        "declared_at",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5273,6 +6516,17 @@
           "minLength": 1,
           "type": "string"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "method": {
           "minLength": 1,
           "type": "string"
@@ -5308,7 +6562,8 @@
         "alternatives",
         "verification",
         "reliability",
-        "dependencies"
+        "dependencies",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5343,6 +6598,17 @@
         "invariants": {
           "$ref": "#/$defs/StringOrList"
         },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
+        },
         "operation": {
           "minLength": 1,
           "type": "string"
@@ -5374,7 +6640,8 @@
         "outputs",
         "actual_effect",
         "dependencies",
-        "status"
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5398,6 +6665,17 @@
         },
         "joint_sufficiency": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
           "type": "string"
         },
         "necessity": {
@@ -5434,7 +6712,8 @@
         "confirmation",
         "conflict_status",
         "influence",
-        "status"
+        "status",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5445,7 +6724,6 @@
           "$ref": "#/$defs/StringOrList"
         },
         "assessment_refs": {
-          "items": {},
           "type": "array"
         },
         "bounded_at_phase": {
@@ -5471,6 +6749,17 @@
         },
         "formulation": {
           "minLength": 1,
+          "type": "string"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "CAPTURED",
+            "BOUNDED",
+            "ASSESSED",
+            "QUALIFIED",
+            "RESOLVED",
+            "PRESERVED"
+          ],
           "type": "string"
         },
         "owner": {
@@ -5519,7 +6808,8 @@
         "owner",
         "created_at_phase",
         "bounded_at_phase",
-        "assessment_refs"
+        "assessment_refs",
+        "lifecycle_state"
       ],
       "type": "object"
     },
@@ -5540,7 +6830,7 @@
         }
       ]
     },
-    "Working Hypothesis Role": {
+    "Working_Hypothesis_Role": {
       "additionalProperties": false,
       "properties": {
         "alternatives": {
@@ -5558,6 +6848,17 @@
         },
         "hypothesis_id": {
           "$ref": "#/$defs/Identifier"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "DRAFT",
+            "VALIDATED",
+            "ACTIVE",
+            "HOLD",
+            "CLOSED",
+            "SUPERSEDED"
+          ],
+          "type": "string"
         },
         "operator_decision": {
           "minLength": 1,
@@ -5592,11 +6893,12 @@
         "term",
         "alternatives",
         "risk",
-        "termination_conditions"
+        "termination_conditions",
+        "lifecycle_state"
       ],
       "type": "object"
     }
   },
-  "$id": "https://bois.invalid/schema/gate-context/v2.22",
+  "$id": "urn:bois:v2.31_Public_BOIS_Common_Core:gate-context-schemas",
   "$schema": "https://json-schema.org/draft/2020-12/schema"
 }

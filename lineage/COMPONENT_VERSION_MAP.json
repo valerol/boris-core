@@ -1,0 +1,509 @@
+{
+  "artifact_version": "2.31",
+  "components": [
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/CANONICAL_JSON_SIGNATURE_PROFILE.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/CAPSULE_TEST_VECTORS.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/COMPACT_RENDERING_SPEC.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "MATERIALIZED_BUDGET_REPAIRED",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "assurance/CONTEXT_BUDGET_REPORT.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "NEW_REPAIR_REPORT",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "assurance/FULL_CANON_CAPSULE_PAIRED_EXECUTION_REPORT.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/JUSTIFICATION_GRAPH.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/REFERENCE_INDEX.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/REGRESSION_TESTS.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/SCHEMA_CONFORMANCE_REPORT.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/SELECTOR_EQUIVALENCE_REPORT.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/SEMANTIC_PRESERVATION_REPORT.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/TEST_REGISTRY.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "assurance/VALIDATION_SPEC.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "fixtures/ALIAS_FIXTURES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "fixtures/GATE_FIXTURES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "fixtures/MACHINE_RUNTIME_FIXTURES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "fixtures/NORM_FIXTURES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "fixtures/REGRESSION_FIXTURES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "lineage/COMPONENT_VERSION_MAP.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "lineage/RELEASE_REGISTRY.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "lineage/SEMANTIC_CHANGE_MAP.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/APPLICABILITY_SELECTOR.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/ARTIFACT_SET_POLICY.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/CORE_CANON.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/CRITICAL_NORM_PREDICATES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/CYCLE_STATE_MACHINE.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/DEPENDENCY_GRAPH.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/GATE_CONTRACTS.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/IDENTIFIER_GRAMMAR.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/MACHINE_RUNTIME_CONTRACT.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/NAMING_STANDARD.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/NORM_PRESENTATION_PROFILES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "NEW_REPAIR_COMPONENT",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "machine/NORM_RECORD_MATERIALIZER.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/OBJECT_MODEL.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "SEMANTICS_REPAIRED",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "machine/OPERATIONAL_SEMANTICS.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/PHASE_VOCABULARY.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/RELATION_TYPES.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "machine/SEMANTIC_MERKLE_INDEX.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "runtime/AUTHOR_MESSAGE.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "runtime/AUTHOR_MESSAGE_DELIVERY_RECEIPT_TEMPLATE.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "runtime/RUNTIME_PROFILE.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "ACCEPTANCE_BINDING_REPAIRED",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "runtime/operator_acceptance.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/APPLICABILITY_SELECTOR_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/AUTHOR_MESSAGE_DELIVERY_RECEIPT_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/AUTHOR_MESSAGE_DELIVERY_RECEIPT_TEMPLATE_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/AUTHOR_MESSAGE_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/BOIS_SOURCE_MODEL_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/BOOT_CAPSULE_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/CAPSULE_TEST_VECTORS_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/CONTEXT_BUDGET_REPORT_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/CORE_CANON_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/DEPENDENCY_GRAPH_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/FULL_CANON_CAPSULE_PAIRED_EXECUTION_REPORT_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "OPERATOR_GRAMMAR_REPAIRED",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "schema/GATE_CONTEXT_SCHEMAS.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/GATE_CONTRACTS_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/MACHINE_RUNTIME_SEPARATION_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/NORM_PRESENTATION_PROFILES_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/NORM_RECORD_MATERIALIZER_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "OPERATOR_GRAMMAR_REPAIRED",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "schema/OBJECT_INSTANCE_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/OBJECT_MODEL_CATALOG_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/OPERATOR_ACCEPTANCE_RECORD_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/REGRESSION_TESTS_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/RELATION_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/RELEASE_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/SELECTOR_EQUIVALENCE_REPORT_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/SEMANTIC_MERKLE_INDEX_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/SEMANTIC_PRESERVATION_REPORT_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "REGENERATED_PROJECTION_OR_PRESERVED_SEMANTICS",
+      "component_revision": "PRESERVED_OR_REGENERATED_FROM_PARENT",
+      "component_semantics_version": "PRESERVED_FROM_PARENT",
+      "path": "schema/TEST_REGISTRY_SCHEMA.json"
+    },
+    {
+      "artifact_version": "2.31",
+      "change_class": "STRICT_RECEIPT_REPAIRED",
+      "component_revision": "2.31",
+      "component_semantics_version": "2.31",
+      "path": "schema/VALIDATION_RECEIPT_SCHEMA.json"
+    }
+  ],
+  "map_id": "v2.31_Public_BOIS_Common_Core_Component_Version_Map",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "version_model": {
+    "artifact_version": "2.31",
+    "component_revision": "explicit per component",
+    "component_semantics_version": "explicit per component"
+  }
+}

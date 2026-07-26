@@ -1,0 +1,15 @@
+{
+  "artifact_version": "2.31",
+  "assurance_toolset_filename": "v2.31_Assurance_BOIS_Validation_Toolset.zip",
+  "author_message_position": "ABSOLUTE_FINAL_DESIGNED_BASE_INVARIANT_UNCHANGED",
+  "canonical_pdf_filename": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+  "canonical_pdf_sha256": "b493a59cfb9eb39927f3537696d18397d97b2a2505bdbabfcdf775c83f4c68c4",
+  "full_semantic_conformance": "HOLD_FOR_354_KERNEL_INTERPRETED_NORMS",
+  "parent_archive_sha256": "54ec788711e7d0ba9ccf1310e9bf1d1b16f8f0693a50de89e485ce7f93b08be8",
+  "parent_release_id": "v2.30_Public_BOIS_Common_Core",
+  "post_packaging_receipt_filename": "v2.31_Public_BOIS_Common_Core_Post_Packaging_Validation_Receipt.json",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "release_timestamp": "2026-07-25T20:31:00Z",
+  "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d",
+  "status": "AUTHORIZED_FOR_EXTERNAL_REVIEW"
+}

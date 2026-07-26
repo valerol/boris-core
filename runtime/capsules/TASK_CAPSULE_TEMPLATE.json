@@ -1,0 +1,538 @@
+{
+  "artifact_version": "2.31",
+  "canonical_authority": "SIGNED_CANONICAL_PDF",
+  "capsule_sha256": "c8b9274c38bd2288326bc980bbf7994e2a3037036f7fe4aa164a632b5236c301",
+  "capsule_type": "TASK_CAPSULE",
+  "execution_precondition": "MATERIALIZATION_STATUS_PASS_AND_ACCEPTANCE_BINDING_CURRENT",
+  "explicit_norm_ids": [],
+  "failure_if_incomplete": "HOLD-RUNTIME-CAPSULE-INCOMPLETE",
+  "gate_contract": {
+    "adversarial_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C00/adversarial",
+    "canonical_object_projection": {
+      "assessment_objects": [
+        "Input Container",
+        "Source"
+      ],
+      "output_objects": [
+        "Phenomenon"
+      ],
+      "primary_object": "Phenomenon"
+    },
+    "execution_receipt_ref": "validation/PREPACK_TEST_EXECUTION_RECEIPTS.jsonl#test_id=TEST-GATE-C00-POSITIVE",
+    "gate_id": "C00",
+    "hold_condition": "Recoverable schema or semantic incompleteness without a fundamental violation.",
+    "hold_return_state": "C00",
+    "input_schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC00",
+    "name": "INPUT_CAPTURED",
+    "negative_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C00/negative",
+    "next_phase": "C01",
+    "owner": "O003",
+    "pass_condition": "Schema-valid context, closed runtime evidence, semantic predicate TRUE, exact next-phase transition, and no STOP boundary.",
+    "positive_fixture_ref": "fixtures/GATE_FIXTURES.json#/fixtures/C00/positive",
+    "predicate": {
+      "op": "schema_valid",
+      "schema_ref": "schema/GATE_CONTEXT_SCHEMAS.json#/$defs/GateContextC00"
+    },
+    "required_evidence": [
+      "typed CycleObjectStore",
+      "current GateEvidence bound to the exact context digest",
+      "all declared runtime references resolve in the current cycle and scope"
+    ],
+    "required_evidence_contract": {
+      "allowed_source_classes": [
+        "CURRENT_RUNTIME",
+        "AUTHORIZED_SOURCE",
+        "INDEPENDENT_REVIEW"
+      ],
+      "context_digest_excludes": [
+        "runtime_registry"
+      ],
+      "exact_cycle_binding": true,
+      "exact_revision_binding": true,
+      "exact_scope_binding": true,
+      "gate_evidence_owner": "O003",
+      "gate_evidence_type": "GateEvidence",
+      "known_object_types_required": true,
+      "minimum_evidence_count": 1,
+      "object_bindings": [
+        {
+          "context_path": "phenomenon",
+          "freshness": "CURRENT",
+          "id_path": "phenomenon_id",
+          "object_type": "Phenomenon",
+          "owner": "O001",
+          "source_class": "CURRENT_RUNTIME"
+        }
+      ],
+      "object_id_uniqueness_required": true,
+      "object_payload_required": true,
+      "reference_bindings": [
+        {
+          "context_path": "source_ref",
+          "freshness": "CURRENT",
+          "minimum_count": 1,
+          "object_type": "Source",
+          "owner": "O009",
+          "source_class": "AUTHORIZED_SOURCE"
+        }
+      ],
+      "registry_lifecycle_state_required": "ACTIVE",
+      "registry_path": "runtime_registry",
+      "registry_type": "CycleObjectStore",
+      "required_freshness": "CURRENT"
+    },
+    "semantic_predicate": {
+      "args": [
+        {
+          "op": "nonempty",
+          "path": "literal_input"
+        },
+        {
+          "op": "nonempty",
+          "path": "phenomenon.phenomenon_id"
+        },
+        {
+          "op": "nonempty",
+          "path": "phenomenon.revision"
+        },
+        {
+          "left_path": "phenomenon.identification_source",
+          "op": "equals",
+          "right_path": "source_ref"
+        },
+        {
+          "equals": "C01",
+          "op": "fact",
+          "path": "next_transition"
+        }
+      ],
+      "op": "all"
+    },
+    "stop_condition": "Fundamental invariant violation or prohibition."
+  },
+  "gate_contract_ref": "runtime/capsules/PHASE_C00_CAPSULE.json#/gate_contract",
+  "hold_stop_repair": {
+    "hold": [
+      "AUTHORITY_PENDING",
+      "HOLD-CONFLICT",
+      "MISSING_EVIDENCE",
+      "OWNER_OR_SCOPE_PENDING",
+      "PACKAGE_INCOMPLETE",
+      "RISK_UNRESOLVED",
+      "SCOPE_PENDING",
+      "STATE_OR_EFFECT_UNKNOWN",
+      "UNRESOLVED_COUNTEREVIDENCE"
+    ],
+    "repair": [
+      "ADD_COUNTEREVIDENCE_CHECK",
+      "ADD_ROLLBACK_OR_COMPENSATION",
+      "CLASSIFY_RISK",
+      "CREATE_NEXT_INPUT",
+      "DECLARE_SCOPE",
+      "IDENTIFY_AUTHORITY_OWNER",
+      "IDENTIFY_OWNER",
+      "LOWER_CONFIDENCE",
+      "OBTAIN_OR_REVOKE_DELEGATION",
+      "OBTAIN_RISK_ACCEPTANCE",
+      "REBUILD_COMPONENT",
+      "REBUILD_PROVENANCE",
+      "RECALCULATE_HASHES",
+      "RECALCULATE_SCOPE",
+      "RECORD_AUTHORIZED_CHANGE",
+      "RECORD_DEBT",
+      "REDUCE_SCOPE",
+      "REGENERATE_MANIFEST",
+      "REOPEN_CYCLE",
+      "REOPEN_HYPOTHESIS",
+      "RERUN_FINAL_VERIFICATION",
+      "RESOLVE_OR_REPAIR_CONFLICT",
+      "RESTORE_LAST_VALID_STATE"
+    ],
+    "stop": [
+      "EVIDENCE_FABRICATION",
+      "FALSE_CLOSURE",
+      "HIGH_RISK_WITHOUT_HUMAN_PROCEDURE",
+      "OWNER_MISSING",
+      "PACKAGE_MISMATCH",
+      "RULE_CONFLICT",
+      "STOP-ILLEGAL-TRANSITION",
+      "UNAUTHORIZED_EXTERNAL_TRANSITION",
+      "UNAUTHORIZED_IRREVERSIBLE_TRANSITION"
+    ]
+  },
+  "inclusion_proof_bundle": {},
+  "independent_normative_authority": "ZERO",
+  "materialization_contract_ref": "machine/NORM_RECORD_MATERIALIZER.json",
+  "materialization_status": "NOT_RUN",
+  "operator_acceptance_binding": {
+    "acceptance_status": "NOT_INSTALLED_IN_PUBLIC_PACKAGE",
+    "accepted_layers": [
+      "BASE"
+    ],
+    "accepted_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "loading_is_acceptance": false,
+    "record_ref": "runtime/operator_acceptance.json",
+    "record_sha256": "267a5576cf693b90d529e2a447effb24cb4af590b79584752b97bca3aa67a132",
+    "rejected_norm_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "revocation_route": "INSTALL_NEW_SIGNED_ACCEPTANCE_RECORD",
+    "scope": [],
+    "validity": "NOT_ESTABLISHED"
+  },
+  "phase_id": "TEMPLATE",
+  "release_binding": {
+    "binding_rule": "Resolve exact PDF SHA-256 through the signed release statement; capsule identity is committed by release_id and semantic_merkle_root.",
+    "canonical_pdf_ref": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+    "release_id": "v2.31_Public_BOIS_Common_Core",
+    "release_statement_ref": "v2.31_Public_BOIS_Common_Core_Release_Statement.json"
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "required_boot_capsule_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "required_object_schemas": [
+    {
+      "allowed_states": [
+        "DRAFT",
+        "VALIDATED",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O001",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O001",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O001",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O001",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O001",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O001",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "7384dacc2fbfa4e28e07deedcff4cb5a5986e4a9d6b3554ee8eb22e017bf4ad1",
+      "field_types": {
+        "class": [
+          "string"
+        ],
+        "formulation": [
+          "string"
+        ],
+        "identification_source": [
+          "string"
+        ],
+        "phenomenon_id": [
+          "#/$defs/Identifier"
+        ],
+        "related_inputs": [
+          "#/$defs/StringOrList"
+        ],
+        "revision": [
+          "#/$defs/RevisionIdentifier"
+        ],
+        "risks": [
+          "#/$defs/StringOrList"
+        ],
+        "scope": [
+          "string"
+        ],
+        "status": [
+          "string"
+        ],
+        "time": [
+          "string"
+        ],
+        "unknowns": [
+          "#/$defs/StringOrList"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "Phenomenon",
+      "owner": "O001",
+      "relations": [
+        "IMPLEMENTS_PHASE:C00",
+        "IMPLEMENTS_PHASE:C01"
+      ],
+      "required_fields": [
+        "phenomenon_id",
+        "class",
+        "formulation",
+        "scope",
+        "time",
+        "identification_source",
+        "related_inputs",
+        "unknowns",
+        "risks",
+        "status",
+        "revision",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O001",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-PHENOMENON-STRUCTURE",
+        "TEST-OBJECT-PHENOMENON-BEHAVIOR"
+      ]
+    },
+    {
+      "allowed_states": [
+        "DRAFT",
+        "VALIDATED",
+        "ACTIVE",
+        "HOLD",
+        "CLOSED",
+        "SUPERSEDED"
+      ],
+      "allowed_transitions": [
+        {
+          "from": "DRAFT",
+          "owner": "O009",
+          "to": "VALIDATED"
+        },
+        {
+          "from": "VALIDATED",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "HOLD"
+        },
+        {
+          "from": "HOLD",
+          "owner": "O009",
+          "to": "ACTIVE"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "CLOSED"
+        },
+        {
+          "from": "ACTIVE",
+          "owner": "O009",
+          "to": "SUPERSEDED"
+        }
+      ],
+      "artifact_version": null,
+      "base_profile_id": "GENERIC_STATEFUL_OBJECT",
+      "catalog_integrity_sha256": "6e207b4b0b0bad28ab72b89e032e17860839c3dab6e367afc1cb327ca851e242",
+      "field_types": {
+        "access": [
+          "#/$defs/StringOrList"
+        ],
+        "author_or_creator": [
+          "string"
+        ],
+        "constraints": [
+          "#/$defs/StringOrList"
+        ],
+        "independence": [
+          "string"
+        ],
+        "place": [
+          "string"
+        ],
+        "provenance": [
+          "string"
+        ],
+        "related_artifacts": [
+          "#/$defs/StringOrList"
+        ],
+        "source_id": [
+          "#/$defs/Identifier"
+        ],
+        "time": [
+          "string"
+        ],
+        "type": [
+          "string"
+        ],
+        "version": [
+          "string"
+        ]
+      },
+      "initial_state": "DRAFT",
+      "object_type": "Source",
+      "owner": "O009",
+      "relations": [],
+      "required_fields": [
+        "source_id",
+        "type",
+        "author_or_creator",
+        "time",
+        "place",
+        "version",
+        "provenance",
+        "access",
+        "independence",
+        "constraints",
+        "related_artifacts",
+        "lifecycle_state"
+      ],
+      "special_contract": {},
+      "transition_owner": "O009",
+      "type_kind": "SUPPORT_OBJECT",
+      "validation_tests": [
+        "TEST-OBJECT-SOURCE-STRUCTURE",
+        "TEST-OBJECT-SOURCE-BEHAVIOR"
+      ]
+    }
+  ],
+  "required_phase_capsule_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "selected_norm_ids_including_boot_globals": [],
+  "selected_norm_records": [],
+  "selected_record_keys": [],
+  "selection_completeness_basis": {
+    "materialized_norm_ids_sha256": "7e655eb4a51e01e89789d97623d71c0aa3e918830d362b0ec7cbb205a580c42f",
+    "materialized_record_count": 48,
+    "operator_accepted_phase_candidate_norm_ids": [
+      "N-GEN-003",
+      "N-GEN-005",
+      "N-GEN-006",
+      "N-GEN-010",
+      "N-GEN-022",
+      "N-GEN-023",
+      "N-GEN-031",
+      "N-GEN-033",
+      "N-GEN-037",
+      "N-GEN-038",
+      "N-GEN-041",
+      "N-GEN-046",
+      "N-GEN-050",
+      "N-GEN-051",
+      "N-GEN-064",
+      "N-GEN-069",
+      "N-GEN-078",
+      "N-O001-01",
+      "N-O001-02",
+      "N-O001-03",
+      "N-O001-04",
+      "N-O001-05",
+      "N-O001-06",
+      "N-O001-07",
+      "N-O001-10",
+      "N-O002-02",
+      "N-O002-04",
+      "N-O003-04",
+      "N-O005-03",
+      "N-O005-05",
+      "N-O005-06",
+      "N-O008-04",
+      "N-O008-10",
+      "N-O009-10",
+      "N-O010-10",
+      "N-O011-05",
+      "N-O011-10",
+      "N-O012-05",
+      "N-O015-01",
+      "N-O018-02",
+      "N-O019-06",
+      "N-O020-04",
+      "N-O020-06",
+      "N-O023-10",
+      "N-O024-01",
+      "N-O025-02",
+      "N-O026-02",
+      "N-O026-06"
+    ],
+    "phase_candidate_norm_ids": [
+      "N-GEN-003",
+      "N-GEN-005",
+      "N-GEN-006",
+      "N-GEN-010",
+      "N-GEN-022",
+      "N-GEN-023",
+      "N-GEN-031",
+      "N-GEN-033",
+      "N-GEN-037",
+      "N-GEN-038",
+      "N-GEN-041",
+      "N-GEN-046",
+      "N-GEN-050",
+      "N-GEN-051",
+      "N-GEN-064",
+      "N-GEN-069",
+      "N-GEN-078",
+      "N-O001-01",
+      "N-O001-02",
+      "N-O001-03",
+      "N-O001-04",
+      "N-O001-05",
+      "N-O001-06",
+      "N-O001-07",
+      "N-O001-10",
+      "N-O002-02",
+      "N-O002-04",
+      "N-O003-04",
+      "N-O005-03",
+      "N-O005-05",
+      "N-O005-06",
+      "N-O008-04",
+      "N-O008-10",
+      "N-O009-10",
+      "N-O010-10",
+      "N-O011-05",
+      "N-O011-10",
+      "N-O012-05",
+      "N-O015-01",
+      "N-O018-02",
+      "N-O019-06",
+      "N-O020-04",
+      "N-O020-06",
+      "N-O023-10",
+      "N-O024-01",
+      "N-O025-02",
+      "N-O026-02",
+      "N-O026-06",
+      "P-N-029",
+      "P-N-040"
+    ],
+    "selected_equals_operator_accepted_phase_candidate_set": true
+  },
+  "selector_input": {
+    "action_class": "OBSERVE",
+    "active_layers": [
+      "BASE"
+    ],
+    "authority_state": "NOT_REQUIRED",
+    "object_types": [
+      "InputContainer",
+      "Phenomenon",
+      "Source"
+    ],
+    "operator_acceptance_ref": "runtime/operator_acceptance.json",
+    "operator_acceptance_sha256": "267a5576cf693b90d529e2a447effb24cb4af590b79584752b97bca3aa67a132",
+    "phase": "C00",
+    "risk_class": "LOW",
+    "scope": [
+      "core"
+    ],
+    "unresolved_debts": []
+  },
+  "semantic_merkle_root": "3581132c8997dbf8b4b16c89fa2c809197a0f5bec4d806c7bf8c3964e96d463d",
+  "status": "TEMPLATE_REQUIRES_RUNTIME_ACCEPTANCE_AND_MATERIALIZATION"
+}

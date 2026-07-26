@@ -1,0 +1,184 @@
+{
+  "artifact_version": "2.31",
+  "draft": "2020-12",
+  "error_count": 0,
+  "pair_count": 43,
+  "pairs": [
+    {
+      "instance": "RELEASE.json",
+      "schema": "schema/RELEASE_SCHEMA.json"
+    },
+    {
+      "instance": "machine/CORE_CANON.json",
+      "schema": "schema/CORE_CANON_SCHEMA.json"
+    },
+    {
+      "instance": "machine/GATE_CONTRACTS.json",
+      "schema": "schema/GATE_CONTRACTS_SCHEMA.json"
+    },
+    {
+      "instance": "machine/OBJECT_MODEL.json",
+      "schema": "schema/OBJECT_MODEL_CATALOG_SCHEMA.json"
+    },
+    {
+      "instance": "assurance/TEST_REGISTRY.json",
+      "schema": "schema/TEST_REGISTRY_SCHEMA.json"
+    },
+    {
+      "instance": "machine/APPLICABILITY_SELECTOR.json",
+      "schema": "schema/APPLICABILITY_SELECTOR_SCHEMA.json"
+    },
+    {
+      "instance": "machine/DEPENDENCY_GRAPH.json",
+      "schema": "schema/DEPENDENCY_GRAPH_SCHEMA.json"
+    },
+    {
+      "instance": "machine/NORM_PRESENTATION_PROFILES.json",
+      "schema": "schema/NORM_PRESENTATION_PROFILES_SCHEMA.json"
+    },
+    {
+      "instance": "machine/SEMANTIC_MERKLE_INDEX.json",
+      "schema": "schema/SEMANTIC_MERKLE_INDEX_SCHEMA.json"
+    },
+    {
+      "instance": "machine/NORM_RECORD_MATERIALIZER.json",
+      "schema": "schema/NORM_RECORD_MATERIALIZER_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/operator_acceptance.json",
+      "schema": "schema/OPERATOR_ACCEPTANCE_RECORD_SCHEMA.json"
+    },
+    {
+      "instance": "assurance/CONTEXT_BUDGET_REPORT.json",
+      "schema": "schema/CONTEXT_BUDGET_REPORT_SCHEMA.json"
+    },
+    {
+      "instance": "assurance/CAPSULE_TEST_VECTORS.json",
+      "schema": "schema/CAPSULE_TEST_VECTORS_SCHEMA.json"
+    },
+    {
+      "instance": "assurance/REGRESSION_TESTS.json",
+      "schema": "schema/REGRESSION_TESTS_SCHEMA.json"
+    },
+    {
+      "instance": "assurance/SEMANTIC_PRESERVATION_REPORT.json",
+      "schema": "schema/SEMANTIC_PRESERVATION_REPORT_SCHEMA.json"
+    },
+    {
+      "instance": "assurance/FULL_CANON_CAPSULE_PAIRED_EXECUTION_REPORT.json",
+      "schema": "schema/FULL_CANON_CAPSULE_PAIRED_EXECUTION_REPORT_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/AUTHOR_MESSAGE.json",
+      "schema": "schema/AUTHOR_MESSAGE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/BOOT_CAPSULE.json",
+      "schema": "schema/BOOT_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_CAPSULE_TEMPLATE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C00_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C00_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C01_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C01_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C02_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C02_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C03_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C03_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C04_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C04_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C05_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C05_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C06_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C06_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C07_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C07_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C08_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C08_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C09_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C09_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C10_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C10_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/PHASE_C11_CAPSULE.json",
+      "schema": "schema/PHASE_CAPSULE_SCHEMA.json"
+    },
+    {
+      "instance": "runtime/capsules/TASK_C11_EXAMPLE.json",
+      "schema": "schema/TASK_CAPSULE_SCHEMA.json"
+    }
+  ],
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "report_id": "v2.31_Public_BOIS_Common_Core_Schema_Conformance_Report",
+  "scope": "PACKAGE_WIDE_PUBLISHED_DATA_SCHEMA_PAIRS",
+  "status": "PASS_PENDING_FINAL_ARTIFACT_VALIDATION"
+}

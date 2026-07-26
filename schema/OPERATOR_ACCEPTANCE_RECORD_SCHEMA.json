@@ -1,0 +1,96 @@
+{
+  "$id": "urn:bois:schema:operator-acceptance:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "acceptance_id": {
+      "type": "string"
+    },
+    "acceptance_status": {
+      "type": "string"
+    },
+    "accepted_at": {},
+    "accepted_layers": {
+      "items": {
+        "enum": [
+          "BASE",
+          "PERSONAL"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "accepted_norm_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "authority_source": {},
+    "canon_active_norm_count": {
+      "type": "integer"
+    },
+    "external_action_authority": {
+      "type": "string"
+    },
+    "loading_is_acceptance": {
+      "const": false
+    },
+    "operator_acceptance_status": {
+      "type": "string"
+    },
+    "personal_norm_ids": {
+      "type": "array"
+    },
+    "record_type": {
+      "enum": [
+        "OPERATOR_ACCEPTANCE",
+        "OPERATOR_ACCEPTANCE_TEMPLATE"
+      ]
+    },
+    "rejected_norm_ids": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "required_runtime_fields": {
+      "type": "array"
+    },
+    "revocation_route": {
+      "type": "string"
+    },
+    "runtime_authorization_status": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "array"
+    },
+    "valid_until": {},
+    "validity": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "artifact_version",
+    "release_id",
+    "record_type",
+    "operator_acceptance_status",
+    "accepted_norm_ids",
+    "rejected_norm_ids",
+    "accepted_layers",
+    "loading_is_acceptance",
+    "runtime_authorization_status",
+    "external_action_authority",
+    "revocation_route"
+  ],
+  "type": "object"
+}

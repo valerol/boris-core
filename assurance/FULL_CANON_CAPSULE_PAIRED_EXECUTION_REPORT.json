@@ -1,0 +1,287 @@
+{
+  "artifact_version": "2.31",
+  "full_canon_capsule_semantic_equivalence": "HOLD_FOR_354_KERNEL_INTERPRETED_NORMS",
+  "gate_execution": {
+    "scope": "SAME_PUBLISHED_GATE_CONTRACTS_AND_FIXTURES",
+    "status": "PASS_C00_C11_PAIRED"
+  },
+  "kernel_interpreted_record_delivery": {
+    "semantic_interpretation": "HOLD_FOR_354_OF_364",
+    "status": "PASS_EXACT_RECORD_DELIVERY_WHEN_SELECTED"
+  },
+  "phase_results": [
+    {
+      "gate_contract_capsule_sha256": "e8cfa7e827f8a3ff6ced5aa634ad81386a7197d20a9b8c95d2053f6506e1b381",
+      "gate_contract_full_sha256": "e8cfa7e827f8a3ff6ced5aa634ad81386a7197d20a9b8c95d2053f6506e1b381",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 48,
+      "phase": "C00",
+      "record_identity_root": "8b1bbce1afcbbcf1d2ccdfd1a71eb416599f56c05d6fddcd173f706afced0a09",
+      "record_set_status": "PASS",
+      "selected_norm_count": 48
+    },
+    {
+      "gate_contract_capsule_sha256": "c1aeaa4d334035dd307fc9fbbcda389ec1967adc7fa2a89395da50d16103d5df",
+      "gate_contract_full_sha256": "c1aeaa4d334035dd307fc9fbbcda389ec1967adc7fa2a89395da50d16103d5df",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 48,
+      "phase": "C01",
+      "record_identity_root": "f6a0558d8b8e2c8868ed75430d33f81c2de67bc924180a92dbc1816c48eff6c6",
+      "record_set_status": "PASS",
+      "selected_norm_count": 48
+    },
+    {
+      "gate_contract_capsule_sha256": "9b8d864a10dd156653a005e51572fc7a1229d36787226a940fffed942cd30ca3",
+      "gate_contract_full_sha256": "9b8d864a10dd156653a005e51572fc7a1229d36787226a940fffed942cd30ca3",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 82,
+      "phase": "C02",
+      "record_identity_root": "5a74ca05affc2f844e7faea571041dd66508d1c613fc1729563eed168103ccb8",
+      "record_set_status": "PASS",
+      "selected_norm_count": 82
+    },
+    {
+      "gate_contract_capsule_sha256": "71feb42d0ed00f7450b7173b9ccef9b9e0e80436742b5655241a27d097417af9",
+      "gate_contract_full_sha256": "71feb42d0ed00f7450b7173b9ccef9b9e0e80436742b5655241a27d097417af9",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 261,
+      "phase": "C03",
+      "record_identity_root": "c6eae75c33583048d2ec0dd10107e1547ab9e9462bf57a924de808ff1208081b",
+      "record_set_status": "PASS",
+      "selected_norm_count": 261
+    },
+    {
+      "gate_contract_capsule_sha256": "3d606e1bc1e7c94a1704e9fd847ac1efef705af6978638149cecdbe81bd50d75",
+      "gate_contract_full_sha256": "3d606e1bc1e7c94a1704e9fd847ac1efef705af6978638149cecdbe81bd50d75",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 74,
+      "phase": "C04",
+      "record_identity_root": "9c5483f2f406b3b9570c3ddf679daff24d285ef3dd6430b984bf6d5dc9d8068c",
+      "record_set_status": "PASS",
+      "selected_norm_count": 74
+    },
+    {
+      "gate_contract_capsule_sha256": "bac6e1f22dd53b7fb3d9a5b1aecabac271713867584c324e3842d1a45a71b471",
+      "gate_contract_full_sha256": "bac6e1f22dd53b7fb3d9a5b1aecabac271713867584c324e3842d1a45a71b471",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 127,
+      "phase": "C05",
+      "record_identity_root": "dca0e03a556f1e760672deda4aeae3b8d277d407339b45c54e12c38550261c60",
+      "record_set_status": "PASS",
+      "selected_norm_count": 127
+    },
+    {
+      "gate_contract_capsule_sha256": "0bc465a993096192ef0d97be0fe3b9994f8c4195c4b296afa5a6e242264a435f",
+      "gate_contract_full_sha256": "0bc465a993096192ef0d97be0fe3b9994f8c4195c4b296afa5a6e242264a435f",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 77,
+      "phase": "C06",
+      "record_identity_root": "b2d11bab5730c6b93df8285b17bb318b0c2a4d4285a27b20906cae0f8f12a12a",
+      "record_set_status": "PASS",
+      "selected_norm_count": 77
+    },
+    {
+      "gate_contract_capsule_sha256": "d9a2be1e54c13610655fbbf4c2002b2c19e24d427285f8c56d7a5715a7c0266f",
+      "gate_contract_full_sha256": "d9a2be1e54c13610655fbbf4c2002b2c19e24d427285f8c56d7a5715a7c0266f",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 261,
+      "phase": "C07",
+      "record_identity_root": "c6eae75c33583048d2ec0dd10107e1547ab9e9462bf57a924de808ff1208081b",
+      "record_set_status": "PASS",
+      "selected_norm_count": 261
+    },
+    {
+      "gate_contract_capsule_sha256": "72832378890926cec02e5ff8cb87a97419743befd585bb04e255903c14c47631",
+      "gate_contract_full_sha256": "72832378890926cec02e5ff8cb87a97419743befd585bb04e255903c14c47631",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 106,
+      "phase": "C08",
+      "record_identity_root": "a0e2bf8d54dbaffc78d0ab79d9bc3295fdc92e6fec4b1b4a7500c3986d1672b9",
+      "record_set_status": "PASS",
+      "selected_norm_count": 106
+    },
+    {
+      "gate_contract_capsule_sha256": "d604bdc7d3b1d6c7dd6288f7c73cefdbca55f4da8a75a17c292fc63738e80275",
+      "gate_contract_full_sha256": "d604bdc7d3b1d6c7dd6288f7c73cefdbca55f4da8a75a17c292fc63738e80275",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 141,
+      "phase": "C09",
+      "record_identity_root": "f2ae5a6da01a6f653cb040b277bc47f529c5dbb3ee8dc34c0c02d75e014452bd",
+      "record_set_status": "PASS",
+      "selected_norm_count": 141
+    },
+    {
+      "gate_contract_capsule_sha256": "b5d3c0cd9ed45de1f2645a5d587352638ad20cebddebf404ff94089d1b7c4e89",
+      "gate_contract_full_sha256": "b5d3c0cd9ed45de1f2645a5d587352638ad20cebddebf404ff94089d1b7c4e89",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 62,
+      "phase": "C10",
+      "record_identity_root": "a419ab4c6b51ec827915aa80ea71b883d71629e9c7f4ea3c023bc7462b0bd99c",
+      "record_set_status": "PASS",
+      "selected_norm_count": 62
+    },
+    {
+      "gate_contract_capsule_sha256": "f6a9531606bf3a87225e3f7f8ea396ebae69f640e2bd8ba56bcadd7429a5a016",
+      "gate_contract_full_sha256": "f6a9531606bf3a87225e3f7f8ea396ebae69f640e2bd8ba56bcadd7429a5a016",
+      "gate_result_pair_status": "PASS_IDENTICAL_CONTRACT_AND_FIXTURE_EVALUATION",
+      "materialized_norm_count": 96,
+      "phase": "C11",
+      "record_identity_root": "5254c176914d31429eb1d65385062fe06cc9eb1cf5136dcd730d93529ece1477",
+      "record_set_status": "PASS",
+      "selected_norm_count": 96
+    }
+  ],
+  "record_identity": {
+    "canon_norm_count": 364,
+    "profile_acceptance_boundary": "NOT_INSTALLED_IN_PUBLIC_PACKAGE",
+    "status": "PASS_ALL_SELECTED_RECORDS",
+    "unique_materialized_norm_count": 305
+  },
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "report_id": "v2.31_Public_BOIS_Common_Core_Full_Canon_Capsule_Paired_Execution",
+  "typed_predicate_execution": {
+    "results": [
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-010",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-047",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-051",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-064",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-087",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-098",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-099",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-GEN-100",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-O025-02",
+        "status": "PASS"
+      },
+      {
+        "capsule": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "full_canon": {
+          "negative_violation": "TRUE",
+          "positive_applicability": "TRUE",
+          "positive_violation": "FALSE"
+        },
+        "norm_id": "N-O025-04",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS_FOR_10_AUTOMATED_NORMS"
+  }
+}

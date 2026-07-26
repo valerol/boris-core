@@ -1,0 +1,155 @@
+{
+  "aliases": [
+    {
+      "alias": "PACKAGE_LOADING",
+      "canonical": "PACKAGE_LOAD",
+      "status": "DEPRECATED_ALIAS"
+    }
+  ],
+  "artifact_version": "2.31",
+  "closed_vocabulary": true,
+  "component_revision": "1",
+  "component_semantics_version": "2.26",
+  "control_states": [
+    {
+      "kind": "CONTROL_STATE",
+      "phase_id": "HOLD"
+    },
+    {
+      "kind": "CONTROL_STATE",
+      "phase_id": "STOP"
+    },
+    {
+      "kind": "CONTROL_STATE",
+      "phase_id": "REPAIR"
+    },
+    {
+      "kind": "CONTROL_STATE",
+      "phase_id": "CLOSED"
+    }
+  ],
+  "cycle_phases": [
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C00"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C01"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C02"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C03"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C04"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C05"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C06"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C07"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C08"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C09"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C10"
+    },
+    {
+      "kind": "CYCLE_PHASE",
+      "phase_id": "C11"
+    }
+  ],
+  "external_phases_and_events": [
+    {
+      "definition": "Deterministic construction, manifesting, hashing, validation, and signing of a package.",
+      "kind": "EXTERNAL_PHASE",
+      "phase_id": "PACKAGE_BUILD"
+    },
+    {
+      "definition": "Integrity verification and loading of an exact archive into a runtime instance.",
+      "kind": "EXTERNAL_PHASE",
+      "phase_id": "PACKAGE_LOAD"
+    },
+    {
+      "definition": "Construction of an interpreter-controlled visible response.",
+      "kind": "EXTERNAL_PHASE",
+      "phase_id": "VISIBLE_RESPONSE"
+    },
+    {
+      "definition": "Making an immutable release publicly available under a release statement.",
+      "kind": "EXTERNAL_PHASE",
+      "phase_id": "PUBLICATION"
+    },
+    {
+      "definition": "A visible response exposes a BOIS archive as a downloadable artifact.",
+      "kind": "SURFACE_EVENT",
+      "phase_id": "ARCHIVE_DOWNLOAD_PRESENTED"
+    },
+    {
+      "definition": "An authorized transition that changes an external substrate.",
+      "kind": "EXTERNAL_PHASE",
+      "phase_id": "EXTERNAL_ACTION"
+    },
+    {
+      "definition": "Verification and restoration from a recovery or handoff package.",
+      "kind": "EXTERNAL_PHASE",
+      "phase_id": "RECOVERY"
+    }
+  ],
+  "global_control_semantics": {
+    "meaning": "The norm applies across every cycle, release, response, and runtime control phase and cannot be narrowed by a required_phase filter.",
+    "precedence": "ABOVE_PHASE_LOCAL_RULES_WITHIN_THE_SAME_NORMATIVE_LAYER",
+    "token": "GLOBAL_CONTROL"
+  },
+  "namespace_policy": {
+    "CYCLE_PHASE": [
+      "C00",
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C09",
+      "C10",
+      "C11"
+    ],
+    "RELEASE_PHASE": [
+      "PACKAGE_BUILD",
+      "PACKAGE_LOAD",
+      "PACKAGE_VERIFICATION",
+      "PUBLICATION",
+      "ARCHIVE_DOWNLOAD_PRESENTED",
+      "RECOVERY"
+    ],
+    "RESPONSE_PHASE": [
+      "VISIBLE_RESPONSE",
+      "FINAL_BLOCK_RENDER",
+      "EXTERNAL_ACTION"
+    ],
+    "rule": "Every non-cycle phase token carries an explicit namespace in typed contexts."
+  },
+  "registry_id": "BOIS-PHASE-VOCABULARY-2.31",
+  "release_id": "v2.31_Public_BOIS_Common_Core"
+}

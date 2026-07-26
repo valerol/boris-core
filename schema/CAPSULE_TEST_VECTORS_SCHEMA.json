@@ -1,0 +1,81 @@
+{
+  "$id": "urn:bois:schema:capsule-vectors:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "C00": {
+      "type": "object"
+    },
+    "C01": {
+      "type": "object"
+    },
+    "C02": {
+      "type": "object"
+    },
+    "C03": {
+      "type": "object"
+    },
+    "C04": {
+      "type": "object"
+    },
+    "C05": {
+      "type": "object"
+    },
+    "C06": {
+      "type": "object"
+    },
+    "C07": {
+      "type": "object"
+    },
+    "C08": {
+      "type": "object"
+    },
+    "C09": {
+      "type": "object"
+    },
+    "C10": {
+      "type": "object"
+    },
+    "C11": {
+      "type": "object"
+    },
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "vector_set_id": {
+      "type": "string"
+    },
+    "vectors": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "C00",
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C09",
+    "C10",
+    "C11",
+    "artifact_version",
+    "release_id",
+    "summary",
+    "vector_set_id",
+    "vectors"
+  ],
+  "type": "object"
+}

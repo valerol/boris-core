@@ -1,0 +1,54 @@
+{
+  "artifact_version": "2.31",
+  "change_class": "REPAIR_ONLY_SUCCESSOR",
+  "changed_norm_formulations": 0,
+  "changes": [
+    {
+      "area": "GATE_OPERATOR_SEMANTICS",
+      "change_id": "V231-C01",
+      "description": "Define all_items_fact and allowed_pair in the published four-valued operational semantics and closed expression grammar.",
+      "type": "AUTHORIZED_SEMANTIC_REPAIR"
+    },
+    {
+      "area": "VALIDATION_RECEIPT",
+      "change_id": "V231-C02",
+      "description": "Require the exact ordered check set, PASS for every check, exact release/archive/tool identities, trace and result roots, and Ed25519 signature metadata.",
+      "type": "ASSURANCE_REPAIR"
+    },
+    {
+      "area": "CAPSULE_MATERIALIZATION",
+      "change_id": "V231-C03",
+      "description": "Embed complete normative content for every selected norm in each Task Capsule.",
+      "type": "RUNTIME_PROJECTION_REPAIR"
+    },
+    {
+      "area": "CONTEXT_BUDGET",
+      "change_id": "V231-C04",
+      "description": "Measure Boot+Phase+materialized Task plus task, working-object, tool-result, and output reserves.",
+      "type": "MEASUREMENT_REPAIR"
+    },
+    {
+      "area": "OPERATOR_ACCEPTANCE",
+      "change_id": "V231-C05",
+      "description": "Bind selector and capsules to an exact OperatorAcceptanceRecord; Public does not auto-activate Personal Layer.",
+      "type": "RUNTIME_AUTHORITY_REPAIR"
+    },
+    {
+      "area": "PAIRED_EXECUTION",
+      "change_id": "V231-C06",
+      "description": "Compare full-canon and capsule record sets and execute the automated typed predicates and gates in paired contexts.",
+      "type": "ASSURANCE_REPAIR"
+    },
+    {
+      "area": "AUTHOR_MESSAGE",
+      "change_id": "V231-C07",
+      "description": "Preserve N-GEN-098 through N-GEN-100 and the absolute-final Author Message position unchanged.",
+      "type": "PRESERVED_DESIGN"
+    }
+  ],
+  "new_philosophical_norms": 0,
+  "parent_release_id": "v2.30_Public_BOIS_Common_Core",
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "removed_philosophical_norms": 0,
+  "semantic_change_digest": "9441c615d2cb18b88fc1f77c176ea9d02a642038e69afdb9350fabc9574764b7"
+}

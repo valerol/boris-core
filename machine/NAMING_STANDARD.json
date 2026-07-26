@@ -1,0 +1,22 @@
+{
+  "archive_name": "v2.31_Public_BOIS_Common_Core.zip",
+  "artifact_version": "2.31",
+  "branches": "FORBIDDEN",
+  "canonical_pdf_name": "v2.31_Public_BOIS_Common_Core_Canon.pdf",
+  "lineage_mode": "SINGLE_PARENT_LINEAR",
+  "official_name": "v2.31_Public_BOIS_Common_Core",
+  "official_name_regex": "^v2\\.29_Public_[A-Za-z0-9_]+$",
+  "profile_signature": "Public",
+  "profile_signature_semantics": "PROJECTION_SIGNATURE_NOT_RELEASE_BRANCH",
+  "profile_signatures_are_branches": false,
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "release_lineage_fanout": "FORBIDDEN",
+  "required_order": [
+    "VERSION_TOKEN",
+    "PROFILE_SIGNATURE",
+    "MACHINE_OR_ARTIFACT_DESCRIPTOR"
+  ],
+  "scope": "ALL_RELEASE_LEVEL_NAMES_ACROSS_THE_DEVELOPED_PHILOSOPHICAL_MACHINE",
+  "standard_id": "v2.31_Naming_Standard",
+  "version_token": "v2.31"
+}

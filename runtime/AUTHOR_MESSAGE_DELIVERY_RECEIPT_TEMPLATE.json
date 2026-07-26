@@ -1,0 +1,15 @@
+{
+  "$schema": "../schema/AUTHOR_MESSAGE_DELIVERY_RECEIPT_TEMPLATE_SCHEMA.json",
+  "archive_sha256": "RUNTIME_ASSIGNED",
+  "delivered_at": "RUNTIME_ASSIGNED",
+  "delivery_receipt_id": "RUNTIME_ASSIGNED",
+  "effective_operator_language": "RUNTIME_ASSIGNED",
+  "message_id": "AUTHOR_MESSAGE",
+  "position": "ABSOLUTE_LAST_INTERPRETER_CONTROLLED_VISIBLE_BLOCK",
+  "rendered_text_sha256": "RUNTIME_ASSIGNED",
+  "runtime_instance_id": "RUNTIME_ASSIGNED",
+  "source_text_sha256": "56f6076b9fa8dc545398d5e1e1a3ded0f13e2f691753f8ba2113c3dde425f92c",
+  "template": true,
+  "translation_kind": "RUNTIME_ASSIGNED",
+  "trigger": "RUNTIME_ASSIGNED"
+}

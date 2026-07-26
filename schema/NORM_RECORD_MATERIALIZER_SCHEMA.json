@@ -1,0 +1,36 @@
+{
+  "$id": "urn:bois:schema:norm-record-materializer:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "algorithm": {
+      "minItems": 1,
+      "type": "array"
+    },
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "execution_precondition": {
+      "type": "string"
+    },
+    "materializer_id": {
+      "type": "string"
+    },
+    "normative_field_set": {
+      "minItems": 20,
+      "type": "array"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    }
+  },
+  "required": [
+    "artifact_version",
+    "release_id",
+    "materializer_id",
+    "algorithm",
+    "normative_field_set",
+    "execution_precondition"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,71 @@
+{
+  "$id": "urn:bois:schema:applicability-selector:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "acceptance_binding_contract": {
+      "type": "object"
+    },
+    "algorithm": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "determinism_rule": {
+      "type": "string"
+    },
+    "fail_closed_result": {
+      "type": "string"
+    },
+    "input_fields": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "norm_index": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "selector_id": {
+      "type": "string"
+    },
+    "selector_kind": {
+      "type": "string"
+    },
+    "semantic_completeness_scope": {
+      "type": "object"
+    },
+    "typed_applicability_map": {
+      "type": "object"
+    },
+    "typed_applicability_map_sha256": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "acceptance_binding_contract",
+    "algorithm",
+    "artifact_version",
+    "determinism_rule",
+    "fail_closed_result",
+    "input_fields",
+    "norm_index",
+    "release_id",
+    "selector_id",
+    "selector_kind",
+    "semantic_completeness_scope",
+    "typed_applicability_map",
+    "typed_applicability_map_sha256"
+  ],
+  "type": "object"
+}

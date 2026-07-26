@@ -1,0 +1,176 @@
+{
+  "$defs": {
+    "Identifier": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "MachineDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "canonical_artifact_digest": {
+          "$ref": "#/$defs/Sha256"
+        },
+        "frozen": {
+          "const": true
+        },
+        "machine_definition_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "release_id": {
+          "$ref": "#/$defs/Identifier"
+        }
+      },
+      "required": [
+        "machine_definition_id",
+        "release_id",
+        "canonical_artifact_digest",
+        "frozen"
+      ],
+      "type": "object"
+    },
+    "MemoryLog": {
+      "additionalProperties": false,
+      "properties": {
+        "append_only": {
+          "const": true
+        },
+        "entries": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "content_ref": {
+                "$ref": "#/$defs/Identifier"
+              },
+              "entry_id": {
+                "$ref": "#/$defs/Identifier"
+              },
+              "recorded_at": {
+                "format": "date-time",
+                "type": "string"
+              },
+              "supersedes": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "entry_id",
+              "recorded_at",
+              "content_ref",
+              "supersedes"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "memory_log_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "runtime_instance_ref": {
+          "$ref": "#/$defs/Identifier"
+        }
+      },
+      "required": [
+        "memory_log_id",
+        "runtime_instance_ref",
+        "append_only",
+        "entries"
+      ],
+      "type": "object"
+    },
+    "RuntimeInstance": {
+      "additionalProperties": false,
+      "properties": {
+        "authority_scope": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "created_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "machine_definition_ref": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "operator_acceptance_state": {
+          "enum": [
+            "NOT_RECORDED",
+            "PARTIAL",
+            "ACCEPTED"
+          ]
+        },
+        "runtime_instance_id": {
+          "$ref": "#/$defs/Identifier"
+        }
+      },
+      "required": [
+        "runtime_instance_id",
+        "machine_definition_ref",
+        "created_at",
+        "operator_acceptance_state",
+        "authority_scope"
+      ],
+      "type": "object"
+    },
+    "RuntimeState": {
+      "additionalProperties": false,
+      "properties": {
+        "cycle_state": {
+          "enum": [
+            "C00",
+            "C01",
+            "C02",
+            "C03",
+            "C04",
+            "C05",
+            "C06",
+            "C07",
+            "C08",
+            "C09",
+            "C10",
+            "C11",
+            "HOLD",
+            "STOP",
+            "REPAIR",
+            "CLOSED"
+          ]
+        },
+        "revision": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "runtime_instance_ref": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "runtime_state_id": {
+          "$ref": "#/$defs/Identifier"
+        },
+        "transition_evidence": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "runtime_state_id",
+        "runtime_instance_ref",
+        "revision",
+        "cycle_state",
+        "transition_evidence"
+      ],
+      "type": "object"
+    },
+    "Sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    }
+  },
+  "$id": "urn:bois:v2.31_Public_BOIS_Common_Core:machine-runtime-separation-schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}

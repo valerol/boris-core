@@ -1,0 +1,51 @@
+{
+  "artifact_version": "2.31",
+  "contract_id": "BOIS-MACHINE-RUNTIME-SEPARATION-2.31",
+  "definitions": {
+    "MachineDefinition": {
+      "description": "The complete released physiology, independent of any particular runtime state.",
+      "identity_fields": [
+        "machine_definition_id",
+        "release_id",
+        "canonical_artifact_digest"
+      ],
+      "mutability": "IMMUTABLE_AFTER_FROZEN_RELEASE"
+    },
+    "MemoryLog": {
+      "description": "An append-only log that cannot rewrite MachineDefinition semantics.",
+      "identity_fields": [
+        "memory_log_id",
+        "runtime_instance_ref"
+      ],
+      "mutability": "APPEND_ONLY_WITH_TYPED_SUPERSESSION"
+    },
+    "RuntimeInstance": {
+      "description": "A concrete application of one immutable MachineDefinition.",
+      "identity_fields": [
+        "runtime_instance_id",
+        "machine_definition_ref",
+        "created_at"
+      ],
+      "mutability": "INSTANCE_LIFECYCLE_ONLY"
+    },
+    "RuntimeState": {
+      "description": "The current mutable state of one RuntimeInstance.",
+      "identity_fields": [
+        "runtime_state_id",
+        "runtime_instance_ref",
+        "revision"
+      ],
+      "mutability": "ONLY_BY_DECLARED_MACHINE_TRANSITIONS"
+    }
+  },
+  "fixtures_ref": "fixtures/MACHINE_RUNTIME_FIXTURES.json",
+  "invariants": [
+    "MachineDefinition does not change when RuntimeState changes.",
+    "RuntimeInstance cannot reference more than one active MachineDefinition revision.",
+    "RuntimeState changes only through transitions declared by the referenced MachineDefinition.",
+    "MemoryLog may append and supersede records but cannot amend frozen physiology."
+  ],
+  "release_id": "v2.31_Public_BOIS_Common_Core",
+  "schema_ref": "schema/MACHINE_RUNTIME_SEPARATION_SCHEMA.json",
+  "status": "ACTIVE_TYPED_CONTRACT"
+}

@@ -1,0 +1,45 @@
+{
+  "$id": "urn:bois:schema:semantic-merkle:2.31:v2.31_Public_BOIS_Common_Core",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "algorithm": {
+      "type": "object"
+    },
+    "artifact_version": {
+      "const": "2.31"
+    },
+    "index_id": {
+      "type": "string"
+    },
+    "leaves": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "record_count": {
+      "type": "integer"
+    },
+    "release_id": {
+      "const": "v2.31_Public_BOIS_Common_Core"
+    },
+    "semantic_merkle_root": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "algorithm",
+    "artifact_version",
+    "index_id",
+    "leaves",
+    "record_count",
+    "release_id",
+    "semantic_merkle_root",
+    "status"
+  ],
+  "type": "object"
+}

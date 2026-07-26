@@ -1,0 +1,79 @@
+{
+  "$id": "urn:bois:v2.31_Public_BOIS_Common_Core:author-message-schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cannot": {
+      "minItems": 5,
+      "type": "array"
+    },
+    "delivery": {
+      "type": "object"
+    },
+    "links": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "href": {
+            "pattern": "^https://",
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "verification_status": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "label",
+          "href",
+          "purpose",
+          "verification_status"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "message_id": {
+      "const": "AUTHOR_MESSAGE"
+    },
+    "non_normative": {
+      "const": true
+    },
+    "source_language": {
+      "const": "en"
+    },
+    "source_text": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_text_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "status": {
+      "const": "ACTIVE_PACKAGE_DATA"
+    },
+    "translation": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "message_id",
+    "status",
+    "source_language",
+    "source_text",
+    "source_text_sha256",
+    "links",
+    "translation",
+    "delivery",
+    "non_normative",
+    "cannot"
+  ],
+  "type": "object"
+}
